@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save My Seat - GMBA Tunghai University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --maroon:   #7A1422;
+      --maroon-2: #9B1A2C;
+      --maroon-dk:#4D0D16;
+      --gold:     #B8922A;
+      --gold-lt:  #D4A83A;
+      --ink:      #0D0D0D;
+      --ink-2:    #2B2B2B;
+      --ink-3:    #4A4A4A;
+      --rule:     #DDD8D0;
+      --cream:    #F8F6F2;
+      --white:    #FFFFFF;
+      --red:      #C0392B;
+      --green:    #1A6B3C;
+      --ff:       'Inter','Noto Sans TC',sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ff); color: var(--ink); background: var(--cream); line-height: 1.65; }
+
+    /* NAV */
+    .top-nav {
+      background: var(--maroon); padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px; position: sticky; top: 0; z-index: 100;
+      border-bottom: 2px solid var(--gold);
+    }
+    .nav-brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+    .nav-logo-badge { background: var(--gold); color: var(--maroon); font-weight: 900; font-size: 0.8rem; letter-spacing: 0.08em; padding: 0.22rem 0.55rem; border-radius: 2px; }
+    .nav-brand-text { color: var(--white); font-weight: 700; font-size: 0.95rem; }
+    .nav-link { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+    .nav-link:hover { color: var(--gold-lt); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #7A1422 0%, #3a0a10 55%, #180408 100%);
+      padding: 4rem 2rem 3.5rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(155,26,44,0.25) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(184,146,42,0.18); border: 1px solid rgba(184,146,42,0.45);
+      color: var(--gold-lt); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.28rem 0.9rem; border-radius: 2px; margin-bottom: 1.2rem;
+    }
+    .hero h1 { font-size: clamp(36px,6vw,64px); font-weight: 900; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero-sub { font-size: clamp(15px,1.8vw,18px); color: rgba(255,255,255,0.72); max-width: 540px; margin: 0 auto; line-height: 1.65; }
+
+    /* FORM CARD */
+    .form-wrap { max-width: 740px; margin: -1.5rem auto 4rem; position: relative; z-index: 2; padding: 0 1.25rem; }
+    .form-card { background: var(--white); border-radius: 8px; box-shadow: 0 4px 32px rgba(122,20,34,0.14), 0 1px 4px rgba(122,20,34,0.08); overflow: hidden; }
+    .form-card-header { background: var(--maroon); padding: 1.4rem 2rem; border-bottom: 3px solid var(--gold); }
+    .form-card-header h2 { color: var(--white); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.15rem; }
+    .form-card-header p { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
+
+    .form-card-header.hidden { display: none; }
+
+    /* STEP PROGRESS */
+    .step-progress { display: flex; align-items: center; padding: 1.1rem 2rem; background: var(--cream); border-bottom: 1px solid var(--rule); }
+    .step-item { display: flex; align-items: center; gap: 0.5rem; flex: 1; }
+    .step-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 700; flex-shrink: 0; background: var(--rule); color: var(--ink-3); transition: background 0.3s, color 0.3s; }
+    .step-num.active { background: var(--maroon); color: var(--white); }
+    .step-num.done   { background: var(--green); color: var(--white); }
+    .step-label { font-size: 0.78rem; font-weight: 600; color: var(--ink-3); }
+    .step-label.active { color: var(--maroon); }
+    .step-label.done   { color: var(--green); }
+    .step-sep { flex: 1; height: 1px; background: var(--rule); margin: 0 0.5rem; max-width: 40px; }
+
+    /* SECTIONS */
+    .section { display: none; padding: 2rem; }
+    .section.visible { display: block; }
+
+    /* RADIO OPTIONS */
+    .question-block { margin-bottom: 1.8rem; }
+    .q-title { display: block; font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: 0.25rem; }
+    .q-hint { font-size: 0.82rem; color: var(--ink-3); margin-bottom: 0.8rem; line-height: 1.5; }
+    .radio-group { display: flex; flex-direction: column; gap: 0.55rem; }
+    .radio-option { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 1rem; border: 1.5px solid var(--rule); border-radius: 6px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    .radio-option:hover { border-color: var(--maroon); background: #fdf5f5; }
+    .radio-option input[type="radio"] { margin-top: 2px; accent-color: var(--maroon); flex-shrink: 0; }
+    .radio-option-text { font-size: 0.93rem; color: var(--ink); font-weight: 500; }
+    .radio-option-sub  { font-size: 0.8rem; color: var(--ink-3); margin-top: 0.1rem; }
+    .radio-option.selected { border-color: var(--maroon); background: rgba(122,20,34,0.05); }
+
+    /* CONTINUE BUTTON */
+    .btn-next { background: var(--maroon); color: var(--white); padding: 0.75rem 1.8rem; border-radius: 4px; border: none; font-family: var(--ff); font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    .btn-next:hover { background: var(--maroon-dk); }
+    .form-actions { margin-top: 1.75rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .form-note { font-size: 0.8rem; color: var(--ink-3); }
+
+    /* NOT ELIGIBLE */
+    .inelig-card { background: #FEF9ED; border: 1.5px solid #E8C84A; border-radius: 6px; padding: 1.5rem; text-align: center; }
+    .inelig-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .inelig-card h3 { font-size: 1.15rem; color: var(--ink); margin-bottom: 0.6rem; }
+    .inelig-card p  { font-size: 0.9rem; color: var(--ink-2); line-height: 1.65; margin-bottom: 0.5rem; }
+    .inelig-criteria { background: var(--white); border: 1px solid var(--rule); border-radius: 4px; padding: 0.9rem 1.1rem; text-align: left; margin: 1rem 0; }
+    .inelig-criteria p { font-size: 0.85rem; color: var(--ink-2); margin-bottom: 0.3rem; }
+    .btn-retry { display: inline-block; margin-top: 0.75rem; background: var(--maroon); color: var(--white); padding: 0.6rem 1.4rem; border-radius: 4px; border: none; font-weight: 700; font-size: 0.9rem; cursor: pointer; font-family: var(--ff); }
+    .btn-retry:hover { background: var(--maroon-dk); }
+
+    /* REGISTRATION FORM - GOOGLE FORM STYLE */
+    .eligible-banner { background: #EDF7F1; border: 1.5px solid #27AE60; border-radius: 6px; padding: 0.85rem 1.1rem; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.5rem; font-size: 0.88rem; color: #1A6B3C; font-weight: 600; }
+    .gf-question { padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
+    .gf-question:last-of-type { border-bottom: none; }
+    .gf-q-title { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; line-height: 1.4; }
+    .gf-q-hint { font-size: 0.82rem; color: var(--ink-3); margin-bottom: 0.75rem; line-height: 1.5; }
+    .req { color: var(--red); margin-left: 2px; }
+    .gf-text, .gf-select, .gf-textarea {
+      width: 100%; padding: 0.65rem 0; margin-top: 0.5rem;
+      border: none; border-bottom: 1.5px solid var(--ink-3);
+      background: transparent; font-family: var(--ff); font-size: 0.96rem; color: var(--ink);
+      transition: border-color 0.2s; outline: none; border-radius: 0;
+      -webkit-appearance: none; appearance: none;
+    }
+    .gf-text:focus, .gf-select:focus, .gf-textarea:focus { border-bottom-color: var(--maroon); border-bottom-width: 2px; }
+    .gf-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A4A4A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 0.5rem center; padding-right: 2rem; cursor: pointer;
+    }
+    .gf-textarea { resize: vertical; min-height: 80px; padding-top: 0.5rem; }
+    .field-error { font-size: 0.8rem; color: var(--red); margin-top: 0.4rem; display: none; }
+    .gf-question.has-error .gf-text,
+    .gf-question.has-error .gf-select,
+    .gf-question.has-error .gf-textarea { border-bottom-color: var(--red); border-bottom-width: 2px; }
+    .gf-question.has-error .field-error { display: block; }
+
+    /* SUBMIT */
+    .btn-primary { background: var(--gold); color: var(--ink); padding: 0.85rem 2rem; border-radius: 4px; border: none; font-family: var(--ff); font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s, transform 0.15s; letter-spacing: 0.03em; }
+    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-1px); }
+    .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    /* SUCCESS */
+    .success-section { text-align: center; padding: 3rem 2rem; }
+    .success-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+    .success-section h2 { font-size: 1.6rem; color: var(--maroon); margin-bottom: 0.75rem; }
+    .success-section p { font-size: 0.95rem; color: var(--ink-2); max-width: 420px; margin: 0 auto 0.5rem; line-height: 1.7; }
+    .success-ref { display: inline-block; margin-top: 1.5rem; background: var(--cream); border: 1px solid var(--rule); border-radius: 6px; padding: 0.75rem 1.25rem; font-size: 0.85rem; color: var(--ink-2); }
+
+    /* FOOTER */
+    .page-footer { text-align: center; padding: 1.5rem; font-size: 0.78rem; color: var(--ink-3); border-top: 1px solid var(--rule); background: var(--white); }
+    .page-footer a { color: var(--maroon); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a class="nav-brand" href="./" target="_blank">
+    <span class="nav-logo-badge">GMBA</span>
+    <span class="nav-brand-text">Tunghai University</span>
+  </a>
+  <a class="nav-link" href="./" target="_blank">Back to Website</a>
+</nav>
+
+<section class="hero">
+  <span class="hero-tag">Limited Seats</span>
+  <h1>Save My <em>Seat</em></h1>
+  <p class="hero-sub">Reserve your place in Tunghai GMBA &mdash; Taiwan's fully English-taught graduate business program at the heart of Asia's AI tech industry.</p>
+</section>
+
+<div class="form-wrap">
+  <div class="form-card">
+    <div class="form-card-header" id="form-card-header">
+      <h2>Eligibility Verification &amp; Registration &nbsp;/&nbsp; 資格確認與報名登記</h2>
+      <p>Complete the eligibility check first, then submit your registration. / 請先完成資格確認再進行報名。</p>
+    </div>
+
+    <div class="step-progress">
+      <div class="step-item">
+        <div class="step-num active" id="snum-1">1</div>
+        <div class="step-label active" id="slbl-1">ARC &amp; Education</div>
+      </div>
+      <div class="step-sep"></div>
+      <div class="step-item">
+        <div class="step-num" id="snum-2">2</div>
+        <div class="step-label" id="slbl-2">Your Details</div>
+      </div>
+      <div class="step-sep"></div>
+      <div class="step-item">
+        <div class="step-num" id="snum-3">3</div>
+        <div class="step-label" id="slbl-3">Done</div>
+      </div>
+    </div>
+
+    <!-- STEP 1: ELIGIBILITY -->
+    <div class="section visible" id="sec-elig">
+
+      <div class="question-block">
+        <label class="q-title">
+          1. Do you currently hold a Valid ARC (Alien Resident Certificate)?<br>
+          <span style="font-weight:400;font-size:0.9rem;color:var(--ink-3)">您目前是否持有有效的台灣外僑居留證（ARC）？</span>
+        </label>
+        <p class="q-hint">ARC = Alien Resident Certificate / 外僑居留證，由內政部移民署核發。</p>
+        <div class="radio-group" id="rg-arc">
+          <label class="radio-option">
+            <input type="radio" name="arc" value="Yes, I hold a Valid ARC / 是，我持有有效居留證">
+            <div>
+              <div class="radio-option-text">Yes, I hold a Valid ARC</div>
+              <div class="radio-option-sub">是，我持有有效的台灣外僑居留證</div>
+            </div>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="arc" value="No / 否">
+            <div>
+              <div class="radio-option-text">No, I do not hold a Valid ARC</div>
+              <div class="radio-option-sub">否，我目前沒有有效的台灣外僑居留證</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="q-title">
+          2. What is your current education status?<br>
+          <span style="font-weight:400;font-size:0.9rem;color:var(--ink-3)">請確認您目前的學歷狀態：</span>
+        </label>
+        <div class="radio-group" id="rg-edu">
+          <label class="radio-option">
+            <input type="radio" name="edu" value="I am currently a 4th-year (senior) undergraduate student / 我目前是大四在學生">
+            <div>
+              <div class="radio-option-text">I am currently a 4th-year (senior) undergraduate student</div>
+              <div class="radio-option-sub">我目前是大四在學生</div>
+            </div>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="edu" value="I already hold a Bachelor's degree / 我已取得大學學歷">
+            <div>
+              <div class="radio-option-text">I already hold a Bachelor's degree</div>
+              <div class="radio-option-sub">我已取得大學學士學位（大學畢業）</div>
+            </div>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="edu" value="Neither of the above / 以上皆不符合">
+            <div>
+              <div class="radio-option-text">Neither of the above</div>
+              <div class="radio-option-sub">以上皆不符合</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-next" id="btn-check-elig">Continue &rarr;</button>
+        <span class="form-note">Answer both questions to proceed. / 請回答兩個問題後繼續。</span>
+      </div>
+    </div>
+
+    <!-- NOT ELIGIBLE -->
+    <div class="section" id="sec-inelig">
+      <div class="inelig-card">
+        <div class="inelig-icon">📋</div>
+        <h3>You do not currently meet the eligibility criteria<br>
+          <span style="font-size:0.92rem;font-weight:400">您目前不符合本次報名的資格條件</span></h3>
+        <div class="inelig-criteria">
+          <p><strong>Required / 必要條件：</strong></p>
+          <p>✔ &nbsp;Hold a Valid ARC issued by Taiwan &nbsp;/&nbsp; 持有有效的台灣外僑居留證</p>
+          <p style="margin-top:0.4rem">✔ &nbsp;Currently a 4th-year undergraduate student, OR hold a Bachelor's degree<br>
+            <span style="font-size:0.81rem;color:var(--ink-3)">目前為大四在學生，或已取得大學學歷</span></p>
+        </div>
+        <p>If your status changes, you are welcome to register again.<br>如狀態有所改變，歡迎再次填表。</p>
+        <p style="margin-top:0.6rem">Questions? <a href="mailto:gmba@thu.edu.tw" style="color:var(--maroon);font-weight:600">gmba@thu.edu.tw</a></p>
+        <button type="button" class="btn-retry" onclick="retryForm()">Try Again / 重新填寫</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: REGISTRATION FORM -->
+    <div class="section" id="sec-form">
+      <div class="eligible-banner">
+        <span style="font-size:1.2rem">✅</span>
+        <span>Eligibility confirmed — please complete your registration below.<br>
+          <span style="font-weight:400">資格確認通過，請填寫以下報名資料。</span></span>
+      </div>
+
+      <form id="reg-form" novalidate>
+
+        <div class="gf-question" id="gfq-name">
+          <div class="gf-q-title">1. Full Name / 姓名<span class="req">*</span></div>
+          <div class="gf-q-hint">As it appears on your ARC or Passport / 請與居留證或護照上的姓名相同</div>
+          <input type="text" id="f-name" class="gf-text" autocomplete="name">
+          <span class="field-error">Please enter your full name.</span>
+        </div>
+
+        <div class="gf-question" id="gfq-email">
+          <div class="gf-q-title">2. Email Address / 電子郵件<span class="req">*</span></div>
+          <input type="email" id="f-email" class="gf-text" autocomplete="email">
+          <span class="field-error">Please enter a valid email address.</span>
+        </div>
+
+
+
+        <div class="gf-question" id="gfq-nationality">
+          <div class="gf-q-title">4. Nationality / 國籍<span class="req">*</span></div>
+          <select id="f-nationality" class="gf-select">
+            <option value="">-- Select --</option>
+            <option value="Taiwanese / 台灣">Taiwanese / 台灣</option>
+            <option value="Other / 其他">Other / 其他</option>
+          </select>
+          <input type="text" id="f-nationality-other" class="gf-text" style="display:none;margin-top:0.6rem">
+          <span class="field-error">Please select / enter your nationality.</span>
+        </div>
+
+        <div class="gf-question" id="gfq-university">
+          <div class="gf-q-title">5. Current or Most Recent University / 目前就讀或畢業院校<span class="req">*</span></div>
+          <select id="f-university" class="gf-select">
+            <option value="">-- Select --</option>
+            <option value="Tunghai University / 東海大學">Tunghai University / 東海大學</option>
+            <option value="Other / 其他">Other / 其他</option>
+          </select>
+          <input type="text" id="f-university-other" class="gf-text" style="display:none;margin-top:0.6rem">
+          <span class="field-error">Please select / enter your university.</span>
+        </div>
+
+        <div class="gf-question" id="gfq-major">
+          <div class="gf-q-title">6. Major / Field of Study / 主修科系<span class="req">*</span></div>
+          <input type="text" id="f-major" class="gf-text">
+          <span class="field-error">Please enter your major.</span>
+        </div>
+
+        <div class="gf-question" id="gfq-intake">
+          <div class="gf-q-title">7. Preferred Intake / 預計入學時間<span class="req">*</span></div>
+          <div class="radio-group" id="rg-intake">
+            <label class="radio-option">
+              <input type="radio" name="intake" value="Fall Semester - September / 秋季班（9月）">
+              <div class="radio-option-text">Fall Semester — September / 秋季班（9月）</div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="intake" value="Spring Semester - February / 春季班（2月）">
+              <div class="radio-option-text">Spring Semester — February / 春季班（2月）</div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="intake" value="Not yet decided / 尚未決定">
+              <div class="radio-option-text">Not yet decided / 尚未決定</div>
+            </label>
+          </div>
+          <span class="field-error" id="err-intake">Please select your preferred intake.</span>
+        </div>
+
+        <div class="gf-question">
+          <div class="gf-q-title">8. How did you hear about GMBA? / 如何得知本學程？</div>
+          <div class="radio-group" id="rg-source">
+            <label class="radio-option">
+              <input type="radio" name="source" value="University campus fair / 大學說明會">
+              <div class="radio-option-text">University campus fair / 大學說明會</div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="source" value="Social media / 社群媒體">
+              <div class="radio-option-text">Social media (Instagram / Facebook / LINE) / 社群媒體</div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="source" value="Friend or family / 親友介紹">
+              <div class="radio-option-text">Friend or family recommendation / 親友介紹</div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="source" value="GMBA website / GMBA官網">
+              <div class="radio-option-text">GMBA website / GMBA官網</div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="source" value="Google search / 搜尋引擎">
+              <div class="radio-option-text">Google search / 搜尋引擎</div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="source" value="AI recommendation (ChatGPT / Claude / etc.) / AI推薦">
+              <div class="radio-option-text">AI recommendation (ChatGPT / Claude / etc.) / AI推薦</div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="source" value="Other / 其他">
+              <div class="radio-option-text">Other / 其他</div>
+            </label>
+          </div>
+        </div>
+
+        <div class="gf-question">
+          <div class="gf-q-title">9. Questions or Comments / 有任何問題或備註？</div>
+          <div class="gf-q-hint">Optional / 選填</div>
+          <textarea id="f-comments" class="gf-textarea"></textarea>
+        </div>
+
+        <div class="form-actions" style="padding-top:0.5rem">
+          <button type="submit" class="btn-primary" id="btn-submit">🎓 Save My Seat / 預約我的位置</button>
+          <span class="form-note">Your information goes directly to the GMBA admissions team.</span>
+        </div>
+      </form>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="section" id="sec-success">
+      <div class="success-section">
+        <div class="success-icon">🎓</div>
+        <h2>Your seat is reserved!</h2>
+        <p>Thank you for registering your interest in Tunghai GMBA. Our admissions team will be in touch with you soon.</p>
+        <p style="margin-top:0.5rem;font-size:0.88rem">感謝您的報名！招生團隊將盡快與您聯繫。</p>
+        <div class="success-ref">
+          Questions? Email us at <a href="mailto:gmba@thu.edu.tw">gmba@thu.edu.tw</a><br>
+          Visit <a href="./" target="_blank">gmba.thu.edu.tw</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="page-footer">
+  &copy; Tunghai University GMBA Program &nbsp;&middot;&nbsp;
+  <a href="./" target="_blank">gmba.thu.edu.tw</a> &nbsp;&middot;&nbsp;
+  <a href="mailto:gmba@thu.edu.tw">gmba@thu.edu.tw</a>
+</footer>
+
+<iframe id="submit-iframe" name="submit-iframe" style="display:none"></iframe>
+
+<script>
+(function () {
+  var GF = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeD7RePNHDHHX_MXDdGz9KDehdFK5sCU8CVJ9ERRu0e7nJ7yQ/formResponse';
+  var E = {
+    arc:'entry.1711123340', edu:'entry.2057165607', name:'entry.1006072488',
+    email:'entry.488965570', phone:'entry.1939547337', nationality:'entry.1919724464',
+    university:'entry.1699207166', major:'entry.966983947', intake:'entry.1781548739',
+    source:'entry.1811166972', comments:'entry.564378171'
+  };
+  var arcVal = '', eduVal = '';
+
+  function g(id) { return document.getElementById(id); }
+  function show(id) { g(id).classList.add('visible'); }
+  function hide(id) { g(id).classList.remove('visible'); }
+  function val(id) { return g(id) ? g(id).value.trim() : ''; }
+
+  function setStep(n) {
+    var prog = document.querySelector('.step-progress');
+    if (prog) prog.style.display = n === 1 ? '' : 'none';
+    var hero = document.querySelector('.hero');
+    if (hero) hero.style.display = n === 1 ? '' : 'none';
+    for (var i = 1; i <= 3; i++) {
+      var num = g('snum-' + i), lbl = g('slbl-' + i);
+      num.className = 'step-num'; lbl.className = 'step-label';
+      if (i < n) { num.classList.add('done'); lbl.classList.add('done'); num.textContent = 'v'; }
+      else if (i === n) { num.classList.add('active'); lbl.classList.add('active'); num.textContent = String(i); }
+    }
+  }
+
+  function markSelected(radio) {
+    var group = radio.closest('.radio-group');
+    group.querySelectorAll('.radio-option').forEach(function(o) { o.classList.remove('selected'); });
+    radio.closest('.radio-option').classList.add('selected');
+  }
+
+  // Eligibility radios
+  g('rg-arc').querySelectorAll('input[type="radio"]').forEach(function(r) {
+    r.addEventListener('change', function() {
+      markSelected(this);
+      if (this.value.indexOf('No') === 0) { arcVal = this.value; goInelig(); }
+    });
+  });
+  g('rg-edu').querySelectorAll('input[type="radio"]').forEach(function(r) {
+    r.addEventListener('change', function() {
+      markSelected(this);
+      if (this.value.indexOf('Neither') === 0) { eduVal = this.value; goInelig(); }
+    });
+  });
+
+  function goInelig() {
+    hide('sec-elig');
+    show('sec-inelig');
+    g('form-card-header') && g('form-card-header').classList.add('hidden');
+    var hero = document.querySelector('.hero'); if (hero) hero.style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Continue button
+  g('btn-check-elig').addEventListener('click', function() {
+    var arcIn = document.querySelector('#rg-arc input:checked');
+    var eduIn = document.querySelector('#rg-edu input:checked');
+    if (!arcIn || !eduIn) {
+      alert('Please answer both questions before continuing.\n請回答兩個問題後再繼續。');
+      return;
+    }
+    arcVal = arcIn.value;
+    eduVal = eduIn.value;
+    hide('sec-elig');
+    setStep(2);
+    show('sec-form');
+    g('form-card-header') && g('form-card-header').classList.add('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Form radios - highlight only
+  g('rg-intake').querySelectorAll('input[type="radio"]').forEach(function(r) {
+    r.addEventListener('change', function() {
+      markSelected(this);
+      g('gfq-intake').classList.remove('has-error');
+    });
+  });
+  g('rg-source').querySelectorAll('input[type="radio"]').forEach(function(r) {
+    r.addEventListener('change', function() { markSelected(this); });
+  });
+
+  // Form submit
+  g('reg-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validate()) return;
+    var btn = g('btn-submit');
+    btn.disabled = true; btn.textContent = 'Submitting...';
+    var intakeIn = document.querySelector('#rg-intake input:checked');
+    var sourceIn = document.querySelector('#rg-source input:checked');
+    var data = new FormData();
+    data.append(E.arc,         arcVal);
+    data.append(E.edu,         eduVal);
+    data.append(E.name,        val('f-name'));
+    data.append(E.email,       val('f-email'));
+    var natVal = val('f-nationality') === 'Other / 其他' ? val('f-nationality-other') : val('f-nationality');
+    var uniVal = val('f-university') === 'Other / 其他' ? val('f-university-other') : val('f-university');
+    data.append(E.nationality, natVal);
+    data.append(E.university,  uniVal);
+    data.append(E.major,       val('f-major'));
+    data.append(E.intake,      intakeIn ? intakeIn.value : '');
+    data.append(E.source,      sourceIn ? sourceIn.value : '');
+    data.append(E.comments,    val('f-comments'));
+    fetch(GF, { method: 'POST', mode: 'no-cors', body: data })
+      .then(function() { done(); })
+      .catch(function() { fallback(data); });
+  });
+
+  function fallback(data) {
+    var f = document.createElement('form');
+    f.method = 'POST'; f.action = GF; f.target = 'submit-iframe'; f.style.display = 'none';
+    data.forEach(function(v, k) {
+      var i = document.createElement('input'); i.type = 'hidden'; i.name = k; i.value = v; f.appendChild(i);
+    });
+    document.body.appendChild(f); f.submit();
+    setTimeout(function() { document.body.removeChild(f); done(); }, 1500);
+  }
+
+  function done() {
+    hide('sec-form');
+    for (var i = 1; i <= 3; i++) {
+      var num = g('snum-' + i), lbl = g('slbl-' + i);
+      num.className = 'step-num done'; lbl.className = 'step-label done'; num.textContent = 'v';
+    }
+    show('sec-success');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.retryForm = function() {
+    arcVal = ''; eduVal = '';
+    document.querySelectorAll('input[type="radio"]').forEach(function(r) { r.checked = false; });
+    document.querySelectorAll('.radio-option').forEach(function(o) { o.classList.remove('selected'); });
+    hide('sec-inelig');
+    setStep(1);
+    show('sec-elig');
+    var hdr = g('form-card-header'); if (hdr) hdr.classList.remove('hidden');
+    var hero = document.querySelector('.hero'); if (hero) hero.style.display = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  function validate() {
+    var ok = true;
+    [
+      { id: 'f-name',        qid: 'gfq-name',        fn: function(v) { return v.length > 1; } },
+      { id: 'f-email',       qid: 'gfq-email',       fn: function(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); } },
+      { id: 'f-nationality', qid: 'gfq-nationality', fn: function(v) {
+          if (v !== 'Other / 其他') return v !== '';
+          return g('f-nationality-other').value.trim().length > 0;
+        } },
+      { id: 'f-university',  qid: 'gfq-university',  fn: function(v) {
+          if (v !== 'Other / 其他') return v !== '';
+          return g('f-university-other').value.trim().length > 0;
+        } },
+      { id: 'f-major',       qid: 'gfq-major',       fn: function(v) { return v.length > 1; } }
+    ].forEach(function(f) {
+      var elem = g(f.id), blk = g(f.qid);
+      if (!elem || !blk) return;
+      if (!f.fn(elem.value.trim())) { blk.classList.add('has-error'); ok = false; }
+      else blk.classList.remove('has-error');
+    });
+    var intakeChecked = document.querySelector('#rg-intake input:checked');
+    var intakeBlk = g('gfq-intake');
+    if (!intakeChecked) { intakeBlk.classList.add('has-error'); ok = false; }
+    else intakeBlk.classList.remove('has-error');
+    if (!ok) {
+      var first = document.querySelector('.has-error');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    return ok;
+  }
+
+  // Show/hide "Other" text inputs
+  g('f-nationality').addEventListener('change', function() {
+    var other = g('f-nationality-other');
+    other.style.display = this.value === 'Other / 其他' ? 'block' : 'none';
+    if (this.value !== 'Other / 其他') other.value = '';
+    g('gfq-nationality').classList.remove('has-error');
+  });
+  g('f-university').addEventListener('change', function() {
+    var other = g('f-university-other');
+    other.style.display = this.value === 'Other / 其他' ? 'block' : 'none';
+    if (this.value !== 'Other / 其他') other.value = '';
+    g('gfq-university').classList.remove('has-error');
+  });
+
+  // Clear errors on input
+  ['f-name','f-email','f-nationality','f-university','f-major',
+   'f-nationality-other','f-university-other'].forEach(function(id) {
+    var elem = g(id); if (!elem) return;
+    ['input', 'change'].forEach(function(ev) {
+      elem.addEventListener(ev, function() {
+        var q = elem.closest('.gf-question'); if (q) q.classList.remove('has-error');
+      });
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
