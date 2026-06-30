@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/api/yaho-news"
+  to = "https://yaho-sooty.vercel.app/api/home"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/api/yaho-news"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
