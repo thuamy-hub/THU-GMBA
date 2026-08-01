@@ -7,8 +7,8 @@
   <meta property="og:title" content="Tunghai University GMBA | Lead in the AI Era from Taiwan">
   <meta property="og:description" content="Get your MBA at the center of global AI supply chains. Tunghai GMBA — fully English-taught in Taichung, Taiwan.">
   <meta property="og:url" content="https://gmba.thu.edu.tw/">
-  <link rel="alternate" hreflang="en" href="index.html">
-  <link rel="alternate" hreflang="zh-TW" href="index-zh.html">
+  <link rel="alternate" hreflang="en" href="academics.html">
+  <link rel="alternate" hreflang="zh-TW" href="academics-zh.html">
   <title>Tunghai University GMBA | Lead in the AI Era from Taiwan's Innovation Core</title>
 <style>
   @font-face {
@@ -118,12 +118,10 @@
     .hero-slide-main {
       color: var(--white);
       background:
-        linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.28) 42%, rgba(0,0,0,0.04) 100%),
-        url('./鐘樓.jpg') center 40% / cover no-repeat;
-      min-height: 540px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+        linear-gradient(135deg, rgba(122,20,34,0.78) 0%, rgba(58,10,16,0.85) 55%, rgba(24,4,8,0.92) 100%),
+        url('https://upload.wikimedia.org/wikipedia/commons/d/de/Wen_Li_Da_Dao.jpg') center / cover no-repeat;
+      color: var(--white);
+      align-items: flex-end;
       width: 100%;
       padding: 2rem 2rem 4rem;
     }
@@ -162,6 +160,28 @@
 
         }
   
+    /* ── Page header strip ── */
+    .page-hero-strip {
+      background: var(--white);
+      padding: 3rem 0 2.5rem;
+      border-top: 4px solid var(--maroon);
+    }
+    .page-hero-strip .ph-tag {
+      font-size: 0.68rem; font-weight: 800; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--maroon);
+      margin-bottom: 0.5rem; display: block; opacity: 0.75;
+    }
+    .page-hero-strip h1 {
+      font-size: clamp(44px,6.5vw,80px); font-weight: 900;
+      line-height: 1.0; color: var(--maroon); margin: 0;
+      text-transform: uppercase; letter-spacing: -0.01em;
+    }
+    .page-hero-strip p {
+      color: var(--ink-3); margin-top: 1rem;
+      font-size: 1rem; max-width: 560px; line-height: 1.65;
+    }
+
+    
     /* ===== SITE FOOTER ===== */
     .site-footer {
       background: #1A0A0E;
@@ -173,7 +193,7 @@
 
     .footer-main {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 2rem 2rem;
       max-width: 1300px;
       margin: 0 auto;
@@ -236,9 +256,6 @@
     @media(max-width:680px) {
       .footer-main { grid-template-columns: repeat(2,1fr); padding: 2.5rem 1.2rem 2rem; }
       .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: .5rem; }
-      .footer-col { text-align: center; }
-      .footer-col-title { text-align: center; }
-      .footer-col ul { text-align: center; }
     }
     @media(max-width:400px) {
       .footer-main { grid-template-columns: 1fr; }
@@ -308,7 +325,7 @@
           {"@type": "Question","name": "What visa and ARC do international students need?","acceptedAnswer": {"@type": "Answer","text": "Apply for a Resident Visa (type FS) at a ROC representative office before arrival. Do not enter on a landing visa — it cannot be converted to an ARC. After arrival, OIR assists new students to obtain the ARC collectively. The ARC must be renewed annually, at least 3 months before expiry."}},
           {"@type": "Question","name": "What health insurance do GMBA students have?","acceptedAnswer": {"@type": "Answer","text": "All international students are automatically enrolled in Group Medical Insurance upon arrival. After 6 months of continuous residence with a valid ARC, they transition to National Health Insurance (NHI). To claim: bring diagnosis certificate and receipt to OIR."}},
           {"@type": "Question","name": "Do GMBA students need to speak Chinese?","acceptedAnswer": {"@type": "Answer","text": "No. All courses, assignments, and thesis are conducted entirely in English. Administrative procedures including ARC, insurance, and work permits are handled in English by OIR. Optional Chinese courses are available at the on-campus Chinese Language Center."}},
-          {"@type": "Question","name": "What are living costs in Taichung?","acceptedAnswer": {"@type": "Answer","text": "Monthly living costs in Taichung are approximately NT$11,000–16,200 (around USD 340–505), covering accommodation, food, and transport. On-campus dormitories are available with limited spots; off-campus rental in the Xitun area runs approximately NT$30,000–48,000 per semester. Estimated total cost per semester is around NT$100,000."}},
+          {"@type": "Question","name": "What are living costs in Taichung?","acceptedAnswer": {"@type": "Answer","text": "Monthly living costs in Taichung are approximately NT$12,000–18,000 (around USD 370–550), covering accommodation, food, and transport. On-campus dormitories are available with limited spots; off-campus rental in the Xitun area runs approximately NT$30,000–48,000 per semester. Estimated total cost per semester is around NT$100,000."}},
           {"@type": "Question","name": "Can GMBA students work or intern while studying?","acceptedAnswer": {"@type": "Answer","text": "Yes — up to 20 hours per week during semester, with no limit during breaks. Both part-time work and internships require a work permit. Apply online at ezwp.wda.gov.tw with student ID, passport, ARC, and enrollment certificate. Working without a permit carries fines of NT$30,000–150,000 and forced departure."}},
           {"@type": "Question","name": "Can GMBA graduates stay in Taiwan to work after graduation?","acceptedAnswer": {"@type": "Answer","text": "Yes. After receiving the diploma, graduates may extend their ARC for up to 1 year for job-seeking. Full-time employment requires employer sponsorship via the Point-Based System. A separate MOE post-graduation internship program is also available for international graduates."}},
           {"@type": "Question","name": "What are the admission requirements for Tunghai GMBA, and how do I apply?","acceptedAnswer": {"@type": "Answer","text": "Applicants must hold a bachelor's degree. There are three applicant categories: International Students (Overseas), Already in Taiwan / Taiwan Nationals, and Overseas Compatriots (僑生) — each with different application windows and portals. Email gmba@thu.edu.tw for eligibility guidance."}}
@@ -354,9 +371,9 @@
       background: var(--maroon); border-bottom: none;
       padding: 0;
       display: flex; align-items: stretch; justify-content: flex-start;
+      position: sticky; top: 0; z-index: 600;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       min-height: 56px;
-      position: sticky; top: 36px; z-index: 600;
     }
     .nav-logo {
       text-decoration: none; cursor: pointer;
@@ -423,7 +440,7 @@
       display: flex; align-items: stretch;
       filter: drop-shadow(-3px 2px 10px rgba(0,0,0,0.22));
       opacity: 0; pointer-events: none;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.3s ease;
     }
     .float-sidebar.visible { opacity: 1; pointer-events: auto; }
     .float-tab {
@@ -466,7 +483,6 @@
     .announce {
       background: var(--gold); color: var(--ink); text-align: center;
       padding: 0.55rem 1.5rem; font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.06em;
-      position: sticky; top: 0; z-index: 700;
     }
     .announce a { color: var(--ink); }
 
@@ -474,15 +490,15 @@
     .hero {
       /* background moved to .hero-slide-main */
     }
-    .hero-in { width: 100%; display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; }
+    .hero-in { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr 330px; gap: 60px; align-items: end; }
     .hero-tag {
-      display: inline-block; background: rgba(0,0,0,0.55); color: var(--gold);
+      display: inline-block; background: rgba(255,255,255,0.08); color: var(--gold);
       font-size: var(--t-tag); font-weight: 800; letter-spacing: 0.16em;
       text-transform: uppercase; padding: 5px 14px; margin-bottom: 1.5rem;
-      border: 1px solid rgba(184,146,42,0.65);
+      border: 1px solid rgba(184,146,42,0.35);
     }
-    .hero h1 { font-family: var(--ff-num); font-size: var(--t-hero); font-weight: 900; line-height: 0.93; margin-bottom: 1.5rem; text-shadow: 0 2px 12px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4); }
-    .hero h1 em { color: var(--gold); font-style: normal; text-shadow: 0 2px 8px rgba(0,0,0,0.65), 0 0 20px rgba(0,0,0,0.3); }
+    .hero h1 { font-family: var(--ff-num); font-size: var(--t-hero); font-weight: 900; line-height: 0.93; margin-bottom: 1.5rem; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
     .hero-lead { font-size: var(--t-body); color: rgba(255,255,255,0.8); max-width: 560px; margin-bottom: 2rem; }
     .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn-gold { background: var(--gold); color: var(--ink); text-decoration: none; padding: 0.85rem 1.8rem; font-weight: 800; font-size: 0.88rem; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.15s; display: inline-block; }
@@ -491,7 +507,7 @@
     .btn-outline:hover { border-color: var(--white); }
 
     /* DEADLINE CARD */
-    .dl-card { flex-shrink: 0; width: 300px; background: rgba(0,0,0,0.40); border: 1px solid rgba(255,255,255,0.18); padding: 1.6rem; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    .dl-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); padding: 1.6rem; }
     .dl-card-title { font-size: var(--t-tag); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
     .dl-item { margin-bottom: 1.1rem; }
     .dl-item-label { font-size: var(--t-xs); font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; }
@@ -501,11 +517,11 @@
 
     /* STATS */
     .stats { background: var(--white); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-    .stats-in { max-width: 1240px; margin: 0 auto; padding-left: 1.5rem; padding-right: max(1.5rem, calc(155px - (100vw - 1240px) * 0.5)); display: grid; grid-template-columns: repeat(5, 1fr); overflow: hidden; }
+    .stats-in { max-width: 1240px; margin: 0 auto; padding-left: 1.5rem; padding-right: max(1.5rem, calc(155px - (100vw - 1240px) * 0.5)); display: grid; grid-template-columns: repeat(5, 1fr); }
     .stat-cell { padding: 24px 16px; text-align: center; border-right: 1px solid rgba(255,255,255,0.2); }
     .stat-cell:last-child { border-right: none; }
     .stat-num { font-family: var(--ff-num); font-size: 40px; font-weight: 900; color: var(--maroon); display: block; line-height: 1; }
-    .stat-label { font-size: 15px; font-weight: 700; color: var(--ink-3); letter-spacing: 0.03em; margin-top: 6px; display: block; word-break: keep-all; overflow-wrap: break-word; }
+    .stat-label { font-size: 15px; font-weight: 700; color: var(--ink-3); letter-spacing: 0.03em; margin-top: 6px; display: block; }
 
     /* SECTIONS */
     section { padding: 76px 2.5rem; }
@@ -526,12 +542,12 @@
     /* AI CALLOUT */
     .ai-callout { background: var(--white); color: var(--ink); padding: 2rem 2.4rem; margin-bottom: 2.5rem; border-left: 6px solid var(--gold); }
     .ai-callout h3 { font-family: var(--ff-num); font-size: var(--t-h3); font-weight: 900; color: var(--maroon); margin-bottom: 0.7rem; }
-    .ai-callout p { font-size: var(--t-sm); color: var(--ink-3); line-height: 1.75; }
+    .ai-callout p { font-size: 18px; color: var(--ink-3); line-height: 1.75; }
 
     /* FEATURE CARDS */
     .cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 2rem; }
-    .card { background: var(--white); border-top: 4px solid var(--maroon); padding: 1.4rem 1.3rem; }
-    .dark-bg .card { background: var(--white); border-left-color: var(--maroon); color: var(--ink); }
+    .card { background: #f5ecec; border-left: 4px solid var(--maroon); border-top: none; border-radius: 0 8px 8px 0; padding: 1.4rem 1.3rem; }
+    .dark-bg .card { background: var(--cream); border-left-color: var(--maroon); color: var(--ink); }
     .dark-bg .card h3 { color: var(--maroon); }
     .card-num { font-family: var(--ff-num); font-size: 34px; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
     .card h3 { font-family: var(--ff-num); font-size: var(--t-h3); font-weight: 900; letter-spacing: 0.06em; color: var(--maroon); margin-bottom: 0.45rem; }
@@ -556,7 +572,8 @@
 
     /* CURRICULUM GRID */
     .curriculum-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
-    .cur-card { background: var(--cream); padding: 1.2rem 1.3rem 1.5rem; border-bottom: 3px solid var(--maroon); display: flex; flex-direction: column; }
+    .cur-card { background: #e8f0fa; padding: 1.2rem 1.3rem 1.5rem; border-left: 4px solid #1a3a6b; border-bottom: none; border-radius: 0 8px 8px 0; display: flex; flex-direction: column; }
+    .cur-card:nth-child(2) { background: #fdf0e8; border-left-color: #c94b0a; }
     .cur-year { font-size: var(--t-tag); font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--maroon); margin-bottom: 0.5rem; }
     .cur-card h3 { font-family: var(--ff-num); font-size: 24px; font-weight: 900; margin-bottom: 0.6rem; color: var(--ink); }
     .cur-card ul { list-style: none; }
@@ -627,7 +644,7 @@
     .ps-label { font-size: 13px; font-weight: 800; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; display: block; }
 
     /* FOOTER */
-    /* removed conflicting footer rule */
+    footer { background: #2A0810; color: #666; text-align: center; padding: 2rem; font-size: 0.82rem; }
     footer a { color: #999; }
     .lang-sw { margin-top: 1rem; }
     .lang-sw a { color: #999; margin: 0 0.5rem; font-weight: 700; font-size: 0.85rem; }
@@ -641,13 +658,13 @@
       .nav-item > a { font-size: 0.76rem; padding: 0 0.28rem; }
     }
     @media (max-width: 960px) {
-      .hero-in { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .hero-in { grid-template-columns: 1fr; }
       .dl-card { display: none; }
       .stats-in { grid-template-columns: repeat(3, 1fr); }
       .two-col { grid-template-columns: 1fr; gap: 2rem; }
       .cards-3 { grid-template-columns: 1fr; }
       .faq-cols { grid-template-columns: 1fr; }
-      .curriculum-grid { grid-template-columns: 1fr; }
+      .curriculum-grid { grid-template-columns: 1fr !important; }
       .faculty-grid { grid-template-columns: 1fr; }
       .profile-stats { grid-template-columns: repeat(2, 1fr); }
       /* Mobile nav */
@@ -670,15 +687,6 @@
       .nav-dropdown a { color: rgba(255,255,255,0.8) !important; padding: 0.6rem 1.4rem 0.6rem 2rem; }
       .nav-dropdown a:hover { background: rgba(255,255,255,0.1); color: #fff !important; }
       .lang-btn { margin: 0.75rem 1.4rem; align-self: flex-start; }
-      .nav-apply-mobile {
-        display: flex; align-items: center; justify-content: center;
-        margin: 0.6rem 1.4rem 1rem;
-        background: var(--gold); color: var(--ink);
-        font-size: 0.82rem; font-weight: 900; letter-spacing: 0.08em;
-        text-transform: uppercase; text-decoration: none;
-        padding: 0.7rem 1.2rem; border-radius: 3px;
-        align-self: stretch;
-      }
       .nav-contact-mobile {
         display: flex; align-items: center; justify-content: center;
         margin: 0 1.4rem 0.6rem;
@@ -690,32 +698,20 @@
         align-self: stretch;
       }
       .nav-contact-mobile:hover { border-color: var(--gold); color: var(--gold); }
+      .nav-apply-mobile {
+        display: flex; align-items: center; justify-content: center;
+        margin: 0.6rem 1.4rem 1rem;
+        background: var(--gold); color: var(--ink);
+        font-size: 0.82rem; font-weight: 900; letter-spacing: 0.08em;
+        text-transform: uppercase; text-decoration: none;
+        padding: 0.7rem 1.2rem; border-radius: 3px;
+        align-self: stretch;
+      }
     }
     @media (max-width: 600px) {
-      .stats-in { grid-template-columns: repeat(3, 1fr); gap: 1rem 0; padding: 1rem 1.2rem; }
-      .stat-num { font-size: 32px; }
-      .stat-label { font-size: 12px; letter-spacing: 0; }
-      .stat-cell { padding: 1rem 0.5rem; }
+      .stats-in { grid-template-columns: repeat(2, 1fr); }
     }
   
-
-    /* ===== MOBILE HERO FIX ===== */
-    @media (max-width: 680px) {
-      :root { --t-hero: clamp(32px, 8vw, 48px); }
-      .hero-in { flex-direction: column; align-items: flex-start; gap: 1rem; }
-      .dl-card { display: none; }
-      .hero-slide-main { min-height: 480px; }
-      .hero-lead { font-size: 14px; max-width: 90%; }
-      .sec-in { padding-left: 1.2rem; padding-right: 1.2rem; }
-    }
-
-
-    @media (max-width: 480px) {
-      .sec-in { padding-left: 1.2rem; padding-right: 1.2rem; }
-      .sv-row-photo { height: 260px; }
-      .hero-tag { font-size: 10px; }
-    }
-
     /* ===== PAGE SWITCH TRANSITION ===== */
     html { scroll-behavior: auto !important; }
     #page-overlay {
@@ -739,7 +735,7 @@
     .nc-date { font-size: 12px; color: var(--ink-3); margin-bottom: .5rem; }
     .nc-title { font-size: 15px; font-weight: 800; line-height: 1.45; color: var(--ink); margin-bottom: .7rem; flex: 1; }
     .nc-excerpt { font-size: 13px; color: var(--ink-3); line-height: 1.65; margin-bottom: 1rem; }
-    .nc-/* removed conflicting footer rule */
+    .nc-footer { padding: .75rem 1.6rem; border-top: 1px solid var(--rule); background: var(--cream); }
     .nc-link { font-size: 12px; font-weight: 700; color: var(--maroon); text-decoration: none; letter-spacing: .04em; }
     .nc-link:hover { text-decoration: underline; }
     .news-source { font-size: 12px; color: var(--ink-3); margin-top: 1.5rem; text-align: right; }
@@ -784,7 +780,34 @@
     /* Video embed aspect ratio */
     .video-thumb{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;}
     .video-thumb iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
-    </style>
+    
+/* dark-bg child element overrides */
+.dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg .sec-tag,
+.dark-bg .sec-lead, .dark-bg p, .dark-bg li { color: inherit; }
+.dark-bg details { border-bottom-color: var(--rule); }
+.dark-bg details:first-child { border-top-color: var(--rule); }
+.dark-bg summary { color: var(--ink); }
+.dark-bg summary::after { border-color: var(--ink); }
+.dark-bg a { color: var(--maroon); }
+.dark-bg a:hover { color: var(--maroon-hover); }
+.dark-bg .faq-cols .sec-tag { color: var(--gold-lt); opacity: 1; }
+.dark-bg strong { color: inherit; }
+
+/* ===== Faculty v2 Preview ===== */
+.fv2-domain{margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid #e0dbd5;}
+.fv2-domain:last-of-type{border-bottom:none;margin-bottom:0;}
+.fv2-domain-head{display:flex;align-items:center;gap:1.25rem;margin-bottom:1.25rem;}
+.fv2-num{font-family:'Inter',sans-serif;font-size:2.2rem;font-weight:900;color:var(--gold);line-height:1;min-width:3.2rem;letter-spacing:-.02em;}
+.fv2-label{font-size:var(--t-h3);font-weight:800;color:var(--maroon);line-height:1.2;}
+.fv2-sub{font-size:var(--t-xs);color:var(--ink-3);margin-top:.3rem;font-weight:400;}
+.fv2-cards{display:flex;flex-wrap:wrap;gap:1.5rem 1.25rem;}
+.fv2-card{display:flex;flex-direction:column;align-items:center;text-decoration:none;width:auto;min-width:120px;padding:1rem 1rem;border-radius:8px;transition:box-shadow .15s,background .15s;}
+.fv2-card:hover{background:#faf9f7;box-shadow:0 2px 12px rgba(0,0,0,.08);}
+.fv2-photo{width:130px;height:130px;border-radius:50%;overflow:hidden;border:3px solid var(--maroon);margin-bottom:.6rem;flex-shrink:0;}
+.fv2-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;}
+.fv2-name{font-size:15px;font-weight:700;color:var(--ink);text-align:center;line-height:1.35;white-space:nowrap;}
+.fv2-rank{font-size:12px;color:var(--ink-3);text-align:center;margin-top:.25rem;}
+</style>
 <script>
 (function(){
   if(sessionStorage.getItem('lang-manual')) return;
@@ -819,162 +842,63 @@
     });
 })();
 </script>
-  <style>
-    /* ===== MOBILE OPTIMISATION (2026-06-23) ===== */
-    html { overflow-x: hidden; }
-    body { max-width: 100vw; }
-    img { max-width: 100%; height: auto; display: block; }
+
+    
+
+    <style>
+    /* ===== OVERFLOW FIX (2026-06-23) ===== */
+    html { overflow-x: clip; }
+    body { overflow-x: clip; max-width: 100vw; }
     @media (max-width: 768px) {
       .sec-in { padding-left: 1.2rem !important; padding-right: 1.2rem !important; }
-      .container { padding-left: 1.2rem !important; padding-right: 1.2rem !important; }
       .float-sidebar { display: none !important; }
-      .dl-card { display: none !important; }
-      .hero-in { flex-direction: column !important; align-items: flex-start !important; }
-      :root { --t-hero: clamp(32px,8vw,48px); }
-      .hero-lead { font-size: 14px !important; max-width: 90% !important; }
-      .stats-in { grid-template-columns: repeat(3,1fr) !important; padding: 1rem 1.2rem !important; }
-      .stat-num { font-size: 32px !important; }
-      .stat-label { font-size: 12px !important; }
-      .stat-cell { padding: 1rem 0.5rem !important; }
-      .two-col { grid-template-columns: 1fr !important; gap: 2rem !important; }
-      .cards-3 { grid-template-columns: 1fr !important; }
-      .about-split { grid-template-columns: 1fr !important; }
-      .about-img { min-height: 280px !important; }
-      .faq-cols { grid-template-columns: 1fr !important; }
-      .curriculum-grid { grid-template-columns: 1fr !important; }
-      .faculty-grid { grid-template-columns: repeat(2,1fr) !important; }
-      .profile-stats { grid-template-columns: repeat(2,1fr) !important; }
-      .sv-row { flex-direction: column-reverse !important; padding: 0 !important; }
-      .sv-row-photo { width: 100% !important; height: 260px !important; margin-left: 0 !important; }
-      table.record-table, table.record-table thead, table.record-table tbody,
-      table.record-table th, table.record-table td, table.record-table tr { display: block !important; }
-      table.record-table thead { display: none !important; }
-      table.record-table tr { margin-bottom:1rem; border:1px solid #ddd; border-radius:8px; padding:0.75rem; }
-      table.record-table td { position:relative; padding:0.4rem 0 0.4rem 42%; border:none; }
-      table.record-table td::before { content:attr(data-label); position:absolute; left:0; width:38%; font-weight:600; color:#6B0F1A; }
-      .vid-grid { grid-template-columns: 1fr !important; }
-      .video-grid { grid-template-columns: 1fr !important; }
+      img, table, iframe, video { max-width: 100%; }
     }
-    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; position:relative; }
-    .table-wrapper table.compare-table th:first-child,
-    .table-wrapper table.compare-table td:first-child { position:sticky; left:0; background:#fff; z-index:1; box-shadow:2px 0 4px rgba(0,0,0,.06); }
-    .table-wrapper::after { content:''; position:absolute; top:0;right:0;bottom:0;width:24px;background:linear-gradient(to right,transparent,rgba(0,0,0,.08));pointer-events:none; }
-    .video-wrapper { aspect-ratio:16/9; width:100%; }
-    .video-wrapper iframe { width:100%; height:100%; border:0; }
-    /* Compare table: compact on mobile to show ≥2 city columns */
-    @media (max-width: 640px) {
-      .table-wrapper table.compare-table th,
-      .table-wrapper table.compare-table td { font-size: 12px !important; padding: 0.35rem 0.55rem !important; }
-      .table-wrapper table.compare-table th:first-child,
-      .table-wrapper table.compare-table td:first-child { min-width: 58px; }
-    }
-    /* ===== END MOBILE OPTIMISATION ===== */
-  </style>
-  <style>
-    /* ===== INLINE GRID MOBILE OVERRIDE (2026-06-23) ===== */
-    @media (max-width: 768px) {
-      [style*="grid-template-columns:2fr"],[style*="grid-template-columns: 2fr"],
-      [style*="grid-template-columns:3fr"],[style*="grid-template-columns: 3fr"],
-      [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"],
-      [style*="grid-template-columns:1fr 2fr"],[style*="grid-template-columns: 1fr 2fr"],
-      [style*="grid-template-columns:1fr 3fr"],[style*="grid-template-columns: 1fr 3fr"],
-      [style*="grid-template-columns:1fr 220px"],[style*="grid-template-columns: 1fr 220px"],
-      [style*="grid-template-columns:1fr 300px"],[style*="grid-template-columns: 1fr 300px"],
-      [style*="grid-template-columns:repeat(2"],[style*="grid-template-columns: repeat(2"],
-      [style*="grid-template-columns:repeat(4"],[style*="grid-template-columns: repeat(4"],
-      [style*="grid-template-columns:repeat(5"],[style*="grid-template-columns: repeat(5"] {
-        grid-template-columns: 1fr !important;
-      }
-      [style*="grid-template-columns:1fr 82px 82px"],[style*="grid-template-columns: 1fr 82px 82px"] {
-        grid-template-columns: 1fr auto auto !important;
-        font-size: 13px !important;
-      }
-    }
-    /* ===== END INLINE GRID OVERRIDE ===== */
-  </style>
-<style>
-  /* ===== MOBILE LAYOUT FIX 2 (2026-06-23) ===== */
-  @media (max-width: 768px) {
-    /* Faculty cards — 2 per row */
-    .fv2-cards { gap: 0.75rem !important; }
-    .fv2-card { flex: 0 0 calc(50% - 0.5rem) !important; min-width: 0 !important; max-width: calc(50% - 0.5rem) !important; padding: 0.75rem 0.4rem !important; }
-    .fv2-photo { width: 80px !important; height: 80px !important; }
-    .fv2-name { font-size: 13px !important; text-align: center !important; }
-    /* Tables — horizontal scroll */
-    table:not(.record-table) { display: block !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; }
-    table:not(.record-table) th { white-space: nowrap !important; }
-    table:not(.record-table) td { min-width: 80px !important; }
-    /* Admissions 4-col grid (2.5fr 1.5fr 1.5fr 1.5fr) */
-    [style*="grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr"],
-    [style*="grid-template-columns: 2.5fr 1.5fr 1.5fr 1.5fr"] {
-      grid-template-columns: 2fr 1fr 1fr 1fr !important;
-      gap: 0.4rem !important;
-      padding: 0.7rem 0.7rem !important;
-      font-size: 13px !important;
-    }
-    [style*="grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr"] a,
-    [style*="grid-template-columns: 2.5fr 1.5fr 1.5fr 1.5fr"] a {
-      font-size: 12px !important;
-      padding: 0.15rem 0.35rem !important;
-    }
-  }
-  /* ===== END MOBILE LAYOUT FIX 2 ===== */
-</style>
+    </style>
+
+    
+
 <style>
 /* ===== COMPREHENSIVE MOBILE FIX 2026-06-24 ===== */
 @media (max-width: 640px) {
-
-  /* 1. Heading sizes */
   :root {
     --t-hero: clamp(28px, 8vw, 42px) !important;
     --t-h2:   clamp(22px, 6.5vw, 30px) !important;
-    --t-h2zh: clamp(20px, 6vw, 28px) !important;
   }
   h2 { font-size: clamp(22px, 6.5vw, 30px) !important; line-height: 1.2 !important; }
   h3 { font-size: clamp(17px, 5vw, 22px) !important; }
   .page-hero-strip h1 { font-size: clamp(28px, 8vw, 40px) !important; }
-  .hero-feature-title { font-size: clamp(18px, 5vw, 26px) !important; }
-  .feature-story-left h3 { font-size: 1.25rem !important; }
-
-  /* 2. Fix testimonial flex sidebar crushing heading width */
-  [style*="gap:4rem"] {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-  }
-  [style*="width:260px"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 3. Page-hero-strip padding */
-  .page-hero-strip { padding: 1.5rem 0 1.2rem !important; }
-
-  /* 4. Container padding */
+  [style*="gap:4rem"] { flex-direction: column !important; gap: 1.5rem !important; }
+  [style*="width:260px"] { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
   .container { padding-left: 1rem !important; padding-right: 1rem !important; }
-
-  /* 5. Scholarship box */
-  .schol-box { padding: 1.1rem 1rem !important; }
-  .schol-box h3 { font-size: 20px !important; }
-
-  /* 6. Section lead text */
-  .sec-lead { font-size: 15px !important; line-height: 1.6 !important; }
-
-  /* 7. Info-session button full width */
-  .info-session-btn { width: 100% !important; box-sizing: border-box !important; }
-
-  /* 8. Announce bar */
-  .announce { font-size: 13px !important; padding: 0.45rem 1rem !important; position: relative !important; }
-  nav { top: 0 !important; }
+  /* elective column-count:2 -> single column */
+  [style*="column-count:2"] { column-count: 1 !important; }
+  /* Calendar grid: stack on mobile */
+  [style*="grid-template-columns:1fr 300px"] { grid-template-columns: 1fr !important; }
+  /* Faculty: 2-per-row on mobile */
+  .fv2-cards { display: grid !important; grid-template-columns: repeat(2,1fr) !important; gap: 1rem !important; align-items: start !important; }
+  .fv2-card { min-width: unset !important; width: 100% !important; max-width: 100% !important; padding: 0.75rem 0.5rem !important; }
+  .fv2-photo { width: 88px !important; height: 88px !important; }
+  .fv2-name { font-size: 13px !important; white-space: normal !important; }
+  /* Layer cards: 4-col → 2×2 on mobile */
+  [style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: repeat(2,1fr) !important; }
+  /* Curriculum summary: 2-col → 1-col on mobile */
+  .curriculum-grid { grid-template-columns: 1fr !important; }
 }
+/* nav-item link height fix */
+@media (max-width: 960px) {
+  .nav-items .nav-item > a { height: auto !important; min-height: 44px !important; }
+}
+  /* Calendar table mobile */
+  .record-table { table-layout: fixed !important; width: 100% !important; }
+  .record-table th:nth-child(1), .record-table td:nth-child(1) { width: 32% !important; }
+  .record-table th:nth-child(2), .record-table td:nth-child(2) { width: 38% !important; }
+  .record-table th:nth-child(3), .record-table td:nth-child(3) { width: 30% !important; padding: 0.6rem 0.4rem !important; }
+  .cal-badge { font-size: 10px !important; padding: 2px 4px !important; letter-spacing: 0 !important; white-space: normal !important; word-break: break-all !important; line-height: 1.3 !important; }
 /* ===== END COMPREHENSIVE MOBILE FIX ===== */
 </style>
-
 </head>
 <body>
-<div class="announce" role="alert">
-  📢 Tunghai partners with Chunghwa Telecom &amp; Google to lead Taiwan in adopting enterprise AI agent platform Gemini Enterprise.
-</div>
 
 <a href="#maincontent" class="skip-link">Skip to main content</a>
 
@@ -987,14 +911,15 @@
     <span id="floatArrow">▶</span>
   </button>
   <div class="float-panel" id="floatPanel">
-    <a href="admissions.html#admissions" rel="noopener" class="float-item">
+    <a href="admissions.html" class="float-item">
       <span class="float-icon">✎</span>
       <span>Apply Now</span>
     </a>
-    <a href="#" onclick="event.preventDefault();openContactModal();" class="float-item">
+    <a href="#" onclick="openContactModal();return false;" class="float-item">
       <span class="float-icon">✉</span>
-      <span>Contact</span>
+      <span>Contact Us</span>
     </a>
+
   </div>
 </div>
 
@@ -1005,12 +930,12 @@
   <div class="nav-links">
     <div class="nav-items" id="navItems">
             <div class="nav-item">
-        <a href="#why-gmba">Why THU GMBA <span class="nav-caret">▼</span></a>
+        <a href="index.html">Why THU GMBA <span class="nav-caret">▼</span></a>
         <div class="nav-dropdown">
           <a href="index.html">About</a>
-          <a href="#class-profile">Class Profile</a>
-          <a href="#living-in-taiwan">Why Taiwan?</a>
-          <a href="#campus-life">Campus Life</a>
+          <a href="index.html#class-profile">Class Profile</a>
+          <a href="index.html#living-in-taiwan">Why Taiwan?</a>
+          <a href="index.html#campus-life">Campus Life</a>
         </div>
       </div>
       <div class="nav-item">
@@ -1033,717 +958,580 @@
       </div>
 
       
-      <a href="index-zh.html" class="lang-btn" onclick="sessionStorage.setItem('lang-manual','1')">中文</a>
+      <a href="academics-zh.html" class="lang-btn" onclick="sessionStorage.setItem('lang-manual','1')">中文</a>
       <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="nav-contact-mobile">✉ Contact Us</a>
       <a href="admissions.html#admissions" class="nav-apply-mobile">✎ Apply Now</a>
     </div>
   </div>
 </nav>
 <main id="maincontent">
-
-<!-- HERO -->
-<header class="hero" role="banner">
-  <div class="hero-slide-main">
-  <div class="hero-in">
-    <div>
-      <div class="hero-tag">Fully English-Taught · Since 2018</div>
-      <h1>Lead the<br><em>AI Era</em><br>from Taiwan</h1>
-      <p class="hero-lead">Get your MBA at the center of the world's AI and semiconductor ecosystem. Tunghai GMBA — where business education meets Asia's innovation core.</p>
-    </div>
-    <aside class="dl-card" aria-label="Application deadlines">
-      <div class="dl-card-title">Application Deadlines</div>
-      <!-- Column headers -->
-      <div style="display:grid;grid-template-columns:1fr 82px 82px;gap:0.3rem;margin-bottom:0.7rem;padding-bottom:0.55rem;border-bottom:1px solid rgba(255,255,255,0.15);">
-        <div></div>
-        <div style="text-align:center;font-size:clamp(10px,2vw,12px);font-weight:800;letter-spacing:0.05em;color:var(--gold);line-height:1.4;">Spring</div>
-        <div style="text-align:center;font-size:clamp(10px,2vw,12px);font-weight:800;letter-spacing:0.05em;color:var(--gold);line-height:1.4;">Fall</div>
+<section id="curriculum" style="background:var(--white);">
+  <div class="container">
+    <div style="display:flex;gap:4rem;align-items:flex-start;">
+      <div style="flex:1;min-width:0;">
+        <h2>Program overview</h2>
+        <p style="font-size:1.1rem;color:var(--ink-3);line-height:1.85;margin-top:1.5rem;max-width:520px;">The curriculum is structured in four deliberate layers — research discipline, AI and data capability, cross-functional application, and strategic leadership — each one building on the last, culminating in the judgment to lead at the highest level.</p>
       </div>
-      <!-- Row 1: International Students (Overseas) — primary -->
-      <div class="dl-item">
-        <div class="dl-item-label">International Students (Overseas)</div>
-        <div style="display:grid;grid-template-columns:1fr 82px 82px;gap:0.3rem;">
-          <div></div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Oct–Nov</div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Jan–May</div>
-        </div>
-      </div>
-      <hr>
-      <!-- Row 2: Already in Taiwan / Taiwan Nationals -->
-      <div class="dl-item">
-        <div class="dl-item-label">Already in Taiwan<br><span style="font-weight:500;font-size:0.82em;opacity:0.65;">(ARC + reg. required)</span><br>Taiwan nationals</div>
-        <div style="display:grid;grid-template-columns:1fr 82px 82px;gap:0.3rem;">
-          <div></div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Oct–Nov</div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Dec–Feb</div>
-        </div>
-      </div>
-      <hr>
-      <!-- Row 3: Overseas Compatriots -->
-      <div class="dl-item">
-        <div class="dl-item-label">Overseas Compatriots<br><span style="font-weight:500;font-size:0.82em;opacity:0.65;">(僑生)</span></div>
-        <div style="display:grid;grid-template-columns:1fr 82px 82px;gap:0.3rem;">
-          <div></div>
-          <div style="text-align:center;color:rgba(255,255,255,0.25);font-size:18px;font-weight:700;">—</div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Apr–Jun</div>
-        </div>
-      </div>
-      <hr>
-      <div style="text-align:center;margin-top:0.5rem;">
-        <a href="#admissions" class="btn-gold" style="padding:0.65rem 1.4rem;font-size:0.78rem;">Start Application →</a>
-      </div>
-    </aside>
-  </div>
-    
-  </div>
-</header>
-
-<!-- STATS BAR -->
-<div id="about" class="stats" aria-label="Key facts">
-  <div class="stats-in">
-    <div class="stat-cell"><span class="stat-num">100%</span><span class="stat-label">English-Taught</span></div>
-    <div class="stat-cell"><span class="stat-num">#1</span><span class="stat-label">Private Uni · QS Asia</span></div>
-    <div class="stat-cell"><span class="stat-num">20+</span><span class="stat-label">Nationalities</span></div>
-    <div class="stat-cell"><span class="stat-num">98.1%</span><span class="stat-label">Intl. Students</span></div>
-    <div class="stat-cell"><span class="stat-num">#85</span><span class="stat-label">THE World Impact</span></div>
-  </div>
-</div>
-
-<!-- ===== WHY THU GMBA ===== -->
-<section id="why-gmba" style="background:var(--white);padding:0;">
-  <style>
-    @media (max-width: 768px) {
-      .about-split { grid-template-columns: 1fr !important; }
-      .about-img { min-height: 300px !important; }
-    }
-  
-/* dark-bg child element overrides */
-.dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg .sec-tag,
-.dark-bg .sec-lead, .dark-bg p, .dark-bg li { color: inherit; }
-.dark-bg details { border-bottom-color: var(--rule); }
-.dark-bg details:first-child { border-top-color: var(--rule); }
-.dark-bg summary { color: var(--ink); }
-.dark-bg summary::after { border-color: var(--ink); }
-.dark-bg a { color: var(--maroon); }
-.dark-bg a:hover { color: var(--maroon-hover); }
-.dark-bg .faq-cols .sec-tag { color: var(--gold-lt); opacity: 1; }
-.dark-bg strong { color: inherit; }
-</style>
-  <div class="about-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:640px;">
-    <!-- Left: Photo -->
-    <div class="about-img" style="overflow:hidden;min-height:500px;">
-      <img src="./Luce Chapel 2.jpg" alt="Tunghai University campus" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;">
-    </div>
-    <!-- Right: Text -->
-    <div style="padding:5rem 4rem 4rem 5rem;display:flex;flex-direction:column;justify-content:center;background:var(--cream);">
-      <h2 style="margin-bottom:2rem;font-weight:900;line-height:1.1;letter-spacing:-0.01em;">What makes Tunghai GMBA different?</h2>
-      <p style="font-size:var(--t-body);color:var(--ink-3);line-height:1.85;margin-bottom:1.5rem;">The future of business belongs to those who can lead across complexity — across cultures, disciplines, and change. That's the leader Tunghai <strong>Global MBA</strong> develops.</p>
-      <p style="font-size:var(--t-body);color:var(--ink-3);line-height:1.85;margin-bottom:1.5rem;">We build that leader through a <strong>fast-track</strong> program structured in four deliberate layers — research discipline, AI and data capability, cross-functional application, and strategic leadership — each building toward the judgment to lead. You'll stand at the center of Taiwan's <strong>AI and semiconductor hub</strong>, among peers from <strong>20+ countries</strong> and faculty from five colleges. You'll study in English and live in Mandarin, graduating fluent in the world's two most spoken languages, with the cross-cultural agility to lead wherever the world takes you.</p>
-      <p style="font-size:1.2rem;font-weight:900;font-family:var(--ff-num);color:var(--ink);line-height:1.3;margin-top:1rem;letter-spacing:0.01em;">Tunghai GMBA — where AI meets humanities.</p>
-      <div id="about-aacsb" style="border-top:1px solid rgba(0,0,0,0.1);margin-top:3rem;padding-top:1.8rem;display:flex;align-items:center;gap:1.5rem;">
-        <a href="https://mana.thu.edu.tw/web/page/page.php?scid=70&sid=92" target="_blank" rel="noopener">
-          <img src="./THU-AACSB-H-PNG.png" alt="AACSB Accredited" style="height:52px;width:auto;">
-        </a>
-        <span style="font-size:0.9rem;color:var(--ink-3);line-height:1.6;">AACSB Accredited<br><strong style="font-size:0.95rem;color:var(--ink);">Top 5% business schools worldwide</strong></span>
+      <div style="flex-shrink:0;width:260px;border-top:2px solid var(--gold);padding-top:1rem;margin-top:.5rem;margin-left:auto;">
+        <span style="font-family:Georgia,serif;font-size:2.8rem;line-height:.8;color:var(--gold);display:block;margin-bottom:.6rem;opacity:.6;">&ldquo;</span>
+        <p style="font-size:16px;font-weight:700;line-height:1.65;color:var(--ink);margin:0 0 1rem;">Most of our learning requires us to face new changes — one of them is AI. We need to be ready for the new technology. That&rsquo;s why most GMBA programs are about AI.</p>
+        <div style="font-size:12px;color:var(--ink-3);letter-spacing:.03em;">Jefferson Adrian &nbsp;&middot;&nbsp; Philippines &nbsp;&middot;&nbsp; GMBA Class of 2023</div>
       </div>
     </div>
+  </div>
+
+  <!-- ── Curriculum Philosophy (Native) ── -->
+  <div class="container" style="padding-top:0;margin-top:3rem;">
+    <div class="sec-rule" style="margin-bottom:1.5rem;"><span class="sec-tag">Curriculum Philosophy</span><span class="rule-line"></span></div>
+    <h2 style="margin-bottom:.5rem;">Not learning AI. <span style="color:var(--gold);">Leading with it.</span></h2>
+    <p class="sec-lead" style="margin-bottom:2rem;">A four-layer framework — every course builds on the last.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:1rem;">
+      <div style="background:#faf7ed;border:0.5px solid #e8ddd0;border-left:4px solid var(--gold-lt);border-top:none;border-radius:0 10px 10px 0;padding:1.4rem 1rem;text-align:left;">
+        <div style="font-family:var(--ff-num);font-size:2.8rem;font-weight:900;color:var(--gold-lt);line-height:1;margin-bottom:6px;">01</div>
+        <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px;">Research Foundation</div>
+        <div style="width:24px;height:2px;background:var(--gold-lt);margin:0 0 10px;"></div>
+        <div style="font-size:0.9rem;font-weight:800;color:var(--maroon);line-height:1.4;">Business Research Methods</div>
+      </div>
+      <div style="background:#faf5e8;border:0.5px solid #e8ddd0;border-left:4px solid var(--gold);border-top:none;border-radius:0 10px 10px 0;padding:1.4rem 1rem;text-align:left;">
+        <div style="font-family:var(--ff-num);font-size:2.8rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;">02</div>
+        <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px;">Core Pivot</div>
+        <div style="width:24px;height:2px;background:var(--gold);margin:0 0 10px;"></div>
+        <div style="font-size:0.9rem;font-weight:800;color:var(--maroon);line-height:1.4;">AI &amp; Data Technology Core</div>
+      </div>
+      <div style="background:#fdf0f0;border:0.5px solid #e8ddd0;border-left:4px solid var(--maroon-hover);border-top:none;border-radius:0 10px 10px 0;padding:1.4rem 1rem;text-align:left;">
+        <div style="font-family:var(--ff-num);font-size:2.8rem;font-weight:900;color:var(--maroon-hover);line-height:1;margin-bottom:6px;">03</div>
+        <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px;">Cross-Functional Application</div>
+        <div style="width:24px;height:2px;background:var(--maroon-hover);margin:0 0 10px;"></div>
+        <div style="font-size:0.9rem;font-weight:800;color:var(--maroon);line-height:1.4;">AI Analytics Across Every Function</div>
+      </div>
+      <div style="background:#f8ecec;border:0.5px solid #e8ddd0;border-left:4px solid var(--maroon);border-top:none;border-radius:0 10px 10px 0;padding:1.4rem 1rem;text-align:left;">
+        <div style="font-family:var(--ff-num);font-size:2.8rem;font-weight:900;color:var(--maroon);line-height:1;margin-bottom:6px;">04</div>
+        <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px;">Top-Level Capability</div>
+        <div style="width:24px;height:2px;background:var(--maroon);margin:0 0 10px;"></div>
+        <div style="font-size:0.9rem;font-weight:800;color:var(--maroon);line-height:1.4;">Leadership · Strategy · Innovation</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container" style="padding-top:0;margin-top:3rem;">
+    <!-- Credits Summary Bar -->
+
+    <div class="curriculum-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="cur-card">
+        <div class="cur-year">Required Courses</div>
+        <h3>Core curriculum</h3>
+        <p style="font-size:1rem;color:var(--ink-3);line-height:1.75;margin-bottom:1.2rem;">Every student begins with the <strong>same required core</strong> — a shared foundation designed to build the depth and <strong>cross-cultural fluency</strong> that global management demands.</p>
+        <ul style="margin-top:2.5rem;">
+          <li>Business Analytics and AI Application (3)</li>
+          <li>Global Leadership and Organizational Behavior (3)</li>
+          <li>Global Supply Chain Management (3)</li>
+          <li>Marketing Analytics (3)</li>
+          <li>Financial Management and Reporting (3)</li>
+          <li>Economics for Global Managers (3)</li>
+          <li>Global Business Management and Strategy (3)</li>
+          <li>Thesis (1)</li>
+        </ul>
+        <div style="flex-grow:1;min-height:2rem;"></div>
+        <div style="margin-left:-1.3rem;margin-right:-1.3rem;margin-bottom:-1.5rem;background:#0D0D0D;border-radius:0 0 8px 0;padding:1.3rem 1.5rem;display:grid;grid-template-columns:repeat(2,1fr);"><div style="text-align:center;"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;color:#fff;line-height:1;">21</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,0.6);margin-top:.3rem;">REQUIRED CREDITS</div></div><div style="text-align:center;"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;color:#fff;line-height:1;">1</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,0.6);margin-top:.3rem;">THESIS</div></div></div>
+      </div>
+      <div class="cur-card">
+        <div class="cur-year">Elective Courses</div>
+        <h3>Minimum 4 courses (8)</h3>
+        <p style="font-size:1rem;color:var(--ink-3);line-height:1.75;margin-bottom:1.2rem;">Electives let you <strong>deepen expertise</strong> in the areas that matter most to your career — from <strong>data analytics to global entrepreneurship</strong>.</p>
+        <ul style="margin-top:2.5rem;column-count:2;column-gap:1.5rem;">
+          <li>Global Entrepreneurship (2)</li>
+          <li>Data Science for Global Managers (2)</li>
+          <li>Business Research Methods (2)</li>
+          <li>Advanced Analytics for Global Market Intelligence (2)</li>
+          <li>Advanced Data Analytics for Financial Information (2)</li>
+          <li>Advanced Analytics for Global Macroeconomics (2)</li>
+          <li>Advanced Data Analytics for Global Investment (2)</li>
+          <li>Database Design and Implementation for Business (2)</li>
+          <li>Marketing Strategy in the Digital Age (2)</li>
+          <li>Global Risk Governance: from Geopolitics to Sustainable Digital Business (2)</li>
+          <li>Interdisciplinary Case Studies (2)</li>
+          <li>Interdisciplinary Studies for Managers (2)</li>
+          <li>Service Innovation in Digital Era (2)</li>
+        </ul>
+        <div style="flex-grow:1;min-height:2rem;"></div>
+        <div style="margin-left:-1.3rem;margin-right:-1.3rem;margin-bottom:-1.5rem;background:#0D0D0D;border-radius:0 0 8px 0;padding:1.3rem 1.5rem;display:grid;grid-template-columns:repeat(2,1fr);"><div style="text-align:center;"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;color:#fff;line-height:1;">8</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,0.6);margin-top:.3rem;">ELECTIVE CREDITS</div></div><div style="text-align:center;"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;color:#B8922A;line-height:1;">30</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,0.6);margin-top:.3rem;">TOTAL CREDITS</div></div></div>
+      </div>
+    </div>
+      </div>
+</section>
+
+<!-- ===== FACULTY ===== -->
+<section id="faculty" style="background:var(--cream);">
+  <div class="container">
+    <h2>Academic excellence meets industry insight</h2>
+    <p class="sec-lead">GMBA faculty hold doctoral degrees from leading universities in Taiwan, the US, Europe, and Asia — and bring that research depth into classrooms shaped by Asia's technology economy.</p>
+
+    <div class="ai-callout" style="margin-bottom:2.5rem;">
+      <h3>One program. Five colleges.</h3>
+      <p>GMBA draws faculty from across Tunghai University — combining business, policy, law, and communication in one curriculum — preparing graduates to lead across sectors and borders.</p>
+    </div>
+
+    <!--  AI, Data & Technology -->
+    <div class="fv2-domain">
+      <div class="fv2-domain-head">
+        <span class="fv2-num">01</span>
+        <div><div class="fv2-label">AI, Data &amp; Technology</div><div class="fv2-sub">Business analytics · cybersecurity · data science · AI applications</div></div>
+      </div>
+      <div class="fv2-cards">
+        <a class="fv2-card" href="#" onclick="openFacModal('chen-ho'); return false;"><div class="fv2-photo"><img src="https://educator.thu.edu.tw/upload/educator/teacher_upload/00082-1746148839.png" alt="Ho-Yuan Chen" loading="lazy"></div><div class="fv2-name">Ho-Yuan Chen</div></a>
+        <a class="fv2-card" href="#" onclick="openFacModal('kim'); return false;"><div class="fv2-photo"><img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/00033-1763528128.png" alt="Brian Kim" loading="lazy"></div><div class="fv2-name">Brian Kim</div></a>
+        <a class="fv2-card" href="#" onclick="openFacModal('huang'); return false;"><div class="fv2-photo"><img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/00042-1708046565.png" alt="Yin-Tzu Huang" loading="lazy"></div><div class="fv2-name">Yin-Tzu Huang</div></a>
+        <a class="fv2-card" href="#" onclick="openFacModal('wong'); return false;"><div class="fv2-photo"><img src="https://stat.thu.edu.tw/upload/stat/teacher_upload/00058-1753844632.png" alt="Ka-Chun Wong" loading="lazy"></div><div class="fv2-name">Ka-Chun Wong</div></a>
+      </div>
+    </div>
+
+    <!--     <!-- 02 Finance & Capital Markets -->
+    <div class="fv2-domain">
+      <div class="fv2-domain-head">
+        <span class="fv2-num">02</span>
+        <div><div class="fv2-label">Finance &amp; Capital Markets</div><div class="fv2-sub">Corporate finance · capital markets · derivatives &amp; risk management</div></div>
+      </div>
+      <div class="fv2-cards">
+        <a class="fv2-card" href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&id=34" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/%E5%BC%B5%E6%B0%B8%E5%92%8C%E8%80%81%E5%B8%AB.jpg" alt="Yung-Ho Chang" loading="lazy"></div><div class="fv2-name">Yung-Ho Chang</div></a>
+        <a class="fv2-card" href="https://fin.thu.edu.tw/web/teacher/detail.php?id=35" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://fin.thu.edu.tw/upload/teacher_upload/00023-1698288885.png" alt="I-Doun Kuo" loading="lazy"></div><div class="fv2-name">I-Doun Kuo</div></a>
+        <a class="fv2-card" href="https://fin.thu.edu.tw/web/teacher/detail.php?id=30" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://fin.thu.edu.tw/upload/teacher_upload/00015-1698289165.png" alt="Kai-Shi Chuang" loading="lazy"></div><div class="fv2-name">Kai-Shi Chuang</div></a>
+        <a class="fv2-card" href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&id=28" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/%E5%82%85%E9%83%81%E8%8A%AC%E8%80%81%E5%B8%AB.jpg" alt="Yufen Fu" loading="lazy"></div><div class="fv2-name">Yufen Fu</div></a>
+        <a class="fv2-card" href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&id=32" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/%E9%BB%83%E7%90%9B%E7%91%9E%E8%80%81%E5%B8%AB.jpg" alt="Chen-Jui Huang" loading="lazy"></div><div class="fv2-name">Chen-Jui Huang</div></a>
+      </div>
+    </div>
+
+    <!--  Strategy, HR & Operations -->
+    <div class="fv2-domain">
+      <div class="fv2-domain-head">
+        <span class="fv2-num">03</span>
+        <div><div class="fv2-label">Strategy, HR &amp; Operations</div><div class="fv2-sub">Supply chain · human resource management · service operations</div></div>
+      </div>
+      <div class="fv2-cards">
+        <a class="fv2-card" href="https://thotel.thu.edu.tw/dr-kuei-i-lee/" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://thotel.thu.edu.tw/wp-content/uploads/20120430093805902-scaled.jpg" alt="Kuei-I Lee" loading="lazy"></div><div class="fv2-name">Kuei-I Lee</div></a>
+        <a class="fv2-card" href="https://en.ba.thu.edu.tw/teacher/Chih-Yun+Wu/" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/%E5%90%B3%E8%8A%B7%E8%8A%B8.jpg" alt="Chih-Yun Wu" loading="lazy"></div><div class="fv2-name">Chih-Yun Wu</div></a>
+        <a class="fv2-card" href="https://inttrade.thu.edu.tw/en/cat-faculty-1/%e9%99%b3%e9%9d%9c%e7%91%9c-%e5%8a%a9%e7%90%86%e6%95%99%e6%8e%88/" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/%E9%99%B3%E9%9D%9C%E6%84%89.jpg" alt="Amy Chen" loading="lazy"></div><div class="fv2-name">Amy Chen</div><div style="font-size:15px;font-weight:700;color:var(--maroon);text-align:center;margin-top:.3rem;letter-spacing:.04em;">Program Director</div></a>
+      </div>
+    </div>
+
+    <!--  Marketing & Consumer Behavior -->
+    <div class="fv2-domain">
+      <div class="fv2-domain-head">
+        <span class="fv2-num">04</span>
+        <div><div class="fv2-label">Marketing &amp; Consumer Behavior</div><div class="fv2-sub">Digital marketing · consumer psychology · brand management</div></div>
+      </div>
+      <div class="fv2-cards">
+        <a class="fv2-card" href="https://en.ba.thu.edu.tw/teacher/Yu-Teng+Jacky+Jang/" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/%E5%BC%B5%E8%AD%BD%E9%A8%B0.jpg" alt="Jacky Jang" loading="lazy"></div><div class="fv2-name">Jacky Jang</div></a>
+        <a class="fv2-card" href="https://inttrade.thu.edu.tw/en/cat-faculty-1/assistant-professor-wei-ting-chen/" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://inttrade.thu.edu.tw/wp-content/uploads/%E9%99%B3%E6%9A%90%E5%A9%B7_%E5%B7%A5%E4%BD%9C%E5%8D%80%E5%9F%9F-1.jpg" alt="Wei-Ting Chen" loading="lazy"></div><div class="fv2-name">Wei-Ting Chen</div></a>
+        <a class="fv2-card" href="https://en.ba.thu.edu.tw/teacher/Min-Chieh+Chuang/" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/%E8%8E%8A%E6%97%BB%E6%BD%94.jpg" alt="Min-Chieh Chuang" loading="lazy"></div><div class="fv2-name">Min-Chieh Chuang</div></a>
+      </div>
+    </div>
+
+    <!--  Policy, Law & Global Affairs -->
+    <div class="fv2-domain">
+      <div class="fv2-domain-head">
+        <span class="fv2-num">05</span>
+        <div><div class="fv2-label">Policy, Law &amp; Global Affairs</div><div class="fv2-sub">Public management · international relations · trade law</div></div>
+      </div>
+      <div class="fv2-cards">
+        <a class="fv2-card" href="#" onclick="openFacModal('jose'); return false;"><div class="fv2-photo"><img src="https://pmp.thu.edu.tw/upload/pmp/teacher_upload/00004-1742876754.png" alt="José Chen" loading="lazy" style="object-position:50% 35%;"></div><div class="fv2-name">José Chen</div></a>
+        <a class="fv2-card" href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&id=11&lang=en" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://politics.thu.edu.tw/upload/politics/teacher_upload/00011-1679276221.png" alt="Lin Tzu-Li" loading="lazy"></div><div class="fv2-name">Lin Tzu-Li</div></a>
+        <a class="fv2-card" href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&id=12" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://politics.thu.edu.tw/upload/politics/teacher_upload/00012-1712479736.png" alt="Wei-Fang Chen" loading="lazy"></div><div class="fv2-name">Wei-Fang Chen</div></a>
+        <a class="fv2-card" href="#" onclick="openFacModal('chang'); return false;"><div class="fv2-photo"><img src="https://law.thu.edu.tw/upload/law/teacher_upload/00040-1696229749.png" alt="Kai-Hsin Chang" loading="lazy"></div><div class="fv2-name">Kai-Hsin Chang</div></a>
+      </div>
+    </div>
+
+    <!--  Culture & Communication -->
+    <div class="fv2-domain">
+      <div class="fv2-domain-head">
+        <span class="fv2-num">06</span>
+        <div><div class="fv2-label">Culture &amp; Communication</div><div class="fv2-sub">ESL/EFL education · Chinese language · intercultural competency</div></div>
+      </div>
+      <div class="fv2-cards">
+        <a class="fv2-card" href="https://flld.thu.edu.tw/en/faculty-en/faculty-full-time-en/chiu-chia-hui-2/" target="_blank" rel="noopener"><div class="fv2-photo"><img src="https://flld.thu.edu.tw/wp-content/uploads/Chiu-Chia-Hui.jpg" alt="Chia-Hui Chiu" loading="lazy"></div><div class="fv2-name">Chia-Hui Chiu</div></a>
+        <a class="fv2-card" href="#" onclick="openFacModal('bai'); return false;"><div class="fv2-photo"><img src="https://ic.thu.edu.tw/upload/people_upload/00223-1661308358.png" alt="Heng-Xu Bai" loading="lazy"></div><div class="fv2-name">Heng-Xu Bai</div></a>
+      </div>
+    </div>
+
+    <p style="margin-top:2rem;font-size:var(--t-sm);color:var(--ink-3);">For full faculty profiles, visit <a href="https://mana.thu.edu.tw/" target="_blank">mana.thu.edu.tw</a> or contact <a href="mailto:gmba@thu.edu.tw">gmba@thu.edu.tw</a>.</p>
   </div>
 </section>
 
 
 
-<!-- ── Graduate Profile ── -->
-<div class="container" style="padding-top:5rem;padding-bottom:4rem;">
-  <h2 style="margin-bottom:1rem;font-size:clamp(38px,5vw,68px);font-weight:900;line-height:1.08;letter-spacing:-0.02em;">What kind of leader<br>will you become?</h2>
-  <p class="sec-lead" style="margin-bottom:4rem;max-width:580px;">GMBA graduates leave with four compounding advantages — built into every course, every cohort, every career.</p>
 
 
+<!-- ===== JOINT-DEGREE & STUDY ABROAD ===== -->
+<section id="joint-degree" style="background:var(--white);">
+  <div class="container">
+    <div style="display:flex;gap:4rem;align-items:flex-start;">
+      <div style="flex:1;min-width:0;">
+        <h2>Expand your global horizons</h2>
+        <p class="sec-lead" style="margin-top:1rem;max-width:520px;">GMBA students can pursue exchange semesters and joint-degree opportunities at over 93 partner universities worldwide — all coordinated through Tunghai's <a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener" style="color:var(--gold-lt)">Office of International Relations (OIR)</a>.</p>
+      </div>
+      <div style="flex-shrink:0;width:260px;border-top:2px solid var(--gold);padding-top:1rem;margin-top:.5rem;margin-left:auto;">
+        <span style="font-family:Georgia,serif;font-size:2.8rem;line-height:.8;color:var(--gold);display:block;margin-bottom:.6rem;opacity:.6;">&ldquo;</span>
+        <p style="font-size:16px;font-weight:700;line-height:1.65;color:var(--ink);margin:0 0 1rem;">Participating in an exchange program in Austria was a testament to the program&rsquo;s efficacy.</p>
+        <div style="font-size:12px;color:var(--ink-3);letter-spacing:.03em;">Tarah Julius &nbsp;&middot;&nbsp; GMBA Class of 2023</div>
+      </div>
+    </div>
 
-  <!-- Videos -->
-  <div id="video-section" style="margin-bottom:2.5rem;">
-    <div class="vid-grid" style="display:grid;grid-template-columns:2fr 1fr;gap:1.8rem;align-items:start;">
-      <!-- Big video -->
+
+    <div class="cards-3">
+      <div class="card">
+        <h3>Short-term programs</h3>
+        <p>One-to-three month programs at partner universities during summer or winter break — on-site or online — for language, culture, and global business exposure.</p>
+      </div>
+      <div class="card">
+        <h3>Exchange programs</h3>
+        <p>Study one semester or one year at a partner university. Credits transfer back to Tunghai; students pay only Tunghai tuition. Open from the second semester onward.</p>
+      </div>
+      <div class="card">
+        <h3>Dual-degree programs</h3>
+        <p>Graduate with degrees from both Tunghai and a partner university. Application timelines vary by program — see the dual-degree webpage for details.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ACADEMIC CALENDAR ===== -->
+<section id="academic-calendar" style="background:var(--cream);">
+  <div class="container">
+    <h2>Academic calendar</h2>
+    <p class="sec-lead">Plan your studies with our semester schedule and download the official Tunghai University academic calendar.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:start;">
+      <!-- Left: Academic Year table -->
       <div>
-        <div style="aspect-ratio:16/9;background:#1a0508;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;">
-          <div style="width:52px;height:52px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:.15em;text-transform:uppercase;">Coming Soon</span>
-        </div>
-        <h3 style="margin:1rem 0 .4rem;font-size:26px;font-weight:900;line-height:1.2;color:var(--ink);">Career Pivot Story</h3>
-        <p style="font-size:18px;color:var(--ink-3);line-height:1.7;">From GMBA to New Heights — one graduate's before and after.</p>
+        <table class="record-table">
+          <thead><tr><th>Period</th><th>Dates</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Period">Orientation</td><td data-label="Dates">Late August</td><td data-label="Notes"><span class="cal-badge gold">New Cohort</span></td></tr>
+            <tr><td data-label="Period">Fall Semester</td><td data-label="Dates">September – January</td><td data-label="Notes"><span class="cal-badge">Semester 1</span></td></tr>
+            <tr><td data-label="Period">Winter Break</td><td data-label="Dates">Late January – February</td><td data-label="Notes"></td></tr>
+            <tr><td data-label="Period">Spring Semester</td><td data-label="Dates">February – June</td><td data-label="Notes"><span class="cal-badge">Semester 2</span></td></tr>
+            <tr><td data-label="Period">Graduation Ceremony</td><td data-label="Dates">June</td><td data-label="Notes"></td></tr>
+            <tr><td data-label="Period">Summer Break</td><td data-label="Dates">July – August</td><td data-label="Notes"></td></tr>
+          </tbody>
+        </table>
       </div>
-      <!-- Small video -->
+      <!-- Right: Official Calendar downloads -->
       <div>
-        <div style="aspect-ratio:16/9;background:#1a0508;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;">
-          <div style="width:36px;height:36px;border:1.5px solid rgba(255,255,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:.12em;text-transform:uppercase;">Coming Soon</span>
+        <p style="font-size:var(--t-sm);color:var(--ink-3);line-height:1.7;margin-bottom:1.2rem;">Download the official Tunghai University academic calendar (PDF) for complete holiday schedules and key dates.</p>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <a href="https://eng.thu.edu.tw/upload/sitemap/THU-2026-2027-(115)-Academic-Year-Calendar-v0603.pdf" class="forms-dl-btn" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="font-size:1.1em;">↓</span> School Calendar 2026-2027
+          </a>
+          <a href="https://eng.thu.edu.tw/upload/sitemap/Tunghai-calendar-2025-2026-v2-20250611.pdf" class="forms-dl-btn" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="font-size:1.1em;">↓</span> School Calendar 2025-2026 (Revised)
+          </a>
         </div>
-        <h3 style="margin:1rem 0 .4rem;font-size:22px;font-weight:900;line-height:1.2;color:var(--ink);">Why THU GMBA?</h3>
-        <p style="font-size:18px;color:var(--ink-3);line-height:1.7;max-width:480px;">A local student shares what the program changed — in their career, and in how they think about leadership.</p>
       </div>
     </div>
   </div>
+</section>
 
-
-
-  <!-- ===== STUDENT VOICES ===== -->
-  <style>
-    .sv-row{display:flex;align-items:center;gap:3rem;padding:2.75rem 0;border-top:1px solid #d0c9c0;text-decoration:none;transition:opacity .15s;}
-    .sv-row:hover{opacity:.82;}
-    .sv-row-text{flex:1;min-width:0;max-width:560px;}
-    .sv-row-title{font-size:1.35rem;font-weight:900;color:var(--ink);line-height:1.25;margin:0 0 .65rem;letter-spacing:-.01em;}
-    .sv-row-excerpt{font-size:18px;color:var(--ink-3);line-height:1.8;margin:0 0 .85rem;}
-    .sv-row-byline{font-size:15px;color:var(--ink-3);letter-spacing:.02em;}
-    .sv-row-photo{flex-shrink:0;width:380px;height:260px;overflow:hidden;background:#ede9e3;margin-left:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.13);}
-    .sv-row-photo img{width:100%;height:100%;object-fit:cover;}
-    .sv-footer-row{border-top:1px solid #d0c9c0;padding-top:1.25rem;display:flex;justify-content:flex-end;}
-    .sv-see-all{font-size:14px;font-weight:800;color:var(--maroon);text-decoration:none;letter-spacing:.04em;}
-    .sv-see-all:hover{opacity:.7;}
-    @media(max-width:680px){
-      .sv-row{flex-direction:column-reverse;border-top:none;margin-bottom:1.25rem;padding:0;border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 2px 18px rgba(0,0,0,.10);}
-      .sv-row-photo{width:100%;height:260px;margin-left:0;}
-      .sv-row-text{padding:1.1rem 1.2rem 1.3rem;}
-      .sv-row-excerpt{font-size:15px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:0.5rem;}
-      .sv-footer-row{border-top:none;padding-top:0;}
-    }
-  </style>
-
-  <div id="student-voices"></div>
-  <div style="margin-bottom:2rem;">
-    <span style="font-size:0.72rem;font-weight:700;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:0.8rem;">Student Voices</span>
-    <h2 style="margin:0 0 2rem;font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.1;letter-spacing:-0.02em;">Life at GMBA,<br>in their own words</h2>
-  </div>
-
-  <!-- Jefferson Adrian -->
-  <a href="./student-voices.html#jefferson" class="sv-row">
-    <div class="sv-row-text">
-      <div class="sv-row-title">From Fear to Confidence: How GMBA Built Jefferson Adrian</div>
-      <p class="sv-row-excerpt">Before arriving at Tunghai, Jefferson didn't know where his class was, let alone where his career was heading. Two years later, he left with friends from a dozen countries — and the voice to speak up in any room.</p>
-      <div class="sv-row-byline">By Jefferson Adrian &nbsp;&middot;&nbsp; Philippines &nbsp;&middot;&nbsp; Class of 2023</div>
-    </div>
-    <div class="sv-row-photo">
-      <img src="./照片 Jefferson.jpg" alt="Jefferson Adrian" style="object-fit:cover;object-position:center 12%;">
-    </div>
-  </a>
-
-  <!-- Tarah Julius -->
-  <a href="./student-voices.html#tarah" class="sv-row">
-    <div class="sv-row-text">
-      <div class="sv-row-title">A Tightly Knit Community: Tarah Julius on Diversity and Growth at GMBA</div>
-      <p class="sv-row-excerpt">Tarah arrived feeling like a small fish in a vast ocean. The curriculum challenged her across supply chain, finance, and entrepreneurship — then sent her to Austria on exchange. She left ready for the corporate landscape.</p>
-      <div class="sv-row-byline">By Tarah Julius &nbsp;&middot;&nbsp; Class of 2023</div>
-    </div>
-    <div class="sv-row-photo">
-      <img src="./照片 Tarah 1.jpg" alt="Tarah Julius" style="object-fit:cover;object-position:50% 12%;">
-    </div>
-  </a>
-
-  <div class="sv-footer-row">
-    <a href="https://gmba.thu.edu.tw/web/about/page.php?lang=en&amp;scid=51&amp;sid=71" target="_blank" rel="noopener" class="sv-see-all">See all student stories &rarr;</a>
-  </div>
-
-  <!-- Section title before advantage cards -->
-  <div style="margin-top:5rem;margin-bottom:2.5rem;border-top:2px solid var(--maroon);padding-top:3rem;">
-    <span style="font-size:0.72rem;font-weight:700;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:0.8rem;">Why GMBA</span>
-    <h2 style="margin:0 0 1rem;font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.1;letter-spacing:-0.02em;">Four Pillars of the<br>GMBA Advantage</h2>
-    <p class="sec-lead" style="max-width:560px;margin:0;">Built into every course, every cohort, every career — these are the edges GMBA graduates carry for life.</p>
-  </div>
-
-  <!-- Modern animated advantage cards -->
-<style>
-  .advantage-card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 14px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
-    position: relative;
-    opacity: 0;
-    transform: translateY(32px);
-    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,1,0.36,1),
-                box-shadow 0.3s ease;
-    cursor: default;
-  }
-  .advantage-card.ac-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .advantage-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--maroon);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.38s cubic-bezier(0.22,1,0.36,1);
-    border-radius: 0 0 14px 14px;
-  }
-  .advantage-card:hover::after { transform: scaleX(1); }
-  .advantage-card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 24px 52px rgba(0,0,0,0.14);
-  }
-  .ac-photo {
-    transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
-  }
-  .advantage-card:hover .ac-photo { transform: scale(1.06); }
-  .ac-icon svg {
-    width: 22px; height: 22px;
-    transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
-  }
-  .advantage-card:hover .ac-icon svg { transform: scale(1.2); }
-  .ac-body { padding: 1.5rem 1.3rem 2rem; flex: 1; }
-  .ac-num {
-    font-family: var(--ff-num);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: .15em;
-    color: var(--maroon);
-    margin-bottom: .6rem;
-  }
-</style>
-
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-bottom:2rem;margin-top:3rem;">
-
-  <div class="advantage-card">
-    <div class="ac-icon" style="position:relative;overflow:hidden;height:200px;padding:0;background:var(--cream);">
-      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=380&fit=crop&auto=format&q=80" alt="Professional working with AI and data"
-           loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);" class="ac-photo">
-      <div style="position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.92);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9B1A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="10"/><path d="M8 12h8M12 8v8"/><circle cx="12" cy="12" r="3"/></svg>
+<!-- ===== ADMISSIONS ===== -->
+<div id="modal-wong" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-wong-title">
+  <div class="fac-modal-box">
+    <button class="fac-modal-close" onclick="closeFacModal('wong')" aria-label="Close">&times;</button>
+    <div class="fac-modal-content">
+      <img src="https://stat.thu.edu.tw/upload/stat/teacher_upload/00058-1753844632.png" alt="Ka-Chun Wong" class="fac-modal-photo" loading="lazy">
+      <div class="fac-modal-info">
+        <h3 id="modal-wong-title">Ka-Chun Wong</h3>
+        <p class="fac-modal-title">Assistant Professor &mdash; Statistics</p>
+        <p><a href="mailto:junkow@thu.edu.tw">junkow@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 35708</p>
+        <p>Research Room: M433</p>
+        <h4>Education</h4>
+        <ul>
+          <li>Ph.D. in Statistics, Florida State University, USA</li>
+        </ul>
+        <h4>Research Expertise</h4>
+        <ul>
+          <li>Object Data Analysis</li>
+          <li>High Dimensional Data Analysis</li>
+          <li>Manifold Statistics</li>
+        </ul>
       </div>
     </div>
-    <div class="ac-body">
-      <div class="ac-num">01</div>
-      <h3 style="font-size:18px;font-weight:800;color:var(--ink);margin-bottom:.6rem;line-height:1.35;">AI, Day One.</h3>
-      <p style="font-size:16px;color:var(--ink-3);line-height:1.7;">Practical AI fluency woven into every course — plus the ethics and critical thinking to lead where algorithms can't.</p>
-    </div>
   </div>
-
-  <div class="advantage-card">
-    <div class="ac-icon" style="position:relative;overflow:hidden;height:200px;padding:0;background:var(--cream);">
-      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=380&fit=crop&auto=format&q=80" alt="Diverse multicultural team"
-           loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);" class="ac-photo">
-      <div style="position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.92);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9B1A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      </div>
-    </div>
-    <div class="ac-body">
-      <div class="ac-num">02</div>
-      <h3 style="font-size:18px;font-weight:800;color:var(--ink);margin-bottom:.6rem;line-height:1.35;">Scholarship Supported.</h3>
-      <p style="font-size:16px;color:var(--ink-3);line-height:1.7;">Scholarships from Tunghai, the GMBA program, and the Taiwanese government — financial support at multiple levels.</p>
-    </div>
-  </div>
-
-  <div class="advantage-card">
-    <div class="ac-icon" style="position:relative;overflow:hidden;height:200px;padding:0;background:var(--cream);">
-      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=380&fit=crop&auto=format&q=80" alt="Faculty and academic professional"
-           loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);" class="ac-photo">
-      <div style="position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.92);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9B1A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-    </div>
-    <div class="ac-body">
-      <div class="ac-num">03</div>
-      <h3 style="font-size:18px;font-weight:800;color:var(--ink);margin-bottom:.6rem;line-height:1.35;">Taiwan Edge.</h3>
-      <p style="font-size:16px;color:var(--ink-3);line-height:1.7;">Deep expertise in Taiwan's supply chain and semiconductor ecosystem — an edge you carry into any market.</p>
-    </div>
-  </div>
-
-  <div class="advantage-card">
-    <div class="ac-icon" style="position:relative;overflow:hidden;height:200px;padding:0;background:var(--cream);">
-      <img src="https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=600&h=380&fit=crop&auto=format&q=80" alt="Bilingual Asian professional"
-           loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);" class="ac-photo">
-      <div style="position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.92);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9B1A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      </div>
-    </div>
-    <div class="ac-body">
-      <div class="ac-num">04</div>
-      <h3 style="font-size:18px;font-weight:800;color:var(--ink);margin-bottom:.6rem;line-height:1.35;">Go Global.</h3>
-      <p style="font-size:16px;color:var(--ink-3);line-height:1.7;">Study or intern abroad via our global sister-university network — credits count toward your degree.</p>
-    </div>
-  </div>
-
 </div>
-
+<div id="modal-jose" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-jose-title">
+  <div class="fac-modal-box" style="max-width:820px;">
+    <button class="fac-modal-close" onclick="closeFacModal('jose')" aria-label="Close">&times;</button>
+    <div class="fac-modal-content">
+      <img src="https://pmp.thu.edu.tw/upload/pmp/teacher_upload/00004-1742876754.png" alt="Jos&eacute; Chiu-C. Chen" class="fac-modal-photo" style="object-fit:cover;object-position:50% 35%;" loading="lazy">
+      <div class="fac-modal-info">
+        <h3 id="modal-jose-title">Jos&eacute; Chiu-C. Chen</h3>
+        <p class="fac-modal-title">Professor &mdash; Department of Public Management and Policy</p>
+        <p><a href="mailto:josechen@thu.edu.tw">josechen@thu.edu.tw</a> &nbsp;|&nbsp; Tel: +886-4-23590121 ext. 36715 &nbsp;|&nbsp; Fax: +886-4-23593843</p>
+        <p><a href="https://resume.thu.edu.tw/portfolio/main/josechen" target="_blank" rel="noopener">Personal Website &rarr;</a></p>
+        <h4>Education</h4>
+        <ul>
+          <li>Ph.D. in Public Administration, National Chengchi University (NCCU), Taipei, Taiwan</li>
+        </ul>
+        <h4>Biography</h4>
+        <p>Jos&eacute; Chiu-C. Chen is a professor at the Department of Public Management and Policy, Tunghai University. His teaching and research focus on non-profit management, personnel administration reform, cross-boundary governance, and local and urban governance. He actively engages with the global public administration community and serves as an adjunct/visiting professor at The Development Academy of the Philippines (DAP) and a country expert for the V-Dem Project.</p>
+        <p>Professor Chen has held key leadership roles, including department chair at Tunghai University, president of the Taiwan Association for Schools of Public Administration and Affairs (TASPAA) in 2019, and host of the 2019 ARNOVA Asia Conference. He has also served as a consultant and committee member for multiple government agencies, NPOs, and social enterprises.</p>
+        <h4>Current Positions</h4>
+        <ul>
+          <li>Professor, Department of Public Management and Policy, Tunghai University</li>
+          <li>Adjunct/Visiting Professor, The Development Academy of the Philippines (DAP)</li>
+          <li>Counseling Consultant, Taiwanese Turnaround Alliance, Taichung, Taiwan</li>
+          <li>Research Consultant, Commerce Development Research Institute (CDRI), Taipei, Taiwan</li>
+          <li>Country Expert, V-Dem Project</li>
+          <li>Consultant, Taiwan Councilors Forum (TCF)</li>
+          <li>Standing Supervisor, Academy of Taiwan Local Governance</li>
+          <li>Board Member, Chinese Association of Public Affairs Management (CaPAM)</li>
+          <li>Board Member, Social Impact Institute of Taiwan</li>
+          <li>Executive Committee Member, Center for Civil Society and Local Governance, NCCU</li>
+          <li>Chief Executive, Local Governance Committee of Central Taiwan, Chinese Society for Public Administration</li>
+        </ul>
+        <h4>Editorial Roles</h4>
+        <ul>
+          <li>Chief Editor, <em>Journal of Youth &amp; Public Governance</em></li>
+          <li>Editor, <em>Third-Sector Review</em></li>
+          <li>Editor, <em>Journal of Asian Political Economy and Peace Study</em></li>
+          <li>Editor, <em>Journal of Management Profession and Innovation (JMPI)</em></li>
+        </ul>
+        <h4>Major Experiences</h4>
+        <ul>
+          <li>President (2019), Taiwan Association for Schools of Public Administration and Affairs (TASPAA)</li>
+          <li>Host (2019), ARNOVA Asia Conference</li>
+          <li>Chair, Department of Public Management and Policy, Tunghai University</li>
+          <li>Visiting Scholar, College of Urban &amp; Public Affairs, Portland State University, United States (2013)</li>
+          <li>Chief Executive, Taiwan Public Governance Research Center (TPGRC) (2008&ndash;2014)</li>
+          <li>Visiting Research Fellow, School of Philanthropy, Sun Yat-sen University, China (2014&ndash;Present)</li>
+          <li>Fulbright Visiting Scholar, Sol Price School, University of Southern California (USC), United States (2006&ndash;2007)</li>
+          <li>Visiting Scholar, School of International and Public Affairs, Shanghai Jiao Tong University, China (2005)</li>
+          <li>Advisory Committee Member, Civic Service Development Institute (CSDI), D.G.P.A., Executive Yuan (2013&ndash;Present)</li>
+          <li>Academic Consultant, Kaiyuan Social Service Research Center, China (2014&ndash;2017)</li>
+          <li>Research Consultant, The Can Co. Ltd., Taiwan (2017)</li>
+          <li>Board Member, Tunghai University Faculty Association (2016&ndash;2018)</li>
+        </ul>
+        <h4>Expertise</h4>
+        <ul>
+          <li>Cross-Sector Governance</li>
+          <li>Non-Profit Organization and Management</li>
+          <li>Public Human Resource Management</li>
+          <li>Civil Society and the Third Sector</li>
+          <li>Urban Governance and Policy Planning</li>
+        </ul>
+        <h4>Courses Taught</h4>
+        <ul>
+          <li>Non-Profit Management</li>
+          <li>Personnel Administration</li>
+          <li>Local and Urban Governance</li>
+          <li>Social Enterprise and Innovation</li>
+          <li>Local Revitalization Policy</li>
+        </ul>
+        <h4>Awards and Honors</h4>
+        <ul>
+          <li>Tunghai University Outstanding Teaching Award (2012, 2016)</li>
+          <li>Short-Term Research Scholarship, Ministry of Science and Technology, Taiwan (2012)</li>
+          <li>Best Ph.D. Dissertation Award, Taiwan Association for Schools of Public Administration and Affairs (TASPAA) (2008)</li>
+          <li>Full Grant Winner, Fulbright Program, United States (2006&ndash;2007)</li>
+        </ul>
+        <h4>Publications in English</h4>
+        <table style="width:100%;border-collapse:collapse;font-size:.85em;margin-top:.5em;">
+          <thead>
+            <tr style="background:var(--maroon);color:#fff;">
+              <th style="padding:6px 8px;text-align:center;width:40px;">#</th>
+              <th style="padding:6px 8px;text-align:center;width:60px;">Year</th>
+              <th style="padding:6px 8px;text-align:left;">Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--rule);">
+              <td style="padding:6px 8px;text-align:center;color:var(--ink-3);">1</td>
+              <td style="padding:6px 8px;text-align:center;">2020</td>
+              <td style="padding:6px 8px;">Liu, Helen K., &amp; Chen, Jos&eacute; Chiu-C. (2020). The roles of community-based nonprofits in the context of collaborative governance in Hong Kong and Taiwan. In <em>Designing Governance Structures for Performance and Accountability: Developments in Australia and Greater China</em> (pp. 167-192). The Australian National University Press.</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--rule);background:#f8f9fc;">
+              <td style="padding:6px 8px;text-align:center;color:var(--ink-3);">2</td>
+              <td style="padding:6px 8px;text-align:center;">2018</td>
+              <td style="padding:6px 8px;">Chen, Jos&eacute; Chiu-C., &amp; Cheng, Chen-Yang (2018). Solving social loafing phenomenon through lean-Kanban: A case study in non-profit organization. <em>Journal of Organizational Change Management (JOCM)</em>, 31(5), 984-1000. (SSCI)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--rule);">
+              <td style="padding:6px 8px;text-align:center;color:var(--ink-3);">3</td>
+              <td style="padding:6px 8px;text-align:center;">2013</td>
+              <td style="padding:6px 8px;">Chen, Jos&eacute; Chiu-C., Chiang, Min-Hsiu, &amp; Chen, Tin-Min (2013). Reinventing strategies of oral examination in Taiwan civil service recruitment. <em>Public Personnel Management</em>, 42(2): 292-308. (SSCI)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-chang" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chang-title">
+  <div class="fac-modal-box">
+    <button class="fac-modal-close" onclick="closeFacModal('chang')" aria-label="Close">&times;</button>
+    <div class="fac-modal-content">
+      <img src="https://law.thu.edu.tw/upload/law/teacher_upload/00040-1696229749.png" alt="Kai-Hsin Chang" class="fac-modal-photo" loading="lazy">
+      <div class="fac-modal-info">
+        <h3 id="modal-chang-title">Kai-Hsin Chang</h3>
+        <p class="fac-modal-title">Assistant Professor &mdash; Law &nbsp;|&nbsp; Director, AI Legal Research Center</p>
+        <p><a href="mailto:gwarce@thu.edu.tw">gwarce@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 36607</p>
+        <p><a href="https://resume.thu.edu.tw/portfolio/main/gwarce/B00" target="_blank" rel="noopener">Personal Website &rarr;</a></p>
+        <h4>Education</h4>
+        <ul>
+          <li>Ph.D. in Law, Tunghai University</li>
+        </ul>
+        <h4>Courses Taught</h4>
+        <ul>
+          <li>Civil Law</li>
+          <li>Contract Law</li>
+          <li>International Economic Law</li>
+          <li>Medical Law</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-chen-ho" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chen-ho-title">
+  <div class="fac-modal-box">
+    <button class="fac-modal-close" onclick="closeFacModal('chen-ho')" aria-label="Close">&times;</button>
+    <div class="fac-modal-content">
+      <img src="https://educator.thu.edu.tw/upload/educator/teacher_upload/00082-1746148839.png" alt="Ho-Yuan Chen" class="fac-modal-photo" loading="lazy">
+      <div class="fac-modal-info">
+        <h3 id="modal-chen-ho-title">Ho-Yuan Chen</h3>
+        <p class="fac-modal-title">Associate Professor &amp; Director &mdash; Graduate Institute of Education</p>
+        <p><a href="mailto:edu666@thu.edu.tw">edu666@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 36900*218</p>
+        <p><a href="https://resume.thu.edu.tw/portfolio/main/edu666/B00" target="_blank" rel="noopener">Academic Profile &rarr;</a></p>
+        <h4>Education</h4>
+        <ul>
+          <li>Ph.D., Learning &amp; Performance Systems, The Pennsylvania State University, USA</li>
+        </ul>
+        <h4>Research &amp; Courses</h4>
+        <ul>
+          <li>Information Communication Technology in Education</li>
+          <li>Big Data Analysis</li>
+          <li>Materials and Methods of Civics and Society</li>
+          <li>Sustainable Development and Local Revitalization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-bai" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-bai-title">
+  <div class="fac-modal-box">
+    <button class="fac-modal-close" onclick="closeFacModal('bai')" aria-label="Close">&times;</button>
+    <div class="fac-modal-content">
+      <img src="https://ic.thu.edu.tw/upload/people_upload/00223-1661308358.png" alt="Heng-Xu Bai" class="fac-modal-photo" loading="lazy">
+      <div class="fac-modal-info">
+        <h3 id="modal-bai-title">Heng-Xu Bai</h3>
+        <p class="fac-modal-title">Assistant Professor &mdash; International College</p>
+        <p><a href="mailto:sunny@thu.edu.tw">sunny@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 39302 (PG-IC 310-2)</p>
+        <p>Office Hours: Tuesday 10:00&ndash;12:00</p>
+        <h4>Education</h4>
+        <ul>
+          <li>Ph.D. in Chinese Literature, Tunghai University</li>
+        </ul>
+        <h4>Professional Experience</h4>
+        <ul>
+          <li>Assistant Professor, Chinese Language Teaching Center, Tunghai University</li>
+          <li>Part-Time Assistant Professor, Department of Chinese Literature, Tunghai University</li>
+          <li>Part-Time Assistant Professor, Department of Chinese Literature, Taipei University</li>
+          <li>Part-Time Assistant Professor, Department of Chinese Literature, Providence University</li>
+        </ul>
+        <h4>Research Expertise</h4>
+        <ul>
+          <li>Intellectual History of China</li>
+          <li>Chinese Philosophy</li>
+          <li>Oriental Aesthetics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-huang" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-huang-title">
+  <div class="fac-modal-box">
+    <button class="fac-modal-close" onclick="closeFacModal('huang')" aria-label="Close">&times;</button>
+    <div class="fac-modal-content">
+      <img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/00042-1708046565.png" alt="Yin-Tzu Huang" class="fac-modal-photo" loading="lazy">
+      <div class="fac-modal-info">
+        <h3 id="modal-huang-title">Yin-Tzu Huang</h3>
+        <p class="fac-modal-title">Assistant Professor &mdash; GMBA</p>
+        <p><a href="mailto:deannehuang@thu.edu.tw">deannehuang@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 35205</p>
+        <p><a href="https://resume.thu.edu.tw/portfolio/main/deannehuang/B00" target="_blank" rel="noopener">Personal Website &rarr;</a></p>
+        <h4>Education</h4>
+        <ul>
+          <li>Ph.D., Graduate Institute of Electrical Engineering (Computer Science), National Taiwan University</li>
+        </ul>
+        <h4>Research Expertise</h4>
+        <ul>
+          <li>Cybersecurity</li>
+          <li>Healthcare Information Security</li>
+          <li>Blockchain Applications</li>
+          <li>AI Computational Thinking</li>
+        </ul>
+        <h4>Teaching Areas</h4>
+        <ul>
+          <li>Computer Science: Data Structures, Computer Networks, Database Systems, Technical English, Introduction to Computing, Application Design, Web Design, Programming Design</li>
+          <li>AI &amp; Big Data Analytics: AI Thinking and Basic Program, Business Big Data Applications</li>
+          <li>Information Security: Introduction to Information Security, Blockchain Applications</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-kim" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-kim-title">
+  <div class="fac-modal-box">
+    <button class="fac-modal-close" onclick="closeFacModal('kim')" aria-label="Close">&times;</button>
+    <div class="fac-modal-content">
+      <img src="https://gmba.thu.edu.tw/upload/gmba/teacher_upload/00033-1763528128.png" alt="Taesung Brian Kim" class="fac-modal-photo" loading="lazy">
+      <div class="fac-modal-info">
+        <h3 id="modal-kim-title">Taesung Brian Kim</h3>
+        <p class="fac-modal-title">Assistant Professor &mdash; GMBA</p>
+        <p><a href="mailto:bkim@thu.edu.tw">bkim@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 35202</p>
+        <p><a href="https://thugmba.github.io/ialab/" target="_blank" rel="noopener">Innovation Analytics Lab &rarr;</a></p>
+        <h4>Courses Taught</h4>
+        <p><em>Graduate</em></p>
+        <ul>
+          <li>Business Analytics and AI Applications</li>
+          <li>Data Science for International Managers</li>
+          <li>Programming: Python</li>
+          <li>International Business Management and Strategy</li>
+        </ul>
+        <p><em>Undergraduate</em></p>
+        <ul>
+          <li>Business AI Tools: Effective Communication with ChatGPT</li>
+          <li>Digital Transformation in Platform Economies</li>
+          <li>Machine Learning for Business Analytics</li>
+          <li>Product and Operations Management</li>
+          <li>Western Culture and Society</li>
+        </ul>
+        <h4>Education</h4>
+        <ul>
+          <li>Ph.D., Graduate Institute of Technology Management, National Chung Hsing University (2022)</li>
+          <li>M.S. in Computer Science, Texas A&amp;M University, USA</li>
+          <li>M.S. in Computer Science, Korea University, South Korea</li>
+        </ul>
+        <h4>Research Interests</h4>
+        <ul>
+          <li>Mobile Health Technology Acceptance</li>
+          <li>Research Trend Analysis via Topic Modeling (ML-based methods)</li>
+          <li>Bibliometric Analysis of Academic Big Data</li>
+          <li>Machine Learning Applications in Healthcare</li>
+          <li>IoT and Smart Living</li>
+        </ul>
+        <h4>Professional Experience</h4>
+        <ul>
+          <li>Postdoctoral Fellow, Institute of Statistical Science, Academia Sinica, Taiwan</li>
+          <li>Senior System Analyst / Data Science, Supercomputing Facility, Texas A&amp;M University, USA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
-(function(){
-  var cards = document.querySelectorAll('.advantage-card');
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        var idx = Array.from(cards).indexOf(entry.target);
-        setTimeout(function(){ entry.target.classList.add('ac-visible'); }, idx * 120);
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  cards.forEach(function(c){ io.observe(c); });
-})();
+function openFacModal(id){var m=document.getElementById('modal-'+id);if(m){m.classList.add('open');document.body.style.overflow='hidden';}}
+function closeFacModal(id){var m=document.getElementById('modal-'+id);if(m){m.classList.remove('open');document.body.style.overflow='';}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.fac-modal.open').forEach(function(m){m.classList.remove('open');});document.body.style.overflow='';}});
+document.addEventListener('click',function(e){if(e.target.classList.contains('fac-modal')){e.target.classList.remove('open');document.body.style.overflow='';}});
 </script>
-
-</div>
-<!-- ===== CLASS PROFILE ===== -->
-<section id="class-profile" style="background:var(--cream);padding:4rem 0;">
-  <div class="container">
-    <h2 style="margin-bottom:1rem;">A truly international classroom</h2>
-    <p class="sec-lead" style="color:var(--ink-3);margin-bottom:3rem;">30–40 students. 10+ nationalities. Small enough that you actually know everyone — diverse enough that everyone comes from somewhere different.</p>
-    <div style="max-width:900px;">
-
-      <!-- Right: video -->
-      <div>
-        <div style="aspect-ratio:16/9;background:#1a0508;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;box-shadow:0 8px 32px rgba(0,0,0,0.4);">
-          <div style="width:52px;height:52px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:.15em;text-transform:uppercase;">Coming Soon</span>
-        </div>
-        <h3 style="margin:1rem 0 .4rem;font-size:26px;font-weight:900;line-height:1.2;color:var(--ink);">A Classroom Without Borders</h3>
-        <p style="font-size:18px;color:var(--ink-3);line-height:1.7;">See how 22 nationalities come together in one classroom — and what that means for how you learn to lead.</p>
-      </div>
-
-    </div>
-    <!-- ── Regional Breakdown · Class of 2018-2026 ── -->
-    <div style="margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--rule);">
-      <div style="margin-bottom:2rem;">
-        <p style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#C94B0A;margin:0 0 .35rem;">Class of 2018-2026 · By World Region</p>
-        <p style="font-size:clamp(22px,2.8vw,34px);font-weight:900;color:var(--ink);margin:0;line-height:1.1;font-family:'Barlow Condensed','Inter',sans-serif;letter-spacing:.02em;">8 Regions &nbsp;&middot;&nbsp; 22 Nationalities</p>
-      </div>
-      <div style="display:flex;height:10px;border-radius:3px;overflow:hidden;margin-bottom:2.5rem;gap:2px;">
-        <div style="width:65.4%;background:#9B1A2C;border-radius:3px 0 0 3px;" title="Southeast Asia 65.4%"></div>
-        <div style="width:21.1%;background:#2563A8;border-radius:0;" title="East Asia 21.1%"></div>
-        <div style="width:3.9%;background:#1E6B8C;border-radius:0;" title="Europe 3.9%"></div>
-        <div style="width:3.1%;background:#B8922A;border-radius:0;" title="South Asia 3.1%"></div>
-        <div style="width:3.1%;background:#2D7A5C;border-radius:0;" title="Central Asia 3.1%"></div>
-        <div style="width:1.3%;background:#4A5568;border-radius:0;" title="Africa 1.3%"></div>
-        <div style="width:1.3%;background:#C94B0A;border-radius:0;" title="Americas 1.3%"></div>
-        <div style="width:0.9%;background:#7B5EA7;border-radius:0 3px 3px 0;" title="Middle East 0.9%"></div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
-        <div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #9B1A2C;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Southeast Asia</span><span style="font-size:14px;font-weight:900;color:#9B1A2C;font-family:'Barlow Condensed',sans-serif;">65.4%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:65.4%;height:100%;background:#9B1A2C;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/id.png" width="20" height="15" alt="Indonesia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Indonesia</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="Vietnam" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Vietnam</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/th.png" width="20" height="15" alt="Thailand" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Thailand</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/my.png" width="20" height="15" alt="Malaysia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Malaysia</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/mm.png" width="20" height="15" alt="Myanmar" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Myanmar</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/ph.png" width="20" height="15" alt="Philippines" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Philippines</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/sg.png" width="20" height="15" alt="Singapore" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Singapore</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #2563A8;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">East Asia</span><span style="font-size:14px;font-weight:900;color:#2563A8;font-family:'Barlow Condensed',sans-serif;">21.1%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:21.1%;height:100%;background:#2563A8;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/tw.png" width="20" height="15" alt="Taiwan" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Taiwan</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/mn.png" width="20" height="15" alt="Mongolia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Mongolia</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/hk.png" width="20" height="15" alt="Hong Kong" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Hong Kong</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #1E6B8C;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Europe</span><span style="font-size:14px;font-weight:900;color:#1E6B8C;font-family:'Barlow Condensed',sans-serif;">3.9%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:3.9%;height:100%;background:#1E6B8C;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/es.png" width="20" height="15" alt="Spain" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Spain</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/ru.png" width="20" height="15" alt="Russia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Russia</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/fr.png" width="20" height="15" alt="France" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">France</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/ua.png" width="20" height="15" alt="Ukraine" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Ukraine</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #B8922A;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">South Asia</span><span style="font-size:14px;font-weight:900;color:#B8922A;font-family:'Barlow Condensed',sans-serif;">3.1%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:3.1%;height:100%;background:#B8922A;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/in.png" width="20" height="15" alt="India" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">India</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #2D7A5C;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Central Asia</span><span style="font-size:14px;font-weight:900;color:#2D7A5C;font-family:'Barlow Condensed',sans-serif;">3.1%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:3.1%;height:100%;background:#2D7A5C;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/kg.png" width="20" height="15" alt="Kyrgyzstan" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Kyrgyzstan</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #4A5568;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Africa</span><span style="font-size:14px;font-weight:900;color:#4A5568;font-family:'Barlow Condensed',sans-serif;">1.3%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:1.3%;height:100%;background:#4A5568;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/za.png" width="20" height="15" alt="S. Africa" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">S. Africa</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/ng.png" width="20" height="15" alt="Nigeria" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Nigeria</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #C94B0A;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Americas</span><span style="font-size:14px;font-weight:900;color:#C94B0A;font-family:'Barlow Condensed',sans-serif;">1.3%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:1.3%;height:100%;background:#C94B0A;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/br.png" width="20" height="15" alt="Brazil" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Brazil</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="USA" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">USA</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/bo.png" width="20" height="15" alt="Bolivia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Bolivia</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #7B5EA7;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Middle East</span><span style="font-size:14px;font-weight:900;color:#7B5EA7;font-family:'Barlow Condensed',sans-serif;">0.9%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:0.9%;height:100%;background:#7B5EA7;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="Turkey" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Turkey</span></div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="living-in-taiwan" style="background:var(--white);">
-  <div class="container">
-
-    <!-- Section header -->
-    <h2>Why Taiwan?</h2>
-    <p class="sec-lead">Taiwan doesn't just produce the chips that run the world's AI — it assembles the servers, manufactures the devices, and hosts the companies behind every major AI breakthrough. Studying here puts you at the center of the industry defining the next 50 years.</p>
-
-    <!-- 3 stat cards -->
-    <div class="cards-3" style="margin-bottom:3rem;">
-      <div class="card">
-        <div class="card-num">90%</div>
-        <h3>Advanced chip supply</h3>
-        <p style="font-size:18px;">TSMC fabricates chips for <strong>NVIDIA, Apple, AMD, Qualcomm</strong> — virtually every major AI platform runs on Taiwan silicon.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">70%</div>
-        <h3>Global AI servers</h3>
-        <p style="font-size:18px;"><strong>Quanta, Wiwynn, Foxconn, Inventec</strong> build AI server infrastructure for Google, Amazon, Microsoft, and Meta.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">40%+</div>
-        <h3>World electronics assembly</h3>
-        <p style="font-size:18px;"><strong>Foxconn, Pegatron, Wistron</strong> manufacture devices for Apple, Dell, HP, and Sony — the backbone of global EMS.</p>
-      </div>
-    </div>
-
-    <!-- AI industry conclusion strip -->
-    <div style="background:#1a1a1a;border-top:3px solid #C94B0A;border-radius:8px;padding:2rem 2.5rem;margin-bottom:5rem;">
-      <p style="font-size:clamp(18px,1.4vw,20px);color:#fff;font-weight:700;line-height:1.7;margin:0;">GMBA graduates enter this ecosystem directly — through internships, industry visits, and alumni networks <span style="color:#C94B0A;">inside the companies that run the world's AI.</span></p>
-    </div>
-
-    <!-- Video (left 60%) + Title & Description (right 40%) -->
-    <div class="vid-grid" style="display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:center;margin-top:5rem;margin-bottom:5rem;">
-
-      <!-- Left: Large video -->
-      <div>
-        <div style="aspect-ratio:16/9;background:#1a0508;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;box-shadow:0 6px 32px rgba(0,0,0,0.22);">
-          <div style="width:64px;height:64px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:.15em;text-transform:uppercase;">Coming Soon</span>
-        </div>
-      </div>
-
-      <!-- Right: Title + description -->
-      <div>
-        <h3 style="margin:0 0 1.2rem;font-size:clamp(26px,3vw,38px);font-weight:900;line-height:1.15;color:var(--ink);">Life in Taichung</h3>
-        <p style="font-size:18px;color:var(--ink-3);line-height:1.8;margin-bottom:1.8rem;">Great food, a vibrant city, and a cost of living that makes your scholarship go further. Hear from students who chose Taiwan — and never looked back.</p>
-        <p style="font-size:18px;color:var(--ink-3);line-height:1.8;">Taiwan gives you direct access to the world's AI ecosystem at a fraction of the cost of other major Asian hubs. The comparison below speaks for itself.</p>
-      </div>
-    </div>
-
-    <!-- Full-width modern comparison table -->
-    <div class="table-wrapper" style="margin-bottom:4rem;">
-      <div style="overflow-x:auto;border-radius:10px;">
-        <table class="compare-table" style="width:auto;min-width:100%;border-collapse:separate;border-spacing:0;font-size:14px;">
-        <thead>
-          <tr>
-            <th style="background:var(--ink);color:#fff;padding:0.7rem 1rem;text-align:left;font-size:14px;letter-spacing:.08em;font-weight:700;border-radius:8px 0 0 0;">MONTHLY COST</th>
-            <th style="background:#C94B0A;color:#fff;padding:0.7rem 1rem;text-align:left;border-top:4px solid #ff7a45;position:relative;white-space:nowrap;">
-              <span style="display:block;font-size:10px;font-weight:700;letter-spacing:.14em;opacity:.85;margin-bottom:.3rem;">★ BEST VALUE</span>
-              <span style="font-size:15px;font-weight:900;letter-spacing:.04em;">🇹🇼 TAICHUNG</span>
-            </th>
-            <th style="background:#2a2a2a;color:rgba(255,255,255,0.7);padding:0.7rem 1rem;text-align:left;font-size:14px;letter-spacing:.08em;font-weight:800;white-space:nowrap;">🇰🇷 SEOUL</th>
-            <th style="background:#2a2a2a;color:rgba(255,255,255,0.7);padding:0.7rem 1rem;text-align:left;font-size:14px;letter-spacing:.08em;font-weight:800;white-space:nowrap;">🇯🇵 TOKYO</th>
-            <th style="background:#2a2a2a;color:rgba(255,255,255,0.7);padding:0.7rem 1rem;text-align:left;font-size:14px;letter-spacing:.08em;font-weight:800;border-radius:0 8px 0 0;white-space:nowrap;">🇸🇬 SINGAPORE</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;font-weight:600;font-size:14px;color:var(--ink);">Accommodation</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #f0ddd5;background:#fff8f5;font-weight:700;font-size:14px;color:#C94B0A;">USD 170–250</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 320–460</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 400–560</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 650–980</td>
-          </tr>
-          <tr>
-            <td style="padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;font-weight:600;font-size:14px;color:var(--ink);">Food &amp; Dining</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #f0ddd5;background:#fff8f5;font-weight:700;font-size:14px;color:#C94B0A;">USD 140–200</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 280–400</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 265–390</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 320–500</td>
-          </tr>
-          <tr>
-            <td style="padding:0.7rem 1rem;border-bottom:2px solid #ccc;font-weight:600;font-size:14px;color:var(--ink);">Transport</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:2px solid #e0b8a0;background:#fff8f5;font-weight:700;font-size:14px;color:#C94B0A;">USD 30–55</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:2px solid #ccc;color:var(--ink-3);font-size:14px;">USD 40–80</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:2px solid #ccc;color:var(--ink-3);font-size:14px;">USD 80–130</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:2px solid #ccc;color:var(--ink-3);font-size:14px;">USD 100–155</td>
-          </tr>
-          <tr>
-            <td style="padding:0.7rem 1rem;font-weight:800;font-size:14px;color:var(--ink);border-radius:0 0 0 8px;">Total / Month</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;background:#fff8f5;border-top:2px solid #C94B0A;">
-              <span style="font-size:15px;font-weight:900;color:#C94B0A;display:block;">~USD 340–505</span>
-            </td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;color:var(--ink-3);">
-              <span style="font-size:14px;font-weight:800;display:block;">~USD 640–940</span>
-            </td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;color:var(--ink-3);">
-              <span style="font-size:14px;font-weight:800;display:block;">~USD 745–1,080</span>
-            </td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;color:var(--ink-3);border-radius:0 0 8px 0;">
-              <span style="font-size:14px;font-weight:800;display:block;">~USD 1,070–1,635</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-        <p style="font-size:11px;color:var(--ink-3);margin-top:.8rem;text-align:right;">
-          Data source: <a href="https://www.numbeo.com/cost-of-living/" target="_blank" rel="noopener" style="color:var(--maroon);">Numbeo Cost of Living</a>, June 2026.
-          Accommodation estimated for shared / single-room housing. Individual costs may vary.
-        </p>
-        </div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===== CAMPUS LIFE ===== -->
-<section id="campus-life" style="background:var(--cream);padding:0;">
-
-  <!-- HBS-style: 3-column hero panel -->
-  <div class="vid-grid" style="display:grid;grid-template-columns:1fr 2fr 1fr;min-height:560px;">
-
-    <!-- Left: Maroon panel + title + text -->
-    <div style="background:var(--maroon);padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center;">
-      <h2 style="color:#fff;font-size:clamp(26px,2.8vw,40px);font-weight:900;line-height:1.1;margin-bottom:1.8rem;letter-spacing:-0.01em;">Life at Tunghai University</h2>
-      <p style="font-size:18px;color:rgba(255,255,255,0.82);line-height:1.8;">134 hectares of tree-lined paths, traditional architecture, and the iconic <strong style="color:#f0c080;">Luce Memorial Chapel</strong> — designed by I.M. Pei. A pastoral campus where global careers begin, far from the noise of any city.</p>
-    </div>
-
-    <!-- Center: Campus video -->
-    <div style="overflow:hidden;background:#1a0508;display:flex;align-items:center;justify-content:center;">
-      <div style="width:100%;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;">
-        <div style="width:64px;height:64px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <span style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:.15em;text-transform:uppercase;">Coming Soon</span>
-      </div>
-    </div>
-
-    <!-- Right: Dark panel + 3 stats -->
-    <div style="background:var(--ink);padding:4rem 2.5rem;display:flex;flex-direction:column;justify-content:center;gap:3rem;">
-      <div>
-        <div style="font-size:clamp(44px,4vw,64px);font-weight:900;color:#fff;font-family:var(--ff-num);line-height:1;">134</div>
-        <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:.5rem;line-height:1.5;">hectares of scenic campus</p>
-      </div>
-      <div>
-        <div style="font-size:clamp(40px,4vw,60px);font-weight:900;color:#fff;font-family:var(--ff-num);line-height:1;">150+</div>
-        <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:.5rem;line-height:1.5;">student clubs — something for every interest</p>
-      </div>
-      <div>
-        <div style="font-size:clamp(34px,3.5vw,52px);font-weight:900;color:#fff;font-family:var(--ff-num);line-height:1;">46</div>
-        <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:.5rem;line-height:1.5;">dormitory buildings — on-campus living for every student</p>
-      </div>
-    </div>
-
-  </div>
-
-
-
-</section>
-
-<!-- ===== LIVING IN TAICHUNG ===== -->
-<!-- ===== NEWS ===== -->
-<section id="news" style="background:var(--cream);">
-  <div class="container">
-    <h2>News &amp; events</h2>
-
-    <!-- ── Feature Story ─────────────────────────────── -->
-    <!-- HOW TO UPDATE: change the img src, date, category, title, description and right-panel meta below -->
-    <div class="sec-rule" style="margin-bottom:1.25rem;"><span class="sec-tag">Feature Story</span><span class="rule-line"></span></div>
-    <div class="feature-story">
-      <div class="feature-story-img">
-        <!-- UPDATE IMAGE: replace src with your hosted photo URL (Google Drive public link or web URL) -->
-        <img src="./feature-story/feature_graduation_2026.jpg" alt="Graduation Group Photo on Campus – Luce Chapel, Tunghai University">
-      </div>
-      <div class="feature-story-bottom">
-        <div class="feature-story-left">
-          <div class="feature-date-tag">
-            <span class="feature-date">May 22, 2026</span>
-            <span class="feature-category">Student Life</span>
-          </div>
-          <h3>Graduation group photo on campus</h3>
-          <p class="feature-desc">Class of 2026 GMBA graduates celebrated at Luce Chapel — capturing friendships and milestones from two years of shared learning in Taichung.</p>
-        </div>
-        <div class="feature-story-right">
-          <div class="feature-snapshot-title">Activity Snapshot</div>
-          <div class="feature-meta-row">
-            <div class="feature-meta-label">Location</div>
-            <div class="feature-meta-val">Luce Chapel</div>
-          </div>
-          <div class="feature-meta-row">
-            <div class="feature-meta-label">Photos</div>
-            <div class="feature-meta-val">10 photos</div>
-          </div>
-          <div class="feature-meta-row">
-            <div class="feature-meta-label">Cohort</div>
-            <div class="feature-meta-val">Class of 2026</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Latest From Tunghai ────────────────────────── -->
-    <div class="sec-rule" style="margin-bottom:1rem;"><span class="sec-tag">Latest From Tunghai</span><span class="rule-line"></span></div>
-    <p class="sec-lead" style="margin-bottom:1.5rem;">Stay updated with the latest events and announcements from our GMBA community and Tunghai University.</p>
-    <div id="yaho-news-grid" class="news-grid-3">
-      <div style="grid-column:1/-1;text-align:center;padding:2rem 0;color:var(--ink-3);font-size:.9rem;">Loading latest news…</div>
-    </div>
-    <script>
-    (function(){
-      var BADGE_COLORS = {
-        EDUCATION:'#2a5a7a', CONFERENCE:'#2a5a7a', ACADEMIC:'#5a1a8a',
-        AWARD:'#7A1422', EVENT:'#2a7a4a', RESEARCH:'#7a5a1a'
-      };
-      function fmtDate(iso){
-        if(!iso) return '';
-        var d = new Date(iso);
-        return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-      }
-      function excerpt(txt){
-        if(!txt) return '';
-        var clean = txt.replace(/^[•·]\s*/gm,'').split(/\n/)[0].trim();
-        return clean.length > 140 ? clean.slice(0,137)+'…' : clean;
-      }
-      function escHtml(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-      fetch('https://yaho-sooty.vercel.app/api/home')
-        .then(function(r){ return r.json(); })
-        .then(function(data){
-          var items = (data.announcements || []).slice(0,3);
-          var grid = document.getElementById('yaho-news-grid');
-          if(!items.length){ grid.innerHTML='<p style="color:var(--ink-3)">No news available.</p>'; return; }
-          grid.innerHTML = items.map(function(item){
-            var color = BADGE_COLORS[item.category] || '#555';
-            var link = item.application_link || '#';
-            var hasLink = link && link !== '#';
-            return '<div class="nc">'
-              +'<div class="nc-body">'
-              +'<span class="nc-badge" style="background:'+color+'">'+escHtml(item.category)+'</span>'
-              +'<div class="nc-date">'+fmtDate(item.created_at)+'</div>'
-              +'<div class="nc-title">'+escHtml(item.title_en || item.title)+'</div>'
-              +'<div class="nc-excerpt">'+escHtml(excerpt(item.content_en || item.content))+'</div>'
-              +'</div>'
-              +(hasLink ? '<div class="nc-footer"><a href="'+escHtml(link)+'" target="_blank" rel="noopener" class="nc-link">Read more →</a></div>' : '')
-              +'</div>';
-          }).join('');
-        })
-        .catch(function(){
-          // Fallback: show static cards when API unavailable (e.g. local preview)
-          var grid = document.getElementById('yaho-news-grid');
-          var BADGE_COLORS2 = {
-            EDUCATION:'#2a5a7a', CONFERENCE:'#2a5a7a', ACADEMIC:'#5a1a8a',
-            AWARD:'#7A1422', EVENT:'#2a7a4a', RESEARCH:'#7a5a1a'
-          };
-          function fmtDate2(iso){
-            if(!iso) return '';
-            var d = new Date(iso);
-            return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-          }
-          function exc2(txt){
-            if(!txt) return '';
-            var c = txt.replace(/^[•·]\s*/gm,'').split(/\n/)[0].trim();
-            return c.length > 140 ? c.slice(0,137)+'…' : c;
-          }
-          function esc2(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-          var fallback = [
-  {
-    category:'EDUCATION',
-    created_at:'2026-06-23T00:00:00Z',
-    title_en:'115-1 ILA Honors Program Elective Pre-Registration',
-    content_en:'Pre-registration for the 115-1 ILA Honors Program electives open until June 30, 2026. Four English-taught courses: Global Justice, International Institutions, Gender Studies, and Focus Training.',
-    application_link:'https://honors.thu.edu.tw/current-courses/electives/'
-  },
-  {
-    category:'CONFERENCE',
-    created_at:'2026-06-09T00:00:00Z',
-    title_en:'College of Public Affairs Evening Lecture: Diplomacy Experience and Administrative Innovation',
-    content_en:'Beyond diplomacy — From Diplomatic Experience to Administrative Innovation. Speaker: Mr. Li Guangzhang, Taiwan Democracy Foundation.',
-    application_link:'https://event.ithu.tw/2026060014'
-  },
-  {
-    category:'ACADEMIC',
-    created_at:'2026-05-26T00:00:00Z',
-    title_en:'Interdisciplinary Forum: AI-Era Smart Society & Humanities Dialogue',
-    content_en:'Multi-college forum exploring AI-era interdisciplinary talent development, humane values in smart society, and future visions of technology and education.',
-    application_link:''
-  }
-];
-          grid.innerHTML = fallback.map(function(item){
-            var key = Object.prototype.hasOwnProperty.call(item,'title') && !item.title_en ? 'title' : (item.title_en ? 'title_en' : 'title');
-            var ckey = Object.prototype.hasOwnProperty.call(item,'content') && !item.content_en ? 'content' : (item.content_en ? 'content_en' : 'content');
-            var color = BADGE_COLORS2[item.category] || '#555';
-            var link = item.application_link || '#';
-            var hasLink = link && link !== '#';
-            return '<div class="nc">'
-              +'<div class="nc-body">'
-              +'<span class="nc-badge" style="background:'+color+'">'+esc2(item.category)+'</span>'
-              +'<div class="nc-date">'+fmtDate2(item.created_at)+'</div>'
-              +'<div class="nc-title">'+esc2(item[key])+'</div>'
-              +'<div class="nc-excerpt">'+esc2(exc2(item[ckey]))+'</div>'
-              +'</div>'
-              +(hasLink ? '<div class="nc-footer"><a href="'+esc2(link)+'" target="_blank" rel="noopener" class="nc-link">Read more →</a></div>' : '')
-              +'</div>';
-          }).join('');
-        });
-    })();
-    </script>
-    <p class="news-source">Source: <a href="https://yaho-sooty.vercel.app/" target="_blank" rel="noopener">YAHO — Taiwan University Notice Curation</a></p>
-  </div>
-</section>
-
-<!-- ===== DOWNLOADS ===== -->
-
 
 <section id="contact" style="background:#2E0D1A;padding:0;border-top:3px solid #B8922A;text-align:center;">
   <div style="padding:36px 2.5rem 32px;max-width:640px;margin:0 auto;">
@@ -1753,10 +1541,8 @@
     <a href="admissions.html#admissions" style="display:inline-block;background:#B8922A;color:#fff;text-decoration:none;padding:1.2rem 3.4rem;font-weight:900;font-size:1.15rem;letter-spacing:.05em;transition:opacity 0.15s;">Apply Now →</a>
   </div>
 </section>
-</main>
 
-
-<footer class="site-footer" aria-label="Site footer" style="background:#1A0A0E;">
+<footer class="site-footer" aria-label="Site footer">
   <div class="footer-main">
 
     <div class="footer-col">
@@ -1828,6 +1614,37 @@
   </div>
 </footer>
 
+
+</main>
+
+
+<script>
+/* Course list credit-count nbsp fix */
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.cur-card ul li').forEach(function(li) {
+    li.innerHTML = li.innerHTML.replace(/ \((\d+)\)/g, '\u00a0($1)');
+  });
+});
+</script>
+
+<script>
+(function(){
+  var sidebar = document.getElementById('floatSidebar');
+  if (!sidebar) return;
+  function isNearFooter(){
+    var f = document.querySelector('footer');
+    return f ? f.getBoundingClientRect().top <= window.innerHeight : false;
+  }
+  function checkScroll(){
+    if(isNearFooter()){ sidebar.classList.remove('visible'); }
+    else if(window.scrollY > 300){ sidebar.classList.add('visible'); }
+    else{ sidebar.classList.remove('visible'); }
+  }
+  window.addEventListener('scroll', checkScroll, {passive:true});
+  checkScroll();
+})();
+</script>
+
 <script>
 (function(){
   var nb=document.querySelector('.nav-links'),
@@ -1839,7 +1656,6 @@
   function closeNav(){ni.classList.remove('open');}
   btn.addEventListener('click',function(e){e.stopPropagation();ni.classList.toggle('open');});
   document.addEventListener('click',function(e){if(!ni.contains(e.target)&&!btn.contains(e.target))closeNav();});
-  // Mobile dropdown toggle (tap parent = expand/collapse, not navigate)
   ni.querySelectorAll('.nav-item>a').forEach(function(a){
     var item=a.closest('.nav-item');
     if(item.querySelector('.nav-dropdown')){
@@ -1853,43 +1669,11 @@
       });
     }
   });
-  // Close hamburger when clicking any dropdown sub-link or utility links
   ni.querySelectorAll('.nav-dropdown a,.lang-btn,.nav-contact-mobile,.nav-apply-mobile').forEach(function(a){
     a.addEventListener('click',function(){closeNav();});
   });
 })();
 </script>
-<script>
-(function(){
-  var sidebar=document.getElementById('floatSidebar');
-  if(!sidebar)return;
-  var trigger=document.getElementById('video-section');
-  var timer=null;
-  function isBelowTrigger(){if(!trigger)return false;return trigger.getBoundingClientRect().top<=window.innerHeight*0.9;}
-  function isOverText(){
-    sidebar.style.visibility='hidden';
-    var x=window.innerWidth-64,y=window.innerHeight/2;
-    var el=document.elementFromPoint(x,y);
-    sidebar.style.visibility='';
-    if(!el)return false;
-    var t={P:1,H1:1,H2:1,H3:1,H4:1,H5:1,LI:1,TD:1,TH:1,FIGCAPTION:1,LABEL:1};
-    return !!(el.tagName in t&&tContent.trim().length>10);
-  }
-  function isNearFooter(){
-    var f=document.querySelector('footer');
-    return f?f.getBoundingClientRect().top<=window.innerHeight:false;
-  }
-  function update(){
-    if(isNearFooter()||!isBelowTrigger()){sidebar.classList.remove('visible');return;}
-    if(isOverText()){sidebar.classList.remove('visible');}
-    else{sidebar.classList.add('visible');}
-  }
-  window.addEventListener('scroll',update,{passive:true});
-  window.addEventListener('resize',update,{passive:true});
-  update();
-})();
-</script>
-
 <!-- Contact Modal -->
 <div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.65);align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)closeContactModal()">
   <div style="background:#1A0A0E;border:1px solid #B8922A;border-radius:12px;max-width:380px;width:100%;padding:2rem 1.75rem;position:relative;">
@@ -1914,5 +1698,4 @@ function openContactModal(){var m=document.getElementById('contact-modal');m.sty
 function closeContactModal(){document.getElementById('contact-modal').style.display='none';}
 function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(function(){var b=document.getElementById('copy-email-btn');b.textContent='Copied!';b.style.color='#4ade80';setTimeout(function(){b.textContent='Copy';b.style.color='#B8922A';},2000);});}
 </script>
-
 </body></html>
