@@ -496,12 +496,12 @@
 
     /* DEADLINE CARD */
     .dl-card { flex-shrink: 0; width: 300px; background: rgba(0,0,0,0.40); border: 1px solid rgba(255,255,255,0.18); padding: 1.6rem; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
-    .dl-card-title { font-size: var(--t-tag); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+    .dl-card-title { font-size: var(--t-tag); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; }
     .dl-item { margin-bottom: 1.1rem; }
     .dl-item-label { font-size: var(--t-xs); font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; }
     .dl-item-date { font-family: var(--ff-num); font-size: 26px; font-weight: 900; color: var(--white); line-height: 1.1; }
     .dl-item-desc { font-size: var(--t-xs); color: rgba(255,255,255,0.55); margin-top: 2px; }
-    .dl-card hr { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 0.9rem 0; }
+    .dl-card hr { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 0.6rem 0; }
 
     /* STATS */
     .stats { background: var(--white); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
@@ -1056,39 +1056,43 @@
     </div>
     <aside class="dl-card" aria-label="Application deadlines">
       <div class="dl-card-title">Application Deadlines</div>
-      <!-- Column headers -->
-      <div style="display:grid;grid-template-columns:1fr 82px 82px;gap:0.3rem;margin-bottom:0.7rem;padding-bottom:0.55rem;border-bottom:1px solid rgba(255,255,255,0.15);">
-        <div></div>
-        <div style="text-align:center;font-size:clamp(10px,2vw,12px);font-weight:800;letter-spacing:0.05em;color:var(--gold);line-height:1.4;">Spring</div>
-        <div style="text-align:center;font-size:clamp(10px,2vw,12px);font-weight:800;letter-spacing:0.05em;color:var(--gold);line-height:1.4;">Fall</div>
-      </div>
-      <!-- Row 1: International Students (Overseas) — primary -->
-      <div class="dl-item">
-        <div class="dl-item-label">International Students (Overseas)</div>
-        <div style="display:grid;grid-template-columns:1fr 82px 82px;gap:0.3rem;">
-          <div></div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Oct–Nov</div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Jan–May</div>
+      <div class="dl-item" style="margin-bottom:0;">
+        <div class="dl-item-label">International (Overseas)</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">Spring intake</div>
+          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">Oct</div>
         </div>
       </div>
       <hr>
-      <!-- Row 2: Already in Taiwan / Taiwan Nationals -->
-      <div class="dl-item">
-        <div class="dl-item-label">Already in Taiwan<br><span style="font-weight:500;font-size:0.82em;opacity:0.65;">(ARC + reg. required)</span><br>Taiwan nationals</div>
-        <div style="display:grid;grid-template-columns:1fr 82px 82px;gap:0.3rem;">
-          <div></div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Oct–Nov</div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Dec–Feb</div>
+      <div class="dl-item" style="margin-bottom:0;">
+        <div class="dl-item-label">International (Overseas)</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">Fall intake</div>
+          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">Jan–May</div>
         </div>
       </div>
       <hr>
-      <!-- Row 3: Overseas Compatriots -->
-      <div class="dl-item">
-        <div class="dl-item-label">Overseas Compatriots<br><span style="font-weight:500;font-size:0.82em;opacity:0.65;">(僑生)</span></div>
-        <div style="display:grid;grid-template-columns:1fr 82px 82px;gap:0.3rem;">
-          <div></div>
-          <div style="text-align:center;color:rgba(255,255,255,0.25);font-size:18px;font-weight:700;">—</div>
-          <div class="dl-item-date" style="font-size:16px;text-align:center;">Apr–Jun</div>
+      <div class="dl-item" style="margin-bottom:0;">
+        <div class="dl-item-label">In Taiwan · Taiwan nationals</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">Fall intake · Round 1</div>
+          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">Oct–Nov</div>
+        </div>
+      </div>
+      <hr>
+      <div class="dl-item" style="margin-bottom:0;">
+        <div class="dl-item-label">In Taiwan · Taiwan nationals</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">Fall intake · Round 2</div>
+          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">Dec–Feb</div>
+        </div>
+      </div>
+      <hr>
+      <div class="dl-item" style="margin-bottom:0;">
+        <div class="dl-item-label">Overseas Compatriots</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">Fall intake</div>
+          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">Apr–Jun</div>
         </div>
       </div>
       <hr>

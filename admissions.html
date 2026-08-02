@@ -356,7 +356,7 @@
           {"@type": "Question","name": "What visa and ARC do international students need?","acceptedAnswer": {"@type": "Answer","text": "Apply for a Resident Visa (type FS) at a ROC representative office before arrival. Do not enter on a landing visa — it cannot be converted to an ARC. After arrival, OIR assists new students to obtain the ARC collectively. The ARC must be renewed annually, at least 3 months before expiry."}},
           {"@type": "Question","name": "What health insurance do GMBA students have?","acceptedAnswer": {"@type": "Answer","text": "All international students are automatically enrolled in Group Medical Insurance upon arrival. After 6 months of continuous residence with a valid ARC, they transition to National Health Insurance (NHI). To claim: bring diagnosis certificate and receipt to OIR."}},
           {"@type": "Question","name": "Do GMBA students need to speak Chinese?","acceptedAnswer": {"@type": "Answer","text": "No. All courses, assignments, and thesis are conducted entirely in English. Administrative procedures including ARC, insurance, and work permits are handled in English by OIR. Optional Chinese courses are available at the on-campus Chinese Language Center."}},
-          {"@type": "Question","name": "What are living costs in Taichung?","acceptedAnswer": {"@type": "Answer","text": "Monthly living costs in Taichung are approximately NT$12,000–18,000 (around USD 370–550), covering accommodation, food, and transport. On-campus dormitories are available with limited spots; off-campus rental in the Xitun area runs approximately NT$30,000–48,000 per semester. Estimated total cost per semester is around NT$100,000."}},
+          {"@type": "Question","name": "What are living costs in Taichung?","acceptedAnswer": {"@type": "Answer","text": "Monthly living costs in Taichung are approximately NT$24,000 (around USD 740), covering food, transport, and daily expenses. Housing is budgeted separately: on-campus dormitories are available with limited spots, and off-campus rental in the Xitun area runs approximately NT$30,000–48,000 per semester. Estimated total cost per semester is around NT$100,000."}},
           {"@type": "Question","name": "Can GMBA students work or intern while studying?","acceptedAnswer": {"@type": "Answer","text": "Yes — up to 20 hours per week during semester, with no limit during breaks. Both part-time work and internships require a work permit. Apply online at ezwp.wda.gov.tw with student ID, passport, ARC, and enrollment certificate. Working without a permit carries fines of NT$30,000–150,000 and forced departure."}},
           {"@type": "Question","name": "Can GMBA graduates stay in Taiwan to work after graduation?","acceptedAnswer": {"@type": "Answer","text": "Yes. After receiving the diploma, graduates may extend their ARC for up to 1 year for job-seeking. Full-time employment requires employer sponsorship via the Point-Based System. A separate MOE post-graduation internship program is also available for international graduates."}},
           {"@type": "Question","name": "What are the admission requirements for Tunghai GMBA, and how do I apply?","acceptedAnswer": {"@type": "Answer","text": "Applicants must hold a bachelor's degree. There are three applicant categories: International Students (Overseas), Already in Taiwan / Taiwan Nationals, and Overseas Compatriots (僑生) — each with different application windows and portals. Email gmba@thu.edu.tw for eligibility guidance."}}
@@ -1071,7 +1071,7 @@
   }
   /* Section labels via ::before */
   .admit-grid-wrapper > div:not(:first-child) > div:nth-child(2)::before {
-    content: "Spring";
+    content: "Intake";
     display: block;
     font-size: 10px;
     font-weight: 800;
@@ -1081,7 +1081,7 @@
     margin-bottom: 0.15rem;
   }
   .admit-grid-wrapper > div:not(:first-child) > div:nth-child(3)::before {
-    content: "Fall";
+    content: "Apply during";
     display: block;
     font-size: 10px;
     font-weight: 800;
@@ -1402,62 +1402,82 @@
 <section id="admissions" style="background:var(--cream);">
   <div class="container">
     <h2>How to apply</h2>
-    <p class="sec-lead">Confirm your applicant category and target semester, then go directly to the relevant application portal.</p>
+    <p class="sec-lead">Find your applicant category below, then go straight to the right application portal. Only international applicants from overseas have a spring intake — every other route enrols in the fall.</p>
 
     <!-- Application Routes Table -->
     <div style="margin-bottom:3rem">
       <div class="admit-grid-wrapper" style="overflow:hidden;background:#fff;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,0.18)">
         <!-- Header -->
-        <div style="display:grid;grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr;background:var(--maroon);color:var(--white);padding:0.85rem 1.2rem;gap:1rem;align-items:center">
-          <div style="font-size:18px;font-weight:800;letter-spacing:0.04em">Applicant Category</div>
-          <div style="font-size:18px;font-weight:800;letter-spacing:0.05em">Spring<br><span style="font-size:14px;font-weight:600;letter-spacing:0.03em">Selection Route (甄試入學)</span></div>
-          <div style="font-size:18px;font-weight:800;letter-spacing:0.05em">Fall<br><span style="font-size:14px;font-weight:600;letter-spacing:0.03em">Exam Route (考試入學)</span></div>
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;background:var(--maroon);color:var(--white);padding:0.85rem 1.2rem;gap:1rem;align-items:center">
+          <div style="font-size:18px;font-weight:800;letter-spacing:0.04em">Application route</div>
+          <div style="font-size:18px;font-weight:800;letter-spacing:0.05em">Intake</div>
+          <div style="font-size:18px;font-weight:800;letter-spacing:0.05em">Apply during</div>
           <div style="font-size:18px;font-weight:800;letter-spacing:0.05em">Process</div>
         </div>
-        <!-- Row 1: International Students (Overseas) — primary -->
-        <div style="display:grid;grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:var(--cream)">
+        <!-- Row 1: International — Spring intake -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:var(--cream)">
           <div style="display:flex;align-items:flex-start;gap:0.6rem">
             <span style="display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;background:var(--maroon);color:#fff;font-size:var(--t-sm);font-weight:800;border-radius:3px;flex-shrink:0">1</span>
-            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">International (Overseas)</div>
+            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">International (Overseas)<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">Applying from outside Taiwan</span></div>
           </div>
+          <div><span style="display:inline-block;background:#E1F5EE;color:#085041;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Spring</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Oct – Nov</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=26" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Oct</div>
+            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=26" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review</div>
+        </div>
+        <!-- Row 2: International — Fall intake -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:var(--cream)">
+          <div style="display:flex;align-items:flex-start;gap:0.6rem">
+            <span style="min-width:28px;flex-shrink:0"></span>
+            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">International (Overseas)<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">Applying from outside Taiwan</span></div>
+          </div>
+          <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Fall</span></div>
           <div>
             <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Jan – May</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=25" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=25" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
-          <div style=";font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review</div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review</div>
         </div>
-        <!-- Row 2: Already in Taiwan / Taiwan Nationals -->
-        <div style="display:grid;grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:#fff">
+        <!-- Row 3: In Taiwan — Round 1 -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:#fff">
           <div style="display:flex;align-items:flex-start;gap:0.6rem">
             <span style="display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;background:var(--maroon);color:#fff;font-size:var(--t-sm);font-weight:800;border-radius:3px;flex-shrink:0">2</span>
-            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">In Taiwan · Taiwan nationals<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">ARC + enrolled in degree program</span></div>
+            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">In Taiwan · Taiwan nationals<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">ARC + enrolled in degree program &nbsp;·&nbsp; Round 1</span></div>
           </div>
+          <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Fall</span></div>
           <div>
             <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Oct – Nov</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=21&page='si'" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=21&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review + Interview</div>
+        </div>
+        <!-- Row 4: In Taiwan — Round 2 -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:#fff">
+          <div style="display:flex;align-items:flex-start;gap:0.6rem">
+            <span style="min-width:28px;flex-shrink:0"></span>
+            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">In Taiwan · Taiwan nationals<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">ARC + enrolled in degree program &nbsp;·&nbsp; Round 2</span></div>
+          </div>
+          <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Fall</span></div>
           <div>
             <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Dec – Feb</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=22&page='si'" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=22&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
-          <div style=";font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review + Interview</div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review + Interview</div>
         </div>
-        <!-- Row 3: Overseas Compatriots -->
-        <div style="display:grid;grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr;padding:1.1rem 1.2rem;align-items:center;gap:1rem;background:var(--cream)">
+        <!-- Row 5: Overseas Compatriots -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;align-items:center;gap:1rem;background:var(--cream)">
           <div style="display:flex;align-items:flex-start;gap:0.6rem">
             <span style="display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;background:var(--maroon);color:#fff;font-size:var(--t-sm);font-weight:800;border-radius:3px;flex-shrink:0">3</span>
             <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">Overseas Compatriots <span style="font-weight:500;color:var(--ink-3)">(僑生)</span></div>
           </div>
-          <div style="color:rgba(255,255,255,0.25);font-size:var(--t-body);font-weight:700;text-align:center">—</div>
+          <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Fall</span></div>
           <div>
             <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Apr – Jun</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=54" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=54" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
-          <div style=";font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review</div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review</div>
         </div>
       </div>
     </div>
@@ -1540,7 +1560,7 @@
         <div>
           <details>
             <summary>What are living costs in Taichung?</summary>
-            <p class="faq-a">Monthly living costs are approximately NT$12,000–18,000 (~USD 370–550), covering accommodation, food, and transport. On-campus dormitories are available (limited spots); off-campus rental in the Xitun area runs ~NT$30,000–48,000/semester. Significantly lower than Singapore or Hong Kong. → <a href="#fees-table">Full cost breakdown</a></p>
+            <p class="faq-a">Monthly living costs are approximately NT$24,000 (~USD 740), covering food, transport, and daily expenses. Housing is budgeted separately: on-campus dormitories are available (limited spots); off-campus rental in the Xitun area runs ~NT$30,000–48,000/semester. Significantly lower than Singapore or Hong Kong. → <a href="#fees-table">Full cost breakdown</a></p>
           </details>
           <details>
             <summary>Can I work or intern while studying?</summary>

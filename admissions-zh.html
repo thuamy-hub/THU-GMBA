@@ -353,7 +353,7 @@
           {"@type": "Question","name": "國際生需要辦什麼簽證與居留證？","acceptedAnswer": {"@type": "Answer","text": "入境前須向我國駐外代表處申請居留簽證（FS類），切勿以落地簽入境（無法換辦居留證）。抵台後由國際處統一協助新生申請ARC，每年須辦理延期，到期前3個月內申辦。"}},
           {"@type": "Question","name": "GMBA學生有哪些保險？","acceptedAnswer": {"@type": "Answer","text": "入學起自動加入團體傷病保險；持有效居留證且在台連續居住滿6個月後轉為全民健保。看診後憑診斷書與收據至國際處申請理賠。"}},
           {"@type": "Question","name": "念GMBA需要會中文嗎？","acceptedAnswer": {"@type": "Answer","text": "不需要。所有課程、作業、論文全程英文進行；國際處行政手續均提供英語服務。有興趣可選修校內華語中心課程。"}},
-          {"@type": "Question","name": "台中的生活費大約多少？","acceptedAnswer": {"@type": "Answer","text": "每月約NT$12,000–18,000（含住宿、飲食與交通）。每學期生活費總估算約NT$10萬，遠低於新加坡或香港。"}},
+          {"@type": "Question","name": "台中的生活費大約多少？","acceptedAnswer": {"@type": "Answer","text": "每月約NT$24,000（約USD 740），包含飲食、交通與日常開銷，住宿費另計。每學期總花費估算約NT$10萬，遠低於新加坡或香港。"}},
           {"@type": "Question","name": "在學期間可以打工或實習嗎？","acceptedAnswer": {"@type": "Answer","text": "可以，學期間每週上限20小時（寒暑假不限）。打工與實習均須事先至ezwp.wda.gov.tw申請工作許可。未申請即打工違法，罰款NT$3–15萬且限令出境。"}},
           {"@type": "Question","name": "GMBA畢業後可以留台工作嗎？","acceptedAnswer": {"@type": "Answer","text": "可以。領取畢業證書後可申請最長1年的求職居留，找到工作後由雇主依評點新制申請工作許可。另有教育部畢業後在台實習管道可分開申辦。"}},
           {"@type": "Question","name": "GMBA入學條件是什麼？如何申請？","acceptedAnswer": {"@type": "Answer","text": "依身份分三類：海外國際生、在台外籍生／台灣籍、僑生，各有不同申請時間與入口。詳情請洽gmba@thu.edu.tw。"}}
@@ -1052,7 +1052,7 @@
   }
   /* Section labels via ::before */
   .admit-grid-wrapper > div:not(:first-child) > div:nth-child(2)::before {
-    content: "春季班";
+    content: "入學學期";
     display: block;
     font-size: 10px;
     font-weight: 800;
@@ -1062,7 +1062,7 @@
     margin-bottom: 0.15rem;
   }
   .admit-grid-wrapper > div:not(:first-child) > div:nth-child(3)::before {
-    content: "秋季班";
+    content: "申請期間";
     display: block;
     font-size: 10px;
     font-weight: 800;
@@ -1072,7 +1072,7 @@
     margin-bottom: 0.15rem;
   }
   .admit-grid-wrapper > div:not(:first-child) > div:nth-child(4)::before {
-    content: "申請方式";
+    content: "審查方式";
     display: block;
     font-size: 10px;
     font-weight: 800;
@@ -1383,63 +1383,84 @@
 <section id="admissions" style="background:var(--cream);">
   <div class="container">
     <h2>如何申請</h2>
-    <p class="sec-lead">確認申請身份與入學學期，直接前往對應的報名頁面。</p>
+    <p class="sec-lead">先找到你屬於哪一類，再點進對應的報名頁面。只有從海外申請的國際生分春季班與秋季班，其餘管道都是秋季入學。</p>
 
     <!-- 申請管道表格 -->
     <div style="margin-bottom:3rem">
       <div class="admit-grid-wrapper" style="overflow:hidden;background:#fff;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,0.18)">
         <!-- 表頭 -->
-        <div style="display:grid;grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr;background:var(--maroon);color:var(--white);padding:0.85rem 1.2rem;gap:1rem;align-items:center">
-          <div style="font-size:var(--t-body);font-weight:800;letter-spacing:0.04em">類別</div>
-          <div style="font-size:var(--t-body);font-weight:800;letter-spacing:0.04em">春季班<br><span style="font-size:13px;font-weight:600;letter-spacing:0.03em">甄試入學</span></div>
-          <div style="font-size:var(--t-body);font-weight:800;letter-spacing:0.04em">秋季班<br><span style="font-size:13px;font-weight:600;letter-spacing:0.03em">考試入學</span></div>
-          <div style="font-size:var(--t-body);font-weight:800;letter-spacing:0.04em">申請流程</div>
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;background:var(--maroon);color:var(--white);padding:0.85rem 1.2rem;gap:1rem;align-items:center">
+          <div style="font-size:var(--t-body);font-weight:800;letter-spacing:0.04em">申請管道</div>
+          <div style="font-size:var(--t-body);font-weight:800;letter-spacing:0.04em">入學學期</div>
+          <div style="font-size:var(--t-body);font-weight:800;letter-spacing:0.04em">申請期間</div>
+          <div style="font-size:var(--t-body);font-weight:800;letter-spacing:0.04em">審查方式</div>
         </div>
-        <!-- 第一列：海外國際學生（主要）-->
-        <div style="display:grid;grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:start;gap:1rem;background:var(--cream)">
+        <!-- 第一列：海外國際學生 春季班 -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:var(--cream)">
           <div style="display:flex;align-items:flex-start;gap:0.6rem">
             <span style="display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;background:var(--maroon);color:#fff;font-size:var(--t-sm);font-weight:800;border-radius:3px;flex-shrink:0">1</span>
-            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">海外國際學生</div>
+            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">海外國際學生<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">自海外提出申請</span></div>
           </div>
+          <div><span style="display:inline-block;background:#E1F5EE;color:#085041;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">春季班</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">10月－11月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=26" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">10月</div>
+            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=26" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">書面審查</div>
+        </div>
+        <!-- 第二列：海外國際學生 秋季班 -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:var(--cream)">
+          <div style="display:flex;align-items:flex-start;gap:0.6rem">
+            <span style="min-width:28px;flex-shrink:0"></span>
+            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">海外國際學生<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">自海外提出申請</span></div>
+          </div>
+          <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">秋季班</span></div>
           <div>
             <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">1月－5月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=25" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=25" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
-          <div style=";font-size:var(--t-body);font-weight:400;line-height:1.5">書面審查</div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">書面審查</div>
         </div>
-        <!-- 第二列：已在台者／台灣籍 -->
-        <div style="display:grid;grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:start;gap:1rem;background:#fff">
+        <!-- 第三列：已在台者／台灣籍 甄試入學 -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:#fff">
           <div style="display:flex;align-items:flex-start;gap:0.6rem">
             <span style="display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;background:var(--maroon);color:#fff;font-size:var(--t-sm);font-weight:800;border-radius:3px;flex-shrink:0">2</span>
-            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">已在台者 · 台灣籍<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">須持ARC及正式學籍</span></div>
+            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">已在台者 · 台灣籍<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">須持ARC及正式學籍 &nbsp;·&nbsp; 甄試入學</span></div>
           </div>
+          <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">秋季班</span></div>
           <div>
             <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">10月－11月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=21&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=21&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">資料審查＋面試</div>
+        </div>
+        <!-- 第四列：已在台者／台灣籍 考試入學 -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;border-bottom:1px solid var(--rule);align-items:center;gap:1rem;background:#fff">
+          <div style="display:flex;align-items:flex-start;gap:0.6rem">
+            <span style="min-width:28px;flex-shrink:0"></span>
+            <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">已在台者 · 台灣籍<br><span style="font-weight:500;font-size:var(--t-sm);color:var(--ink-3)">須持ARC及正式學籍 &nbsp;·&nbsp; 考試入學</span></div>
+          </div>
+          <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">秋季班</span></div>
           <div>
             <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">12月－2月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=22&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=22&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
-          <div style=";font-size:var(--t-body);font-weight:400;line-height:1.5">資料審查＋面試</div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">資料審查＋面試</div>
         </div>
-        <!-- 第三列：海外僑生 -->
-        <div style="display:grid;grid-template-columns:2.5fr 1.5fr 1.5fr 1.5fr;padding:1.1rem 1.2rem;align-items:start;gap:1rem;background:var(--cream)">
+        <!-- 第五列：海外僑生 -->
+        <div style="display:grid;grid-template-columns:2.3fr 0.9fr 1.25fr 1.5fr;padding:1.1rem 1.2rem;align-items:center;gap:1rem;background:var(--cream)">
           <div style="display:flex;align-items:flex-start;gap:0.6rem">
             <span style="display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;background:var(--maroon);color:#fff;font-size:var(--t-sm);font-weight:800;border-radius:3px;flex-shrink:0">3</span>
             <div style="font-weight:800;color:var(--ink);font-size:var(--t-body);line-height:1.3">海外僑生</div>
           </div>
-          <div style="color:var(--rule);font-size:18px;font-weight:700;text-align:center">—</div>
+          <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">秋季班</span></div>
           <div>
             <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">4月－6月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=54" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-size:var(--t-body);font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=54" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
-          <div style="color:var(--ink-2);font-size:var(--t-body);font-weight:400;line-height:1.5">書面審查</div>
+          <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">書面審查</div>
         </div>
+      </div>
     </div>
 
     <!-- 申請條件 -->
@@ -1520,7 +1541,7 @@
         <div>
           <details>
             <summary>台中生活費大約多少？</summary>
-            <p class="faq-a">每月約 NT$12,000–18,000（含住宿、飲食與交通），遠低於新加坡或香港。校內宿舍名額有限；校外西屯區租屋每學期約 NT$30,000–48,000。→ <a href="#fees-table">完整費用明細</a></p>
+            <p class="faq-a">每月約 NT$24,000（約 USD 740），包含飲食、交通與日常開銷，遠低於新加坡或香港。住宿費另計：校內宿舍名額有限，校外西屯區租屋每學期約 NT$30,000–48,000。→ <a href="#fees-table">完整費用明細</a></p>
           </details>
           <details>
             <summary>在學期間可以打工或實習嗎？</summary>
