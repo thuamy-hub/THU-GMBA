@@ -1,0 +1,31 @@
+# ===== Windows / Google Drive 自動產生 =====
+desktop.ini
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+*.lnk
+
+# ===== macOS =====
+.DS_Store
+._*
+
+# ===== 個人捷徑、不該公開 =====
+*.url
+
+# ===== 舊平台設定，Cloudflare 不讀，留著易誤導 =====
+netlify.toml
+
+# ===== 內部維運文件，不對外 =====
+*_gmba-website-maintenance-plan.md
+*部署檢查報告.md
+
+# ===== 編輯器暫存 =====
+*~
+*.swp
+*.bak
+*.tmp
+
+# ===== 推送工具本身，不需要上傳 =====
+一鍵推送.bat
+.push-config.txt
+推送紀錄.txt
