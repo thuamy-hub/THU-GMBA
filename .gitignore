@@ -29,3 +29,12 @@ netlify.toml
 一鍵推送.bat
 .push-config.txt
 推送紀錄.txt
+
+# ===== FUSE / 雲端同步暫存，會自己長出來 =====
+.fuse_hidden*
+.writetest*
+_t.html
+
+# ===== 一次性工具腳本，不對外發佈 =====
+2026-*_*.bat
+2026-*_*.gs
