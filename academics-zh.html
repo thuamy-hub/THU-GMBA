@@ -434,7 +434,7 @@
             "name": "東海大學"
           },
           "knowsAbout": "策略、人資與營運",
-          "url": "https://thotel.thu.edu.tw/dr-kuei-i-lee/"
+          "url": "https://thotel.thu.edu.tw/%E6%9D%8E%E8%B2%B4%E5%AE%9C-%E5%89%AF%E6%95%99%E6%8E%88/"
         },
         {
           "@type": "Person",
@@ -444,7 +444,7 @@
             "name": "東海大學"
           },
           "knowsAbout": "策略、人資與營運",
-          "url": "https://en.ba.thu.edu.tw/teacher/Chih-Yun+Wu/"
+          "url": "https://ba.thu.edu.tw/teacher/%E5%90%B3%E7%A5%89%E8%8A%B8/"
         },
         {
           "@type": "Person",
@@ -464,7 +464,7 @@
             "name": "東海大學"
           },
           "knowsAbout": "行銷與消費者行為",
-          "url": "https://en.ba.thu.edu.tw/teacher/Yu-Teng+Jacky+Jang/"
+          "url": "https://ba.thu.edu.tw/teacher/%E5%BC%B5%E8%AD%BD%E9%A8%B0/"
         },
         {
           "@type": "Person",
@@ -474,7 +474,7 @@
             "name": "東海大學"
           },
           "knowsAbout": "行銷與消費者行為",
-          "url": "https://inttrade.thu.edu.tw/en/cat-faculty-1/assistant-professor-wei-ting-chen/"
+          "url": "https://inttrade.thu.edu.tw/department-introduction/faculty-introduction/cat-faculty-1/%e9%99%b3%e6%9a%90%e5%a9%b7-%e5%8a%a9%e7%90%86%e6%95%99%e6%8e%88/"
         },
         {
           "@type": "Person",
@@ -484,7 +484,7 @@
             "name": "東海大學"
           },
           "knowsAbout": "行銷與消費者行為",
-          "url": "https://en.ba.thu.edu.tw/teacher/Min-Chieh+Chuang/"
+          "url": "https://ba.thu.edu.tw/teacher/%E8%8E%8A%E6%97%BB%E6%BD%94/"
         },
         {
           "@type": "Person",
@@ -532,7 +532,7 @@
             "name": "東海大學"
           },
           "knowsAbout": "文化與溝通",
-          "url": "https://flld.thu.edu.tw/en/faculty-en/faculty-full-time-en/chiu-chia-hui-2/"
+          "url": "https://flld.thu.edu.tw/faculty/faculty-full-time/chiu-chia-hui/"
         },
         {
           "@type": "Person",
@@ -677,7 +677,10 @@
     @media (max-width: 960px) { .float-sidebar { display: none; } }
 
     /* ANNOUNCEMENT BAR */
-    .announce { background: var(--gold); color: var(--ink); text-align: center; padding: 0.55rem 1.5rem; font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.03em; }
+    .announce {
+      background: var(--gold); color: var(--ink); text-align: center;
+      padding: 0.55rem 1.5rem; font-size: 15px; font-weight: 700; letter-spacing: 0.03em;
+    }
     .announce a { color: var(--ink); }
 
     /* HERO */
@@ -1114,6 +1117,7 @@
 <style>
 /* ===== COMPREHENSIVE MOBILE FIX 2026-06-24 ===== */
 @media (max-width: 640px) {
+  .announce { font-size: 13px !important; padding: 0.45rem 1rem !important; }
   :root {
     --t-hero: clamp(28px, 8vw, 42px) !important;
     --t-h2:   clamp(22px, 6.5vw, 30px) !important;
@@ -1171,6 +1175,9 @@
 </style>
 </head>
 <body>
+<div class="announce" role="alert">
+  東海攜手中華電信與Google，率全台之先導入企業級Agent管理平台「Gemini Enterprise」。
+</div>
 
 <a href="#maincontent" class="skip-link">跳到主要內容</a>
 
@@ -1356,10 +1363,10 @@
         <div><div class="fv2-label">AI、數據與科技</div><div class="fv2-sub">商業分析 · 資訊安全 · 資料科學 · AI 應用</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('chen-ho'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/01-chen-ho-yuan.jpg" alt="陳鶴元" loading="lazy"></div><div class="fv2-name">陳鶴元</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('kim'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/02-kim-brian.jpg" alt="金泰星" loading="lazy"></div><div class="fv2-name">金泰星</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('huang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/03-huang-yin-tzu.jpg" alt="黃尹姿" loading="lazy"></div><div class="fv2-name">黃尹姿</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('wong'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/04-wong-ka-chun.jpg" alt="黃家俊" loading="lazy"></div><div class="fv2-name">黃家俊</div></a>
+        <a class="fv2-card" data-fac="chen-ho" href="#" onclick="openFacModal('chen-ho'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chen-ho.photo" src="faculty-photos/01-chen-ho-yuan.jpg" alt="陳鶴元" loading="lazy"></div><div class="fv2-name" data-k="fac.chen-ho.card">陳鶴元</div></a>
+        <a class="fv2-card" data-fac="kim" href="#" onclick="openFacModal('kim'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.kim.photo" src="faculty-photos/02-kim-brian.jpg" alt="金泰星" loading="lazy"></div><div class="fv2-name" data-k="fac.kim.card">金泰星</div></a>
+        <a class="fv2-card" data-fac="huang" href="#" onclick="openFacModal('huang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.huang.photo" src="faculty-photos/03-huang-yin-tzu.jpg" alt="黃尹姿" loading="lazy"></div><div class="fv2-name" data-k="fac.huang.card">黃尹姿</div></a>
+        <a class="fv2-card" data-fac="wong" href="#" onclick="openFacModal('wong'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.wong.photo" src="faculty-photos/04-wong-ka-chun.jpg" alt="黃家俊" loading="lazy"></div><div class="fv2-name" data-k="fac.wong.card">黃家俊</div></a>
       </div>
     </div>
 
@@ -1370,11 +1377,11 @@
         <div><div class="fv2-label">財務與資本市場</div><div class="fv2-sub">公司財務 · 資本市場 · 衍生性商品與風險管理</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('chang-yh'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/05-chang-yung-ho.jpg" alt="張永和" loading="lazy"></div><div class="fv2-name">張永和</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('kuo'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/06-kuo-i-doun.jpg" alt="郭一棟" loading="lazy"></div><div class="fv2-name">郭一棟</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chuang-ks'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/07-chuang-kai-shi.jpg" alt="莊凱旭" loading="lazy"></div><div class="fv2-name">莊凱旭</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('fu'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/08-fu-yufen.jpg" alt="傅郁芬" loading="lazy"></div><div class="fv2-name">傅郁芬</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('huang-cj'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/09-huang-chen-jui.jpg" alt="黃琛瑞" loading="lazy"></div><div class="fv2-name">黃琛瑞</div></a>
+        <a class="fv2-card" data-fac="chang-yh" href="#" onclick="openFacModal('chang-yh'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chang-yh.photo" src="faculty-photos/05-chang-yung-ho.jpg" alt="張永和" loading="lazy"></div><div class="fv2-name" data-k="fac.chang-yh.card">張永和</div></a>
+        <a class="fv2-card" data-fac="kuo" href="#" onclick="openFacModal('kuo'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.kuo.photo" src="faculty-photos/06-kuo-i-doun.jpg" alt="郭一棟" loading="lazy"></div><div class="fv2-name" data-k="fac.kuo.card">郭一棟</div></a>
+        <a class="fv2-card" data-fac="chuang-ks" href="#" onclick="openFacModal('chuang-ks'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chuang-ks.photo" src="faculty-photos/07-chuang-kai-shi.jpg" alt="莊凱旭" loading="lazy"></div><div class="fv2-name" data-k="fac.chuang-ks.card">莊凱旭</div></a>
+        <a class="fv2-card" data-fac="fu" href="#" onclick="openFacModal('fu'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.fu.photo" src="faculty-photos/08-fu-yufen.jpg" alt="傅郁芬" loading="lazy"></div><div class="fv2-name" data-k="fac.fu.card">傅郁芬</div></a>
+        <a class="fv2-card" data-fac="huang-cj" href="#" onclick="openFacModal('huang-cj'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.huang-cj.photo" src="faculty-photos/09-huang-chen-jui.jpg" alt="黃琛瑞" loading="lazy"></div><div class="fv2-name" data-k="fac.huang-cj.card">黃琛瑞</div></a>
       </div>
     </div>
 
@@ -1385,9 +1392,9 @@
         <div><div class="fv2-label">策略、人資與營運</div><div class="fv2-sub">供應鏈 · 人力資源管理 · 服務營運</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('lee-ki'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/10-lee-kuei-i.jpg" alt="李貴宜" loading="lazy"></div><div class="fv2-name">李貴宜</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('wu-cy'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/11-wu-chih-yun.jpg" alt="吳祉芸" loading="lazy"></div><div class="fv2-name">吳祉芸</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chen-cy'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/12-chen-amy.jpg" alt="陳靜瑜" loading="lazy"></div><div class="fv2-name">陳靜瑜</div><div style="font-size:15px;font-weight:700;color:var(--maroon);text-align:center;margin-top:.3rem;letter-spacing:.04em;">學程主任</div></a>
+        <a class="fv2-card" data-fac="lee-ki" href="#" onclick="openFacModal('lee-ki'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.lee-ki.photo" src="faculty-photos/10-lee-kuei-i.jpg" alt="李貴宜" loading="lazy"></div><div class="fv2-name" data-k="fac.lee-ki.card">李貴宜</div></a>
+        <a class="fv2-card" data-fac="wu-cy" href="#" onclick="openFacModal('wu-cy'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.wu-cy.photo" src="faculty-photos/11-wu-chih-yun.jpg" alt="吳祉芸" loading="lazy"></div><div class="fv2-name" data-k="fac.wu-cy.card">吳祉芸</div></a>
+        <a class="fv2-card" data-fac="chen-cy" href="#" onclick="openFacModal('chen-cy'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chen-cy.photo" src="faculty-photos/12-chen-amy.jpg" alt="陳靜瑜" loading="lazy"></div><div class="fv2-name" data-k="fac.chen-cy.card">陳靜瑜</div><div style="font-size:15px;font-weight:700;color:var(--maroon);text-align:center;margin-top:.3rem;letter-spacing:.04em;">學程主任</div></a>
       </div>
     </div>
 
@@ -1398,9 +1405,9 @@
         <div><div class="fv2-label">行銷與消費者行為</div><div class="fv2-sub">數位行銷 · 消費者心理 · 品牌管理</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('jang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/13-jang-jacky.jpg" alt="張譽騰" loading="lazy"></div><div class="fv2-name">張譽騰</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chen-wt'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/14-chen-wei-ting.jpg" alt="陳暐婷" loading="lazy"></div><div class="fv2-name">陳暐婷</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chuang-mc'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/15-chuang-min-chieh.jpg" alt="莊旻潔" loading="lazy"></div><div class="fv2-name">莊旻潔</div></a>
+        <a class="fv2-card" data-fac="jang" href="#" onclick="openFacModal('jang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.jang.photo" src="faculty-photos/13-jang-jacky.jpg" alt="張譽騰" loading="lazy"></div><div class="fv2-name" data-k="fac.jang.card">張譽騰</div></a>
+        <a class="fv2-card" data-fac="chen-wt" href="#" onclick="openFacModal('chen-wt'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chen-wt.photo" src="faculty-photos/14-chen-wei-ting.jpg" alt="陳暐婷" loading="lazy"></div><div class="fv2-name" data-k="fac.chen-wt.card">陳暐婷</div></a>
+        <a class="fv2-card" data-fac="chuang-mc" href="#" onclick="openFacModal('chuang-mc'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chuang-mc.photo" src="faculty-photos/15-chuang-min-chieh.jpg" alt="莊旻潔" loading="lazy"></div><div class="fv2-name" data-k="fac.chuang-mc.card">莊旻潔</div></a>
       </div>
     </div>
 
@@ -1411,10 +1418,10 @@
         <div><div class="fv2-label">政策、法律與全球事務</div><div class="fv2-sub">公共管理 · 國際關係 · 貿易法律</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('jose'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/16-chen-jose.jpg" alt="陳秋政" loading="lazy" style="object-position:50% 35%;"></div><div class="fv2-name">陳秋政</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('lin-tl'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/17-lin-tzu-li.jpg" alt="林子立" loading="lazy"></div><div class="fv2-name">林子立</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chen-wf'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/18-chen-wei-fang.jpg" alt="陳蔚芳" loading="lazy"></div><div class="fv2-name">陳蔚芳</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/19-chang-kai-hsin.jpg" alt="張凱鑫" loading="lazy"></div><div class="fv2-name">張凱鑫</div></a>
+        <a class="fv2-card" data-fac="jose" href="#" onclick="openFacModal('jose'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.jose.photo" src="faculty-photos/16-chen-jose.jpg" alt="陳秋政" loading="lazy" style="object-position:50% 35%;"></div><div class="fv2-name" data-k="fac.jose.card">陳秋政</div></a>
+        <a class="fv2-card" data-fac="lin-tl" href="#" onclick="openFacModal('lin-tl'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.lin-tl.photo" src="faculty-photos/17-lin-tzu-li.jpg" alt="林子立" loading="lazy"></div><div class="fv2-name" data-k="fac.lin-tl.card">林子立</div></a>
+        <a class="fv2-card" data-fac="chen-wf" href="#" onclick="openFacModal('chen-wf'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chen-wf.photo" src="faculty-photos/18-chen-wei-fang.jpg" alt="陳蔚芳" loading="lazy"></div><div class="fv2-name" data-k="fac.chen-wf.card">陳蔚芳</div></a>
+        <a class="fv2-card" data-fac="chang" href="#" onclick="openFacModal('chang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chang.photo" src="faculty-photos/19-chang-kai-hsin.jpg" alt="張凱鑫" loading="lazy"></div><div class="fv2-name" data-k="fac.chang.card">張凱鑫</div></a>
       </div>
     </div>
 
@@ -1425,8 +1432,8 @@
         <div><div class="fv2-label">文化與溝通</div><div class="fv2-sub">英語教學 · 中文語言 · 跨文化能力</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('chiu'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/20-chiu-chia-hui.jpg" alt="邱嘉慧" loading="lazy"></div><div class="fv2-name">邱嘉慧</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('bai'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/21-bai-heng-xu.jpg" alt="白恒旭" loading="lazy"></div><div class="fv2-name">白恒旭</div></a>
+        <a class="fv2-card" data-fac="chiu" href="#" onclick="openFacModal('chiu'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chiu.photo" src="faculty-photos/20-chiu-chia-hui.jpg" alt="邱嘉慧" loading="lazy"></div><div class="fv2-name" data-k="fac.chiu.card">邱嘉慧</div></a>
+        <a class="fv2-card" data-fac="bai" href="#" onclick="openFacModal('bai'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.bai.photo" src="faculty-photos/21-bai-heng-xu.jpg" alt="白恒旭" loading="lazy"></div><div class="fv2-name" data-k="fac.bai.card">白恒旭</div></a>
       </div>
     </div>
 
@@ -1477,11 +1484,11 @@
       <div>
         <p style="font-size:var(--t-sm);color:var(--ink-3);line-height:1.7;margin-bottom:1.2rem;">下載東海大學官方學年行事曆（PDF），確認完整假期與重要日期。</p>
         <div style="display:flex;flex-direction:column;gap:0.75rem;">
-          <a href="https://www.thu.edu.tw/upload/files/thu-calendar-115-1150311-2.pdf" class="forms-dl-btn" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
-            <span style="font-size:1.1em;">↓</span> 115學年度行事曆
+          <a href="https://www.thu.edu.tw/upload/files/thu-calendar-115-1150311-2.pdf" class="forms-dl-btn" data-k="calendar.pdf1" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="font-size:1.1em;">↓</span> <span data-k="calendar.pdf1_text">115學年度行事曆</span>
           </a>
-          <a href="https://www.thu.edu.tw/upload/files/thu-calendar-114-v2-1140611.pdf" class="forms-dl-btn" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
-            <span style="font-size:1.1em;">↓</span> 114學年度行事曆（修正版）
+          <a href="https://www.thu.edu.tw/upload/files/thu-calendar-114-v2-1140611.pdf" class="forms-dl-btn" data-k="calendar.pdf2" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="font-size:1.1em;">↓</span> <span data-k="calendar.pdf2_text">114學年度行事曆（修正版）</span>
           </a>
         </div>
       </div>
@@ -1569,6 +1576,8 @@
       </a>
       <span class="footer-bottom-copy">&copy; 2026 東海大學 GMBA 學程。版權所有。</span>
       <div class="footer-bottom-links">
+        <a href="https://www.thu.edu.tw/" target="_blank" rel="noopener">東海大學首頁</a>
+        <a href="https://mana.thu.edu.tw/" target="_blank" rel="noopener">管理學院</a>
         <a href="academics.html">English</a>
       </div>
     </div>
@@ -1589,22 +1598,23 @@
     }
   });
 </script>
-<div id="modal-wong" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-wong-title">
+<div id="modal-wong" class="fac-modal" data-fac="wong" role="dialog" aria-modal="true" aria-labelledby="modal-wong-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('wong')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/04-wong-ka-chun.jpg" alt="黃家俊" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.wong.photo" src="faculty-photos/04-wong-ka-chun.jpg" alt="黃家俊" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-wong-title">黃家俊 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Ka-Chun Wong</span></h3>
-        <p class="fac-modal-title">助理教授（統計學系）</p>
-        <p><a href="mailto:junkow@thu.edu.tw">junkow@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35708</p>
+        <h3 id="modal-wong-title"><span data-k="fac.wong.name">黃家俊</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Ka-Chun Wong</span></h3>
+        <p class="fac-modal-title" data-k="fac.wong.title">助理教授（統計學系）</p>
+        <p><a data-k="fac.wong.email" href="mailto:junkow@thu.edu.tw">junkow@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.wong.ext">35708</span></p>
         <p>研究室：管院 M433</p>
+        <p><a data-k="fac.wong.url" href="https://stat.thu.edu.tw/web/teacher/detail_teacher.php?cid=1&amp;id=58" target="_blank" rel="noopener">統計系師資頁 &rarr;</a></p>
         <h4>最高學歷</h4>
         <ul>
           <li>美國佛羅里達州立大學 統計博士</li>
         </ul>
         <h4>研究領域</h4>
-        <ul>
+        <ul data-k="fac.wong.expertise">
           <li>物件資料分析</li>
           <li>高維度資料分析</li>
           <li>流形統計</li>
@@ -1613,16 +1623,16 @@
     </div>
   </div>
 </div>
-<div id="modal-jose" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-jose-title">
+<div id="modal-jose" class="fac-modal" data-fac="jose" role="dialog" aria-modal="true" aria-labelledby="modal-jose-title">
   <div class="fac-modal-box" style="max-width:820px;">
     <button class="fac-modal-close" onclick="closeFacModal('jose')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/16-chen-jose.jpg" alt="陳秋政" class="fac-modal-photo" style="object-fit:cover;object-position:50% 35%;">
+      <img referrerpolicy="no-referrer" data-k="fac.jose.photo" src="faculty-photos/16-chen-jose.jpg" alt="陳秋政" class="fac-modal-photo" style="object-fit:cover;object-position:50% 35%;">
       <div class="fac-modal-info">
-        <h3 id="modal-jose-title">陳秋政 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Jos&eacute; Chiu-C. Chen</span></h3>
-        <p class="fac-modal-title">教授 &mdash; 行政管理暨政策學系</p>
-        <p><a href="mailto:josechen@thu.edu.tw">josechen@thu.edu.tw</a> &nbsp;|&nbsp; 電話：(04)23590121 轉 36715 &nbsp;|&nbsp; 傳真：04-2359-3843</p>
-        <p><a href="https://resume.thu.edu.tw/portfolio/main/josechen" target="_blank" rel="noopener">個人網站 &rarr;</a></p>
+        <h3 id="modal-jose-title"><span data-k="fac.jose.name">陳秋政</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Jos&eacute; Chiu-C. Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.jose.title">教授 &mdash; 行政管理暨政策學系</p>
+        <p><a data-k="fac.jose.email" href="mailto:josechen@thu.edu.tw">josechen@thu.edu.tw</a> &nbsp;|&nbsp; 電話：(04)23590121 轉 <span data-k="fac.jose.ext">36715</span> &nbsp;|&nbsp; 傳真：04-2359-3843</p>
+        <p><a data-k="fac.jose.url" href="https://pmp.thu.edu.tw/web/teacher/detail.php?cid=1&amp;id=4" target="_blank" rel="noopener">個人網站 &rarr;</a></p>
         <h4>最高學歷</h4>
         <ul>
           <li>國立政治大學 公共行政學博士</li>
@@ -1667,7 +1677,7 @@
           <li>理事，東海大學教職員工會（2016&ndash;2018）</li>
         </ul>
         <h4>專長領域</h4>
-        <ul>
+        <ul data-k="fac.jose.expertise">
           <li>跨部門治理</li>
           <li>非營利組織管理</li>
           <li>公共人力資源管理</li>
@@ -1720,38 +1730,38 @@
     </div>
   </div>
 </div>
-<div id="modal-chang" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chang-title">
+<div id="modal-chang" class="fac-modal" data-fac="chang" role="dialog" aria-modal="true" aria-labelledby="modal-chang-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chang')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/19-chang-kai-hsin.jpg" alt="張凱鑫" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.chang.photo" src="faculty-photos/19-chang-kai-hsin.jpg" alt="張凱鑫" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-chang-title">張凱鑫 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Kai-Hsin Chang</span></h3>
-        <p class="fac-modal-title">助理教授（法律系）&nbsp;|&nbsp; 人工智慧法制研究中心主任</p>
-        <p><a href="mailto:gwarce@thu.edu.tw">gwarce@thu.edu.tw</a> &nbsp;|&nbsp; 分機 36607</p>
-        <p><a href="https://resume.thu.edu.tw/portfolio/main/gwarce/B00" target="_blank" rel="noopener">個人網站 &rarr;</a></p>
+        <h3 id="modal-chang-title"><span data-k="fac.chang.name">張凱鑫</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Kai-Hsin Chang</span></h3>
+        <p class="fac-modal-title" data-k="fac.chang.title">助理教授（法律系）&nbsp;|&nbsp; 人工智慧法制研究中心主任</p>
+        <p><a data-k="fac.chang.email" href="mailto:gwarce@thu.edu.tw">gwarce@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.chang.ext">36607</span></p>
+        <p><a data-k="fac.chang.url" href="https://law.thu.edu.tw/web/teacher/detail_teacher.php?cid=&amp;id=40" target="_blank" rel="noopener">法律系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>東海大學 法律博士</li>
         </ul>
         <h4>授課領域</h4>
-        <ul>
+        <ul data-k="fac.chang.expertise">
           <li>民法、契約法、國際經濟法、醫療法</li>
         </ul>
       </div>
     </div>
   </div>
 </div>
-<div id="modal-chen-ho" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chen-ho-title">
+<div id="modal-chen-ho" class="fac-modal" data-fac="chen-ho" role="dialog" aria-modal="true" aria-labelledby="modal-chen-ho-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chen-ho')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/01-chen-ho-yuan.jpg" alt="陳鶴元" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.chen-ho.photo" src="faculty-photos/01-chen-ho-yuan.jpg" alt="陳鶴元" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-chen-ho-title">陳鶴元 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Ho-Yuan Chen</span></h3>
-        <p class="fac-modal-title">副教授兼所長（教育研究所）</p>
-        <p><a href="mailto:edu666@thu.edu.tw">edu666@thu.edu.tw</a> &nbsp;|&nbsp; 分機 36900*218</p>
-        <p><a href="https://resume.thu.edu.tw/portfolio/main/edu666/B00" target="_blank" rel="noopener">學術檔案 &rarr;</a></p>
+        <h3 id="modal-chen-ho-title"><span data-k="fac.chen-ho.name">陳鶴元</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Ho-Yuan Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.chen-ho.title">副教授兼所長（教育研究所）</p>
+        <p><a data-k="fac.chen-ho.email" href="mailto:edu666@thu.edu.tw">edu666@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.chen-ho.ext">36900</span>*218</p>
+        <p><a data-k="fac.chen-ho.url" href="https://resume.thu.edu.tw/portfolio/main/edu666/B00" target="_blank" rel="noopener">學術檔案 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>美國賓州州立大學 學習效能所博士</li>
@@ -1763,23 +1773,24 @@
           <li>社會領域教材教法</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.chen-ho.expertise">
           <li>科技融入教學、大數據分析、翻轉教育</li>
         </ul>
       </div>
     </div>
   </div>
 </div>
-<div id="modal-bai" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-bai-title">
+<div id="modal-bai" class="fac-modal" data-fac="bai" role="dialog" aria-modal="true" aria-labelledby="modal-bai-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('bai')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/21-bai-heng-xu.jpg" alt="白恒旭" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.bai.photo" src="faculty-photos/21-bai-heng-xu.jpg" alt="白恒旭" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-bai-title">白恒旭 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Heng-Xu Bai</span></h3>
-        <p class="fac-modal-title">助理教授（國際學院）</p>
-        <p><a href="mailto:sunny@thu.edu.tw">sunny@thu.edu.tw</a> &nbsp;|&nbsp; 分機 39302（PG-IC 310-2）</p>
+        <h3 id="modal-bai-title"><span data-k="fac.bai.name">白恒旭</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Heng-Xu Bai</span></h3>
+        <p class="fac-modal-title" data-k="fac.bai.title">助理教授（國際學院）</p>
+        <p><a data-k="fac.bai.email" href="mailto:sunny@thu.edu.tw">sunny@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.bai.ext">39302</span>（PG-IC 310-2）</p>
         <p>Office Hours：週二 10:00&ndash;12:00</p>
+        <p><a data-k="fac.bai.url" href="https://ic.thu.edu.tw/web/people/detail_page.php?lang=zh_tw&amp;cid=&amp;cid2=&amp;id=223" target="_blank" rel="noopener">國際學院師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>東海大學 中國文學博士</li>
@@ -1792,7 +1803,7 @@
           <li>靜宜大學 中文系 兼任助理教授</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.bai.expertise">
           <li>中國思想史、中國哲學</li>
           <li>東方美學、書法</li>
           <li>台灣文化與民俗</li>
@@ -1803,16 +1814,16 @@
   </div>
 </div>
 <!-- ===== FACULTY MODALS ===== -->
-<div id="modal-huang" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-huang-title">
+<div id="modal-huang" class="fac-modal" data-fac="huang" role="dialog" aria-modal="true" aria-labelledby="modal-huang-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('huang')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/03-huang-yin-tzu.jpg" alt="黃尹姿" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.huang.photo" src="faculty-photos/03-huang-yin-tzu.jpg" alt="黃尹姿" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-huang-title">黃尹姿 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Yin-Tzu Huang</span></h3>
-        <p class="fac-modal-title">GMBA 助理教授</p>
-        <p><a href="mailto:deannehuang@thu.edu.tw">deannehuang@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35205</p>
-        <p><a href="https://resume.thu.edu.tw/portfolio/main/deannehuang/B00" target="_blank" rel="noopener">個人網站 &rarr;</a></p>
+        <h3 id="modal-huang-title"><span data-k="fac.huang.name">黃尹姿</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Yin-Tzu Huang</span></h3>
+        <p class="fac-modal-title" data-k="fac.huang.title">GMBA 助理教授</p>
+        <p><a data-k="fac.huang.email" href="mailto:deannehuang@thu.edu.tw">deannehuang@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.huang.ext">35205</span></p>
+        <p><a data-k="fac.huang.url" href="https://resume.thu.edu.tw/portfolio/main/deannehuang/B00" target="_blank" rel="noopener">個人網站 &rarr;</a></p>
         <h4>經歷</h4>
         <ul>
           <li>東海大學管理學院兼任教師</li>
@@ -1822,7 +1833,7 @@
           <li>台灣大學電機工程研究所（計算機組）博士</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.huang.expertise">
           <li>網路安全</li>
           <li>醫療資訊安全</li>
           <li>區塊鏈應用</li>
@@ -1838,16 +1849,16 @@
     </div>
   </div>
 </div>
-<div id="modal-kim" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-kim-title">
+<div id="modal-kim" class="fac-modal" data-fac="kim" role="dialog" aria-modal="true" aria-labelledby="modal-kim-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('kim')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/02-kim-brian.jpg" alt="金泰星" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.kim.photo" src="faculty-photos/02-kim-brian.jpg" alt="金泰星" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-kim-title">金泰星 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Taesung Brian Kim</span></h3>
-        <p class="fac-modal-title">GMBA 助理教授</p>
-        <p><a href="mailto:bkim@thu.edu.tw">bkim@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35202</p>
-        <p><a href="https://thugmba.github.io/ialab/" target="_blank" rel="noopener">Innovation Analytics Lab &rarr;</a></p>
+        <h3 id="modal-kim-title"><span data-k="fac.kim.name">金泰星</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Taesung Brian Kim</span></h3>
+        <p class="fac-modal-title" data-k="fac.kim.title">GMBA 助理教授</p>
+        <p><a data-k="fac.kim.email" href="mailto:bkim@thu.edu.tw">bkim@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.kim.ext">35202</span></p>
+        <p><a data-k="fac.kim.url" href="https://thugmba.github.io/ialab/" target="_blank" rel="noopener">Innovation Analytics Lab &rarr;</a></p>
         <h4>授課課程</h4>
         <p><em>碩士班課程</em></p>
         <ul>
@@ -1871,7 +1882,7 @@
           <li>韓國高麗大學 電腦科學碩士，韓國</li>
         </ul>
         <h4>研究領域</h4>
-        <ul>
+        <ul data-k="fac.kim.expertise">
           <li>行動健康科技接受度</li>
           <li>透過主題模型之研究趨勢分析（機器學習資料分析方法）</li>
           <li>學術大數據之書目計量分析</li>
@@ -1887,17 +1898,17 @@
     </div>
   </div>
 </div>
-<div id="modal-chang-yh" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chang-yh-title">
+<div id="modal-chang-yh" class="fac-modal" data-fac="chang-yh" role="dialog" aria-modal="true" aria-labelledby="modal-chang-yh-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chang-yh')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/05-chang-yung-ho.jpg" alt="張永和" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.chang-yh.photo" src="faculty-photos/05-chang-yung-ho.jpg" alt="張永和" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-chang-yh-title">張永和 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Yung-Ho Chang</span></h3>
-        <p class="fac-modal-title">教授（財務金融學系）</p>
-        <p><a href="mailto:changy@thu.edu.tw">changy@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35804</p>
+        <h3 id="modal-chang-yh-title"><span data-k="fac.chang-yh.name">張永和</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Yung-Ho Chang</span></h3>
+        <p class="fac-modal-title" data-k="fac.chang-yh.title">教授（財務金融學系）</p>
+        <p><a data-k="fac.chang-yh.email" href="mailto:changy@thu.edu.tw">changy@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.chang-yh.ext">35804</span></p>
         <p>Office Hour：週三 14:00–17:00</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=34" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.chang-yh.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=34" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>美國休士頓大學 財務金融博士</li>
@@ -1910,7 +1921,7 @@
           <li>東海大學財務金融學系 助理教授</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.chang-yh.expertise">
           <li>投資學、公司理財</li>
         </ul>
         <h4>授課領域</h4>
@@ -1922,17 +1933,17 @@
     </div>
   </div>
 </div>
-<div id="modal-kuo" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-kuo-title">
+<div id="modal-kuo" class="fac-modal" data-fac="kuo" role="dialog" aria-modal="true" aria-labelledby="modal-kuo-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('kuo')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/06-kuo-i-doun.jpg" alt="郭一棟" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.kuo.photo" src="faculty-photos/06-kuo-i-doun.jpg" alt="郭一棟" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-kuo-title">郭一棟 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">I-Doun Kuo</span></h3>
-        <p class="fac-modal-title">教授（財務金融學系）</p>
-        <p><a href="mailto:idkuo@thu.edu.tw">idkuo@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35806</p>
+        <h3 id="modal-kuo-title"><span data-k="fac.kuo.name">郭一棟</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">I-Doun Kuo</span></h3>
+        <p class="fac-modal-title" data-k="fac.kuo.title">教授（財務金融學系）</p>
+        <p><a data-k="fac.kuo.email" href="mailto:idkuo@thu.edu.tw">idkuo@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.kuo.ext">35806</span></p>
         <p>Office Hour：週四 16:00–18:00</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?id=35" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.kuo.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?id=35" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>英國曼徹斯特大學 財務金融博士</li>
@@ -1943,7 +1954,7 @@
           <li>東海大學財務金融學系 副教授</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.kuo.expertise">
           <li>金融衍生性商品、期貨與選擇權、財務專題</li>
         </ul>
         <h4>授課領域</h4>
@@ -1955,17 +1966,17 @@
     </div>
   </div>
 </div>
-<div id="modal-chuang-ks" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chuang-ks-title">
+<div id="modal-chuang-ks" class="fac-modal" data-fac="chuang-ks" role="dialog" aria-modal="true" aria-labelledby="modal-chuang-ks-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chuang-ks')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/07-chuang-kai-shi.jpg" alt="莊凱旭" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.chuang-ks.photo" src="faculty-photos/07-chuang-kai-shi.jpg" alt="莊凱旭" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-chuang-ks-title">莊凱旭 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Kai-Shi Chuang</span></h3>
-        <p class="fac-modal-title">副教授（財務金融學系）</p>
-        <p><a href="mailto:kschuang@thu.edu.tw">kschuang@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35820</p>
+        <h3 id="modal-chuang-ks-title"><span data-k="fac.chuang-ks.name">莊凱旭</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Kai-Shi Chuang</span></h3>
+        <p class="fac-modal-title" data-k="fac.chuang-ks.title">副教授（財務金融學系）</p>
+        <p><a data-k="fac.chuang-ks.email" href="mailto:kschuang@thu.edu.tw">kschuang@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.chuang-ks.ext">35820</span></p>
         <p>Office Hour：週一 13:00–16:00</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?id=30" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.chuang-ks.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?id=30" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>英國格拉斯哥大學 財務金融博士</li>
@@ -1975,7 +1986,7 @@
           <li>東海大學財務金融學系 副教授</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.chuang-ks.expertise">
           <li>企業併購</li>
         </ul>
         <h4>授課領域</h4>
@@ -1986,17 +1997,17 @@
     </div>
   </div>
 </div>
-<div id="modal-fu" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-fu-title">
+<div id="modal-fu" class="fac-modal" data-fac="fu" role="dialog" aria-modal="true" aria-labelledby="modal-fu-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('fu')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/08-fu-yufen.jpg" alt="傅郁芬" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.fu.photo" src="faculty-photos/08-fu-yufen.jpg" alt="傅郁芬" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-fu-title">傅郁芬 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Yufen Fu</span></h3>
-        <p class="fac-modal-title">副教授（財務金融學系）</p>
-        <p><a href="mailto:yufenfu@thu.edu.tw">yufenfu@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35818</p>
+        <h3 id="modal-fu-title"><span data-k="fac.fu.name">傅郁芬</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Yufen Fu</span></h3>
+        <p class="fac-modal-title" data-k="fac.fu.title">副教授（財務金融學系）</p>
+        <p><a data-k="fac.fu.email" href="mailto:yufenfu@thu.edu.tw">yufenfu@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.fu.ext">35818</span></p>
         <p>Office Hour：週三 13:00–15:00</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=28" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.fu.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=28" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>加拿大西門菲莎大學 財務金融博士</li>
@@ -2006,7 +2017,7 @@
           <li>東海大學財務金融學系 副教授</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.fu.expertise">
           <li>投資學、公司理財</li>
         </ul>
         <h4>授課領域</h4>
@@ -2018,17 +2029,17 @@
     </div>
   </div>
 </div>
-<div id="modal-huang-cj" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-huang-cj-title">
+<div id="modal-huang-cj" class="fac-modal" data-fac="huang-cj" role="dialog" aria-modal="true" aria-labelledby="modal-huang-cj-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('huang-cj')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/09-huang-chen-jui.jpg" alt="黃琛瑞" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.huang-cj.photo" src="faculty-photos/09-huang-chen-jui.jpg" alt="黃琛瑞" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-huang-cj-title">黃琛瑞 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Chen-Jui Huang</span></h3>
-        <p class="fac-modal-title">副教授（財務金融學系）</p>
-        <p><a href="mailto:cjhuang@thu.edu.tw">cjhuang@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35811</p>
+        <h3 id="modal-huang-cj-title"><span data-k="fac.huang-cj.name">黃琛瑞</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Chen-Jui Huang</span></h3>
+        <p class="fac-modal-title" data-k="fac.huang-cj.title">副教授（財務金融學系）</p>
+        <p><a data-k="fac.huang-cj.email" href="mailto:cjhuang@thu.edu.tw">cjhuang@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.huang-cj.ext">35811</span></p>
         <p>Office Hour：週四 16:30–18:30</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=32" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.huang-cj.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?id=32" target="_blank" rel="noopener">財金系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>法國巴黎第一大學（先賢祠–索邦） 經濟學博士</li>
@@ -2039,7 +2050,7 @@
           <li>東海大學財務金融學系 助理教授</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.huang-cj.expertise">
           <li>總體經濟學、金融市場與機構</li>
           <li>歐洲經濟與貨幣整合、財金英文</li>
         </ul>
@@ -2052,17 +2063,17 @@
     </div>
   </div>
 </div>
-<div id="modal-lee-ki" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-lee-ki-title">
+<div id="modal-lee-ki" class="fac-modal" data-fac="lee-ki" role="dialog" aria-modal="true" aria-labelledby="modal-lee-ki-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('lee-ki')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/10-lee-kuei-i.jpg" alt="李貴宜" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.lee-ki.photo" src="faculty-photos/10-lee-kuei-i.jpg" alt="李貴宜" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-lee-ki-title">李貴宜 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Kuei-I Lee</span></h3>
-        <p class="fac-modal-title">副教授（餐旅管理學系）</p>
-        <p><a href="mailto:kuei521@thu.edu.tw">kuei521@thu.edu.tw</a> &nbsp;|&nbsp; 分機 37710</p>
+        <h3 id="modal-lee-ki-title"><span data-k="fac.lee-ki.name">李貴宜</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Kuei-I Lee</span></h3>
+        <p class="fac-modal-title" data-k="fac.lee-ki.title">副教授（餐旅管理學系）</p>
+        <p><a data-k="fac.lee-ki.email" href="mailto:kuei521@thu.edu.tw">kuei521@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.lee-ki.ext">37710</span></p>
         <p><a href="https://resume.thu.edu.tw/portfolio/main/kuei521/B00" target="_blank" rel="noopener">學術檔案 &rarr;</a></p>
-        <p><a href="https://thotel.thu.edu.tw/dr-kuei-i-lee/" target="_blank" rel="noopener">餐旅系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.lee-ki.url" href="https://thotel.thu.edu.tw/%E6%9D%8E%E8%B2%B4%E5%AE%9C-%E5%89%AF%E6%95%99%E6%8E%88/" target="_blank" rel="noopener">餐旅系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>美國堪薩斯州立大學 餐旅管理與營養學系 博士</li>
@@ -2077,7 +2088,7 @@
           <li>美國堪薩斯州立大學 研究助理</li>
         </ul>
         <h4>授課領域</h4>
-        <ul>
+        <ul data-k="fac.lee-ki.expertise">
           <li>採購學、會計學、研究方法、食品安全</li>
           <li>餐旅英文、銀髮餐飲服務、財務管理、餐飲生產管理</li>
         </ul>
@@ -2085,17 +2096,17 @@
     </div>
   </div>
 </div>
-<div id="modal-wu-cy" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-wu-cy-title">
+<div id="modal-wu-cy" class="fac-modal" data-fac="wu-cy" role="dialog" aria-modal="true" aria-labelledby="modal-wu-cy-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('wu-cy')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/11-wu-chih-yun.jpg" alt="吳祉芸" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.wu-cy.photo" src="faculty-photos/11-wu-chih-yun.jpg" alt="吳祉芸" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-wu-cy-title">吳祉芸 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Chih-Yun Wu</span></h3>
-        <p class="fac-modal-title">副教授兼系主任（企業管理學系）</p>
-        <p><a href="mailto:annacywu@thu.edu.tw">annacywu@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35121（研究室 M473）</p>
+        <h3 id="modal-wu-cy-title"><span data-k="fac.wu-cy.name">吳祉芸</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Chih-Yun Wu</span></h3>
+        <p class="fac-modal-title" data-k="fac.wu-cy.title">副教授兼系主任（企業管理學系）</p>
+        <p><a data-k="fac.wu-cy.email" href="mailto:annacywu@thu.edu.tw">annacywu@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.wu-cy.ext">35121</span>（研究室 M473）</p>
         <p>Office Hours：週四 14:00–17:00</p>
-        <p><a href="https://ba.thu.edu.tw/teacher/%E5%90%B3%E7%A5%89%E8%8A%B8/" target="_blank" rel="noopener">企管系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.wu-cy.url" href="https://ba.thu.edu.tw/teacher/%E5%90%B3%E7%A5%89%E8%8A%B8/" target="_blank" rel="noopener">企管系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>國立政治大學 企業管理學系 博士</li>
@@ -2110,7 +2121,7 @@
           <li>台灣智慧資本研究中心 專案研究助理</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.wu-cy.expertise">
           <li>員工甄選面談、印象管理行為、企業訓練</li>
         </ul>
         <h4>授課領域</h4>
@@ -2121,17 +2132,17 @@
     </div>
   </div>
 </div>
-<div id="modal-chen-cy" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chen-cy-title">
+<div id="modal-chen-cy" class="fac-modal" data-fac="chen-cy" role="dialog" aria-modal="true" aria-labelledby="modal-chen-cy-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chen-cy')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/12-chen-amy.jpg" alt="陳靜瑜" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.chen-cy.photo" src="faculty-photos/12-chen-amy.jpg" alt="陳靜瑜" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-chen-cy-title">陳靜瑜 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Ching-Yu Chen</span></h3>
-        <p class="fac-modal-title">副教授兼 GMBA 學程主任（國際經營與貿易學系）</p>
-        <p><a href="mailto:amychen@thu.edu.tw">amychen@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35306</p>
+        <h3 id="modal-chen-cy-title"><span data-k="fac.chen-cy.name">陳靜瑜</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Ching-Yu Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.chen-cy.title">副教授兼 GMBA 學程主任（國際經營與貿易學系）</p>
+        <p><a data-k="fac.chen-cy.email" href="mailto:amychen@thu.edu.tw">amychen@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.chen-cy.ext">35306</span></p>
         
-        <p><a href="https://inttrade.thu.edu.tw/department-introduction/faculty-introduction/cat-faculty-1/%e9%99%b3%e9%9d%9c%e7%91%9c-%e5%8a%a9%e7%90%86%e6%95%99%e6%8e%88/" target="_blank" rel="noopener">國貿系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.chen-cy.url" href="https://inttrade.thu.edu.tw/department-introduction/faculty-introduction/cat-faculty-1/%E9%99%B3%E9%9D%9C%E7%91%9C-%E5%8A%A9%E7%90%86%E6%95%99%E6%8E%88/" target="_blank" rel="noopener">國貿系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>美國羅格斯大學（Rutgers） 企業管理博士</li>
@@ -2144,7 +2155,7 @@
           <li>美國羅格斯大學 兼任講師</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.chen-cy.expertise">
           <li>供應鏈管理、全球運籌管理</li>
           <li>隨機過程存貨系統、專案管理</li>
         </ul>
@@ -2165,17 +2176,17 @@
     </div>
   </div>
 </div>
-<div id="modal-jang" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-jang-title">
+<div id="modal-jang" class="fac-modal" data-fac="jang" role="dialog" aria-modal="true" aria-labelledby="modal-jang-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('jang')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/13-jang-jacky.jpg" alt="張譽騰" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.jang.photo" src="faculty-photos/13-jang-jacky.jpg" alt="張譽騰" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-jang-title">張譽騰 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Yu-Teng Jacky Jang</span></h3>
-        <p class="fac-modal-title">副教授（企業管理學系）</p>
-        <p><a href="mailto:ytjackyjang@thu.edu.tw">ytjackyjang@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35107（研究室 M507）</p>
+        <h3 id="modal-jang-title"><span data-k="fac.jang.name">張譽騰</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Yu-Teng Jacky Jang</span></h3>
+        <p class="fac-modal-title" data-k="fac.jang.title">副教授（企業管理學系）</p>
+        <p><a data-k="fac.jang.email" href="mailto:ytjackyjang@thu.edu.tw">ytjackyjang@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.jang.ext">35107</span>（研究室 M507）</p>
         <p>Office Hour：週五 14:10–16:10 &nbsp;|&nbsp; <a href="http://ytjackyjang.thu.edu.tw/" target="_blank" rel="noopener">個人網站 &rarr;</a></p>
-        <p><a href="https://ba.thu.edu.tw/teacher/%E5%BC%B5%E8%AD%BD%E9%A8%B0/" target="_blank" rel="noopener">企管系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.jang.url" href="https://ba.thu.edu.tw/teacher/%E5%BC%B5%E8%AD%BD%E9%A8%B0/" target="_blank" rel="noopener">企管系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>國立中興大學 企業管理博士</li>
@@ -2188,26 +2199,22 @@
           <li>台南應用科技大學 專案助理教授（2014–2016）</li>
         </ul>
         <h4>研究興趣</h4>
-        <ul>
-          <li>電子商務、科技行銷</li>
-          <li>機器學習與行銷、創新科技服務管理</li>
-          <li>企業行銷活動與資訊安全</li>
-        </ul>
+        <ul data-k="fac.jang.expertise"><li>E-Commerce</li><li>Technology Marketing</li><li>Machine Learning in Marketing</li><li>Innovative Technology Service Management</li><li>Marketing Activities and Information Security</li></ul>
       </div>
     </div>
   </div>
 </div>
-<div id="modal-chen-wt" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chen-wt-title">
+<div id="modal-chen-wt" class="fac-modal" data-fac="chen-wt" role="dialog" aria-modal="true" aria-labelledby="modal-chen-wt-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chen-wt')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/14-chen-wei-ting.jpg" alt="陳暐婷" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.chen-wt.photo" src="faculty-photos/14-chen-wei-ting.jpg" alt="陳暐婷" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-chen-wt-title">陳暐婷 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Wei-Ting Chen</span></h3>
-        <p class="fac-modal-title">助理教授（國際經營與貿易學系）</p>
-        <p><a href="mailto:weitingchen@thu.edu.tw">weitingchen@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35317</p>
+        <h3 id="modal-chen-wt-title"><span data-k="fac.chen-wt.name">陳暐婷</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Wei-Ting Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.chen-wt.title">助理教授（國際經營與貿易學系）</p>
+        <p><a data-k="fac.chen-wt.email" href="mailto:weitingchen@thu.edu.tw">weitingchen@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.chen-wt.ext">35317</span></p>
         
-        <p><a href="https://inttrade.thu.edu.tw/department-introduction/faculty-introduction/cat-faculty-1/%e9%99%b3%e6%9a%90%e5%a9%b7-%e5%8a%a9%e7%90%86%e6%95%99%e6%8e%88/" target="_blank" rel="noopener">國貿系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.chen-wt.url" href="https://inttrade.thu.edu.tw/department-introduction/faculty-introduction/cat-faculty-1/%E9%99%B3%E6%9A%90%E5%A9%B7-%E5%8A%A9%E7%90%86%E6%95%99%E6%8E%88/" target="_blank" rel="noopener">國貿系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>國立台灣大學 國際企業學系（行銷管理組） 商學博士</li>
@@ -2220,7 +2227,7 @@
           <li>104 人力銀行 行銷與顧客價值經理</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.chen-wt.expertise">
           <li>行銷管理、消費者行為</li>
           <li>社群行銷、身份認同</li>
         </ul>
@@ -2233,17 +2240,17 @@
     </div>
   </div>
 </div>
-<div id="modal-chuang-mc" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chuang-mc-title">
+<div id="modal-chuang-mc" class="fac-modal" data-fac="chuang-mc" role="dialog" aria-modal="true" aria-labelledby="modal-chuang-mc-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chuang-mc')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/15-chuang-min-chieh.jpg" alt="莊旻潔" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.chuang-mc.photo" src="faculty-photos/15-chuang-min-chieh.jpg" alt="莊旻潔" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-chuang-mc-title">莊旻潔 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Min-Chieh Chuang</span></h3>
-        <p class="fac-modal-title">助理教授（企業管理學系）</p>
-        <p><a href="mailto:mcchuang718@thu.edu.tw">mcchuang718@thu.edu.tw</a> &nbsp;|&nbsp; 分機 35114（研究室 M474）</p>
+        <h3 id="modal-chuang-mc-title"><span data-k="fac.chuang-mc.name">莊旻潔</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Min-Chieh Chuang</span></h3>
+        <p class="fac-modal-title" data-k="fac.chuang-mc.title">助理教授（企業管理學系）</p>
+        <p><a data-k="fac.chuang-mc.email" href="mailto:mcchuang718@thu.edu.tw">mcchuang718@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.chuang-mc.ext">35114</span>（研究室 M474）</p>
         
-        <p><a href="https://ba.thu.edu.tw/teacher/%E8%8E%8A%E6%97%BB%E6%BD%94/" target="_blank" rel="noopener">企管系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.chuang-mc.url" href="https://ba.thu.edu.tw/teacher/%E8%8E%8A%E6%97%BB%E6%BD%94/" target="_blank" rel="noopener">企管系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>國立政治大學 國際經營與貿易學研究所 博士</li>
@@ -2256,7 +2263,7 @@
           <li>玉山銀行 國外部專員</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.chuang-mc.expertise">
           <li>消費者滿意與忠誠、通路管理、品牌管理</li>
         </ul>
         <h4>授課領域</h4>
@@ -2267,23 +2274,23 @@
     </div>
   </div>
 </div>
-<div id="modal-lin-tl" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-lin-tl-title">
+<div id="modal-lin-tl" class="fac-modal" data-fac="lin-tl" role="dialog" aria-modal="true" aria-labelledby="modal-lin-tl-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('lin-tl')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/17-lin-tzu-li.jpg" alt="林子立" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.lin-tl.photo" src="faculty-photos/17-lin-tzu-li.jpg" alt="林子立" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-lin-tl-title">林子立 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Tzu-Li (Max) Lin</span></h3>
-        <p class="fac-modal-title">專任教師（政治學系）</p>
-        <p><a href="mailto:maxtl@thu.edu.tw">maxtl@thu.edu.tw</a> &nbsp;|&nbsp; 分機 36205（社會科學院 SS437）</p>
+        <h3 id="modal-lin-tl-title"><span data-k="fac.lin-tl.name">林子立</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Tzu-Li (Max) Lin</span></h3>
+        <p class="fac-modal-title" data-k="fac.lin-tl.title">專任教師（政治學系）</p>
+        <p><a data-k="fac.lin-tl.email" href="mailto:maxtl@thu.edu.tw">maxtl@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.lin-tl.ext">36205</span>（社會科學院 SS437）</p>
         <p><a href="https://resume.thu.edu.tw/portfolio/main/maxtl/B00" target="_blank" rel="noopener">學術檔案 &rarr;</a></p>
-        <p><a href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&amp;id=11" target="_blank" rel="noopener">政治系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.lin-tl.url" href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&amp;id=11" target="_blank" rel="noopener">政治系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>英國利物浦大學 博士</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.lin-tl.expertise">
           <li>國際關係</li>
           <li>中歐關係</li>
           <li>外交政策</li>
@@ -2292,23 +2299,23 @@
     </div>
   </div>
 </div>
-<div id="modal-chen-wf" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chen-wf-title">
+<div id="modal-chen-wf" class="fac-modal" data-fac="chen-wf" role="dialog" aria-modal="true" aria-labelledby="modal-chen-wf-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chen-wf')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/18-chen-wei-fang.jpg" alt="陳蔚芳" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.chen-wf.photo" src="faculty-photos/18-chen-wei-fang.jpg" alt="陳蔚芳" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-chen-wf-title">陳蔚芳 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Wei-Fang Chen</span></h3>
-        <p class="fac-modal-title">專任教師（政治學系）</p>
-        <p><a href="mailto:wfchen1021@thu.edu.tw">wfchen1021@thu.edu.tw</a> &nbsp;|&nbsp; 分機 36217（社會科學院 SS430）</p>
+        <h3 id="modal-chen-wf-title"><span data-k="fac.chen-wf.name">陳蔚芳</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Wei-Fang Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.chen-wf.title">專任教師（政治學系）</p>
+        <p><a data-k="fac.chen-wf.email" href="mailto:wfchen1021@thu.edu.tw">wfchen1021@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.chen-wf.ext">36217</span>（社會科學院 SS430）</p>
         <p><a href="https://resume.thu.edu.tw/portfolio/main/wfchen1021/B00" target="_blank" rel="noopener">學術檔案 &rarr;</a></p>
-        <p><a href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&amp;id=12" target="_blank" rel="noopener">政治系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.chen-wf.url" href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&amp;id=12" target="_blank" rel="noopener">政治系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>英國杜倫大學 政治學博士</li>
         </ul>
         <h4>研究專長</h4>
-        <ul>
+        <ul data-k="fac.chen-wf.expertise">
           <li>歐盟政治與制度</li>
           <li>歐洲國際關係</li>
           <li>區域整合</li>
@@ -2317,26 +2324,23 @@
     </div>
   </div>
 </div>
-<div id="modal-chiu" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chiu-title">
+<div id="modal-chiu" class="fac-modal" data-fac="chiu" role="dialog" aria-modal="true" aria-labelledby="modal-chiu-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chiu')" aria-label="關閉">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/20-chiu-chia-hui.jpg" alt="邱嘉慧" class="fac-modal-photo">
+      <img referrerpolicy="no-referrer" data-k="fac.chiu.photo" src="faculty-photos/20-chiu-chia-hui.jpg" alt="邱嘉慧" class="fac-modal-photo">
       <div class="fac-modal-info">
-        <h3 id="modal-chiu-title">邱嘉慧 <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Chia-Hui Chiu</span></h3>
-        <p class="fac-modal-title">副教授（外國語文學系）</p>
-        <p><a href="mailto:chiahuichiu@thu.edu.tw">chiahuichiu@thu.edu.tw</a> &nbsp;|&nbsp; 分機 31222</p>
+        <h3 id="modal-chiu-title"><span data-k="fac.chiu.name">邱嘉慧</span> <span style="font-weight:400;font-size:.8em;color:var(--ink-3)">Chia-Hui Chiu</span></h3>
+        <p class="fac-modal-title" data-k="fac.chiu.title">副教授（外國語文學系）</p>
+        <p><a data-k="fac.chiu.email" href="mailto:chiahuichiu@thu.edu.tw">chiahuichiu@thu.edu.tw</a> &nbsp;|&nbsp; 分機 <span data-k="fac.chiu.ext">31222</span></p>
         <p><a href="https://resume.thu.edu.tw/portfolio/main/chiahuichiu/B00" target="_blank" rel="noopener">學術檔案 &rarr;</a></p>
-        <p><a href="https://flld.thu.edu.tw/faculty/faculty-full-time/chiu-chia-hui/" target="_blank" rel="noopener">外文系師資頁 &rarr;</a></p>
+        <p><a data-k="fac.chiu.url" href="https://flld.thu.edu.tw/faculty/faculty-full-time/chiu-chia-hui/" target="_blank" rel="noopener">外文系師資頁 &rarr;</a></p>
         <h4>學歷</h4>
         <ul>
           <li>美國愛荷華大學 外語與 ESL 教育 博士</li>
         </ul>
         <h4>專業領域</h4>
-        <ul>
-          <li>ESL/EFL 字彙習得</li>
-          <li>英語閱讀發展</li>
-        </ul>
+        <ul data-k="fac.chiu.expertise"><li>ESL/EFL Vocabulary Acquisition</li><li>Reading Development</li></ul>
       </div>
     </div>
   </div>

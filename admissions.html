@@ -542,7 +542,7 @@
     /* ANNOUNCEMENT BAR */
     .announce {
       background: var(--gold); color: var(--ink); text-align: center;
-      padding: 0.55rem 1.5rem; font-size: var(--t-body); font-weight: 700; letter-spacing: 0.06em;
+      padding: 0.55rem 1.5rem; font-size: 15px; font-weight: 700; letter-spacing: 0.06em;
     }
     .announce a { color: var(--ink); }
 
@@ -1180,6 +1180,9 @@
 </style>
 </head>
 <body>
+<div class="announce" role="alert">
+  Tunghai partners with Chunghwa Telecom &amp; Google to lead Taiwan in adopting enterprise AI agent platform Gemini Enterprise.
+</div>
 
 <a href="#maincontent" class="skip-link">Skip to main content</a>
 
@@ -1263,28 +1266,28 @@
       <p style="font-size:var(--t-body);color:var(--ink-3);margin-bottom:1rem;">The following scholarships are offered by Taiwan government agencies.</p>
       <div class="gov-schol-cards">
         <div class="gov-schol-card">
-          <div class="gov-schol-head">MOE Taiwan Scholarship</div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Monthly</span><span class="gov-schol-val">NT$20,000 (Master/Doctoral)</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Tuition</span><span class="gov-schol-val">Up to NT$40,000 / semester</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Duration</span><span class="gov-schol-val">Up to 2 years (Master)</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Eligible</span><span class="gov-schol-val">All nationalities (excl. HK/Macao/Mainland China)</span></div>
-          <div class="gov-schol-link"><a href="https://english.moe.gov.tw/cp-24-16833-23C09-1.html" target="_blank" rel="noopener">More Info</a></div>
+          <div data-k="sch1.name" class="gov-schol-head">MOE Taiwan Scholarship</div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Monthly</span><span data-k="sch1.monthly" class="gov-schol-val">NT$20,000 (Master/Doctoral)</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Tuition</span><span data-k="sch1.tuition" class="gov-schol-val">Up to NT$40,000 / semester</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Duration</span><span data-k="sch1.duration" class="gov-schol-val">Up to 2 years (Master)</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Eligible</span><span data-k="sch1.eligible" class="gov-schol-val">All nationalities (excl. HK/Macao/Mainland China)</span></div>
+          <div class="gov-schol-link"><a data-k="sch1.url" href="https://english.moe.gov.tw/cp-24-16833-23C09-1.html" target="_blank" rel="noopener">More Info</a></div>
         </div>
         <div class="gov-schol-card">
-          <div class="gov-schol-head">MOE Huayu Enrichment Scholarship (HES)</div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Monthly</span><span class="gov-schol-val">NT$28,000</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Tuition</span><span class="gov-schol-val">—</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Duration</span><span class="gov-schol-val">2 months – 1 year</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Eligible</span><span class="gov-schol-val">All nationalities</span></div>
-          <div class="gov-schol-link"><a href="https://english.moe.gov.tw/cp-24-24284-3ea37-1.html" target="_blank" rel="noopener">More Info</a></div>
+          <div data-k="sch2.name" class="gov-schol-head">MOE Huayu Enrichment Scholarship (HES)</div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Monthly</span><span data-k="sch2.monthly" class="gov-schol-val">NT$28,000</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Tuition</span><span data-k="sch2.tuition" class="gov-schol-val">&mdash;</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Duration</span><span data-k="sch2.duration" class="gov-schol-val">2 months &ndash; 1 year</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Eligible</span><span data-k="sch2.eligible" class="gov-schol-val">All nationalities</span></div>
+          <div class="gov-schol-link"><a data-k="sch2.url" href="https://english.moe.gov.tw/cp-24-24284-3ea37-1.html" target="_blank" rel="noopener">More Info</a></div>
         </div>
         <div class="gov-schol-card">
-          <div class="gov-schol-head">MOFA Taiwan Scholarship</div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Monthly</span><span class="gov-schol-val">NT$33,000 (Degree Program)</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Tuition</span><span class="gov-schol-val">—</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Duration</span><span class="gov-schol-val">Up to 2 years (Master)</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">Eligible</span><span class="gov-schol-val">Countries with diplomatic/friendly ties with Taiwan</span></div>
-          <div class="gov-schol-link"><a href="https://en.mofa.gov.tw/cp.aspx?n=1325" target="_blank" rel="noopener">More Info</a></div>
+          <div data-k="sch3.name" class="gov-schol-head">MOFA Taiwan Scholarship</div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Monthly</span><span data-k="sch3.monthly" class="gov-schol-val">NT$33,000 (Degree Program)</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Tuition</span><span data-k="sch3.tuition" class="gov-schol-val">&mdash;</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Duration</span><span data-k="sch3.duration" class="gov-schol-val">Up to 2 years (Master)</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">Eligible</span><span data-k="sch3.eligible" class="gov-schol-val">Countries with diplomatic/friendly ties with Taiwan</span></div>
+          <div class="gov-schol-link"><a data-k="sch3.url" href="https://en.mofa.gov.tw/cp.aspx?n=1325" target="_blank" rel="noopener">More Info</a></div>
         </div>
       </div>
       <p style="margin-top:1rem;font-size:var(--t-body);color:var(--ink-3);">Applications are submitted through Taiwan's representative office (TECO/AIT) in your country. Typical deadline: <strong>March 31</strong> each year.</p>
@@ -1295,22 +1298,22 @@
       <p style="font-size:var(--t-body);color:var(--ink-3);margin-bottom:1rem;">Scholarships from Tunghai University (OIR) and the GMBA program. Click any card for details or to register.</p>
       <div class="gov-schol-cards">
       <div class="gov-schol-card">
-        <div class="gov-schol-head">International Student Merit Scholarship</div>
-        <div class="gov-schol-row"><span class="gov-schol-key">By</span><span class="gov-schol-val">Tunghai University OIR</span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">For</span><span class="gov-schol-val">Enrolled international students (foreign nationals; excl. overseas Chinese &amp; mainland Chinese)</span></div>
-        <div class="gov-schol-link"><a href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/INTL_Scholarshi/pages.php?ID=dGh1X29zYSZJTlRMX1NjaG9sYXJzaGk=" target="_blank" rel="noopener">More Info</a></div>
+        <div data-k="sch4.name" class="gov-schol-head">International Student Merit Scholarship</div>
+        <div class="gov-schol-row"><span class="gov-schol-key">By</span><span data-k="sch4.by" class="gov-schol-val">Tunghai University OIR</span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">For</span><span data-k="sch4.for" class="gov-schol-val">Enrolled international students (foreign nationals; excl. overseas Chinese &amp; mainland Chinese)</span></div>
+        <div class="gov-schol-link"><a data-k="sch4.url" href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/INTL_Scholarshi/pages.php?ID=dGh1X29zYSZJTlRMX1NjaG9sYXJzaGk=" target="_blank" rel="noopener">More Info</a></div>
       </div>
       <div class="gov-schol-card">
-        <div class="gov-schol-head">Overseas Chinese Student Scholarship</div>
-        <div class="gov-schol-row"><span class="gov-schol-key">By</span><span class="gov-schol-val">Tunghai University OIR</span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">For</span><span class="gov-schol-val">Overseas Chinese students (僑生)</span></div>
-        <div class="gov-schol-link"><a href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/Overseas_Schola/pages.php?ID=dGh1X29zYSZPdmVyc2Vhc19TY2hvbGE=" target="_blank" rel="noopener">More Info</a></div>
+        <div data-k="sch5.name" class="gov-schol-head">Overseas Chinese Student Scholarship</div>
+        <div class="gov-schol-row"><span class="gov-schol-key">By</span><span data-k="sch5.by" class="gov-schol-val">Tunghai University OIR</span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">For</span><span data-k="sch5.for" class="gov-schol-val">Overseas Chinese students (僑生)</span></div>
+        <div class="gov-schol-link"><a data-k="sch5.url" href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/Overseas_Schola/pages.php?ID=dGh1X29zYSZPdmVyc2Vhc19TY2hvbGE=" target="_blank" rel="noopener">More Info</a></div>
       </div>
       <div class="gov-schol-card" style="border-color:var(--gold);">
-        <div class="gov-schol-head" style="background:var(--gold);color:var(--ink);">GMBA Program Scholarship</div>
-        <div class="gov-schol-row"><span class="gov-schol-key">For</span><span class="gov-schol-val">New / incoming students in Taiwan (ARC required) or Taiwan nationals</span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">Amount</span><span class="gov-schol-val">Announced each semester at Info Session<br><a href="問卷2 GMBA Save My Seat 填寫頁面.html" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.5rem;padding:0.4rem 1rem;font-size:0.78rem;font-weight:700;text-decoration:none;background:var(--gold);color:var(--ink);border-radius:4px;letter-spacing:0.05em;">✉ SAVE MY SEAT →</a></span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">Note</span><span class="gov-schol-val" style="font-style:italic;color:var(--ink-3);font-size:12px;">Prospective students only — not for currently enrolled</span></div>
+        <div data-k="sch6.name" class="gov-schol-head" style="background:var(--gold);color:var(--ink);">GMBA Program Scholarship</div>
+        <div class="gov-schol-row"><span class="gov-schol-key">For</span><span data-k="sch6.for" class="gov-schol-val">New / incoming students in Taiwan (ARC required) or Taiwan nationals</span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">Amount</span><span class="gov-schol-val"><span data-k="sch6.amount">Announced each semester at Info Session</span><br><a href="問卷2 GMBA Save My Seat 填寫頁面.html" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.5rem;padding:0.4rem 1rem;font-size:0.78rem;font-weight:700;text-decoration:none;background:var(--gold);color:var(--ink);border-radius:4px;letter-spacing:0.05em;">✉ SAVE MY SEAT →</a></span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">Note</span><span data-k="sch6.note" class="gov-schol-val" style="font-style:italic;color:var(--ink-3);font-size:12px;">Prospective students only &mdash; not for currently enrolled</span></div>
         
       </div>
     </div>
@@ -1348,48 +1351,48 @@
       <div class="fee-cards-header"><span>ITEM</span><span>AMOUNT (NTD)</span><span>REFERENCE</span></div>
       <div class="fee-card">
         <div class="fee-card-label"><strong>Tuition</strong> (incl. misc. fees)</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$69,020</div>
-          <div class="fee-card-usd">~USD 2,125 / semester</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.tuition.nt">NT$69,020</div>
+          <div class="fee-card-usd" data-k="fee.tuition.usd">~USD 2,124 / semester</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">Official Fee Schedule →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">On-Campus Housing</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$10,560–41,360</div>
-          <div class="fee-card-usd">~USD 325–1,270</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.dorm.nt">NT$10,560–41,360</div>
+          <div class="fee-card-usd" data-k="fee.dorm.usd">~USD 325–1,273</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://dorm.thu.edu.tw/web/about/page.php?lang=en&amp;scid=56&amp;sid=65" target="_blank" rel="noopener">Dormitory Fee →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">Off-Campus Housing</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$30,000–48,000</div>
-          <div class="fee-card-usd">~USD 925–1,480 · market estimate</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.offcampus.nt">NT$30,000–48,000</div>
+          <div class="fee-card-usd" data-k="fee.offcampus.usd">~USD 923–1,477 · market estimate</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://oir.thu.edu.tw/redirect.php?ID=400_9_Fees_and_" target="_blank" rel="noopener">OIR Living Costs →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">National Health Insurance (NHI) premium</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$4,956</div>
-          <div class="fee-card-usd">~USD 153 · per semester</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.nhi.nt">NT$4,956</div>
+          <div class="fee-card-usd" data-k="fee.nhi.usd">~USD 152 · per semester</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://oir.thu.edu.tw/redirect.php?ID=400_7_NHI" target="_blank" rel="noopener">OIR · NHI →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">Living Expenses</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$24,000</div>
-          <div class="fee-card-usd">~USD 740 · varies</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.living.nt">NT$48,000</div>
+          <div class="fee-card-usd" data-k="fee.living.usd">~USD 1,477 · per semester</div>
         </div>
         <div class="fee-card-ref"></div>
       </div>
       <div class="fee-card fee-card-total">
         <div class="fee-card-label"><strong>Estimated Total / Semester</strong></div>
-        <div class="fee-card-amt"><div class="fee-card-nt">~NT$100,000</div>
-          <div class="fee-card-usd">~USD 3,080 · varies by individual</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.total.nt">~NT$150,000</div>
+          <div class="fee-card-usd" data-k="fee.total.usd">~USD 4,615 · varies by individual</div>
         </div>
         <div class="fee-card-ref"></div>
       </div>
     </div>
-    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;">All amounts are for reference only; official university announcements prevail. Last updated: 2026-08-06</p>
+    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;" data-k="fee.disclaimer">All amounts are for reference only; official university announcements prevail. Last updated: 2026-08-06</p>
 
     <div class="sec-rule" style="margin-top:2rem;"><span class="sec-tag">Year 3: Credit-Based Fee</span><span class="rule-line"></span></div>
     <p style="font-size:var(--t-body);color:var(--ink-3);margin-bottom:1rem;">From Year 3, students pay per credit enrolled — typically far less than full-semester tuition.</p>
@@ -1397,20 +1400,20 @@
       <div class="fee-cards-header"><span>ITEM</span><span>AMOUNT (NTD)</span><span>REFERENCE</span></div>
       <div class="fee-card">
         <div class="fee-card-label">Credit Fee<div style="font-size:12px;font-weight:400;color:var(--ink-3);margin-top:2px;">Charged per credit enrolled</div></div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$2,090</div>
-          <div class="fee-card-usd">~USD 64 / credit</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.credit.nt">NT$2,090</div>
+          <div class="fee-card-usd" data-k="fee.credit.usd">~USD 64 / credit</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">Accounting Office →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">Miscellaneous Fee<div style="font-size:12px;font-weight:400;color:var(--ink-3);margin-top:2px;">Same as above</div></div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$440</div>
-          <div class="fee-card-usd">~USD 14 / credit</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.misc.nt">NT$440</div>
+          <div class="fee-card-usd" data-k="fee.misc.usd">~USD 14 / credit</div>
         </div>
         <div class="fee-card-ref"></div>
       </div>
     </div>
-    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;">All amounts are for reference only; official university announcements prevail. Last updated: 2026-08-06</p>
+    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;" data-k="fee.disclaimer2">All amounts are for reference only; official university announcements prevail. Last updated: 2026-08-06</p>
   </div>
 </section>
 
@@ -1438,8 +1441,8 @@
           </div>
           <div><span style="display:inline-block;background:#E1F5EE;color:#085041;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Spring</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Oct</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=26" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.intl_spring.period">Oct</div>
+            <a data-k="apply.intl_spring.url" href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=26" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review</div>
         </div>
@@ -1451,8 +1454,8 @@
           </div>
           <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Fall</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Jan – May</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=25" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.intl_fall.period">Jan – May</div>
+            <a data-k="apply.intl_fall.url" href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=25" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review</div>
         </div>
@@ -1464,8 +1467,8 @@
           </div>
           <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Fall</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Oct – Nov</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=21&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.taiwan_r1.period">Oct – Nov</div>
+            <a data-k="apply.taiwan_r1.url" href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=21&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review + Interview</div>
         </div>
@@ -1477,8 +1480,8 @@
           </div>
           <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Fall</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Dec – Feb</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=22&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.taiwan_r2.period">Dec – Feb</div>
+            <a data-k="apply.taiwan_r2.url" href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=22&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review + Interview</div>
         </div>
@@ -1490,8 +1493,8 @@
           </div>
           <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">Fall</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">Apr – Jun</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=54" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.overseas_chinese.period">Apr – Jun</div>
+            <a data-k="apply.overseas_chinese.url" href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=54" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">Apply →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">Document Review</div>
         </div>
@@ -1697,6 +1700,13 @@
           </div>
           <a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Precautions%20for%20thesis%20upload.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ Download</a>
         </div>
+        <div class="forms-item">
+          <div class="forms-item-info">
+            <div class="forms-item-name">GMBA Program Schedule</div>
+            <div class="forms-item-desc">Full programme schedule &amp; study plan overview</div>
+          </div>
+          <a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Global%20Master%20of%20Business%20Administration%20Program%20schedule.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ Download</a>
+        </div>
       </div>
     </div>
     <div class="dl-note">
@@ -1815,6 +1825,8 @@
       </a>
       <span class="footer-bottom-copy">&copy; 2026 Tunghai University GMBA Program. All Rights Reserved.</span>
       <div class="footer-bottom-links">
+        <a href="https://eng.thu.edu.tw/" target="_blank" rel="noopener">Tunghai University</a>
+        <a href="https://mana.thu.edu.tw/web/about/page.php?scid=35&amp;sid=38&amp;lang=en" target="_blank" rel="noopener">College of Management</a>
         <a href="admissions-zh.html">中文</a>
       </div>
     </div>

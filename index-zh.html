@@ -355,7 +355,7 @@
       display: flex; align-items: stretch; justify-content: flex-start;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       min-height: 56px;
-      position: sticky; top: 36px; z-index: 600;
+      position: sticky; top: 0; z-index: 600;
     }
     .nav-logo {
       text-decoration: none; cursor: pointer;
@@ -463,8 +463,7 @@
     /* ANNOUNCEMENT BAR */
     .announce {
       background: var(--gold); color: var(--ink); text-align: center;
-      padding: 0.55rem 1.5rem; font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.06em;
-      position: sticky; top: 0; z-index: 700;
+      padding: 0.55rem 1.5rem; font-size: 15px; font-weight: 700; letter-spacing: 0.03em;
     }
     .announce a { color: var(--ink); }
 
@@ -967,7 +966,7 @@
   .info-session-btn { width: 100% !important; box-sizing: border-box !important; }
 
   /* 8. Announce bar */
-  .announce { font-size: 13px !important; padding: 0.45rem 1rem !important; position: relative !important; }
+  .announce { font-size: 13px !important; padding: 0.45rem 1rem !important; }
   nav { top: 0 !important; }
 }
 /* ===== END COMPREHENSIVE MOBILE FIX ===== */
@@ -975,14 +974,14 @@
 
 <style>
 /* ===== ANCHOR OFFSET FIX ===== */
-[id] { scroll-margin-top: 104px; }
+[id] { scroll-margin-top: 68px; }
 @media (max-width: 640px) { [id] { scroll-margin-top: 68px; } }
 /* ===== END ANCHOR OFFSET FIX ===== */
 </style>
 </head>
 <body>
 <div class="announce" role="alert">
-  📢 東海攜手中華電信與Google，率全台之先導入企業級Agent管理平台「Gemini Enterprise」。
+  東海攜手中華電信與Google，率全台之先導入企業級Agent管理平台「Gemini Enterprise」。
 </div>
 
 <a href="#maincontent" class="skip-link">跳至主要內容</a>
@@ -1111,11 +1110,11 @@
 <!-- STATS BAR -->
 <div id="about" class="stats" aria-label="Key facts">
   <div class="stats-in">
-    <div class="stat-cell"><span class="stat-num">100%</span><span class="stat-label">全英文授課</span></div>
-    <div class="stat-cell"><span class="stat-num">#1</span><span class="stat-label">私立大學#1 · QS亞洲</span></div>
-    <div class="stat-cell"><span class="stat-num">20+</span><span class="stat-label">個國籍</span></div>
-    <div class="stat-cell"><span class="stat-num">98.1%</span><span class="stat-label">國際學生</span></div>
-    <div class="stat-cell"><span class="stat-num">#85</span><span class="stat-label">THE世界影響力排名</span></div>
+    <div class="stat-cell"><span class="stat-num" data-k="stat.english.num">100%</span><span class="stat-label" data-k="stat.english.label">全英文授課</span></div>
+    <div class="stat-cell"><span class="stat-num" data-k="stat.qs.num">#1</span><span class="stat-label" data-k="stat.qs.label">私立大學#1 · QS亞洲</span></div>
+    <div class="stat-cell"><span class="stat-num" data-k="stat.nationalities.num">20+</span><span class="stat-label" data-k="stat.nationalities.label">個國籍</span></div>
+    <div class="stat-cell"><span class="stat-num" data-k="stat.intl_ratio.num">98.1%</span><span class="stat-label" data-k="stat.intl_ratio.label">國際學生</span></div>
+    <div class="stat-cell"><span class="stat-num" data-k="stat.the_impact.num">#85</span><span class="stat-label" data-k="stat.the_impact.label">THE世界影響力排名</span></div>
   </div>
 </div>
 
@@ -1683,15 +1682,28 @@
         return c.length > 140 ? c.slice(0,137)+'…' : c;
       }
       function card(o){
-        var hasLink = o.link && o.link !== '#';
+        var links = '';
+        if(o.link && o.link !== '#'){
+          links += '<a href="'+esc(o.link)+'" target="_blank" rel="noopener" class="nc-link">'+esc(o.linkText || T.read)+'</a>';
+        }
+        if(o.link2 && o.link2 !== '#'){
+          links += '<a href="'+esc(o.link2)+'" target="_blank" rel="noopener" class="nc-link" style="display:block;margin-top:.35rem;">'+esc(o.link2Text || '')+'</a>';
+        }
+        /* 招生公告附件：把「GMBA 招生公告」資料夾裡的檔案列成下載連結
+           （由 sync-admission-files.py 掃描資料夾寫進 news-pinned.json） */
+        (o.files || []).forEach(function(f){
+          if(!f || !f.href) return;
+          links += '<a href="'+esc(f.href)+'" target="_blank" rel="noopener" class="nc-link" style="display:block;margin-top:.35rem;">&darr; '+esc(f.label)+'</a>';
+        });
         return '<div class="nc">'
+          + (o.image ? '<a href="'+esc(o.link || '#')+'" target="_blank" rel="noopener" style="display:block;"><img src="'+esc(o.image)+'" alt="'+esc(o.imageAlt || o.title)+'" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-bottom:1px solid var(--rule);"></a>' : '')
           + '<div class="nc-body">'
           + '<span class="nc-badge" style="background:'+o.color+'">'+esc(o.badge)+'</span>'
           + '<div class="nc-date">'+esc(o.date)+'</div>'
           + '<div class="nc-title">'+esc(o.title)+'</div>'
           + '<div class="nc-excerpt">'+esc(o.body)+'</div>'
           + '</div>'
-          + (hasLink ? '<div class="nc-footer"><a href="'+esc(o.link)+'" target="_blank" rel="noopener" class="nc-link">'+esc(o.linkText || T.read)+'</a></div>' : '')
+          + (links ? '<div class="nc-footer">'+links+'</div>' : '')
           + '</div>';
       }
 
@@ -1704,8 +1716,19 @@
             date: fmtDate(pinned.date),
             title: LANG === 'zh' ? pinned.title_zh : pinned.title_en,
             body:  LANG === 'zh' ? pinned.summary_zh : pinned.summary_en,
+            image: pinned.image ? encodeURI(pinned.image) : '',
+            imageAlt: LANG === 'zh' ? pinned.image_alt_zh : pinned.image_alt_en,
             link:  pinned.link,
-            linkText: LANG === 'zh' ? pinned.link_text_zh : pinned.link_text_en
+            linkText: LANG === 'zh' ? pinned.link_text_zh : pinned.link_text_en,
+            link2: pinned.link2,
+            link2Text: LANG === 'zh' ? pinned.link2_text_zh : pinned.link2_text_en,
+            files: (pinned.files || []).map(function(f){
+              return {
+                href:  encodeURI(f.file || ''),
+                label: LANG === 'zh' ? (f.label_zh || f.label_en || f.file)
+                                     : (f.label_en || f.label_zh || f.file)
+              };
+            })
           });
         }
         html += (items || []).map(function(it){
@@ -1822,6 +1845,8 @@
       </a>
       <span class="footer-bottom-copy">&copy; 2026 © 2026 東海大學 GMBA 學程。版權所有。</span>
       <div class="footer-bottom-links">
+        <a href="https://www.thu.edu.tw/" target="_blank" rel="noopener">東海大學首頁</a>
+        <a href="https://mana.thu.edu.tw/" target="_blank" rel="noopener">管理學院</a>
         <a href="index.html">English</a>
       </div>
     </div>

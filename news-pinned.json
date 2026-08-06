@@ -1,16 +1,24 @@
 {
-  "_使用說明": "首頁新聞區塊第一格（招生公告）。每學期只要改這個檔案，中英文首頁會同時更新。改完存檔，再跑一次「一鍵推送.bat」即可。",
-  "_注意事項": "只改冒號後面引號裡的文字。不要刪掉引號、逗號或大括號。日期請用 YYYY-MM-DD 格式。",
-
-  "date": "2026-10-08",
-
-  "title_zh": "115 學年度碩士班甄試入學",
-  "title_en": "AY115 Master's Program — Admission by Review",
-
-  "summary_zh": "東海大學 115 學年度碩士班甄試入學招生簡章已公告，GMBA 國際企業管理碩士學位學程同步招生。報名期間與應繳文件請見招生系統公告。",
-  "summary_en": "Tunghai University has released the AY115 master's admission guidelines. The GMBA program is enrolling for the fall intake. See the admissions portal for deadlines and required documents.",
-
-  "link": "https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=21",
-  "link_text_zh": "查看招生公告 →",
-  "link_text_en": "View announcement →"
+  "_這個檔案是誰改的": "由試算表的「📢 招生公告：套用更新」選單自動產生，請不要手動編輯。",
+  "date": "2025-12-24",
+  "image": "GMBA 招生公告/115 招生公告.jpg",
+  "image_alt_zh": "東海大學 115 學年度碩士班考試入學海報",
+  "image_alt_en": "Tunghai University AY115 master's entrance exam admission poster",
+  "title_zh": "115 學年度碩士班考試入學（在台申請者）",
+  "title_en": "AY115 Master's Admission by Entrance Exam (applicants in Taiwan)",
+  "summary_zh": "網路報名自 114/12/24 上午 10:00 起，至 115/02/24 中午 12:00 止。本管道適用在台申請者；海外申請者請依國際暨兩岸合作處公告辦理。招生專線 04-2359-8900。",
+  "summary_en": "Online application opens 24 Dec 2025 at 10:00 and closes 24 Feb 2026 at 12:00 noon. This route is for applicants already in Taiwan. Overseas applicants should follow the announcement from the Office of International Relations. Hotline: +886-4-2359-8900.",
+  "link": "https://recruit.thu.edu.tw",
+  "link_text_zh": "在台申請者 →",
+  "link_text_en": "Apply from Taiwan →",
+  "link2": "https://oir.thu.edu.tw/redirect.php?ID=timeline",
+  "link2_text_zh": "海外申請者（國際處）→",
+  "link2_text_en": "Overseas applicants (OIR) →",
+  "files": [],
+  "announce_zh": "115 學年度碩士班考試入學報名中，至 2/24 中午 12:00 截止 →",
+  "announce_en": "AY115 Master’s admission by entrance exam is open — apply by 24 Feb, 12:00 noon →",
+  "announce_link": "https://recruit.thu.edu.tw",
+  "announce_until": "2026-02-24",
+  "announce_fallback_zh": "東海攜手中華電信與Google，率全台之先導入企業級Agent管理平台「Gemini Enterprise」。",
+  "announce_fallback_en": "Tunghai partners with Chunghwa Telecom & Google to lead Taiwan in adopting enterprise AI agent platform Gemini Enterprise."
 }

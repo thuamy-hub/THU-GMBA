@@ -1,0 +1,170 @@
+{
+  "_這個檔案是什麼": "東海 GMBA 官網每學期會變動的資料，全部集中在這裡。改這個檔案，再執行套用步驟，中英文六個網頁會同時更新。",
+  "_怎麼改": "只改冒號後面引號裡的文字。有 en / zh 兩行的表示中英文不同，兩行都要改；只有一行的表示中英文共用，改一次即可。",
+  "_千萬不要": "不要刪引號、逗號、大括號，不要改冒號左邊的欄位名稱（那是程式定位用的）。",
+  "_改完之後": "請 Claude 執行「更新 GMBA 官網學期資料」，或依照『每學期更新SOP.md』手動操作，最後跑一鍵推送.bat。",
+  "_最後更新": "2026-08-06",
+  "stat": {
+    "_說明": "首頁最上方那條關鍵數字（全英文授課／QS排名／國籍數／國際生比例／THE影響力排名）。通常一學年更新一次。",
+    "english": {
+      "num": "100%",
+      "label": {
+        "en": "English-Taught",
+        "zh": "全英文授課"
+      }
+    },
+    "qs": {
+      "num": "#1",
+      "label": {
+        "en": "Private Uni · QS Asia",
+        "zh": "私立大學#1 · QS亞洲"
+      }
+    },
+    "nationalities": {
+      "num": "20+",
+      "label": {
+        "en": "Nationalities",
+        "zh": "個國籍"
+      }
+    },
+    "intl_ratio": {
+      "num": "98.1%",
+      "label": {
+        "en": "Intl. Students",
+        "zh": "國際學生"
+      }
+    },
+    "the_impact": {
+      "num": "#85",
+      "label": {
+        "en": "THE World Impact",
+        "zh": "THE世界影響力排名"
+      }
+    }
+  },
+  "fee": {
+    "_說明": "招生頁的費用表。每學期學校公告後更新。disclaimer 兩行請把日期改成當天，讓訪客知道資料新舊。",
+    "tuition": {
+      "nt": "NT$69,020",
+      "usd": {
+        "en": "~USD 2,124 / semester",
+        "zh": "~USD 2,124 / 學期"
+      }
+    },
+    "dorm": {
+      "nt": {
+        "en": "NT$10,560–41,360",
+        "zh": "NT$10,560～41,360"
+      },
+      "usd": {
+        "en": "~USD 325–1,273",
+        "zh": "~USD 325～1,273"
+      }
+    },
+    "offcampus": {
+      "nt": {
+        "en": "NT$30,000–48,000",
+        "zh": "NT$30,000～48,000"
+      },
+      "usd": {
+        "en": "~USD 923–1,477 · market estimate",
+        "zh": "~USD 923～1,477 · 台中行情"
+      }
+    },
+    "nhi": {
+      "nt": "NT$4,956",
+      "usd": {
+        "en": "~USD 152 · per semester",
+        "zh": "~USD 152 · 每學期"
+      }
+    },
+    "living": {
+      "nt": "NT$48,000",
+      "usd": {
+        "en": "~USD 1,477 · per semester",
+        "zh": "~USD 1,477 · 每學期"
+      }
+    },
+    "total": {
+      "nt": "~NT$150,000",
+      "usd": {
+        "en": "~USD 4,615 · varies by individual",
+        "zh": "~USD 4,615 · 因人而異"
+      }
+    },
+    "disclaimer": {
+      "en": "All amounts are for reference only; official university announcements prevail. Last updated: 2026-08-06",
+      "zh": "以上金額僅供參考，正確金額以官方公告為準。　資料更新日期：2026-08-06"
+    },
+    "credit": {
+      "nt": "NT$2,090",
+      "usd": {
+        "en": "~USD 64 / credit",
+        "zh": "~USD 64 / 學分"
+      }
+    },
+    "misc": {
+      "nt": "NT$440",
+      "usd": {
+        "en": "~USD 14 / credit",
+        "zh": "~USD 14 / 學分"
+      }
+    },
+    "disclaimer2": {
+      "en": "All amounts are for reference only; official university announcements prevail. Last updated: 2026-08-06",
+      "zh": "以上金額僅供參考，正確金額以官方公告為準。　資料更新日期：2026-08-06"
+    }
+  },
+  "apply": {
+    "_說明": "招生頁「如何申請」表格的申請期間。intl=海外國際生，taiwan=已在台／台灣籍，overseas_chinese=海外僑生。",
+    "intl_spring": {
+      "period": {
+        "en": "Oct",
+        "zh": "10月"
+      }
+    },
+    "intl_fall": {
+      "period": {
+        "en": "Jan – May",
+        "zh": "1月－5月"
+      }
+    },
+    "taiwan_r1": {
+      "period": {
+        "en": "Oct – Nov",
+        "zh": "10月－11月"
+      }
+    },
+    "taiwan_r2": {
+      "period": {
+        "en": "Dec – Feb",
+        "zh": "12月－2月"
+      }
+    },
+    "overseas_chinese": {
+      "period": {
+        "en": "Apr – Jun",
+        "zh": "4月－6月"
+      }
+    }
+  },
+  "calendar": {
+    "_說明": "課程頁行事曆右側的兩個 PDF 下載按鈕。pdf1/pdf2 是網址，pdf1_text/pdf2_text 是按鈕上的文字。學校每年公告新版行事曆時更新。",
+    "pdf1": {
+      "en": "https://eng.thu.edu.tw/upload/sitemap/THU-2026-2027-(115)-Academic-Year-Calendar-v0603.pdf",
+      "zh": "https://www.thu.edu.tw/upload/files/thu-calendar-115-1150311-2.pdf"
+    },
+    "pdf2": {
+      "en": "https://eng.thu.edu.tw/upload/sitemap/Tunghai-calendar-2025-2026-v2-20250611.pdf",
+      "zh": "https://www.thu.edu.tw/upload/files/thu-calendar-114-v2-1140611.pdf"
+    },
+    "pdf1_text": {
+      "en": "School Calendar 2026-2027",
+      "zh": "115學年度行事曆"
+    },
+    "pdf2_text": {
+      "en": "School Calendar 2025-2026 (Revised)",
+      "zh": "114學年度行事曆（修正版）"
+    }
+  }
+}

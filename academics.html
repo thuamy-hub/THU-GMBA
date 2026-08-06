@@ -685,7 +685,7 @@
     /* ANNOUNCEMENT BAR */
     .announce {
       background: var(--gold); color: var(--ink); text-align: center;
-      padding: 0.55rem 1.5rem; font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.06em;
+      padding: 0.55rem 1.5rem; font-size: 15px; font-weight: 700; letter-spacing: 0.06em;
     }
     .announce a { color: var(--ink); }
 
@@ -1064,6 +1064,7 @@
 <style>
 /* ===== COMPREHENSIVE MOBILE FIX 2026-06-24 ===== */
 @media (max-width: 640px) {
+  .announce { font-size: 13px !important; padding: 0.45rem 1rem !important; }
   :root {
     --t-hero: clamp(28px, 8vw, 42px) !important;
     --t-h2:   clamp(22px, 6.5vw, 30px) !important;
@@ -1107,6 +1108,9 @@
 </style>
 </head>
 <body>
+<div class="announce" role="alert">
+  Tunghai partners with Chunghwa Telecom &amp; Google to lead Taiwan in adopting enterprise AI agent platform Gemini Enterprise.
+</div>
 
 <a href="#maincontent" class="skip-link">Skip to main content</a>
 
@@ -1296,10 +1300,10 @@
         <div><div class="fv2-label">AI, Data &amp; Technology</div><div class="fv2-sub">Business analytics · cybersecurity · data science · AI applications</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('chen-ho'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/01-chen-ho-yuan.jpg" alt="Ho-Yuan Chen" loading="lazy"></div><div class="fv2-name">Ho-Yuan Chen</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('kim'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/02-kim-brian.jpg" alt="Brian Kim" loading="lazy"></div><div class="fv2-name">Brian Kim</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('huang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/03-huang-yin-tzu.jpg" alt="Yin-Tzu Huang" loading="lazy"></div><div class="fv2-name">Yin-Tzu Huang</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('wong'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/04-wong-ka-chun.jpg" alt="Ka-Chun Wong" loading="lazy"></div><div class="fv2-name">Ka-Chun Wong</div></a>
+        <a class="fv2-card" data-fac="chen-ho" href="#" onclick="openFacModal('chen-ho'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chen-ho.photo" src="faculty-photos/01-chen-ho-yuan.jpg" alt="Ho-Yuan Chen" loading="lazy"></div><div class="fv2-name" data-k="fac.chen-ho.card">Ho-Yuan Chen</div></a>
+        <a class="fv2-card" data-fac="kim" href="#" onclick="openFacModal('kim'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.kim.photo" src="faculty-photos/02-kim-brian.jpg" alt="Taesung Brian Kim" loading="lazy"></div><div class="fv2-name" data-k="fac.kim.card">Taesung Brian Kim</div></a>
+        <a class="fv2-card" data-fac="huang" href="#" onclick="openFacModal('huang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.huang.photo" src="faculty-photos/03-huang-yin-tzu.jpg" alt="Yin-Tzu Huang" loading="lazy"></div><div class="fv2-name" data-k="fac.huang.card">Yin-Tzu Huang</div></a>
+        <a class="fv2-card" data-fac="wong" href="#" onclick="openFacModal('wong'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.wong.photo" src="faculty-photos/04-wong-ka-chun.jpg" alt="Ka-Chun Wong" loading="lazy"></div><div class="fv2-name" data-k="fac.wong.card">Ka-Chun Wong</div></a>
       </div>
     </div>
 
@@ -1310,11 +1314,11 @@
         <div><div class="fv2-label">Finance &amp; Capital Markets</div><div class="fv2-sub">Corporate finance · capital markets · derivatives &amp; risk management</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('chang-yh'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/05-chang-yung-ho.jpg" alt="Yung-Ho Chang" loading="lazy"></div><div class="fv2-name">Yung-Ho Chang</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('kuo'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/06-kuo-i-doun.jpg" alt="I-Doun Kuo" loading="lazy"></div><div class="fv2-name">I-Doun Kuo</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chuang-ks'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/07-chuang-kai-shi.jpg" alt="Kai-Shi Chuang" loading="lazy"></div><div class="fv2-name">Kai-Shi Chuang</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('fu'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/08-fu-yufen.jpg" alt="Yufen Fu" loading="lazy"></div><div class="fv2-name">Yufen Fu</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('huang-cj'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/09-huang-chen-jui.jpg" alt="Chen-Jui Huang" loading="lazy"></div><div class="fv2-name">Chen-Jui Huang</div></a>
+        <a class="fv2-card" data-fac="chang-yh" href="#" onclick="openFacModal('chang-yh'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chang-yh.photo" src="faculty-photos/05-chang-yung-ho.jpg" alt="Yung-Ho Chang" loading="lazy"></div><div class="fv2-name" data-k="fac.chang-yh.card">Yung-Ho Chang</div></a>
+        <a class="fv2-card" data-fac="kuo" href="#" onclick="openFacModal('kuo'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.kuo.photo" src="faculty-photos/06-kuo-i-doun.jpg" alt="I-Doun Kuo" loading="lazy"></div><div class="fv2-name" data-k="fac.kuo.card">I-Doun Kuo</div></a>
+        <a class="fv2-card" data-fac="chuang-ks" href="#" onclick="openFacModal('chuang-ks'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chuang-ks.photo" src="faculty-photos/07-chuang-kai-shi.jpg" alt="Kai-Shi Chuang" loading="lazy"></div><div class="fv2-name" data-k="fac.chuang-ks.card">Kai-Shi Chuang</div></a>
+        <a class="fv2-card" data-fac="fu" href="#" onclick="openFacModal('fu'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.fu.photo" src="faculty-photos/08-fu-yufen.jpg" alt="Yufen Fu" loading="lazy"></div><div class="fv2-name" data-k="fac.fu.card">Yufen Fu</div></a>
+        <a class="fv2-card" data-fac="huang-cj" href="#" onclick="openFacModal('huang-cj'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.huang-cj.photo" src="faculty-photos/09-huang-chen-jui.jpg" alt="Chen-Jui Huang" loading="lazy"></div><div class="fv2-name" data-k="fac.huang-cj.card">Chen-Jui Huang</div></a>
       </div>
     </div>
 
@@ -1325,9 +1329,9 @@
         <div><div class="fv2-label">Strategy, HR &amp; Operations</div><div class="fv2-sub">Supply chain · human resource management · service operations</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('lee-ki'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/10-lee-kuei-i.jpg" alt="Kuei-I Lee" loading="lazy"></div><div class="fv2-name">Kuei-I Lee</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('wu-cy'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/11-wu-chih-yun.jpg" alt="Chih-Yun Wu" loading="lazy"></div><div class="fv2-name">Chih-Yun Wu</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chen-cy'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/12-chen-amy.jpg" alt="Amy Chen" loading="lazy"></div><div class="fv2-name">Amy Chen</div><div style="font-size:15px;font-weight:700;color:var(--maroon);text-align:center;margin-top:.3rem;letter-spacing:.04em;">Program Director</div></a>
+        <a class="fv2-card" data-fac="lee-ki" href="#" onclick="openFacModal('lee-ki'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.lee-ki.photo" src="faculty-photos/10-lee-kuei-i.jpg" alt="Kuei-I Lee" loading="lazy"></div><div class="fv2-name" data-k="fac.lee-ki.card">Kuei-I Lee</div></a>
+        <a class="fv2-card" data-fac="wu-cy" href="#" onclick="openFacModal('wu-cy'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.wu-cy.photo" src="faculty-photos/11-wu-chih-yun.jpg" alt="Chih-Yun Wu" loading="lazy"></div><div class="fv2-name" data-k="fac.wu-cy.card">Chih-Yun Wu</div></a>
+        <a class="fv2-card" data-fac="chen-cy" href="#" onclick="openFacModal('chen-cy'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chen-cy.photo" src="faculty-photos/12-chen-amy.jpg" alt="Ching-Yu Chen" loading="lazy"></div><div class="fv2-name" data-k="fac.chen-cy.card">Ching-Yu Chen</div><div style="font-size:15px;font-weight:700;color:var(--maroon);text-align:center;margin-top:.3rem;letter-spacing:.04em;">Program Director</div></a>
       </div>
     </div>
 
@@ -1338,9 +1342,9 @@
         <div><div class="fv2-label">Marketing &amp; Consumer Behavior</div><div class="fv2-sub">Digital marketing · consumer psychology · brand management</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('jang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/13-jang-jacky.jpg" alt="Jacky Jang" loading="lazy"></div><div class="fv2-name">Jacky Jang</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chen-wt'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/14-chen-wei-ting.jpg" alt="Wei-Ting Chen" loading="lazy"></div><div class="fv2-name">Wei-Ting Chen</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chuang-mc'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/15-chuang-min-chieh.jpg" alt="Min-Chieh Chuang" loading="lazy"></div><div class="fv2-name">Min-Chieh Chuang</div></a>
+        <a class="fv2-card" data-fac="jang" href="#" onclick="openFacModal('jang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.jang.photo" src="faculty-photos/13-jang-jacky.jpg" alt="Yu-Teng Jacky Jang" loading="lazy"></div><div class="fv2-name" data-k="fac.jang.card">Yu-Teng Jacky Jang</div></a>
+        <a class="fv2-card" data-fac="chen-wt" href="#" onclick="openFacModal('chen-wt'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chen-wt.photo" src="faculty-photos/14-chen-wei-ting.jpg" alt="Wei-Ting Chen" loading="lazy"></div><div class="fv2-name" data-k="fac.chen-wt.card">Wei-Ting Chen</div></a>
+        <a class="fv2-card" data-fac="chuang-mc" href="#" onclick="openFacModal('chuang-mc'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chuang-mc.photo" src="faculty-photos/15-chuang-min-chieh.jpg" alt="Min-Chieh Chuang" loading="lazy"></div><div class="fv2-name" data-k="fac.chuang-mc.card">Min-Chieh Chuang</div></a>
       </div>
     </div>
 
@@ -1351,10 +1355,10 @@
         <div><div class="fv2-label">Policy, Law &amp; Global Affairs</div><div class="fv2-sub">Public management · international relations · trade law</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('jose'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/16-chen-jose.jpg" alt="José Chen" loading="lazy" style="object-position:50% 35%;"></div><div class="fv2-name">José Chen</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('lin-tl'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/17-lin-tzu-li.jpg" alt="Lin Tzu-Li" loading="lazy"></div><div class="fv2-name">Lin Tzu-Li</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chen-wf'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/18-chen-wei-fang.jpg" alt="Wei-Fang Chen" loading="lazy"></div><div class="fv2-name">Wei-Fang Chen</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('chang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/19-chang-kai-hsin.jpg" alt="Kai-Hsin Chang" loading="lazy"></div><div class="fv2-name">Kai-Hsin Chang</div></a>
+        <a class="fv2-card" data-fac="jose" href="#" onclick="openFacModal('jose'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.jose.photo" src="faculty-photos/16-chen-jose.jpg" alt="José Chiu-C. Chen" loading="lazy" style="object-position:50% 35%;"></div><div class="fv2-name" data-k="fac.jose.card">José Chiu-C. Chen</div></a>
+        <a class="fv2-card" data-fac="lin-tl" href="#" onclick="openFacModal('lin-tl'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.lin-tl.photo" src="faculty-photos/17-lin-tzu-li.jpg" alt="Tzu-Li (Max) Lin" loading="lazy"></div><div class="fv2-name" data-k="fac.lin-tl.card">Tzu-Li (Max) Lin</div></a>
+        <a class="fv2-card" data-fac="chen-wf" href="#" onclick="openFacModal('chen-wf'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chen-wf.photo" src="faculty-photos/18-chen-wei-fang.jpg" alt="Wei-Fang Chen" loading="lazy"></div><div class="fv2-name" data-k="fac.chen-wf.card">Wei-Fang Chen</div></a>
+        <a class="fv2-card" data-fac="chang" href="#" onclick="openFacModal('chang'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chang.photo" src="faculty-photos/19-chang-kai-hsin.jpg" alt="Kai-Hsin Chang" loading="lazy"></div><div class="fv2-name" data-k="fac.chang.card">Kai-Hsin Chang</div></a>
       </div>
     </div>
 
@@ -1365,8 +1369,8 @@
         <div><div class="fv2-label">Culture &amp; Communication</div><div class="fv2-sub">ESL/EFL education · Chinese language · intercultural competency</div></div>
       </div>
       <div class="fv2-cards">
-        <a class="fv2-card" href="#" onclick="openFacModal('chiu'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/20-chiu-chia-hui.jpg" alt="Chia-Hui Chiu" loading="lazy"></div><div class="fv2-name">Chia-Hui Chiu</div></a>
-        <a class="fv2-card" href="#" onclick="openFacModal('bai'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" src="faculty-photos/21-bai-heng-xu.jpg" alt="Heng-Xu Bai" loading="lazy"></div><div class="fv2-name">Heng-Xu Bai</div></a>
+        <a class="fv2-card" data-fac="chiu" href="#" onclick="openFacModal('chiu'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.chiu.photo" src="faculty-photos/20-chiu-chia-hui.jpg" alt="Chia-Hui Chiu" loading="lazy"></div><div class="fv2-name" data-k="fac.chiu.card">Chia-Hui Chiu</div></a>
+        <a class="fv2-card" data-fac="bai" href="#" onclick="openFacModal('bai'); return false;"><div class="fv2-photo"><img referrerpolicy="no-referrer" data-k="fac.bai.photo" src="faculty-photos/21-bai-heng-xu.jpg" alt="Heng-Xu Bai" loading="lazy"></div><div class="fv2-name" data-k="fac.bai.card">Heng-Xu Bai</div></a>
       </div>
     </div>
 
@@ -1438,11 +1442,11 @@
       <div>
         <p style="font-size:var(--t-sm);color:var(--ink-3);line-height:1.7;margin-bottom:1.2rem;">Download the official Tunghai University academic calendar (PDF) for complete holiday schedules and key dates.</p>
         <div style="display:flex;flex-direction:column;gap:0.75rem;">
-          <a href="https://eng.thu.edu.tw/upload/sitemap/THU-2026-2027-(115)-Academic-Year-Calendar-v0603.pdf" class="forms-dl-btn" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
-            <span style="font-size:1.1em;">↓</span> School Calendar 2026-2027
+          <a href="https://eng.thu.edu.tw/upload/sitemap/THU-2026-2027-(115)-Academic-Year-Calendar-v0603.pdf" class="forms-dl-btn" data-k="calendar.pdf1" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="font-size:1.1em;">↓</span> <span data-k="calendar.pdf1_text">School Calendar 2026-2027</span>
           </a>
-          <a href="https://eng.thu.edu.tw/upload/sitemap/Tunghai-calendar-2025-2026-v2-20250611.pdf" class="forms-dl-btn" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
-            <span style="font-size:1.1em;">↓</span> School Calendar 2025-2026 (Revised)
+          <a href="https://eng.thu.edu.tw/upload/sitemap/Tunghai-calendar-2025-2026-v2-20250611.pdf" class="forms-dl-btn" data-k="calendar.pdf2" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="font-size:1.1em;">↓</span> <span data-k="calendar.pdf2_text">School Calendar 2025-2026 (Revised)</span>
           </a>
         </div>
       </div>
@@ -1451,22 +1455,23 @@
 </section>
 
 <!-- ===== ADMISSIONS ===== -->
-<div id="modal-wong" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-wong-title">
+<div id="modal-wong" class="fac-modal" data-fac="wong" role="dialog" aria-modal="true" aria-labelledby="modal-wong-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('wong')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/04-wong-ka-chun.jpg" alt="Ka-Chun Wong" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.wong.photo" src="faculty-photos/04-wong-ka-chun.jpg" alt="Ka-Chun Wong" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-wong-title">Ka-Chun Wong</h3>
-        <p class="fac-modal-title">Assistant Professor &mdash; Statistics</p>
-        <p><a href="mailto:junkow@thu.edu.tw">junkow@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 35708</p>
+        <h3 id="modal-wong-title"><span data-k="fac.wong.name">Ka-Chun Wong</span></h3>
+        <p class="fac-modal-title" data-k="fac.wong.title">Assistant Professor &mdash; Statistics</p>
+        <p><a data-k="fac.wong.email" href="mailto:junkow@thu.edu.tw">junkow@thu.edu.tw</a> &nbsp;|&nbsp; Ext. <span data-k="fac.wong.ext">35708</span></p>
         <p>Research Room: M433</p>
+        <p><a data-k="fac.wong.url" href="https://stat.thu.edu.tw/web/teacher/detail_teacher.php?cid=1&amp;id=58" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Statistics, Florida State University, USA</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.wong.expertise">
           <li>Object Data Analysis</li>
           <li>High Dimensional Data Analysis</li>
           <li>Manifold Statistics</li>
@@ -1475,16 +1480,16 @@
     </div>
   </div>
 </div>
-<div id="modal-jose" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-jose-title">
+<div id="modal-jose" class="fac-modal" data-fac="jose" role="dialog" aria-modal="true" aria-labelledby="modal-jose-title">
   <div class="fac-modal-box" style="max-width:820px;">
     <button class="fac-modal-close" onclick="closeFacModal('jose')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/16-chen-jose.jpg" alt="Jos&eacute; Chiu-C. Chen" class="fac-modal-photo" style="object-fit:cover;object-position:50% 35%;" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.jose.photo" src="faculty-photos/16-chen-jose.jpg" alt="Jos&eacute; Chiu-C. Chen" class="fac-modal-photo" style="object-fit:cover;object-position:50% 35%;" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-jose-title">Jos&eacute; Chiu-C. Chen</h3>
-        <p class="fac-modal-title">Professor &mdash; Department of Public Management and Policy</p>
-        <p><a href="mailto:josechen@thu.edu.tw">josechen@thu.edu.tw</a> &nbsp;|&nbsp; Tel: +886-4-23590121 ext. 36715 &nbsp;|&nbsp; Fax: +886-4-23593843</p>
-        <p><a href="https://resume.thu.edu.tw/portfolio/main/josechen" target="_blank" rel="noopener">Personal Website &rarr;</a></p>
+        <h3 id="modal-jose-title"><span data-k="fac.jose.name">José Chiu-C. Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.jose.title">Professor &mdash; Department of Public Management and Policy</p>
+        <p><a data-k="fac.jose.email" href="mailto:josechen@thu.edu.tw">josechen@thu.edu.tw</a> &nbsp;|&nbsp; Tel: +886-4-23590121 ext. <span data-k="fac.jose.ext">36715</span> &nbsp;|&nbsp; Fax: +886-4-23593843</p>
+        <p><a data-k="fac.jose.url" href="https://pmp.thu.edu.tw/web/teacher/detail.php?id=72&amp;lang=en" target="_blank" rel="noopener">Personal Website &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Public Administration, National Chengchi University (NCCU), Taipei, Taiwan</li>
@@ -1529,7 +1534,7 @@
           <li>Board Member, Tunghai University Faculty Association (2016&ndash;2018)</li>
         </ul>
         <h4>Expertise</h4>
-        <ul>
+        <ul data-k="fac.jose.expertise">
           <li>Cross-Sector Governance</li>
           <li>Non-Profit Organization and Management</li>
           <li>Public Human Resource Management</li>
@@ -1582,22 +1587,22 @@
     </div>
   </div>
 </div>
-<div id="modal-chang" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chang-title">
+<div id="modal-chang" class="fac-modal" data-fac="chang" role="dialog" aria-modal="true" aria-labelledby="modal-chang-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chang')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/19-chang-kai-hsin.jpg" alt="Kai-Hsin Chang" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.chang.photo" src="faculty-photos/19-chang-kai-hsin.jpg" alt="Kai-Hsin Chang" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-chang-title">Kai-Hsin Chang</h3>
-        <p class="fac-modal-title">Assistant Professor &mdash; Law &nbsp;|&nbsp; Director, AI Legal Research Center</p>
-        <p><a href="mailto:gwarce@thu.edu.tw">gwarce@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 36607</p>
-        <p><a href="https://resume.thu.edu.tw/portfolio/main/gwarce/B00" target="_blank" rel="noopener">Personal Website &rarr;</a></p>
+        <h3 id="modal-chang-title"><span data-k="fac.chang.name">Kai-Hsin Chang</span></h3>
+        <p class="fac-modal-title" data-k="fac.chang.title">Assistant Professor &mdash; Law &nbsp;|&nbsp; Director, AI Legal Research Center</p>
+        <p><a data-k="fac.chang.email" href="mailto:gwarce@thu.edu.tw">gwarce@thu.edu.tw</a> &nbsp;|&nbsp; Ext. <span data-k="fac.chang.ext">36607</span></p>
+        <p><a data-k="fac.chang.url" href="https://law.thu.edu.tw/web/teacher/detail_teacher.php?cid=&amp;id=40" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Law, Tunghai University</li>
         </ul>
         <h4>Courses Taught</h4>
-        <ul>
+        <ul data-k="fac.chang.expertise">
           <li>Civil Law</li>
           <li>Contract Law</li>
           <li>International Economic Law</li>
@@ -1607,41 +1612,37 @@
     </div>
   </div>
 </div>
-<div id="modal-chen-ho" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chen-ho-title">
+<div id="modal-chen-ho" class="fac-modal" data-fac="chen-ho" role="dialog" aria-modal="true" aria-labelledby="modal-chen-ho-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chen-ho')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/01-chen-ho-yuan.jpg" alt="Ho-Yuan Chen" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.chen-ho.photo" src="faculty-photos/01-chen-ho-yuan.jpg" alt="Ho-Yuan Chen" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-chen-ho-title">Ho-Yuan Chen</h3>
-        <p class="fac-modal-title">Associate Professor &amp; Director &mdash; Graduate Institute of Education</p>
-        <p><a href="mailto:edu666@thu.edu.tw">edu666@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 36900*218</p>
-        <p><a href="https://resume.thu.edu.tw/portfolio/main/edu666/B00" target="_blank" rel="noopener">Academic Profile &rarr;</a></p>
+        <h3 id="modal-chen-ho-title"><span data-k="fac.chen-ho.name">Ho-Yuan Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.chen-ho.title">Associate Professor &amp; Director &mdash; Graduate Institute of Education</p>
+        <p><a data-k="fac.chen-ho.email" href="mailto:edu666@thu.edu.tw">edu666@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.chen-ho.ext">36900</span>*218</p>
+        <p><a data-k="fac.chen-ho.url" href="https://resume.thu.edu.tw/portfolio/main/edu666/B00" target="_blank" rel="noopener">Academic Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., Learning &amp; Performance Systems, The Pennsylvania State University, USA</li>
         </ul>
         <h4>Research &amp; Courses</h4>
-        <ul>
-          <li>Information Communication Technology in Education</li>
-          <li>Big Data Analysis</li>
-          <li>Materials and Methods of Civics and Society</li>
-          <li>Sustainable Development and Local Revitalization</li>
-        </ul>
+        <ul data-k="fac.chen-ho.expertise"><li>科技融入教學、大數據分析、翻轉教育</li></ul>
       </div>
     </div>
   </div>
 </div>
-<div id="modal-bai" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-bai-title">
+<div id="modal-bai" class="fac-modal" data-fac="bai" role="dialog" aria-modal="true" aria-labelledby="modal-bai-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('bai')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/21-bai-heng-xu.jpg" alt="Heng-Xu Bai" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.bai.photo" src="faculty-photos/21-bai-heng-xu.jpg" alt="Heng-Xu Bai" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-bai-title">Heng-Xu Bai</h3>
-        <p class="fac-modal-title">Assistant Professor &mdash; International College</p>
-        <p><a href="mailto:sunny@thu.edu.tw">sunny@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 39302 (PG-IC 310-2)</p>
+        <h3 id="modal-bai-title"><span data-k="fac.bai.name">Heng-Xu Bai</span></h3>
+        <p class="fac-modal-title" data-k="fac.bai.title">Assistant Professor &mdash; International College</p>
+        <p><a data-k="fac.bai.email" href="mailto:sunny@thu.edu.tw">sunny@thu.edu.tw</a> &nbsp;|&nbsp; Ext. <span data-k="fac.bai.ext">39302</span> (PG-IC 310-2)</p>
         <p>Office Hours: Tuesday 10:00&ndash;12:00</p>
+        <p><a data-k="fac.bai.url" href="https://ic.thu.edu.tw/web/people/detail_page.php?lang=zh_tw&amp;cid=&amp;cid2=&amp;id=223" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Chinese Literature, Tunghai University</li>
@@ -1654,7 +1655,7 @@
           <li>Part-Time Assistant Professor, Department of Chinese Literature, Providence University</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.bai.expertise">
           <li>Intellectual History of China</li>
           <li>Chinese Philosophy</li>
           <li>Oriental Aesthetics</li>
@@ -1663,22 +1664,22 @@
     </div>
   </div>
 </div>
-<div id="modal-huang" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-huang-title">
+<div id="modal-huang" class="fac-modal" data-fac="huang" role="dialog" aria-modal="true" aria-labelledby="modal-huang-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('huang')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/03-huang-yin-tzu.jpg" alt="Yin-Tzu Huang" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.huang.photo" src="faculty-photos/03-huang-yin-tzu.jpg" alt="Yin-Tzu Huang" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-huang-title">Yin-Tzu Huang</h3>
-        <p class="fac-modal-title">Assistant Professor &mdash; GMBA</p>
-        <p><a href="mailto:deannehuang@thu.edu.tw">deannehuang@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 35205</p>
-        <p><a href="https://resume.thu.edu.tw/portfolio/main/deannehuang/B00" target="_blank" rel="noopener">Personal Website &rarr;</a></p>
+        <h3 id="modal-huang-title"><span data-k="fac.huang.name">Yin-Tzu Huang</span></h3>
+        <p class="fac-modal-title" data-k="fac.huang.title">Assistant Professor &mdash; GMBA</p>
+        <p><a data-k="fac.huang.email" href="mailto:deannehuang@thu.edu.tw">deannehuang@thu.edu.tw</a> &nbsp;|&nbsp; Ext. <span data-k="fac.huang.ext">35205</span></p>
+        <p><a data-k="fac.huang.url" href="https://resume.thu.edu.tw/portfolio/main/deannehuang/B00" target="_blank" rel="noopener">Personal Website &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., Graduate Institute of Electrical Engineering (Computer Science), National Taiwan University</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.huang.expertise">
           <li>Cybersecurity</li>
           <li>Healthcare Information Security</li>
           <li>Blockchain Applications</li>
@@ -1694,16 +1695,16 @@
     </div>
   </div>
 </div>
-<div id="modal-kim" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-kim-title">
+<div id="modal-kim" class="fac-modal" data-fac="kim" role="dialog" aria-modal="true" aria-labelledby="modal-kim-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('kim')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/02-kim-brian.jpg" alt="Taesung Brian Kim" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.kim.photo" src="faculty-photos/02-kim-brian.jpg" alt="Taesung Brian Kim" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-kim-title">Taesung Brian Kim</h3>
-        <p class="fac-modal-title">Assistant Professor &mdash; GMBA</p>
-        <p><a href="mailto:bkim@thu.edu.tw">bkim@thu.edu.tw</a> &nbsp;|&nbsp; Ext. 35202</p>
-        <p><a href="https://thugmba.github.io/ialab/" target="_blank" rel="noopener">Innovation Analytics Lab &rarr;</a></p>
+        <h3 id="modal-kim-title"><span data-k="fac.kim.name">Taesung Brian Kim</span></h3>
+        <p class="fac-modal-title" data-k="fac.kim.title">Assistant Professor &mdash; GMBA</p>
+        <p><a data-k="fac.kim.email" href="mailto:bkim@thu.edu.tw">bkim@thu.edu.tw</a> &nbsp;|&nbsp; Ext. <span data-k="fac.kim.ext">35202</span></p>
+        <p><a data-k="fac.kim.url" href="https://thugmba.github.io/ialab/" target="_blank" rel="noopener">Innovation Analytics Lab &rarr;</a></p>
         <h4>Courses Taught</h4>
         <p><em>Graduate</em></p>
         <ul>
@@ -1727,7 +1728,7 @@
           <li>M.S. in Computer Science, Korea University, South Korea</li>
         </ul>
         <h4>Research Interests</h4>
-        <ul>
+        <ul data-k="fac.kim.expertise">
           <li>Mobile Health Technology Acceptance</li>
           <li>Research Trend Analysis via Topic Modeling (ML-based methods)</li>
           <li>Bibliometric Analysis of Academic Big Data</li>
@@ -1743,17 +1744,17 @@
     </div>
   </div>
 </div>
-<div id="modal-chang-yh" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chang-yh-title">
+<div id="modal-chang-yh" class="fac-modal" data-fac="chang-yh" role="dialog" aria-modal="true" aria-labelledby="modal-chang-yh-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chang-yh')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/05-chang-yung-ho.jpg" alt="Yung-Ho Chang" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.chang-yh.photo" src="faculty-photos/05-chang-yung-ho.jpg" alt="Yung-Ho Chang" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-chang-yh-title">Yung-Ho Chang</h3>
-        <p class="fac-modal-title">Professor &mdash; Department of Finance</p>
-        <p><a href="mailto:changy@thu.edu.tw">changy@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35804</p>
+        <h3 id="modal-chang-yh-title"><span data-k="fac.chang-yh.name">Yung-Ho Chang</span></h3>
+        <p class="fac-modal-title" data-k="fac.chang-yh.title">Professor &mdash; Department of Finance</p>
+        <p><a data-k="fac.chang-yh.email" href="mailto:changy@thu.edu.tw">changy@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.chang-yh.ext">35804</span></p>
         <p>Office Hours: Wed 14:00&ndash;17:00</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=34" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.chang-yh.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=34" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Finance, University of Houston, USA</li>
@@ -1766,7 +1767,7 @@
           <li>Assistant Professor, Department of Finance, Tunghai University</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.chang-yh.expertise">
           <li>Investments</li>
           <li>Corporate Finance</li>
         </ul>
@@ -1780,17 +1781,17 @@
     </div>
   </div>
 </div>
-<div id="modal-kuo" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-kuo-title">
+<div id="modal-kuo" class="fac-modal" data-fac="kuo" role="dialog" aria-modal="true" aria-labelledby="modal-kuo-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('kuo')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/06-kuo-i-doun.jpg" alt="I-Doun Kuo" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.kuo.photo" src="faculty-photos/06-kuo-i-doun.jpg" alt="I-Doun Kuo" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-kuo-title">I-Doun Kuo</h3>
-        <p class="fac-modal-title">Professor &mdash; Department of Finance</p>
-        <p><a href="mailto:idkuo@thu.edu.tw">idkuo@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35806</p>
+        <h3 id="modal-kuo-title"><span data-k="fac.kuo.name">I-Doun Kuo</span></h3>
+        <p class="fac-modal-title" data-k="fac.kuo.title">Professor &mdash; Department of Finance</p>
+        <p><a data-k="fac.kuo.email" href="mailto:idkuo@thu.edu.tw">idkuo@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.kuo.ext">35806</span></p>
         <p>Office Hours: Thu 16:00&ndash;18:00</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?id=35" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.kuo.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?id=35" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Finance, University of Manchester, UK</li>
@@ -1801,7 +1802,7 @@
           <li>Associate Professor, Department of Finance, Tunghai University</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.kuo.expertise">
           <li>Financial Derivatives</li>
           <li>Futures and Options</li>
         </ul>
@@ -1815,17 +1816,17 @@
     </div>
   </div>
 </div>
-<div id="modal-chuang-ks" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chuang-ks-title">
+<div id="modal-chuang-ks" class="fac-modal" data-fac="chuang-ks" role="dialog" aria-modal="true" aria-labelledby="modal-chuang-ks-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chuang-ks')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/07-chuang-kai-shi.jpg" alt="Kai-Shi Chuang" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.chuang-ks.photo" src="faculty-photos/07-chuang-kai-shi.jpg" alt="Kai-Shi Chuang" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-chuang-ks-title">Kai-Shi Chuang</h3>
-        <p class="fac-modal-title">Associate Professor &mdash; Department of Finance</p>
-        <p><a href="mailto:kschuang@thu.edu.tw">kschuang@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35820</p>
+        <h3 id="modal-chuang-ks-title"><span data-k="fac.chuang-ks.name">Kai-Shi Chuang</span></h3>
+        <p class="fac-modal-title" data-k="fac.chuang-ks.title">Associate Professor &mdash; Department of Finance</p>
+        <p><a data-k="fac.chuang-ks.email" href="mailto:kschuang@thu.edu.tw">kschuang@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.chuang-ks.ext">35820</span></p>
         <p>Office Hours: Mon 13:00&ndash;16:00</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?id=30" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.chuang-ks.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?id=30" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Finance, University of Glasgow, UK</li>
@@ -1835,7 +1836,7 @@
           <li>Associate Professor, Department of Finance, Tunghai University</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.chuang-ks.expertise">
           <li>Mergers and Acquisitions</li>
         </ul>
         <h4>Courses Offered</h4>
@@ -1847,17 +1848,17 @@
     </div>
   </div>
 </div>
-<div id="modal-fu" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-fu-title">
+<div id="modal-fu" class="fac-modal" data-fac="fu" role="dialog" aria-modal="true" aria-labelledby="modal-fu-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('fu')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/08-fu-yufen.jpg" alt="Yufen Fu" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.fu.photo" src="faculty-photos/08-fu-yufen.jpg" alt="Yufen Fu" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-fu-title">Yufen Fu</h3>
-        <p class="fac-modal-title">Associate Professor &mdash; Department of Finance</p>
-        <p><a href="mailto:yufenfu@thu.edu.tw">yufenfu@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35818</p>
+        <h3 id="modal-fu-title"><span data-k="fac.fu.name">Yufen Fu</span></h3>
+        <p class="fac-modal-title" data-k="fac.fu.title">Associate Professor &mdash; Department of Finance</p>
+        <p><a data-k="fac.fu.email" href="mailto:yufenfu@thu.edu.tw">yufenfu@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.fu.ext">35818</span></p>
         <p>Office Hours: Wed 13:00&ndash;15:00</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=28" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.fu.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=28" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Finance, Simon Fraser University, Canada</li>
@@ -1867,7 +1868,7 @@
           <li>Associate Professor, Department of Finance, Tunghai University</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.fu.expertise">
           <li>Investment</li>
           <li>Corporate Finance</li>
         </ul>
@@ -1881,17 +1882,17 @@
     </div>
   </div>
 </div>
-<div id="modal-huang-cj" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-huang-cj-title">
+<div id="modal-huang-cj" class="fac-modal" data-fac="huang-cj" role="dialog" aria-modal="true" aria-labelledby="modal-huang-cj-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('huang-cj')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/09-huang-chen-jui.jpg" alt="Chen-Jui Huang" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.huang-cj.photo" src="faculty-photos/09-huang-chen-jui.jpg" alt="Chen-Jui Huang" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-huang-cj-title">Chen-Jui Huang</h3>
-        <p class="fac-modal-title">Associate Professor &mdash; Department of Finance</p>
-        <p><a href="mailto:cjhuang@thu.edu.tw">cjhuang@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35811</p>
+        <h3 id="modal-huang-cj-title"><span data-k="fac.huang-cj.name">Chen-Jui Huang</span></h3>
+        <p class="fac-modal-title" data-k="fac.huang-cj.title">Associate Professor &mdash; Department of Finance</p>
+        <p><a data-k="fac.huang-cj.email" href="mailto:cjhuang@thu.edu.tw">cjhuang@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.huang-cj.ext">35811</span></p>
         <p>Office Hours: Thu 16:30&ndash;18:30</p>
-        <p><a href="https://fin.thu.edu.tw/web/teacher/detail.php?cid=0&amp;id=32" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.huang-cj.url" href="https://fin.thu.edu.tw/web/teacher/detail.php?id=32" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Economics, Universit&eacute; Paris 1 Panth&eacute;on-Sorbonne, France</li>
@@ -1902,7 +1903,7 @@
           <li>Assistant Professor, Department of Finance, Tunghai University</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.huang-cj.expertise">
           <li>Macroeconomics</li>
           <li>Financial Markets and Institutions</li>
           <li>Integration of European Economy and Currency</li>
@@ -1917,17 +1918,17 @@
     </div>
   </div>
 </div>
-<div id="modal-lee-ki" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-lee-ki-title">
+<div id="modal-lee-ki" class="fac-modal" data-fac="lee-ki" role="dialog" aria-modal="true" aria-labelledby="modal-lee-ki-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('lee-ki')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/10-lee-kuei-i.jpg" alt="Kuei-I Lee" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.lee-ki.photo" src="faculty-photos/10-lee-kuei-i.jpg" alt="Kuei-I Lee" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-lee-ki-title">Kuei-I Lee</h3>
-        <p class="fac-modal-title">Associate Professor &mdash; Department of Hospitality Management</p>
-        <p><a href="mailto:kuei521@thu.edu.tw">kuei521@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 37710</p>
+        <h3 id="modal-lee-ki-title"><span data-k="fac.lee-ki.name">Kuei-I Lee</span></h3>
+        <p class="fac-modal-title" data-k="fac.lee-ki.title">Associate Professor &mdash; Department of Hospitality Management</p>
+        <p><a data-k="fac.lee-ki.email" href="mailto:kuei521@thu.edu.tw">kuei521@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.lee-ki.ext">37710</span></p>
         <p><a href="https://resume.thu.edu.tw/portfolio/main/kuei521/B00" target="_blank" rel="noopener">Academic Profile &rarr;</a></p>
-        <p><a href="https://thotel.thu.edu.tw/dr-kuei-i-lee/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.lee-ki.url" href="https://thotel.thu.edu.tw/dr-kuei-i-lee/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., Hospitality Management and Dietetics, Kansas State University, USA</li>
@@ -1942,27 +1943,22 @@
           <li>Research Assistant, Kansas State University</li>
         </ul>
         <h4>Courses Offered</h4>
-        <ul>
-          <li>Purchasing; Accounting; Financial Management</li>
-          <li>Research Methodology; Food Safety</li>
-          <li>Elderly Care Foodservice; Food Production Management</li>
-          <li>English for Hospitality Management</li>
-        </ul>
+        <ul data-k="fac.lee-ki.expertise"><li>採購學、會計學、研究方法、食品安全</li><li>餐旅英文、銀髮餐飲服務、財務管理、餐飲生產管理</li></ul>
       </div>
     </div>
   </div>
 </div>
-<div id="modal-wu-cy" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-wu-cy-title">
+<div id="modal-wu-cy" class="fac-modal" data-fac="wu-cy" role="dialog" aria-modal="true" aria-labelledby="modal-wu-cy-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('wu-cy')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/11-wu-chih-yun.jpg" alt="Chih-Yun Wu" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.wu-cy.photo" src="faculty-photos/11-wu-chih-yun.jpg" alt="Chih-Yun Wu" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-wu-cy-title">Chih-Yun Wu</h3>
-        <p class="fac-modal-title">Associate Professor &amp; Chair &mdash; Department of Business Administration</p>
-        <p><a href="mailto:annacywu@thu.edu.tw">annacywu@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35121 &middot; Office M473</p>
+        <h3 id="modal-wu-cy-title"><span data-k="fac.wu-cy.name">Chih-Yun Wu</span></h3>
+        <p class="fac-modal-title" data-k="fac.wu-cy.title">Associate Professor &amp; Chair &mdash; Department of Business Administration</p>
+        <p><a data-k="fac.wu-cy.email" href="mailto:annacywu@thu.edu.tw">annacywu@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.wu-cy.ext">35121</span> &middot; Office M473</p>
         <p>Office Hours: Thu 14:00&ndash;17:00</p>
-        <p><a href="https://en.ba.thu.edu.tw/teacher/Chih-Yun+Wu/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.wu-cy.url" href="https://en.ba.thu.edu.tw/teacher/Chih-Yun+Wu/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., Business Administration, National Chengchi University</li>
@@ -1977,7 +1973,7 @@
           <li>Project Research Assistant, Taiwan Intellectual Capital Research Center</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.wu-cy.expertise">
           <li>Employment Interviews and Selection</li>
           <li>Impression Management Behavior</li>
           <li>Corporate Training</li>
@@ -1992,17 +1988,17 @@
     </div>
   </div>
 </div>
-<div id="modal-chen-cy" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chen-cy-title">
+<div id="modal-chen-cy" class="fac-modal" data-fac="chen-cy" role="dialog" aria-modal="true" aria-labelledby="modal-chen-cy-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chen-cy')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/12-chen-amy.jpg" alt="Ching-Yu Chen" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.chen-cy.photo" src="faculty-photos/12-chen-amy.jpg" alt="Ching-Yu Chen" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-chen-cy-title">Ching-Yu Chen</h3>
-        <p class="fac-modal-title">Associate Professor &amp; GMBA Program Director &mdash; Department of International Business</p>
-        <p><a href="mailto:amychen@thu.edu.tw">amychen@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35306</p>
+        <h3 id="modal-chen-cy-title"><span data-k="fac.chen-cy.name">Ching-Yu Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.chen-cy.title">Associate Professor &amp; GMBA Program Director &mdash; Department of International Business</p>
+        <p><a data-k="fac.chen-cy.email" href="mailto:amychen@thu.edu.tw">amychen@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.chen-cy.ext">35306</span></p>
         
-        <p><a href="https://inttrade.thu.edu.tw/en/cat-faculty-1/%e9%99%b3%e9%9d%9c%e7%91%9c-%e5%8a%a9%e7%90%86%e6%95%99%e6%8e%88/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.chen-cy.url" href="https://inttrade.thu.edu.tw/en/cat-faculty-1/%e9%99%b3%e9%9d%9c%e7%91%9c-%e5%8a%a9%e7%90%86%e6%95%99%e6%8e%88/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., Business Administration, Rutgers, The State University of New Jersey, USA</li>
@@ -2015,7 +2011,7 @@
           <li>Adjunct Lecturer, Rutgers, The State University of New Jersey, USA</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.chen-cy.expertise">
           <li>Supply Chain Management</li>
           <li>Global Logistics Management</li>
           <li>Stochastic Inventory Systems</li>
@@ -2039,17 +2035,17 @@
     </div>
   </div>
 </div>
-<div id="modal-jang" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-jang-title">
+<div id="modal-jang" class="fac-modal" data-fac="jang" role="dialog" aria-modal="true" aria-labelledby="modal-jang-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('jang')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/13-jang-jacky.jpg" alt="Yu-Teng Jacky Jang" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.jang.photo" src="faculty-photos/13-jang-jacky.jpg" alt="Yu-Teng Jacky Jang" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-jang-title">Yu-Teng Jacky Jang</h3>
-        <p class="fac-modal-title">Associate Professor &mdash; Department of Business Administration</p>
-        <p><a href="mailto:ytjackyjang@thu.edu.tw">ytjackyjang@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35107 &middot; Office M507</p>
+        <h3 id="modal-jang-title"><span data-k="fac.jang.name">Yu-Teng Jacky Jang</span></h3>
+        <p class="fac-modal-title" data-k="fac.jang.title">Associate Professor &mdash; Department of Business Administration</p>
+        <p><a data-k="fac.jang.email" href="mailto:ytjackyjang@thu.edu.tw">ytjackyjang@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.jang.ext">35107</span> &middot; Office M507</p>
         <p>Office Hours: Fri 14:10&ndash;16:10 &nbsp;|&nbsp; <a href="http://ytjackyjang.thu.edu.tw/" target="_blank" rel="noopener">Personal Site &rarr;</a></p>
-        <p><a href="https://en.ba.thu.edu.tw/teacher/Yu-Teng+Jacky+Jang/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.jang.url" href="https://en.ba.thu.edu.tw/teacher/Yu-Teng+Jacky+Jang/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., Business Administration, National Chung Hsing University</li>
@@ -2062,27 +2058,22 @@
           <li>Project Assistant Professor, Tainan University of Technology (2014&ndash;2016)</li>
         </ul>
         <h4>Research Interests</h4>
-        <ul>
-          <li>E-Commerce; Technology Marketing</li>
-          <li>Machine Learning in Marketing</li>
-          <li>Innovative Technology Service Management</li>
-          <li>Marketing Activities and Information Security</li>
-        </ul>
+        <ul data-k="fac.jang.expertise"><li>E-Commerce</li><li>Technology Marketing</li><li>Machine Learning in Marketing</li><li>Innovative Technology Service Management</li><li>Marketing Activities and Information Security</li></ul>
       </div>
     </div>
   </div>
 </div>
-<div id="modal-chen-wt" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chen-wt-title">
+<div id="modal-chen-wt" class="fac-modal" data-fac="chen-wt" role="dialog" aria-modal="true" aria-labelledby="modal-chen-wt-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chen-wt')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/14-chen-wei-ting.jpg" alt="Wei-Ting Chen" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.chen-wt.photo" src="faculty-photos/14-chen-wei-ting.jpg" alt="Wei-Ting Chen" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-chen-wt-title">Wei-Ting Chen</h3>
-        <p class="fac-modal-title">Assistant Professor &mdash; Department of International Business</p>
-        <p><a href="mailto:weitingchen@thu.edu.tw">weitingchen@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35317</p>
+        <h3 id="modal-chen-wt-title"><span data-k="fac.chen-wt.name">Wei-Ting Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.chen-wt.title">Assistant Professor &mdash; Department of International Business</p>
+        <p><a data-k="fac.chen-wt.email" href="mailto:weitingchen@thu.edu.tw">weitingchen@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.chen-wt.ext">35317</span></p>
         
-        <p><a href="https://inttrade.thu.edu.tw/en/cat-faculty-1/assistant-professor-wei-ting-chen/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.chen-wt.url" href="https://inttrade.thu.edu.tw/en/cat-faculty-1/assistant-professor-wei-ting-chen/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., International Business (Marketing), National Taiwan University</li>
@@ -2095,10 +2086,7 @@
           <li>Marketing and Customer Value Manager, 104 Job Bank</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
-          <li>Marketing Management; Consumer Behavior</li>
-          <li>Social Media Marketing; Identity Research</li>
-        </ul>
+        <ul data-k="fac.chen-wt.expertise"><li>Marketing Management</li><li>Consumer Behavior</li><li>Social Media Marketing</li><li>Identity Research</li></ul>
         <h4>Courses Offered</h4>
         <ul>
           <li>Business Management; International Business Management</li>
@@ -2108,17 +2096,17 @@
     </div>
   </div>
 </div>
-<div id="modal-chuang-mc" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chuang-mc-title">
+<div id="modal-chuang-mc" class="fac-modal" data-fac="chuang-mc" role="dialog" aria-modal="true" aria-labelledby="modal-chuang-mc-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chuang-mc')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/15-chuang-min-chieh.jpg" alt="Min-Chieh Chuang" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.chuang-mc.photo" src="faculty-photos/15-chuang-min-chieh.jpg" alt="Min-Chieh Chuang" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-chuang-mc-title">Min-Chieh Chuang</h3>
-        <p class="fac-modal-title">Assistant Professor &mdash; Department of Business Administration</p>
-        <p><a href="mailto:mcchuang718@thu.edu.tw">mcchuang718@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 35114 &middot; Office M474</p>
+        <h3 id="modal-chuang-mc-title"><span data-k="fac.chuang-mc.name">Min-Chieh Chuang</span></h3>
+        <p class="fac-modal-title" data-k="fac.chuang-mc.title">Assistant Professor &mdash; Department of Business Administration</p>
+        <p><a data-k="fac.chuang-mc.email" href="mailto:mcchuang718@thu.edu.tw">mcchuang718@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.chuang-mc.ext">35114</span> &middot; Office M474</p>
         
-        <p><a href="https://en.ba.thu.edu.tw/teacher/Min-Chieh+Chuang/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.chuang-mc.url" href="https://en.ba.thu.edu.tw/teacher/Min-Chieh+Chuang/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., International Business, National Chengchi University</li>
@@ -2131,10 +2119,7 @@
           <li>Officer, International Banking Division, E.SUN Bank</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
-          <li>Customer Satisfaction and Loyalty</li>
-          <li>Channel Management; Brand Management</li>
-        </ul>
+        <ul data-k="fac.chuang-mc.expertise"><li>Customer Satisfaction and Loyalty</li><li>Channel Management</li><li>Brand Management</li></ul>
         <h4>Courses Offered</h4>
         <ul>
           <li>Marketing Management</li>
@@ -2145,23 +2130,23 @@
     </div>
   </div>
 </div>
-<div id="modal-lin-tl" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-lin-tl-title">
+<div id="modal-lin-tl" class="fac-modal" data-fac="lin-tl" role="dialog" aria-modal="true" aria-labelledby="modal-lin-tl-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('lin-tl')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/17-lin-tzu-li.jpg" alt="Tzu-Li (Max) Lin" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.lin-tl.photo" src="faculty-photos/17-lin-tzu-li.jpg" alt="Tzu-Li (Max) Lin" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-lin-tl-title">Tzu-Li (Max) Lin</h3>
-        <p class="fac-modal-title">Faculty &mdash; Department of Political Science</p>
-        <p><a href="mailto:maxtl@thu.edu.tw">maxtl@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 36205 &middot; Office SS437</p>
+        <h3 id="modal-lin-tl-title"><span data-k="fac.lin-tl.name">Tzu-Li (Max) Lin</span></h3>
+        <p class="fac-modal-title" data-k="fac.lin-tl.title">Faculty &mdash; Department of Political Science</p>
+        <p><a data-k="fac.lin-tl.email" href="mailto:maxtl@thu.edu.tw">maxtl@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.lin-tl.ext">36205</span> &middot; Office SS437</p>
         <p><a href="https://resume.thu.edu.tw/portfolio/main/maxtl/B00" target="_blank" rel="noopener">Academic Profile &rarr;</a></p>
-        <p><a href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&amp;id=11&amp;lang=en" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.lin-tl.url" href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&amp;id=11&amp;lang=en" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., University of Liverpool, UK</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.lin-tl.expertise">
           <li>International Relations</li>
           <li>EU&ndash;China Relations</li>
           <li>Foreign Policy</li>
@@ -2170,23 +2155,23 @@
     </div>
   </div>
 </div>
-<div id="modal-chen-wf" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chen-wf-title">
+<div id="modal-chen-wf" class="fac-modal" data-fac="chen-wf" role="dialog" aria-modal="true" aria-labelledby="modal-chen-wf-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chen-wf')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/18-chen-wei-fang.jpg" alt="Wei-Fang Chen" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.chen-wf.photo" src="faculty-photos/18-chen-wei-fang.jpg" alt="Wei-Fang Chen" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-chen-wf-title">Wei-Fang Chen</h3>
-        <p class="fac-modal-title">Faculty &mdash; Department of Political Science</p>
-        <p><a href="mailto:wfchen1021@thu.edu.tw">wfchen1021@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 36217 &middot; Office SS430</p>
+        <h3 id="modal-chen-wf-title"><span data-k="fac.chen-wf.name">Wei-Fang Chen</span></h3>
+        <p class="fac-modal-title" data-k="fac.chen-wf.title">Faculty &mdash; Department of Political Science</p>
+        <p><a data-k="fac.chen-wf.email" href="mailto:wfchen1021@thu.edu.tw">wfchen1021@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.chen-wf.ext">36217</span> &middot; Office SS430</p>
         <p><a href="https://resume.thu.edu.tw/portfolio/main/wfchen1021/B00" target="_blank" rel="noopener">Academic Profile &rarr;</a></p>
-        <p><a href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&amp;id=12" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.chen-wf.url" href="https://politics.thu.edu.tw/web/teacher/detail.php?cid=1&amp;id=12" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D. in Politics, Durham University, UK</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.chen-wf.expertise">
           <li>EU Politics and Institutions</li>
           <li>European International Relations</li>
           <li>Regional Integration</li>
@@ -2195,23 +2180,23 @@
     </div>
   </div>
 </div>
-<div id="modal-chiu" class="fac-modal" role="dialog" aria-modal="true" aria-labelledby="modal-chiu-title">
+<div id="modal-chiu" class="fac-modal" data-fac="chiu" role="dialog" aria-modal="true" aria-labelledby="modal-chiu-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('chiu')" aria-label="Close">&times;</button>
     <div class="fac-modal-content">
-      <img referrerpolicy="no-referrer" src="faculty-photos/20-chiu-chia-hui.jpg" alt="Chia-Hui Chiu" class="fac-modal-photo" loading="lazy">
+      <img referrerpolicy="no-referrer" data-k="fac.chiu.photo" src="faculty-photos/20-chiu-chia-hui.jpg" alt="Chia-Hui Chiu" class="fac-modal-photo" loading="lazy">
       <div class="fac-modal-info">
-        <h3 id="modal-chiu-title">Chia-Hui Chiu</h3>
-        <p class="fac-modal-title">Associate Professor &mdash; Department of Foreign Languages and Literature</p>
-        <p><a href="mailto:chiahuichiu@thu.edu.tw">chiahuichiu@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. 31222</p>
+        <h3 id="modal-chiu-title"><span data-k="fac.chiu.name">Chia-Hui Chiu</span></h3>
+        <p class="fac-modal-title" data-k="fac.chiu.title">Associate Professor &mdash; Department of Foreign Languages and Literature</p>
+        <p><a data-k="fac.chiu.email" href="mailto:chiahuichiu@thu.edu.tw">chiahuichiu@thu.edu.tw</a> &nbsp;|&nbsp; (04) 23590121 Ext. <span data-k="fac.chiu.ext">31222</span></p>
         <p><a href="https://resume.thu.edu.tw/portfolio/main/chiahuichiu/B00" target="_blank" rel="noopener">Academic Profile &rarr;</a></p>
-        <p><a href="https://flld.thu.edu.tw/en/faculty-en/faculty-full-time-en/chiu-chia-hui-2/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
+        <p><a data-k="fac.chiu.url" href="https://flld.thu.edu.tw/en/faculty-en/faculty-full-time-en/chiu-chia-hui-2/" target="_blank" rel="noopener">Department Profile &rarr;</a></p>
         <h4>Education</h4>
         <ul>
           <li>Ph.D., Foreign Language and ESL Education, University of Iowa, USA</li>
         </ul>
         <h4>Research Expertise</h4>
-        <ul>
+        <ul data-k="fac.chiu.expertise">
           <li>ESL/EFL Vocabulary Acquisition</li>
           <li>Reading Development</li>
         </ul>
@@ -2301,6 +2286,8 @@ document.addEventListener('click',function(e){if(e.target.classList.contains('fa
       </a>
       <span class="footer-bottom-copy">&copy; 2026 Tunghai University GMBA Program. All Rights Reserved.</span>
       <div class="footer-bottom-links">
+        <a href="https://eng.thu.edu.tw/" target="_blank" rel="noopener">Tunghai University</a>
+        <a href="https://mana.thu.edu.tw/web/about/page.php?scid=35&amp;sid=38&amp;lang=en" target="_blank" rel="noopener">College of Management</a>
         <a href="academics-zh.html">中文</a>
       </div>
     </div>

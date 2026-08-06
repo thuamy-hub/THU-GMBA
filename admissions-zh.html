@@ -518,7 +518,10 @@
     @media (max-width: 960px) { .float-sidebar { display: none; } }
 
     /* ANNOUNCEMENT BAR */
-    .announce { background: var(--gold); color: var(--ink); text-align: center; padding: 0.55rem 1.5rem; font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.03em; }
+    .announce {
+      background: var(--gold); color: var(--ink); text-align: center;
+      padding: 0.55rem 1.5rem; font-size: 15px; font-weight: 700; letter-spacing: 0.03em;
+    }
     .announce a { color: var(--ink); }
 
     /* HERO */
@@ -1161,6 +1164,9 @@
 </style>
 </head>
 <body>
+<div class="announce" role="alert">
+  東海攜手中華電信與Google，率全台之先導入企業級Agent管理平台「Gemini Enterprise」。
+</div>
 
 <a href="#maincontent" class="skip-link">跳到主要內容</a>
 
@@ -1246,28 +1252,28 @@
       <p style="font-size:var(--t-xs);color:var(--ink-3);margin-bottom:1rem;">以下獎學金由台灣政府相關部會提供，申請資格、所需文件及申請程序等細節，請直接洽各主管機關確認。</p>
       <div class="gov-schol-cards">
         <div class="gov-schol-card">
-          <div class="gov-schol-head">教育部台灣獎學金</div>
-          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span class="gov-schol-val">NT$20,000（碩/博士生）</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span class="gov-schol-val">每學期最高 NT$40,000</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span class="gov-schol-val">最長 2 年（碩士）</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span class="gov-schol-val">各國籍均可（不含港澳及中國大陸）</span></div>
-          <div class="gov-schol-link"><a href="https://english.moe.gov.tw/cp-24-16833-23C09-1.html" target="_blank" rel="noopener">詳細資訊</a></div>
+          <div data-k="sch1.name" class="gov-schol-head">教育部台灣獎學金</div>
+          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span data-k="sch1.monthly" class="gov-schol-val">NT$20,000（碩/博士生）</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span data-k="sch1.tuition" class="gov-schol-val">每學期最高 NT$40,000</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span data-k="sch1.duration" class="gov-schol-val">最長 2 年（碩士）</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span data-k="sch1.eligible" class="gov-schol-val">各國籍均可（不含港澳及中國大陸）</span></div>
+          <div class="gov-schol-link"><a data-k="sch1.url" href="https://english.moe.gov.tw/cp-24-16833-23C09-1.html" target="_blank" rel="noopener">詳細資訊</a></div>
         </div>
         <div class="gov-schol-card">
-          <div class="gov-schol-head">教育部華語獎學金（HES）</div>
-          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span class="gov-schol-val">NT$28,000</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span class="gov-schol-val">—</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span class="gov-schol-val">2 個月 – 1 年</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span class="gov-schol-val">各國籍均可</span></div>
-          <div class="gov-schol-link"><a href="https://english.moe.gov.tw/cp-24-24284-3ea37-1.html" target="_blank" rel="noopener">詳細資訊</a></div>
+          <div data-k="sch2.name" class="gov-schol-head">教育部華語獎學金（HES）</div>
+          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span data-k="sch2.monthly" class="gov-schol-val">NT$28,000</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span data-k="sch2.tuition" class="gov-schol-val">&mdash;</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span data-k="sch2.duration" class="gov-schol-val">2 個月 &ndash; 1 年</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span data-k="sch2.eligible" class="gov-schol-val">各國籍均可</span></div>
+          <div class="gov-schol-link"><a data-k="sch2.url" href="https://english.moe.gov.tw/cp-24-24284-3ea37-1.html" target="_blank" rel="noopener">詳細資訊</a></div>
         </div>
         <div class="gov-schol-card">
-          <div class="gov-schol-head">外交部台灣獎學金</div>
-          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span class="gov-schol-val">NT$33,000（學位生）</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span class="gov-schol-val">—</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span class="gov-schol-val">最長 2 年（碩士）</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span class="gov-schol-val">與台灣有邦交或友好關係之國家</span></div>
-          <div class="gov-schol-link"><a href="https://en.mofa.gov.tw/cp.aspx?n=1325" target="_blank" rel="noopener">詳細資訊</a></div>
+          <div data-k="sch3.name" class="gov-schol-head">外交部台灣獎學金</div>
+          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span data-k="sch3.monthly" class="gov-schol-val">NT$33,000（學位生）</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span data-k="sch3.tuition" class="gov-schol-val">&mdash;</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span data-k="sch3.duration" class="gov-schol-val">最長 2 年（碩士）</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span data-k="sch3.eligible" class="gov-schol-val">與台灣有邦交或友好關係之國家</span></div>
+          <div class="gov-schol-link"><a data-k="sch3.url" href="https://en.mofa.gov.tw/cp.aspx?n=1325" target="_blank" rel="noopener">詳細資訊</a></div>
         </div>
       </div>
       <p style="margin-top:1rem;font-size:var(--t-xs);color:var(--ink-3);">申請須透過所在國台灣代表處（TECO）提出，申請截止日一般為每年 <strong>3月31日</strong>。</p>
@@ -1278,22 +1284,22 @@
       <p style="font-size:var(--t-xs);color:var(--ink-3);margin-bottom:1rem;">東海大學（國際處）及 GMBA 學程提供的獎學金，點擊卡片查看詳情或報名。</p>
       <div class="gov-schol-cards">
       <div class="gov-schol-card">
-        <div class="gov-schol-head">外國學生績優獎學金</div>
-        <div class="gov-schol-row"><span class="gov-schol-key">提供單位</span><span class="gov-schol-val">東海大學國際處</span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span class="gov-schol-val">已在學之外國學生（不含僑生及陸生）</span></div>
-        <div class="gov-schol-link"><a href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/INTL_Scholarshi/pages.php?ID=dGh1X29zYSZJTlRMX1NjaG9sYXJzaGk=" target="_blank" rel="noopener">詳細資訊</a></div>
+        <div data-k="sch4.name" class="gov-schol-head">外國學生績優獎學金</div>
+        <div class="gov-schol-row"><span class="gov-schol-key">提供單位</span><span data-k="sch4.by" class="gov-schol-val">東海大學國際處</span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span data-k="sch4.for" class="gov-schol-val">已在學之外國學生（不含僑生及陸生）</span></div>
+        <div class="gov-schol-link"><a data-k="sch4.url" href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/INTL_Scholarshi/pages.php?ID=dGh1X29zYSZJTlRMX1NjaG9sYXJzaGk=" target="_blank" rel="noopener">詳細資訊</a></div>
       </div>
       <div class="gov-schol-card">
-        <div class="gov-schol-head">僑生獎學金</div>
-        <div class="gov-schol-row"><span class="gov-schol-key">提供單位</span><span class="gov-schol-val">東海大學國際處</span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span class="gov-schol-val">僑生</span></div>
-        <div class="gov-schol-link"><a href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/Overseas_Schola/pages.php?ID=dGh1X29zYSZPdmVyc2Vhc19TY2hvbGE=" target="_blank" rel="noopener">詳細資訊</a></div>
+        <div data-k="sch5.name" class="gov-schol-head">僑生獎學金</div>
+        <div class="gov-schol-row"><span class="gov-schol-key">提供單位</span><span data-k="sch5.by" class="gov-schol-val">東海大學國際處</span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span data-k="sch5.for" class="gov-schol-val">僑生</span></div>
+        <div class="gov-schol-link"><a data-k="sch5.url" href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/Overseas_Schola/pages.php?ID=dGh1X29zYSZPdmVyc2Vhc19TY2hvbGE=" target="_blank" rel="noopener">詳細資訊</a></div>
       </div>
       <div class="gov-schol-card" style="border-color:var(--gold);">
-        <div class="gov-schol-head" style="background:var(--gold);color:var(--ink);">GMBA 學程獎學金</div>
-        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span class="gov-schol-val">新生／準新生，已在台者（持居留證）或台灣籍</span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">金額</span><span class="gov-schol-val">每學期說明會公布<br><a href="問卷2 GMBA Save My Seat 填寫頁面.html" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.5rem;padding:0.4rem 1rem;font-size:0.78rem;font-weight:700;text-decoration:none;background:var(--gold);color:var(--ink);border-radius:4px;letter-spacing:0.05em;">✉ 我要參加說明會</a></span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">注意</span><span class="gov-schol-val" style="font-style:italic;color:var(--ink-3);font-size:12px;">僅限準備入學之新生，在學生不適用</span></div>
+        <div data-k="sch6.name" class="gov-schol-head" style="background:var(--gold);color:var(--ink);">GMBA 學程獎學金</div>
+        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span data-k="sch6.for" class="gov-schol-val">新生／準新生，已在台者（持居留證）或台灣籍</span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">金額</span><span class="gov-schol-val"><span data-k="sch6.amount">每學期說明會公布</span><br><a href="問卷2 GMBA Save My Seat 填寫頁面.html" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.5rem;padding:0.4rem 1rem;font-size:0.78rem;font-weight:700;text-decoration:none;background:var(--gold);color:var(--ink);border-radius:4px;letter-spacing:0.05em;">✉ 我要參加說明會</a></span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">注意</span><span data-k="sch6.note" class="gov-schol-val" style="font-style:italic;color:var(--ink-3);font-size:12px;">僅限準備入學之新生，在學生不適用</span></div>
         
       </div>
     </div>
@@ -1329,48 +1335,48 @@
       <div class="fee-cards-header"><span>項目</span><span>台幣費用</span><span>備註</span></div>
       <div class="fee-card">
         <div class="fee-card-label"><strong>學費</strong>（含雜費）</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$69,020</div>
-          <div class="fee-card-usd">~USD 2,125 / 學期</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.tuition.nt">NT$69,020</div>
+          <div class="fee-card-usd" data-k="fee.tuition.usd">~USD 2,124 / 學期</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">官方費用公告 →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">住宿費（校內宿舍）</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$10,560～41,360</div>
-          <div class="fee-card-usd">~USD 325～1,270</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.dorm.nt">NT$10,560～41,360</div>
+          <div class="fee-card-usd" data-k="fee.dorm.usd">~USD 325～1,273</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://dorm.thu.edu.tw/web/about/page.php?scid=56&amp;sid=65" target="_blank" rel="noopener">宿舍收費標準 →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">住宿費（校外租屋）</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$30,000～48,000</div>
-          <div class="fee-card-usd">~USD 925～1,480 · 台中行情</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.offcampus.nt">NT$30,000～48,000</div>
+          <div class="fee-card-usd" data-k="fee.offcampus.usd">~USD 923～1,477 · 台中行情</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://oir.thu.edu.tw/redirect.php?ID=400_9_Fees_and_" target="_blank" rel="noopener">國際處生活費 →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">健保費</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$4,956</div>
-          <div class="fee-card-usd">~USD 153 · 每學期</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.nhi.nt">NT$4,956</div>
+          <div class="fee-card-usd" data-k="fee.nhi.usd">~USD 152 · 每學期</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://oir.thu.edu.tw/redirect.php?ID=400_7_NHI" target="_blank" rel="noopener">健保說明 →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">生活費</div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$24,000</div>
-          <div class="fee-card-usd">~USD 740 · 因人而異</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.living.nt">NT$48,000</div>
+          <div class="fee-card-usd" data-k="fee.living.usd">~USD 1,477 · 每學期</div>
         </div>
         <div class="fee-card-ref"></div>
       </div>
       <div class="fee-card fee-card-total">
         <div class="fee-card-label"><strong>每學期總費用估算</strong></div>
-        <div class="fee-card-amt"><div class="fee-card-nt">~NT$100,000</div>
-          <div class="fee-card-usd">~USD 3,080 · 因人而異</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.total.nt">~NT$150,000</div>
+          <div class="fee-card-usd" data-k="fee.total.usd">~USD 4,615 · 因人而異</div>
         </div>
         <div class="fee-card-ref"></div>
       </div>
     </div>
-    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;">以上金額僅供參考，正確金額以官方公告為準。　資料更新日期：2026-08-06</p>
+    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;" data-k="fee.disclaimer">以上金額僅供參考，正確金額以官方公告為準。　資料更新日期：2026-08-06</p>
 
     <div class="sec-rule" style="margin-top:2rem;"><span class="sec-tag">第三學年：按學分計費</span><span class="rule-line"></span></div>
     <p style="font-size:var(--t-body);color:var(--ink-3);margin-bottom:1rem;">第三學年起依修習學分計費，費用通常遠低於全學期學費。</p>
@@ -1378,20 +1384,20 @@
       <div class="fee-cards-header"><span>項目</span><span>台幣費用</span><span>備註</span></div>
       <div class="fee-card">
         <div class="fee-card-label">學分費<div style="font-size:12px;font-weight:400;color:var(--ink-3);margin-top:2px;">依修習學分計費</div></div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$2,090</div>
-          <div class="fee-card-usd">~USD 64 / 學分</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.credit.nt">NT$2,090</div>
+          <div class="fee-card-usd" data-k="fee.credit.usd">~USD 64 / 學分</div>
         </div>
         <div class="fee-card-ref"><a class="fee-card-note" href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計室公告 →</a></div>
       </div>
       <div class="fee-card">
         <div class="fee-card-label">雜費<div style="font-size:12px;font-weight:400;color:var(--ink-3);margin-top:2px;">同上</div></div>
-        <div class="fee-card-amt"><div class="fee-card-nt">NT$440</div>
-          <div class="fee-card-usd">~USD 14 / 學分</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.misc.nt">NT$440</div>
+          <div class="fee-card-usd" data-k="fee.misc.usd">~USD 14 / 學分</div>
         </div>
         <div class="fee-card-ref"></div>
       </div>
     </div>
-    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;">以上金額僅供參考，正確金額以官方公告為準。　資料更新日期：2026-08-06</p>
+    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;" data-k="fee.disclaimer2">以上金額僅供參考，正確金額以官方公告為準。　資料更新日期：2026-08-06</p>
   </div>
 </section>
 
@@ -1419,8 +1425,8 @@
           </div>
           <div><span style="display:inline-block;background:#E1F5EE;color:#085041;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">春季班</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">10月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=26" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.intl_spring.period">10月</div>
+            <a data-k="apply.intl_spring.url" href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=26" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">書面審查</div>
         </div>
@@ -1432,8 +1438,8 @@
           </div>
           <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">秋季班</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">1月－5月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=25" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.intl_fall.period">1月－5月</div>
+            <a data-k="apply.intl_fall.url" href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=25" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">書面審查</div>
         </div>
@@ -1445,8 +1451,8 @@
           </div>
           <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">秋季班</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">10月－11月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=21&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.taiwan_r1.period">10月－11月</div>
+            <a data-k="apply.taiwan_r1.url" href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=21&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">資料審查＋面試</div>
         </div>
@@ -1458,8 +1464,8 @@
           </div>
           <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">秋季班</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">12月－2月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=22&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.taiwan_r2.period">12月－2月</div>
+            <a data-k="apply.taiwan_r2.url" href="https://exam2.thu.edu.tw/EXAM/081.jsp?DOC=22&page=%27si%27" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">資料審查＋面試</div>
         </div>
@@ -1471,8 +1477,8 @@
           </div>
           <div><span style="display:inline-block;background:#F5EAD2;color:#6B4A05;font-size:13px;font-weight:700;padding:0.12rem 0.6rem;border-radius:20px;letter-spacing:0.02em">秋季班</span></div>
           <div>
-            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)">4月－6月</div>
-            <a href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=54" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
+            <div style="font-family:var(--ff-num);font-size:var(--t-body);font-weight:900;color:var(--gold-lt)" data-k="apply.overseas_chinese.period">4月－6月</div>
+            <a data-k="apply.overseas_chinese.url" href="https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=54" target="_blank" style="display:inline-block;background:var(--maroon);color:#fff;font-weight:700;text-decoration:none;padding:0.1rem 0.55rem;border-radius:3px;font-size:15px;">前往申請 →</a>
           </div>
           <div style="font-size:var(--t-body);font-weight:400;line-height:1.5">書面審查</div>
         </div>
@@ -1646,6 +1652,7 @@
         <div class="forms-group-title">考試與繳交</div>
         <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">學位考試時程表</div><div class="forms-item-desc">論文口試時程與程序說明</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/oral%20defense%20(2).pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
         <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">論文上傳說明</div><div class="forms-item-desc">電子論文繳交注意事項與步驟</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Precautions%20for%20thesis%20upload.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
+        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">GMBA 學程時程表</div><div class="forms-item-desc">學程完整修業時程與課程規劃總覽</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Global%20Master%20of%20Business%20Administration%20Program%20schedule.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
       </div>
     </div>
     <div class="dl-note"><strong>找不到所需表單？</strong>請聯絡 GMBA 辦公室：<a href="mailto:gmba@thu.edu.tw" style="color:var(--maroon);">gmba@thu.edu.tw</a> 或致電 <strong>+886-4-2359-0121 分機 35002</strong>。</div>
@@ -1739,6 +1746,8 @@
       </a>
       <span class="footer-bottom-copy">&copy; 2026 東海大學 GMBA 學程。版權所有。</span>
       <div class="footer-bottom-links">
+        <a href="https://www.thu.edu.tw/" target="_blank" rel="noopener">東海大學首頁</a>
+        <a href="https://mana.thu.edu.tw/" target="_blank" rel="noopener">管理學院</a>
         <a href="admissions.html">English</a>
       </div>
     </div>
