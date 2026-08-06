@@ -10,8 +10,10 @@
   <meta property="og:title" content="東海大學GMBA｜在台灣AI產業核心取得你的MBA">
   <meta property="og:description" content="在全球AI供應鏈中心攻讀MBA。東海GMBA——台中全英文授課碩士學程。">
   <meta property="og:url" content="https://gmba.thu.edu.tw/index-zh.html">
-  <link rel="alternate" hreflang="en" href="index.html">
-  <link rel="alternate" hreflang="zh-TW" href="index-zh.html">
+  <link rel="canonical" href="https://gmba.thu.edu.tw/index-zh.html">
+  <link rel="alternate" hreflang="en" href="https://gmba.thu.edu.tw/index.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://gmba.thu.edu.tw/index-zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://gmba.thu.edu.tw/index.html">
   <title>東海大學GMBA國際企業管理碩士｜在台灣AI產業核心領航未來</title>
 <style>
   @font-face {
@@ -1014,7 +1016,7 @@
       <div class="nav-item">
         <a href="#why-gmba">為何選東海GMBA <span class="nav-caret">▼</span></a>
         <div class="nav-dropdown">
-          <a href="index-zh.html">關於學程</a>
+          <a href="#why-gmba">關於學程</a>
           <a href="#class-profile">班級組成</a>
           <a href="#campus-life">校園生活</a>
           <a href="#living-in-taiwan">為何選擇台灣？</a>
@@ -1644,101 +1646,96 @@
       <div style="grid-column:1/-1;text-align:center;padding:2rem 0;color:var(--ink-3);font-size:.9rem;">載入最新消息中…</div>
     </div>
     <script>
+    /* ── 新聞區塊 ────────────────────────────────────────────────
+       第 1 格：固定招生公告，內容來自 news-pinned.json（每學期改那個檔案）
+       第 2-3 格：YAHO 即時新聞，經由 /api/yaho-news 代理取得
+       YAHO 取不到時：只顯示招生公告 + 一行說明，不用舊資料充數
+    ────────────────────────────────────────────────────────────── */
     (function(){
+      var LANG = 'zh';
+      var T = {
+        en: { badge:'ADMISSIONS', read:'Read more →',
+              offline:'Live news feed is temporarily unavailable.',
+              locale:'en-US' },
+        zh: { badge:'招生公告', read:'查看詳情 →',
+              offline:'即時新聞暫時無法載入。',
+              locale:'zh-TW' }
+      }[LANG];
       var BADGE_COLORS = {
         EDUCATION:'#2a5a7a', CONFERENCE:'#2a5a7a', ACADEMIC:'#5a1a8a',
         AWARD:'#7A1422', EVENT:'#2a7a4a', RESEARCH:'#7a5a1a'
       };
+      var GRID = document.getElementById('yaho-news-grid-zh');
+      if(!GRID) return;
+
+      function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
       function fmtDate(iso){
         if(!iso) return '';
         var d = new Date(iso);
-        return d.toLocaleDateString('zh-TW',{year:'numeric',month:'long',day:'numeric'});
+        if(isNaN(d)) return '';
+        return LANG === 'zh'
+          ? d.getFullYear()+' 年 '+(d.getMonth()+1)+' 月 '+d.getDate()+' 日'
+          : d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
       }
       function excerpt(txt){
         if(!txt) return '';
-        var clean = txt.replace(/^[•·]\s*/gm,'').split(/\n/)[0].trim();
-        return clean.length > 140 ? clean.slice(0,137)+'…' : clean;
+        var c = txt.replace(/^[•·]\s*/gm,'').split(/\n/)[0].trim();
+        return c.length > 140 ? c.slice(0,137)+'…' : c;
       }
-      function escHtml(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-      fetch('https://yaho-sooty.vercel.app/api/home')
-        .then(function(r){ return r.json(); })
-        .then(function(data){
-          var items = (data.announcements || []).slice(0,3);
-          var grid = document.getElementById('yaho-news-grid-zh');
-          if(!items.length){ grid.innerHTML='<p style="color:var(--ink-3)">暫無最新消息。</p>'; return; }
-          grid.innerHTML = items.map(function(item){
-            var color = BADGE_COLORS[item.category] || '#555';
-            var link = item.application_link || '#';
-            var hasLink = link && link !== '#';
-            return '<div class="nc">'
-              +'<div class="nc-body">'
-              +'<span class="nc-badge" style="background:'+color+'">'+escHtml(item.category)+'</span>'
-              +'<div class="nc-date">'+fmtDate(item.created_at)+'</div>'
-              +'<div class="nc-title">'+escHtml(item.title || item.title_en)+'</div>'
-              +'<div class="nc-excerpt">'+escHtml(excerpt(item.content || item.content_en))+'</div>'
-              +'</div>'
-              +(hasLink ? '<div class="nc-footer"><a href="'+escHtml(link)+'" target="_blank" rel="noopener" class="nc-link">閱讀全文 →</a></div>' : '')
-              +'</div>';
-          }).join('');
-        })
-        .catch(function(){
-          // Fallback: show static cards when API unavailable (e.g. local preview)
-          var grid = document.getElementById('yaho-news-grid-zh');
-          var BADGE_COLORS2 = {
-            EDUCATION:'#2a5a7a', CONFERENCE:'#2a5a7a', ACADEMIC:'#5a1a8a',
-            AWARD:'#7A1422', EVENT:'#2a7a4a', RESEARCH:'#7a5a1a'
-          };
-          function fmtDate2(iso){
-            if(!iso) return '';
-            var d = new Date(iso);
-            return d.toLocaleDateString('zh-TW',{month:'short',day:'numeric',year:'numeric'});
-          }
-          function exc2(txt){
-            if(!txt) return '';
-            var c = txt.replace(/^[•·]\s*/gm,'').split(/\n/)[0].trim();
-            return c.length > 140 ? c.slice(0,137)+'…' : c;
-          }
-          function esc2(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-          var fallback = [
-  {
-    category:'EDUCATION',
-    created_at:'2026-06-23T00:00:00Z',
-    title:'115-1 ILA榮譽學分學程預選',
-    content:'國際博雅榮譽學分學程預選：即日起至2026/06/30。4門全英語選修課程：全球正義、國際制度、性別研究、專注力培養。適用全校大學部學生。',
-    application_link:'https://honors.thu.edu.tw/current-courses/electives/'
-  },
-  {
-    category:'CONFERENCE',
-    created_at:'2026-06-09T00:00:00Z',
-    title:'公共事務學院晚間講座：外交經驗與行政創新',
-    content:'超越外交 — 從外交經驗到行政創新。講者：李光章先生，台灣民主基金會。',
-    application_link:'https://event.ithu.tw/2026060014'
-  },
-  {
-    category:'ACADEMIC',
-    created_at:'2026-05-26T00:00:00Z',
-    title:'跨域論壇：AI時代智慧社會與人文對話',
-    content:'多學院論壇，探討AI時代跨域人才培育、智慧社會中的人文價值，以及科技與教育的未來願景。',
-    application_link:''
-  }
-];
-          grid.innerHTML = fallback.map(function(item){
-            var key = Object.prototype.hasOwnProperty.call(item,'title') && !item.title_en ? 'title' : (item.title_en ? 'title_en' : 'title');
-            var ckey = Object.prototype.hasOwnProperty.call(item,'content') && !item.content_en ? 'content' : (item.content_en ? 'content_en' : 'content');
-            var color = BADGE_COLORS2[item.category] || '#555';
-            var link = item.application_link || '#';
-            var hasLink = link && link !== '#';
-            return '<div class="nc">'
-              +'<div class="nc-body">'
-              +'<span class="nc-badge" style="background:'+color+'">'+esc2(item.category)+'</span>'
-              +'<div class="nc-date">'+fmtDate2(item.created_at)+'</div>'
-              +'<div class="nc-title">'+esc2(item[key])+'</div>'
-              +'<div class="nc-excerpt">'+esc2(exc2(item[ckey]))+'</div>'
-              +'</div>'
-              +(hasLink ? '<div class="nc-footer"><a href="'+esc2(link)+'" target="_blank" rel="noopener" class="nc-link">閱讀全文 →</a></div>' : '')
-              +'</div>';
-          }).join('');
-        });
+      function card(o){
+        var hasLink = o.link && o.link !== '#';
+        return '<div class="nc">'
+          + '<div class="nc-body">'
+          + '<span class="nc-badge" style="background:'+o.color+'">'+esc(o.badge)+'</span>'
+          + '<div class="nc-date">'+esc(o.date)+'</div>'
+          + '<div class="nc-title">'+esc(o.title)+'</div>'
+          + '<div class="nc-excerpt">'+esc(o.body)+'</div>'
+          + '</div>'
+          + (hasLink ? '<div class="nc-footer"><a href="'+esc(o.link)+'" target="_blank" rel="noopener" class="nc-link">'+esc(o.linkText || T.read)+'</a></div>' : '')
+          + '</div>';
+      }
+
+      function render(pinned, items, offline){
+        var html = '';
+        if(pinned){
+          html += card({
+            badge: T.badge,
+            color: '#B8922A',
+            date: fmtDate(pinned.date),
+            title: LANG === 'zh' ? pinned.title_zh : pinned.title_en,
+            body:  LANG === 'zh' ? pinned.summary_zh : pinned.summary_en,
+            link:  pinned.link,
+            linkText: LANG === 'zh' ? pinned.link_text_zh : pinned.link_text_en
+          });
+        }
+        html += (items || []).map(function(it){
+          return card({
+            badge: it.category,
+            color: BADGE_COLORS[it.category] || '#555',
+            date:  fmtDate(it.created_at),
+            title: LANG === 'zh' ? (it.title || it.title_en) : (it.title_en || it.title),
+            body:  excerpt(LANG === 'zh' ? (it.content || it.content_en) : (it.content_en || it.content)),
+            link:  it.application_link
+          });
+        }).join('');
+        if(offline){
+          html += '<p style="grid-column:1/-1;margin:.25rem 0 0;font-size:.8rem;color:var(--ink-3);">'+esc(T.offline)+'</p>';
+        }
+        GRID.innerHTML = html || '<p style="color:var(--ink-3)">'+esc(T.offline)+'</p>';
+      }
+
+      var pinnedReq = fetch('news-pinned.json', {cache:'no-cache'})
+        .then(function(r){ return r.ok ? r.json() : null; })
+        .catch(function(){ return null; });
+
+      var newsReq = fetch('/api/yaho-news')
+        .then(function(r){ return r.ok ? r.json() : null; })
+        .then(function(d){ return (d && d.announcements) ? d.announcements.slice(0,2) : null; })
+        .catch(function(){ return null; });
+
+      Promise.all([pinnedReq, newsReq]).then(function(res){
+        render(res[0], res[1] || [], !res[1] || !res[1].length);
+      });
     })();
     </script>
     <p class="news-source">資料來源： <a href="https://yaho-sooty.vercel.app/" target="_blank" rel="noopener">YAHO — Taiwan University Notice Curation</a></p>
@@ -1765,7 +1762,7 @@
     <div class="footer-col">
       <div class="footer-col-title">探索 GMBA</div>
       <ul>
-        <li><a href="index-zh.html">關於學程</a></li>
+        <li><a href="#why-gmba">關於學程</a></li>
         <li><a href="index-zh.html#class-profile">班級組成</a></li>
         <li><a href="index-zh.html#living-in-taiwan">為何選擇台灣？</a></li>
         <li><a href="index-zh.html#campus-life">校園生活</a></li>
@@ -1813,7 +1810,7 @@
         <li><a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">學生資訊系統</a></li>
         <li><a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計處</a></li>
         <li><a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">學生事務處</a></li>
-        <li><a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">國際事務處</a></li>
+        <li><a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">國際暨兩岸合作處</a></li>
         <li><a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">公共事務處</a></li>
       </ul>
     </div>

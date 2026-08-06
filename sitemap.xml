@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Tunghai University GMBA — sitemap.xml · 最後更新 2026-08-06 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://gmba.thu.edu.tw/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gmba.thu.edu.tw/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://gmba.thu.edu.tw/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gmba.thu.edu.tw/index.html"/>
+  </url>
+  <url>
+    <loc>https://gmba.thu.edu.tw/index.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gmba.thu.edu.tw/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://gmba.thu.edu.tw/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gmba.thu.edu.tw/index.html"/>
+  </url>
+  <url>
+    <loc>https://gmba.thu.edu.tw/index-zh.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gmba.thu.edu.tw/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://gmba.thu.edu.tw/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gmba.thu.edu.tw/index.html"/>
+  </url>
+  <url>
+    <loc>https://gmba.thu.edu.tw/academics.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gmba.thu.edu.tw/academics.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://gmba.thu.edu.tw/academics-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gmba.thu.edu.tw/academics.html"/>
+  </url>
+  <url>
+    <loc>https://gmba.thu.edu.tw/academics-zh.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gmba.thu.edu.tw/academics.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://gmba.thu.edu.tw/academics-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gmba.thu.edu.tw/academics.html"/>
+  </url>
+  <url>
+    <loc>https://gmba.thu.edu.tw/admissions.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gmba.thu.edu.tw/admissions.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://gmba.thu.edu.tw/admissions-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gmba.thu.edu.tw/admissions.html"/>
+  </url>
+  <url>
+    <loc>https://gmba.thu.edu.tw/admissions-zh.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gmba.thu.edu.tw/admissions.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://gmba.thu.edu.tw/admissions-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gmba.thu.edu.tw/admissions.html"/>
+  </url>
+  <url>
+    <loc>https://gmba.thu.edu.tw/student-voices.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

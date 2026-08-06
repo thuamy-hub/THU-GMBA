@@ -10,8 +10,10 @@
   <meta property="og:title" content="Tunghai University GMBA | Lead in the AI Era from Taiwan">
   <meta property="og:description" content="Get your MBA at the center of global AI supply chains. Tunghai GMBA — fully English-taught in Taichung, Taiwan.">
   <meta property="og:url" content="https://gmba.thu.edu.tw/index.html">
-  <link rel="alternate" hreflang="en" href="index.html">
-  <link rel="alternate" hreflang="zh-TW" href="index-zh.html">
+  <link rel="canonical" href="https://gmba.thu.edu.tw/index.html">
+  <link rel="alternate" hreflang="en" href="https://gmba.thu.edu.tw/index.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://gmba.thu.edu.tw/index-zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://gmba.thu.edu.tw/index.html">
   <title>Tunghai University GMBA | Lead in the AI Era from Taiwan's Innovation Core</title>
 <style>
   @font-face {
@@ -1009,7 +1011,7 @@
             <div class="nav-item">
         <a href="#why-gmba">Why THU GMBA <span class="nav-caret">▼</span></a>
         <div class="nav-dropdown">
-          <a href="index.html">About</a>
+          <a href="#why-gmba">About</a>
           <a href="#class-profile">Class Profile</a>
           <a href="#campus-life">Campus Life</a>
           <a href="#living-in-taiwan">Why Taiwan?</a>
@@ -1641,101 +1643,96 @@
       <div style="grid-column:1/-1;text-align:center;padding:2rem 0;color:var(--ink-3);font-size:.9rem;">Loading latest news…</div>
     </div>
     <script>
+    /* ── 新聞區塊 ────────────────────────────────────────────────
+       第 1 格：固定招生公告，內容來自 news-pinned.json（每學期改那個檔案）
+       第 2-3 格：YAHO 即時新聞，經由 /api/yaho-news 代理取得
+       YAHO 取不到時：只顯示招生公告 + 一行說明，不用舊資料充數
+    ────────────────────────────────────────────────────────────── */
     (function(){
+      var LANG = 'en';
+      var T = {
+        en: { badge:'ADMISSIONS', read:'Read more →',
+              offline:'Live news feed is temporarily unavailable.',
+              locale:'en-US' },
+        zh: { badge:'招生公告', read:'查看詳情 →',
+              offline:'即時新聞暫時無法載入。',
+              locale:'zh-TW' }
+      }[LANG];
       var BADGE_COLORS = {
         EDUCATION:'#2a5a7a', CONFERENCE:'#2a5a7a', ACADEMIC:'#5a1a8a',
         AWARD:'#7A1422', EVENT:'#2a7a4a', RESEARCH:'#7a5a1a'
       };
+      var GRID = document.getElementById('yaho-news-grid');
+      if(!GRID) return;
+
+      function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
       function fmtDate(iso){
         if(!iso) return '';
         var d = new Date(iso);
-        return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+        if(isNaN(d)) return '';
+        return LANG === 'zh'
+          ? d.getFullYear()+' 年 '+(d.getMonth()+1)+' 月 '+d.getDate()+' 日'
+          : d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
       }
       function excerpt(txt){
         if(!txt) return '';
-        var clean = txt.replace(/^[•·]\s*/gm,'').split(/\n/)[0].trim();
-        return clean.length > 140 ? clean.slice(0,137)+'…' : clean;
+        var c = txt.replace(/^[•·]\s*/gm,'').split(/\n/)[0].trim();
+        return c.length > 140 ? c.slice(0,137)+'…' : c;
       }
-      function escHtml(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-      fetch('https://yaho-sooty.vercel.app/api/home')
-        .then(function(r){ return r.json(); })
-        .then(function(data){
-          var items = (data.announcements || []).slice(0,3);
-          var grid = document.getElementById('yaho-news-grid');
-          if(!items.length){ grid.innerHTML='<p style="color:var(--ink-3)">No news available.</p>'; return; }
-          grid.innerHTML = items.map(function(item){
-            var color = BADGE_COLORS[item.category] || '#555';
-            var link = item.application_link || '#';
-            var hasLink = link && link !== '#';
-            return '<div class="nc">'
-              +'<div class="nc-body">'
-              +'<span class="nc-badge" style="background:'+color+'">'+escHtml(item.category)+'</span>'
-              +'<div class="nc-date">'+fmtDate(item.created_at)+'</div>'
-              +'<div class="nc-title">'+escHtml(item.title_en || item.title)+'</div>'
-              +'<div class="nc-excerpt">'+escHtml(excerpt(item.content_en || item.content))+'</div>'
-              +'</div>'
-              +(hasLink ? '<div class="nc-footer"><a href="'+escHtml(link)+'" target="_blank" rel="noopener" class="nc-link">Read more →</a></div>' : '')
-              +'</div>';
-          }).join('');
-        })
-        .catch(function(){
-          // Fallback: show static cards when API unavailable (e.g. local preview)
-          var grid = document.getElementById('yaho-news-grid');
-          var BADGE_COLORS2 = {
-            EDUCATION:'#2a5a7a', CONFERENCE:'#2a5a7a', ACADEMIC:'#5a1a8a',
-            AWARD:'#7A1422', EVENT:'#2a7a4a', RESEARCH:'#7a5a1a'
-          };
-          function fmtDate2(iso){
-            if(!iso) return '';
-            var d = new Date(iso);
-            return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-          }
-          function exc2(txt){
-            if(!txt) return '';
-            var c = txt.replace(/^[•·]\s*/gm,'').split(/\n/)[0].trim();
-            return c.length > 140 ? c.slice(0,137)+'…' : c;
-          }
-          function esc2(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-          var fallback = [
-  {
-    category:'EDUCATION',
-    created_at:'2026-06-23T00:00:00Z',
-    title_en:'115-1 ILA Honors Program Elective Pre-Registration',
-    content_en:'Pre-registration for the 115-1 ILA Honors Program electives open until June 30, 2026. Four English-taught courses: Global Justice, International Institutions, Gender Studies, and Focus Training.',
-    application_link:'https://honors.thu.edu.tw/current-courses/electives/'
-  },
-  {
-    category:'CONFERENCE',
-    created_at:'2026-06-09T00:00:00Z',
-    title_en:'College of Public Affairs Evening Lecture: Diplomacy Experience and Administrative Innovation',
-    content_en:'Beyond diplomacy — From Diplomatic Experience to Administrative Innovation. Speaker: Mr. Li Guangzhang, Taiwan Democracy Foundation.',
-    application_link:'https://event.ithu.tw/2026060014'
-  },
-  {
-    category:'ACADEMIC',
-    created_at:'2026-05-26T00:00:00Z',
-    title_en:'Interdisciplinary Forum: AI-Era Smart Society & Humanities Dialogue',
-    content_en:'Multi-college forum exploring AI-era interdisciplinary talent development, humane values in smart society, and future visions of technology and education.',
-    application_link:''
-  }
-];
-          grid.innerHTML = fallback.map(function(item){
-            var key = Object.prototype.hasOwnProperty.call(item,'title') && !item.title_en ? 'title' : (item.title_en ? 'title_en' : 'title');
-            var ckey = Object.prototype.hasOwnProperty.call(item,'content') && !item.content_en ? 'content' : (item.content_en ? 'content_en' : 'content');
-            var color = BADGE_COLORS2[item.category] || '#555';
-            var link = item.application_link || '#';
-            var hasLink = link && link !== '#';
-            return '<div class="nc">'
-              +'<div class="nc-body">'
-              +'<span class="nc-badge" style="background:'+color+'">'+esc2(item.category)+'</span>'
-              +'<div class="nc-date">'+fmtDate2(item.created_at)+'</div>'
-              +'<div class="nc-title">'+esc2(item[key])+'</div>'
-              +'<div class="nc-excerpt">'+esc2(exc2(item[ckey]))+'</div>'
-              +'</div>'
-              +(hasLink ? '<div class="nc-footer"><a href="'+esc2(link)+'" target="_blank" rel="noopener" class="nc-link">Read more →</a></div>' : '')
-              +'</div>';
-          }).join('');
-        });
+      function card(o){
+        var hasLink = o.link && o.link !== '#';
+        return '<div class="nc">'
+          + '<div class="nc-body">'
+          + '<span class="nc-badge" style="background:'+o.color+'">'+esc(o.badge)+'</span>'
+          + '<div class="nc-date">'+esc(o.date)+'</div>'
+          + '<div class="nc-title">'+esc(o.title)+'</div>'
+          + '<div class="nc-excerpt">'+esc(o.body)+'</div>'
+          + '</div>'
+          + (hasLink ? '<div class="nc-footer"><a href="'+esc(o.link)+'" target="_blank" rel="noopener" class="nc-link">'+esc(o.linkText || T.read)+'</a></div>' : '')
+          + '</div>';
+      }
+
+      function render(pinned, items, offline){
+        var html = '';
+        if(pinned){
+          html += card({
+            badge: T.badge,
+            color: '#B8922A',
+            date: fmtDate(pinned.date),
+            title: LANG === 'zh' ? pinned.title_zh : pinned.title_en,
+            body:  LANG === 'zh' ? pinned.summary_zh : pinned.summary_en,
+            link:  pinned.link,
+            linkText: LANG === 'zh' ? pinned.link_text_zh : pinned.link_text_en
+          });
+        }
+        html += (items || []).map(function(it){
+          return card({
+            badge: it.category,
+            color: BADGE_COLORS[it.category] || '#555',
+            date:  fmtDate(it.created_at),
+            title: LANG === 'zh' ? (it.title || it.title_en) : (it.title_en || it.title),
+            body:  excerpt(LANG === 'zh' ? (it.content || it.content_en) : (it.content_en || it.content)),
+            link:  it.application_link
+          });
+        }).join('');
+        if(offline){
+          html += '<p style="grid-column:1/-1;margin:.25rem 0 0;font-size:.8rem;color:var(--ink-3);">'+esc(T.offline)+'</p>';
+        }
+        GRID.innerHTML = html || '<p style="color:var(--ink-3)">'+esc(T.offline)+'</p>';
+      }
+
+      var pinnedReq = fetch('news-pinned.json', {cache:'no-cache'})
+        .then(function(r){ return r.ok ? r.json() : null; })
+        .catch(function(){ return null; });
+
+      var newsReq = fetch('/api/yaho-news')
+        .then(function(r){ return r.ok ? r.json() : null; })
+        .then(function(d){ return (d && d.announcements) ? d.announcements.slice(0,2) : null; })
+        .catch(function(){ return null; });
+
+      Promise.all([pinnedReq, newsReq]).then(function(res){
+        render(res[0], res[1] || [], !res[1] || !res[1].length);
+      });
     })();
     </script>
     <p class="news-source">Source: <a href="https://yaho-sooty.vercel.app/" target="_blank" rel="noopener">YAHO — Taiwan University Notice Curation</a></p>
@@ -1762,7 +1759,7 @@
     <div class="footer-col">
       <div class="footer-col-title">Explore GMBA</div>
       <ul>
-        <li><a href="index.html">About</a></li>
+        <li><a href="#why-gmba">About</a></li>
         <li><a href="index.html#class-profile">Class Profile</a></li>
         <li><a href="index.html#living-in-taiwan">Why Taiwan?</a></li>
         <li><a href="index.html#campus-life">Campus Life</a></li>
@@ -1810,7 +1807,7 @@
         <li><a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">Student Info System</a></li>
         <li><a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">Accounting Office</a></li>
         <li><a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">Office of Student Affairs</a></li>
-        <li><a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">Office of Intl. Relations</a></li>
+        <li><a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">Office of International Relations</a></li>
         <li><a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">Office of Public Affairs</a></li>
       </ul>
     </div>

@@ -1,0 +1,16 @@
+{
+  "_使用說明": "首頁新聞區塊第一格（招生公告）。每學期只要改這個檔案，中英文首頁會同時更新。改完存檔，再跑一次「一鍵推送.bat」即可。",
+  "_注意事項": "只改冒號後面引號裡的文字。不要刪掉引號、逗號或大括號。日期請用 YYYY-MM-DD 格式。",
+
+  "date": "2026-10-08",
+
+  "title_zh": "115 學年度碩士班甄試入學",
+  "title_en": "AY115 Master's Program — Admission by Review",
+
+  "summary_zh": "東海大學 115 學年度碩士班甄試入學招生簡章已公告，GMBA 國際企業管理碩士學位學程同步招生。報名期間與應繳文件請見招生系統公告。",
+  "summary_en": "Tunghai University has released the AY115 master's admission guidelines. The GMBA program is enrolling for the fall intake. See the admissions portal for deadlines and required documents.",
+
+  "link": "https://exam2.thu.edu.tw/EXAM/index.jsp?DOC=21",
+  "link_text_zh": "查看招生公告 →",
+  "link_text_en": "View announcement →"
+}

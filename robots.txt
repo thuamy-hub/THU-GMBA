@@ -1,0 +1,162 @@
+# ============================================================
+# Tunghai University GMBA — robots.txt
+# 東海大學國際企業管理碩士學位學程
+#
+# Policy / 政策：
+#   All crawlers are welcome, including AI and LLM crawlers.
+#   本站歡迎所有爬蟲，包含 AI／大型語言模型爬蟲。全站無任何 Disallow。
+#
+# Last updated / 最後更新：2026-08-06
+# ============================================================
+
+
+# ------------------------------------------------------------
+# 1. 預設規則：允許所有爬蟲（含未來才出現的新 bot）
+#    這一組其實已經涵蓋全部。下面的具名清單是「保險」——
+#    robots.txt 的規則是「最明確的那一組優先，且不繼承 *」，
+#    所以萬一日後有人在上面加了 Disallow，具名的 bot 仍不受影響。
+# ------------------------------------------------------------
+User-agent: *
+Allow: /
+
+
+# ------------------------------------------------------------
+# 2. AI / LLM 爬蟲（全球）
+# ------------------------------------------------------------
+# OpenAI（ChatGPT）
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+# Anthropic（Claude）
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+# Google（Gemini／Vertex AI／AI Overviews）
+User-agent: Google-Extended
+User-agent: GoogleOther
+User-agent: GoogleOther-Image
+# Perplexity
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+# Apple（Siri／Apple Intelligence）
+User-agent: Applebot
+User-agent: Applebot-Extended
+# Microsoft（Bing／Copilot）
+User-agent: bingbot
+User-agent: BingPreview
+User-agent: msnbot
+User-agent: MicrosoftPreview
+# Meta（Meta AI）
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: FacebookBot
+# Amazon
+User-agent: Amazonbot
+# Mistral（法國／歐盟）
+User-agent: MistralAI-User
+# Cohere
+User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+# Allen Institute for AI
+User-agent: AI2Bot
+User-agent: AI2Bot-Dolma
+# DuckDuckGo
+User-agent: DuckAssistBot
+User-agent: DuckDuckBot
+# Common Crawl（多數開源模型的資料來源）
+User-agent: CCBot
+# 其他 AI 搜尋／問答服務
+User-agent: YouBot
+User-agent: PhindBot
+User-agent: Diffbot
+User-agent: Timpibot
+User-agent: Omgilibot
+User-agent: Webzio-Extended
+User-agent: ImagesiftBot
+User-agent: Kangaroo Bot
+User-agent: ProRataInc
+User-agent: FirecrawlAgent
+Allow: /
+
+
+# ------------------------------------------------------------
+# 3. 區域搜尋引擎與區域 AI（依使用者所在國家）
+# ------------------------------------------------------------
+# 中國大陸 — 百度、搜狗、360、神馬、字節跳動（豆包）、華為
+User-agent: Baiduspider
+User-agent: Baiduspider-image
+User-agent: Sogou web spider
+User-agent: Sogou inst spider
+User-agent: Sogou spider2
+User-agent: 360Spider
+User-agent: HaosouSpider
+User-agent: YisouSpider
+User-agent: Bytespider
+User-agent: TikTokSpider
+User-agent: PanguBot
+User-agent: PetalBot
+# 韓國 — Naver、Kakao、Liner
+User-agent: Yeti
+User-agent: NaverBot
+User-agent: Daum
+User-agent: Daumoa
+User-agent: LinerBot
+# 日本 — Yahoo! JAPAN
+User-agent: Y!J-BRW
+User-agent: Y!J-WSC
+User-agent: Slurp
+# 俄羅斯／獨立國協 — Yandex、Mail.ru
+User-agent: YandexBot
+User-agent: YandexImages
+User-agent: YandexAdditional
+User-agent: YandexAdditionalBot
+User-agent: Mail.RU_Bot
+# 越南 — Cốc Cốc
+User-agent: coccocbot-web
+User-agent: coccocbot-image
+# 捷克 — Seznam
+User-agent: SeznamBot
+# 歐洲／獨立搜尋引擎
+User-agent: MojeekBot
+User-agent: Qwantify
+User-agent: Qwantbot
+User-agent: Bravebot
+Allow: /
+
+
+# ------------------------------------------------------------
+# 4. 社群與通訊軟體的連結預覽（分享網址時顯示標題與縮圖）
+# ------------------------------------------------------------
+User-agent: facebookexternalhit
+User-agent: Twitterbot
+User-agent: LinkedInBot
+User-agent: Pinterestbot
+User-agent: WhatsApp
+User-agent: TelegramBot
+User-agent: Discordbot
+User-agent: Slackbot
+User-agent: Slackbot-LinkExpanding
+User-agent: redditbot
+User-agent: SkypeUriPreview
+User-agent: vkShare
+User-agent: Line
+Allow: /
+
+
+# ------------------------------------------------------------
+# 5. 學術典藏與 SEO 檢測工具
+# ------------------------------------------------------------
+User-agent: ia_archiver
+User-agent: archive.org_bot
+User-agent: SemrushBot
+User-agent: AhrefsBot
+User-agent: DotBot
+Allow: /
+
+
+# ------------------------------------------------------------
+# 6. Sitemap
+# ------------------------------------------------------------
+Sitemap: https://gmba.thu.edu.tw/sitemap.xml
