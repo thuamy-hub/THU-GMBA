@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="image" href="./鐘樓.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
@@ -122,6 +123,7 @@
     .hero-slide.active { opacity: 1; pointer-events: auto; }
     .hero-slide-main {
       color: var(--white);
+      background-color: #1b2907;
       background:
         linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.28) 42%, rgba(0,0,0,0.04) 100%),
         url('./鐘樓.jpg') center 40% / cover no-repeat;
@@ -311,6 +313,54 @@
         "description": "NT$69,020 per semester (including miscellaneous fees), NT$138,040 per year (~USD 4,250). All students pay the same tuition."
       },
       "url": "https://gmba.thu.edu.tw/"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://gmba.thu.edu.tw/index.html#faqpage",
+      "inLanguage": "en",
+      "url": "https://gmba.thu.edu.tw/index.html",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Tunghai University GMBA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tunghai GMBA is a fully English-taught Global MBA program in Taichung, Taiwan, launched in 2018 and <strong>accredited by AACSB</strong>. The curriculum is built in four layers — Research Foundation, AI &amp; Data Core, AI Analytics Across Functions, and Leadership &amp; Strategy — and enrolls students from more than 20 countries. Tunghai ranks #1 among Taiwan's private, non-medical universities in the QS Asia rankings, and #85 worldwide (3rd nationally, after National Taiwan University and NYCU) in the THE Impact Rankings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why study an MBA in Taiwan rather than Singapore, Hong Kong, or Japan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Taiwan gives you direct access to the world's AI hardware ecosystem at <strong>roughly one-third the living cost of Singapore</strong>. Taiwan fabricates about 90% of the world's advanced chips, builds around 70% of global AI servers, and handles more than 40% of world electronics assembly. Monthly living costs in Taichung run about USD 340–505, compared with USD 1,070–1,635 in Singapore and USD 745–1,080 in Tokyo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many students are in each cohort, and where do they come from?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each GMBA cohort has <strong>30–40 students</strong> from 10 or more countries. Across the 2018–2026 classes, students have come from 22 nationalities across 8 world regions: Southeast Asia 65.4%, East Asia 21.1%, Europe 3.9%, South Asia 3.1%, Central Asia 3.1%, Africa 1.3%, the Americas 1.3%, and the Middle East 0.9%. The class is small enough that you know everyone by name."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is GMBA different from a regular MBA or an IMBA program?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A GMBA (Global MBA) is designed from the start for an international cohort, so every course, assignment, and thesis <strong>runs in English</strong> and the classroom itself is multinational. Tunghai GMBA differs from most Taiwanese IMBA programs in three ways: AI capability is embedded in every course rather than offered as an elective track; faculty are drawn from five colleges instead of business alone; and the program sits in Taichung, at the center of Taiwan's AI-integrated manufacturing belt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Tunghai GMBA accredited?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Tunghai University's College of Management holds AACSB accreditation, which <strong>fewer than 5% of business schools worldwide</strong> have achieved. The GMBA degree is also approved by Taiwan's Ministry of Education, so the diploma is a recognized master's degree valid for further study and employment internationally."
+          }
+        }
+      ]
     }
   ]
 }
@@ -829,7 +879,8 @@
       .hero-in { flex-direction: column !important; align-items: flex-start !important; }
       :root { --t-hero: clamp(32px,8vw,48px); }
       .hero-lead { font-size: 14px !important; max-width: 90% !important; }
-      .stats-in { grid-template-columns: repeat(3,1fr) !important; padding: 1rem 1.2rem !important; }
+      .stats-in { grid-template-columns: repeat(2,1fr) !important; padding: 1rem 1.2rem !important; }
+      .stat-cell:last-child { grid-column: 1 / -1 !important; }
       .stat-num { font-size: 32px !important; }
       .stat-label { font-size: 12px !important; }
       .stat-cell { padding: 1rem 0.5rem !important; }
@@ -1034,6 +1085,10 @@
           <a href="admissions.html#downloads">Downloads</a>
         </div>
       </div>
+      <div class="nav-item">
+        <a href="faq.html">FAQ</a>
+      </div>
+      <button type="button" id="siteSearchBtn" class="nav-search-btn" aria-label="Search" style="background:none;border:none;color:rgba(255,255,255,0.92);font-size:0.82rem;font-weight:700;cursor:pointer;padding:0 0.6rem;display:flex;align-items:center;gap:4px;font-family:inherit;letter-spacing:0.03em;text-transform:uppercase;height:100%;">🔍<span>Search</span></button>
 
       
       <a href="index-zh.html" class="lang-btn" onclick="sessionStorage.setItem('lang-manual','1')">中文</a>
@@ -1056,7 +1111,7 @@
     <aside class="dl-card" aria-label="Application deadlines">
       <div class="dl-card-title">Application Deadlines</div>
       <div class="dl-item" style="margin-bottom:0;">
-        <div class="dl-item-label">International (Overseas)</div>
+        <div class="dl-item-label">International</div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
           <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">Spring intake</div>
           <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">Oct</div>
@@ -1064,7 +1119,7 @@
       </div>
       <hr>
       <div class="dl-item" style="margin-bottom:0;">
-        <div class="dl-item-label">International (Overseas)</div>
+        <div class="dl-item-label">International</div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
           <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">Fall intake</div>
           <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">Jan–May</div>
@@ -1072,7 +1127,7 @@
       </div>
       <hr>
       <div class="dl-item" style="margin-bottom:0;">
-        <div class="dl-item-label">In Taiwan · Taiwan nationals</div>
+        <div class="dl-item-label">Taiwan Nationals</div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
           <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">Fall intake · Round 1</div>
           <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">Oct–Nov</div>
@@ -1080,7 +1135,7 @@
       </div>
       <hr>
       <div class="dl-item" style="margin-bottom:0;">
-        <div class="dl-item-label">In Taiwan · Taiwan nationals</div>
+        <div class="dl-item-label">Taiwan Nationals</div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
           <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">Fall intake · Round 2</div>
           <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">Dec–Feb</div>
@@ -1108,7 +1163,7 @@
 <div id="about" class="stats" aria-label="Key facts">
   <div class="stats-in">
     <div class="stat-cell"><span class="stat-num" data-k="stat.english.num">100%</span><span class="stat-label" data-k="stat.english.label">English-Taught</span></div>
-    <div class="stat-cell"><span class="stat-num" data-k="stat.qs.num">#1</span><span class="stat-label" data-k="stat.qs.label">Private Uni · QS Asia</span></div>
+    <div class="stat-cell"><span class="stat-num" data-k="stat.qs.num">#1</span><span class="stat-label" data-k="stat.qs.label">Private (Non-Med) · QS</span></div>
     <div class="stat-cell"><span class="stat-num" data-k="stat.nationalities.num">20+</span><span class="stat-label" data-k="stat.nationalities.label">Nationalities</span></div>
     <div class="stat-cell"><span class="stat-num" data-k="stat.intl_ratio.num">98.1%</span><span class="stat-label" data-k="stat.intl_ratio.label">Intl. Students</span></div>
     <div class="stat-cell"><span class="stat-num" data-k="stat.the_impact.num">#85</span><span class="stat-label" data-k="stat.the_impact.label">THE World Impact</span></div>
@@ -1142,9 +1197,18 @@
     </div>
     <!-- Right: Text -->
     <div style="padding:5rem 4rem 4rem 5rem;display:flex;flex-direction:column;justify-content:center;background:var(--cream);">
-      <h2 style="margin-bottom:2rem;font-weight:900;line-height:1.1;letter-spacing:-0.01em;">What makes Tunghai GMBA different?</h2>
-      <p style="font-size:var(--t-body);color:var(--ink-3);line-height:1.85;margin-bottom:1.5rem;">The future of business belongs to those who can lead across complexity — across cultures, disciplines, and change. That's the leader Tunghai <strong>Global MBA</strong> develops.</p>
-      <p style="font-size:var(--t-body);color:var(--ink-3);line-height:1.85;margin-bottom:1.5rem;">We build that leader through a <strong>fast-track</strong> program structured in four deliberate layers — research discipline, AI and data capability, cross-functional application, and strategic leadership — each building toward the judgment to lead. You'll stand at the center of Taiwan's <strong>AI and semiconductor hub</strong>, among peers from <strong>20+ countries</strong> and faculty from five colleges. You'll study in English and live in Mandarin, graduating fluent in the world's two most spoken languages, with the cross-cultural agility to lead wherever the world takes you.</p>
+      <h2 style="margin-bottom:2rem;font-size:clamp(28px,3.4vw,42px);font-weight:900;line-height:1.15;letter-spacing:-0.01em;">What makes Tunghai GMBA different?</h2>
+      <p style="font-size:18px;color:var(--ink-3);line-height:1.8;margin-bottom:1.6rem;">Tunghai <strong>Global MBA</strong> is an <strong>AACSB-accredited</strong>, <strong>English-taught</strong> MBA in Taichung, Taiwan, ranked among the <strong>top 5%</strong> of business schools worldwide. The program develops leaders who can navigate complexity across cultures, disciplines, and AI-driven change.</p>
+      <h3 style="font-size:21px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:1rem;letter-spacing:-0.005em;">A 4-layer, fast-track curriculum builds that capability:</h3>
+      <p style="font-size:15px;color:var(--maroon);font-weight:700;margin-top:-0.4rem;margin-bottom:1.2rem;">With intensive coursework, complete all coursework and defend your thesis in as little as 1 year.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.8rem;">
+        <span style="display:inline-block;padding:.4rem 1rem;font-size:14px;font-weight:600;color:var(--ink-3);background:var(--cream);border:1px solid var(--rule);border-radius:20px;"><strong style="color:var(--maroon);margin-right:.45rem;">01</strong>Research Discipline</span>
+        <span style="display:inline-block;padding:.4rem 1rem;font-size:14px;font-weight:600;color:var(--ink-3);background:var(--cream);border:1px solid var(--rule);border-radius:20px;"><strong style="color:var(--maroon);margin-right:.45rem;">02</strong>AI &amp; Data Capability</span>
+        <span style="display:inline-block;padding:.4rem 1rem;font-size:14px;font-weight:600;color:var(--ink-3);background:var(--cream);border:1px solid var(--rule);border-radius:20px;"><strong style="color:var(--maroon);margin-right:.45rem;">03</strong>Cross-Functional Application</span>
+        <span style="display:inline-block;padding:.4rem 1rem;font-size:14px;font-weight:600;color:var(--ink-3);background:var(--cream);border:1px solid var(--rule);border-radius:20px;"><strong style="color:var(--maroon);margin-right:.45rem;">04</strong>Strategic Leadership</span>
+      </div>
+      <p style="font-size:var(--t-sm);color:var(--ink-3);line-height:1.85;margin-bottom:1.5rem;"><strong>Global Reach.</strong> Students come from <strong>20+ countries</strong> and learn from faculty across <strong>5 colleges</strong>, at the center of Taiwan's <strong>AI and semiconductor hub</strong>.</p>
+      <p style="font-size:var(--t-sm);color:var(--ink-3);line-height:1.85;margin-bottom:1.5rem;"><strong>Bilingual Edge.</strong> Coursework is taught in English; daily life happens in Mandarin — graduates leave fluent in the world's <strong>two most spoken languages</strong>, with the cross-cultural agility to lead anywhere.</p>
       <p style="font-size:1.2rem;font-weight:900;font-family:var(--ff-num);color:var(--ink);line-height:1.3;margin-top:1rem;letter-spacing:0.01em;">Tunghai GMBA — where AI meets humanities.</p>
       <div id="about-aacsb" style="border-top:1px solid rgba(0,0,0,0.1);margin-top:3rem;padding-top:1.8rem;display:flex;align-items:center;gap:1.5rem;">
         <a href="https://mana.thu.edu.tw/web/page/page.php?scid=70&sid=92" target="_blank" rel="noopener">
@@ -1595,6 +1659,41 @@
 
 </section>
 
+<!-- ===== FAQ ===== -->
+<section id="faq" style="background:var(--white);">
+  <div class="container">
+    <h2>About the Program</h2>
+    <p class="sec-lead">A few things prospective students ask first — see all 35 questions for the complete list.</p>
+    <div class="faq-cols">
+      <div>
+          <details>
+            <summary>What is Tunghai University GMBA?</summary>
+            <p class="faq-a">GMBA is Tunghai University's fully English-taught Global MBA — <strong>AACSB-accredited</strong>, running since 2018, with classmates from more than 20 countries. <a href="index.html#why-gmba">See full details →</a></p>
+          </details>
+          <details>
+            <summary>Why study an MBA in Taiwan rather than Singapore, Hong Kong, or Japan?</summary>
+            <p class="faq-a">Taiwan puts you inside the world's AI hardware supply chain for <strong>about a third of Singapore's cost of living</strong>. <a href="index.html#living-in-taiwan">See full details →</a></p>
+          </details>
+          <details>
+            <summary>How many students are in each cohort, and where do they come from?</summary>
+            <p class="faq-a">Each cohort holds <strong>30–40 students</strong> from 10-plus countries, with 22 nationalities represented across the program's history. <a href="index.html#class-profile">See full details →</a></p>
+          </details>
+      </div>
+      <div>
+          <details>
+            <summary>How is GMBA different from a regular MBA or an IMBA program?</summary>
+            <p class="faq-a">Every course, assignment, and thesis in GMBA <strong>runs in English</strong> for a genuinely multinational classroom — not a Chinese-medium MBA with an English track bolted on. <a href="index.html#why-gmba">See full details →</a></p>
+          </details>
+          <details>
+            <summary>Is Tunghai GMBA accredited?</summary>
+            <p class="faq-a">Tunghai's College of Management holds AACSB accreditation, a distinction <strong>fewer than 5%</strong> of business schools worldwide achieve. <a href="index.html#why-gmba">See full details →</a></p>
+          </details>
+      </div>
+    </div>
+    <a class="faq-more" href="faq.html" style="display:inline-block;margin-top:1.5rem;font-weight:800;color:var(--maroon);text-decoration:none;font-size:15px;">See all 35 questions →</a>
+  </div>
+</section>
+
 <!-- ===== NEWS ===== -->
 <section id="news" style="background:var(--cream);">
   <div class="container">
@@ -1807,7 +1906,7 @@
         <li><a href="admissions.html#fees-table">Tuition &amp; Fees</a></li>
         <li><a href="admissions.html#tuition">Scholarships</a></li>
         <li><a href="admissions.html#practical-info">Practical Info</a></li>
-        <li><a href="admissions.html#faq">FAQ</a></li>
+        <li><a href="faq.html">FAQ</a></li>
       </ul>
     </div>
 
@@ -1876,7 +1975,7 @@
     }
   });
   // Close hamburger when clicking any dropdown sub-link or utility links
-  ni.querySelectorAll('.nav-dropdown a,.lang-btn,.nav-contact-mobile,.nav-apply-mobile').forEach(function(a){
+  ni.querySelectorAll('.nav-dropdown a,.lang-btn,.nav-contact-mobile,.nav-apply-mobile,.nav-search-btn').forEach(function(a){
     a.addEventListener('click',function(){closeNav();});
   });
 })();
@@ -1935,6 +2034,56 @@
 function openContactModal(){var m=document.getElementById('contact-modal');m.style.display='flex';}
 function closeContactModal(){document.getElementById('contact-modal').style.display='none';}
 function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(function(){var b=document.getElementById('copy-email-btn');b.textContent='Copied!';b.style.color='#4ade80';setTimeout(function(){b.textContent='Copy';b.style.color='#B8922A';},2000);});}
+</script>
+
+
+<div id="search-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.75);align-items:flex-start;justify-content:center;padding:4.5rem 1rem 1rem;overflow-y:auto;" onclick="if(event.target===this)closeSearchModal()">
+  <div style="background:#fff;border-radius:12px;max-width:640px;width:100%;padding:1.5rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4);">
+    <button onclick="closeSearchModal()" aria-label="Close" style="position:absolute;top:.75rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;line-height:1;color:#999;">&times;</button>
+    <input type="text" id="siteSearchInput" placeholder="Search the site (e.g. tuition, visa, GMAT, housing)..." autocomplete="off" style="width:100%;padding:.9rem 1rem;font-size:16px;border:2px solid var(--rule);border-radius:8px;font-family:var(--ff-body);box-sizing:border-box;">
+    <div id="siteSearchResults" style="margin-top:.75rem;max-height:60vh;overflow-y:auto;"></div>
+    <div id="siteSearchEmpty" style="display:none;padding:2rem 0;text-align:center;color:var(--ink-3);font-size:var(--t-sm);">No results found.</div>
+  </div>
+</div>
+<script>window.__SEARCH_INDEX__ = [{"t": "What makes Tunghai GMBA different?", "s": "Tunghai Global MBA is an AACSB-accredited , English-taught MBA in Taichung, Taiwan, ranked among the top 5% of business schools worldwide. The program develops leaders who can navigate complexity…", "p": "index.html", "a": "why-gmba"}, {"t": "A truly international classroom", "s": "30–40 students. 10+ nationalities. Small enough that you actually know everyone — diverse enough that everyone comes from somewhere different. Coming Soon Student Film · 2 min A Classroom Without…", "p": "index.html", "a": "class-profile"}, {"t": "Life at Tunghai University", "s": "134 hectares of tree-lined paths, traditional architecture, and the iconic Luce Memorial Chapel — designed by I.M. Pei. A pastoral campus where global careers begin, far from the noise of any city.…", "p": "index.html", "a": "campus-life"}, {"t": "Why Taiwan?", "s": "Taiwan doesn't just produce the chips that run the world's AI — it assembles the servers, manufactures the devices, and hosts the companies behind every major AI breakthrough. Studying here puts you…", "p": "index.html", "a": "living-in-taiwan"}, {"t": "News & events", "s": "Feature Story May 22, 2026 Student Life Graduation group photo on campus Class of 2026 GMBA graduates celebrated at Luce Chapel — capturing friendships and milestones from two years of shared…", "p": "index.html", "a": "news"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "index.html", "a": "contact"}, {"t": "Program overview", "s": "The curriculum is structured in four deliberate layers — research discipline, AI and data capability, cross-functional application, and strategic leadership — each one building on the last,…", "p": "academics.html", "a": "curriculum"}, {"t": "Academic excellence meets industry insight", "s": "GMBA faculty hold doctoral degrees from leading universities in Taiwan, the US, Europe, and Asia — and bring that research depth into classrooms shaped by Asia's technology economy. One program. Five…", "p": "academics.html", "a": "faculty"}, {"t": "Expand your global horizons", "s": "GMBA students can pursue exchange semesters and joint-degree opportunities at nearly 400 partner universities across 40+ countries — all coordinated through Tunghai's Office of International…", "p": "academics.html", "a": "joint-degree"}, {"t": "Academic calendar", "s": "Plan your studies with our semester schedule and download the official Tunghai University academic calendar. Period Dates Notes Fall Semester September – January Semester 1 Fall Oral Defense…", "p": "academics.html", "a": "academic-calendar"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "academics.html", "a": "contact"}, {"t": "Scholarships", "s": "Taiwan offers some of the most generous graduate scholarships in Asia. Combined with low tuition and living costs, an MBA here can cost a fraction of alternatives. Taiwan government scholarships The…", "p": "admissions.html", "a": "tuition"}, {"t": "How to apply", "s": "Find your applicant category below, then go straight to the right application portal. Only international applicants from overseas have a spring intake — every other route enrols in the fall.…", "p": "admissions.html", "a": "admissions"}, {"t": "Life Admin — Quick Reference", "s": "Three things every incoming student must handle. We've made it short. Visa & ARC Before arrival — FS Resident Visa Within 15 days — ARC registration Annually — renewal Tourist visas cannot be…", "p": "admissions.html", "a": "practical-info"}, {"t": "Student forms & documents", "s": "Download official GMBA forms for thesis procedures, examination, and submission. All files are PDF — open, print, and submit to the GMBA office. Thesis Preparation Supervision Agreement Advisor…", "p": "admissions.html", "a": "downloads"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "admissions.html", "a": "contact"}, {"t": "What is Tunghai University GMBA?", "s": "Tunghai GMBA is a fully English-taught Global MBA program in Taichung, Taiwan, launched in 2018 and accredited by AACSB. The curriculum is built in four layers — Research Foundation, AI &amp; Data…", "p": "faq.html", "a": "faq-g01"}, {"t": "How is GMBA different from a regular MBA or an IMBA program?", "s": "A GMBA (Global MBA) is designed from the start for an international cohort, so every course, assignment, and thesis runs in English and the classroom itself is multinational. Tunghai GMBA differs…", "p": "faq.html", "a": "faq-g02"}, {"t": "Why study an MBA in Taiwan rather than Singapore, Hong Kong, or Japan?", "s": "Taiwan gives you direct access to the world's AI hardware ecosystem at roughly one-third the living cost of Singapore. Taiwan fabricates about 90% of the world's advanced chips, builds around 70% of…", "p": "faq.html", "a": "faq-g03"}, {"t": "Is Tunghai GMBA accredited?", "s": "Yes. Tunghai University's College of Management holds AACSB accreditation, which fewer than 5% of business schools worldwide have achieved. The GMBA degree is also approved by Taiwan's Ministry of…", "p": "faq.html", "a": "faq-g04"}, {"t": "How many students are in each cohort, and where do they come from?", "s": "Each GMBA cohort has 30–40 students from 10 or more countries. Across the 2018–2026 classes, students have come from 22 nationalities across 8 world regions: Southeast Asia 65.4%, East Asia 21.1%,…", "p": "faq.html", "a": "faq-g05"}, {"t": "What courses does GMBA offer?", "s": "The curriculum follows a four-layer framework: Research Foundation, then AI &amp; Data Core, then AI Analytics Across Functions, then Leadership &amp; Strategy. Each layer builds on the one before…", "p": "faq.html", "a": "faq-a01"}, {"t": "Do I need a GMAT or GRE score to apply?", "s": "No. Tunghai GMBA does not require GMAT or GRE scores. Admission is based on document review — your bachelor's degree, English proficiency evidence, autobiography, and study plan. Applicants already…", "p": "faq.html", "a": "faq-a02"}, {"t": "Can I apply without a business or management background?", "s": "Yes. Prior study in business, management, or economics is not required — a bachelor's degree in any field is acceptable. The Research Foundation layer at the start of the curriculum is designed to…", "p": "faq.html", "a": "faq-a03"}, {"t": "Is GMBA a thesis or non-thesis program?", "s": "GMBA is a thesis-based master's program. Students work with a faculty advisor, submit a supervision agreement and topic evaluation form, and complete an oral defense before graduating. All thesis…", "p": "faq.html", "a": "faq-a04"}, {"t": "How long does the program take to complete?", "s": "Students can complete the degree in as little as 1 year with full-time, intensive coursework; most take two, with a maximum allowed duration of four years, depending on course selection and thesis progress. The degree requires 30 credits in total — 21 required credits, 8…", "p": "faq.html", "a": "faq-a05"}, {"t": "Can I study abroad or earn a dual degree?", "s": "Yes. GMBA students can pursue exchange semesters and joint-degree programs at nearly 400 partner universities across more than 40 countries, coordinated through Tunghai's Office of International…", "p": "faq.html", "a": "faq-a06"}, {"t": "Who teaches in the GMBA program?", "s": "GMBA faculty are drawn from five colleges at Tunghai University, not from the business school alone, which is what makes the cross-disciplinary curriculum possible. Teaching areas include supply…", "p": "faq.html", "a": "faq-a07"}, {"t": "What are the admission requirements, and how do I apply?", "s": "You need a bachelor's degree and evidence of English proficiency. There are three application routes with different portals and windows: International (Overseas), In Taiwan / Taiwan Nationals, and…", "p": "faq.html", "a": "faq-ad01"}, {"t": "When are the application deadlines?", "s": "Deadlines depend on your applicant category. International applicants from overseas apply in October for the spring intake, or between January and May for the fall intake. Taiwan nationals and…", "p": "faq.html", "a": "faq-ad02"}, {"t": "What is the difference between the spring and fall intake?", "s": "Only international applicants from overseas have a spring intake; all other routes enroll in the fall. The curriculum and degree are identical — the spring intake simply lets you start six months…", "p": "faq.html", "a": "faq-ad03"}, {"t": "How many years of work experience do I need?", "s": "Work experience is not a formal admission requirement — recent graduates are welcome to apply. Professional experience does strengthen your study plan, since it gives you concrete cases to write…", "p": "faq.html", "a": "faq-ad04"}, {"t": "What documents do I need to prepare?", "s": "International and Overseas Compatriot applicants submit an autobiography in English, a study plan in English, and supporting documents. Applicants already in Taiwan or holding Taiwanese nationality…", "p": "faq.html", "a": "faq-ad05"}, {"t": "Is there an interview?", "s": "An interview is required only for applicants already in Taiwan and for Taiwanese nationals, who also attend an information session. International applicants from overseas and Overseas Compatriots are…", "p": "faq.html", "a": "faq-ad06"}, {"t": "What English test scores are accepted?", "s": "Overseas applicants can meet the language requirement with any one of the following: CEFR B1 or above, TOEFL iBT 47, TOEFL ITP 500, IELTS 4.0, or TOEIC 550. Applicants who graduated from an…", "p": "faq.html", "a": "faq-ad07"}, {"t": "What is the tuition, and what scholarships are available?", "s": "Tuition is NT$69,020 per semester (about USD 2,124), and all students pay the same rate regardless of nationality. Scholarships come from three sources: the Taiwanese government (MOE Taiwan…", "p": "faq.html", "a": "faq-f01"}, {"t": "What is the total cost of the whole degree?", "s": "Budget roughly NT$150,000 (about USD 4,615) per semester covering tuition, housing, health insurance, and living expenses — so about NT$600,000 (USD 18,500) for a standard two-year degree before any…", "p": "faq.html", "a": "faq-f02"}, {"t": "How competitive are the scholarships, and when do I apply?", "s": "Government scholarships and university scholarships run on separate timelines. Taiwan government scholarships (MOE, MOFA) are applied for through the Taiwanese representative office — TECO or AIT —…", "p": "faq.html", "a": "faq-f03"}, {"t": "Is on-campus housing guaranteed?", "s": "On-campus dormitories are available but spots are limited, so housing is not guaranteed. Tunghai has 46 dormitory buildings, and on-campus housing costs NT$10,560–41,360 per semester depending on…", "p": "faq.html", "a": "faq-f04"}, {"t": "What happens to tuition if I need a third year?", "s": "From the third year onward, you pay per credit rather than a full semester's tuition — NT$2,090 per credit plus NT$440 in miscellaneous fees per credit. For a student finishing a thesis with few or…", "p": "faq.html", "a": "faq-f05"}, {"t": "What visa and ARC do I need?", "s": "Apply for a Resident Visa (type FS) at a ROC representative office before you travel — do not enter on a landing or tourist visa, because it cannot be converted to an ARC. After you arrive, the…", "p": "faq.html", "a": "faq-l01"}, {"t": "What health insurance will I have?", "s": "All international students are automatically enrolled in Group Medical Insurance when they arrive. After six months of continuous residence, you transfer to Taiwan's National Health Insurance, which…", "p": "faq.html", "a": "faq-l02"}, {"t": "Do I need to speak Chinese?", "s": "No. All courses, assignments, and the thesis are conducted entirely in English, and the Office of International Relations handles administrative procedures — ARC, insurance, work permits — in…", "p": "faq.html", "a": "faq-l03"}, {"t": "What are living costs in Taichung?", "s": "Monthly living costs run about NT$24,000 (roughly USD 740) for food, transport, and daily expenses, with housing budgeted separately. Total monthly costs including accommodation come to about USD…", "p": "faq.html", "a": "faq-l04"}, {"t": "Can I work or intern while studying?", "s": "Yes, up to 20 hours per week during the semester and with no hour limit during breaks. Both part-time work and internships require a work permit, which you apply for online at ezwp.wda.gov.tw with…", "p": "faq.html", "a": "faq-l05"}, {"t": "What is campus life like at Tunghai?", "s": "Tunghai's campus covers 134 hectares of tree-lined paths and traditional architecture, including the Luce Memorial Chapel designed by I.M. Pei. There are more than 150 student clubs and 46 dormitory…", "p": "faq.html", "a": "faq-l06"}, {"t": "What is it like to live in Taichung?", "s": "Taichung offers the food and amenities of a major Taiwanese city at a cost of living well below Taipei, Singapore, or Hong Kong, which means a scholarship stretches considerably further. The city is…", "p": "faq.html", "a": "faq-l07"}, {"t": "Can I stay in Taiwan to work after graduation?", "s": "Yes. After receiving your diploma you can extend your ARC for up to one year to look for work. Full-time employment requires your employer to apply through Taiwan's Point-Based System, and a separate…", "p": "faq.html", "a": "faq-c01"}, {"t": "What careers do GMBA graduates pursue?", "s": "Graduates work in business management, marketing, finance, and operations across Taiwan's technology and AI-related industries. Taiwan's semiconductor and AI ecosystem generates steady demand for…", "p": "faq.html", "a": "faq-c02"}, {"t": "Does GMBA offer career services and an alumni network?", "s": "GMBA does not yet have a dedicated alumni association. Graduates can use Tunghai University's campus-wide Internship &amp; Student Achievement Center (ISAC), which offers career counseling, resume…", "p": "faq.html", "a": "faq-c03"},{"t": "Can I learn Chinese while I'm here?", "s": "Yes, and many students do. Master's students can take elective beginner and intermediate Chinese courses, and the <a href=\"https://clc.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">Chinese Language Center</a> runs a full Mandarin program that pairs classroom learning with real-life practice. See the <a href=\"https://oir.thu.edu.tw/front/400_IntlDegree/400_3_Chinese_L/pages.php?ID=dGh1X29zYSY0MDBfM19DaGluZXNlX0w=\" target=\"_blank\" rel=\"noopener\">OIR Chinese Learning page</a> for details. Basic Mandarin is also a real advantage when you enter Taiwan's job market.", "p": "faq.html", "a": "faq-l08"}];</script>
+<script>
+(function(){
+  var btn = document.getElementById('siteSearchBtn');
+  var modal = document.getElementById('search-modal');
+  var input = document.getElementById('siteSearchInput');
+  var results = document.getElementById('siteSearchResults');
+  var empty = document.getElementById('siteSearchEmpty');
+  var idx = window.__SEARCH_INDEX__ || [];
+  if (!btn || !modal) return;
+  function openModal(){ modal.style.display='flex'; setTimeout(function(){ input.focus(); }, 50); }
+  window.closeSearchModal = function(){ modal.style.display='none'; input.value=''; render([]); };
+  btn.addEventListener('click', openModal);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeSearchModal();
+  });
+  function escapeHtml(s){ var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  function render(list){
+    if (list.length === 0){
+      results.innerHTML = '';
+      empty.style.display = input.value.trim() ? 'block' : 'none';
+      return;
+    }
+    empty.style.display = 'none';
+    results.innerHTML = list.map(function(item){
+      return '<a href="' + item.p + '#' + item.a + '" style="display:block;padding:.85rem 0;border-bottom:1px solid #eee;text-decoration:none;color:inherit;">' +
+        '<div style="font-weight:800;color:var(--maroon);font-size:15px;margin-bottom:.25rem;">' + escapeHtml(item.t) + '</div>' +
+        '<div style="font-size:13.5px;color:var(--ink-3);line-height:1.5;">' + escapeHtml(item.s) + '</div></a>';
+    }).join('');
+  }
+  input.addEventListener('input', function(){
+    var q = input.value.trim().toLowerCase();
+    if (!q){ render([]); return; }
+    var matches = idx.filter(function(item){
+      return item.t.toLowerCase().indexOf(q) !== -1 || item.s.toLowerCase().indexOf(q) !== -1;
+    }).slice(0, 12);
+    render(matches);
+  });
+})();
 </script>
 
 </body></html>

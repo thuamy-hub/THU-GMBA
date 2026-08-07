@@ -298,74 +298,259 @@
     </style>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "EducationalOrganization",
-        "name": "Tunghai University GMBA Program",
-        "alternateName": ["GMBA", "東海大學國際企業管理碩士學位學程", "Tunghai Global MBA"],
-        "url": "https://gmba.thu.edu.tw/",
-        "description": "A fully English-taught MBA at Tunghai University, Taichung, Taiwan — positioned at the center of Asia's AI and semiconductor industry ecosystem. MOE-approved since 2017.",
-        "foundingDate": "2018",
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Tunghai University GMBA Program",
+      "alternateName": [
+        "GMBA",
+        "東海大學國際企業管理碩士學位學程",
+        "Tunghai Global MBA"
+      ],
+      "url": "https://gmba.thu.edu.tw/",
+      "description": "A fully English-taught MBA at Tunghai University, Taichung, Taiwan — positioned at the center of Asia's AI and semiconductor industry ecosystem. MOE-approved since 2017.",
+      "foundingDate": "2018",
+      "email": "gmba@thu.edu.tw",
+      "telephone": "+886-4-2359-0121",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 1727, Section 4, Taiwan Boulevard",
+        "addressLocality": "Xitun District, Taichung City",
+        "postalCode": "407224",
+        "addressCountry": "TW"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
         "email": "gmba@thu.edu.tw",
-        "telephone": "+886-4-2359-0121",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "No. 1727, Section 4, Taiwan Boulevard",
-          "addressLocality": "Xitun District, Taichung City",
-          "postalCode": "407224",
-          "addressCountry": "TW"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "gmba@thu.edu.tw",
-          "contactType": "admissions",
-          "availableLanguage": ["English", "Chinese"]
-        },
-        "parentOrganization": {
-          "@type": "CollegeOrUniversity",
-          "name": "Tunghai University",
-          "url": "https://www.thu.edu.tw/"
-        }
-      },
-      {
-        "@type": "Course",
-        "name": "Global Master of Business Administration (GMBA)",
-        "provider": {"@type": "CollegeOrUniversity", "name": "Tunghai University"},
-        "description": "A two-year, fully English-taught MBA program covering strategy, marketing, finance, operations, and digital transformation. Located in Taichung, Taiwan — the manufacturing and AI integration capital of the world's semiconductor supply chain.",
-        "educationalLevel": "Graduate",
-        "inLanguage": "en",
-        "timeRequired": "P2Y",
-        "courseMode": "onsite",
-        "educationalCredentialAwarded": "Master of Business Administration (MBA)",
-        "offers": {
-          "@type": "Offer",
-          "price": "60000",
-          "priceCurrency": "TWD",
-          "description": "NT$69,020 per semester (including miscellaneous fees), NT$138,040 per year (~USD 4,250). All students pay the same tuition."
-        },
-        "url": "https://gmba.thu.edu.tw/"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type": "Question","name": "What is the Tunghai University GMBA program?","acceptedAnswer": {"@type": "Answer","text": "The GMBA (Global MBA) at Tunghai University is a fully English-taught master's program approved by Taiwan's Ministry of Education in 2017, welcoming its first cohort in 2018. It serves both local professionals and international students who want careers in Taiwan's AI and technology-driven economy."}},
-          {"@type": "Question","name": "Why study an MBA in Taiwan for AI industry access?","acceptedAnswer": {"@type": "Answer","text": "Taiwan produces over 90% of the world's advanced semiconductors and is the core node of the global AI supply chain — home to TSMC, MediaTek, and NVIDIA's major manufacturing partners. Taichung is a hub for precision manufacturing and AI-integrated applications. GMBA students gain direct access to this ecosystem through industry partnerships, guest lectures, and career networks."}},
-          {"@type": "Question","name": "What courses does Tunghai GMBA offer?","acceptedAnswer": {"@type": "Answer","text": "A four-layer curriculum: Research Foundation (Business Research Methods) → AI & Data Technology Core → AI Analytics Across Every Function → Leadership, Strategy & Innovation. All courses taught entirely in English."}},
-          {"@type": "Question","name": "How much is the tuition for Tunghai GMBA?","acceptedAnswer": {"@type": "Answer","text": "Tuition is approximately NT$69,020 per semester (about USD 4,250 per year). All students pay the same tuition — significantly lower than comparable English-taught MBA programs in Singapore (~USD 37,000/year) or Hong Kong (~USD 32,000/year)."}},
-          {"@type": "Question","name": "What scholarships are available for GMBA students?","acceptedAnswer": {"@type": "Answer","text": "Multiple scholarships are available: (1) MOE Taiwan Scholarship — NT$20,000/month living allowance plus up to NT$40,000/semester tuition support, apply by March 31 through Taiwan's representative office. (2) MOFA Taiwan Scholarship — NT$33,000/month for eligible nationalities. (3) MOE Huayu Enrichment Scholarship — NT$28,000/month. (4) Tunghai International Student Merit Scholarship — apply through OIR (oir@thu.edu.tw)."}},
-          {"@type": "Question","name": "What visa and ARC do international students need?","acceptedAnswer": {"@type": "Answer","text": "Apply for a Resident Visa (type FS) at a ROC representative office before arrival. Do not enter on a landing visa — it cannot be converted to an ARC. After arrival, OIR assists new students to obtain the ARC collectively. The ARC must be renewed annually, at least 3 months before expiry."}},
-          {"@type": "Question","name": "What health insurance do GMBA students have?","acceptedAnswer": {"@type": "Answer","text": "All international students are automatically enrolled in Group Medical Insurance upon arrival. After 6 months of continuous residence with a valid ARC, they transition to National Health Insurance (NHI). To claim: bring diagnosis certificate and receipt to OIR."}},
-          {"@type": "Question","name": "Do GMBA students need to speak Chinese?","acceptedAnswer": {"@type": "Answer","text": "No. All courses, assignments, and thesis are conducted entirely in English. Administrative procedures including ARC, insurance, and work permits are handled in English by OIR. Optional Chinese courses are available at the on-campus Chinese Language Center."}},
-          {"@type": "Question","name": "What are living costs in Taichung?","acceptedAnswer": {"@type": "Answer","text": "Monthly living costs in Taichung are approximately NT$24,000 (around USD 740), covering food, transport, and daily expenses. Housing is budgeted separately: on-campus dormitories are available with limited spots, and off-campus rental in the Xitun area runs approximately NT$30,000–48,000 per semester. Estimated total cost per semester is around NT$100,000."}},
-          {"@type": "Question","name": "Can GMBA students work or intern while studying?","acceptedAnswer": {"@type": "Answer","text": "Yes — up to 20 hours per week during semester, with no limit during breaks. Both part-time work and internships require a work permit. Apply online at ezwp.wda.gov.tw with student ID, passport, ARC, and enrollment certificate. Working without a permit carries fines of NT$30,000–150,000 and forced departure."}},
-          {"@type": "Question","name": "Can GMBA graduates stay in Taiwan to work after graduation?","acceptedAnswer": {"@type": "Answer","text": "Yes. After receiving the diploma, graduates may extend their ARC for up to 1 year for job-seeking. Full-time employment requires employer sponsorship via the Point-Based System. A separate MOE post-graduation internship program is also available for international graduates."}},
-          {"@type": "Question","name": "What are the admission requirements for Tunghai GMBA, and how do I apply?","acceptedAnswer": {"@type": "Answer","text": "Applicants must hold a bachelor's degree. There are three applicant categories: International Students (Overseas), Already in Taiwan / Taiwan Nationals, and Overseas Compatriots (僑生) — each with different application windows and portals. Email gmba@thu.edu.tw for eligibility guidance."}}
+        "contactType": "admissions",
+        "availableLanguage": [
+          "English",
+          "Chinese"
         ]
+      },
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "Tunghai University",
+        "url": "https://www.thu.edu.tw/"
       }
-    ]
-  }
+    },
+    {
+      "@type": "Course",
+      "name": "Global Master of Business Administration (GMBA)",
+      "provider": {
+        "@type": "CollegeOrUniversity",
+        "name": "Tunghai University"
+      },
+      "description": "A two-year, fully English-taught MBA program covering strategy, marketing, finance, operations, and digital transformation. Located in Taichung, Taiwan — the manufacturing and AI integration capital of the world's semiconductor supply chain.",
+      "educationalLevel": "Graduate",
+      "inLanguage": "en",
+      "timeRequired": "P2Y",
+      "courseMode": "onsite",
+      "educationalCredentialAwarded": "Master of Business Administration (MBA)",
+      "offers": {
+        "@type": "Offer",
+        "price": "60000",
+        "priceCurrency": "TWD",
+        "description": "NT$69,020 per semester (including miscellaneous fees), NT$138,040 per year (~USD 4,250). All students pay the same tuition."
+      },
+      "url": "https://gmba.thu.edu.tw/"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://gmba.thu.edu.tw/admissions.html#faqpage",
+      "inLanguage": "en",
+      "url": "https://gmba.thu.edu.tw/admissions.html",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the admission requirements, and how do I apply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need a <strong>bachelor's degree and evidence of English proficiency</strong>. There are three application routes with different portals and windows: International (Overseas), In Taiwan / Taiwan Nationals, and Overseas Compatriots. Find your route on the Admissions page and apply through the linked portal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When are the application deadlines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deadlines depend on your applicant category. International applicants from overseas apply in October for the spring intake, or between January and May for the fall intake. Taiwan nationals and applicants already in Taiwan apply in two fall rounds: October–November and December–February. Overseas Compatriots apply <strong>April–June for the fall intake</strong>."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between the spring and fall intake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only international applicants from overseas have a spring intake; all other routes enroll in the fall. The curriculum and degree are identical — the spring intake simply lets you start <strong>six months earlier</strong> without waiting a full year. If you are applying from outside Taiwan and your documents are ready by October, the spring intake is worth considering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents do I need to prepare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "International and Overseas Compatriot applicants submit <strong>an autobiography in English, a study plan in English</strong>, and supporting documents. Applicants already in Taiwan or holding Taiwanese nationality submit transcripts and a CV instead. All applicants need proof of a bachelor's degree and evidence of English proficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there an interview?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An interview is <strong>required only for applicants already in Taiwan and for Taiwanese nationals</strong>, who also attend an information session. International applicants from overseas and Overseas Compatriots are admitted by document review alone, with no interview."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What English test scores are accepted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Overseas applicants can meet the language requirement with any one of the following: <strong>CEFR B1 or above, TOEFL iBT 47, TOEFL ITP 500, IELTS 4.0, or TOEIC 550</strong>. Applicants who graduated from an English-medium school or majored in English can submit a school certificate instead of a test score."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many years of work experience do I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Work experience is <strong>not a formal admission requirement</strong> — recent graduates are welcome to apply. Professional experience does strengthen your study plan, since it gives you concrete cases to write about, but the program admits students at a range of career stages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the tuition, and what scholarships are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tuition is <strong>NT$69,020 per semester</strong> (about USD 2,124), and all students pay the same rate regardless of nationality. Scholarships come from three sources: the Taiwanese government (<a href=\"https://english.moe.gov.tw/cp-24-16833-23C09-1.html\" target=\"_blank\" rel=\"noopener\">MOE Taiwan Scholarship</a>, <a href=\"https://english.moe.gov.tw/cp-24-24284-3ea37-1.html\" target=\"_blank\" rel=\"noopener\">MOE Huayu Enrichment Scholarship</a>, <a href=\"https://en.mofa.gov.tw/cp.aspx?n=1325\" target=\"_blank\" rel=\"noopener\">MOFA Taiwan Scholarship</a>), Tunghai University's <a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">Office of International Relations</a>, and the GMBA program itself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the total cost of the whole degree?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Budget roughly NT$150,000 (about USD 4,615) per semester covering tuition, housing, health insurance, and living expenses — so about <strong>NT$600,000 (USD 18,500)</strong> for a standard two-year degree before any scholarship. Scholarships can reduce this substantially: the <a href=\"https://english.moe.gov.tw/cp-24-16833-23C09-1.html\" target=\"_blank\" rel=\"noopener\">MOE Taiwan Scholarship</a> alone provides NT$20,000 per month plus up to NT$40,000 per semester in tuition support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is on-campus housing guaranteed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On-campus dormitories are available but spots are limited, so housing <strong>is not guaranteed</strong>. Tunghai has 46 dormitory buildings, and on-campus housing costs NT$10,560–41,360 per semester depending on room type. Off-campus rental in the Xitun area near campus runs about NT$30,000–48,000 per semester."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to tuition if I need a third year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From the third year onward, you pay per credit rather than a full semester's tuition — <strong>NT$2,090 per credit</strong> plus NT$440 in miscellaneous fees per credit. For a student finishing a thesis with few or no remaining courses, this is far cheaper than a full semester."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How competitive are the scholarships, and when do I apply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Government scholarships and university scholarships run on separate timelines. Taiwan government scholarships (MOE, MOFA) are applied for through the Taiwanese representative office — TECO or AIT — in your home country, with a typical deadline of <strong>March 31 each year</strong>, and they are awarded before you arrive. Tunghai and GMBA scholarships are handled after admission, and the GMBA program scholarship amount is announced each semester at the information session."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What visa and ARC do I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Apply for a <strong>Resident Visa (type FS)</strong> at a ROC representative office before you travel — do not enter on a landing or tourist visa, because it cannot be converted to an ARC. After you arrive, the <a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">Office of International Relations</a> helps new students obtain the ARC collectively. The ARC is renewed annually, and you should renew at least three months before it expires."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What health insurance will I have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All international students are automatically enrolled in Group Medical Insurance when they arrive. After <strong>six months of continuous residence</strong>, you transfer to Taiwan's National Health Insurance, which costs NT$4,956 per semester. To make a claim, bring your diagnosis certificate and receipt to the <a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">Office of International Relations</a>."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I work or intern while studying?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, up to <strong>20 hours per week</strong> during the semester and with no hour limit during breaks. Both part-time work and internships require a work permit, which you apply for online at <a href=\"https://ezwp.wda.gov.tw/\" target=\"_blank\" rel=\"noopener\">ezwp.wda.gov.tw</a> with your student ID, passport, ARC, and enrollment certificate. Working without a permit carries a fine of NT$30,000–150,000 and forced departure, so apply before you start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are living costs in Taichung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Monthly living costs run about NT$24,000 (roughly USD 740) for food, transport, and daily expenses, with housing budgeted separately. Total monthly costs including accommodation come to about <strong>USD 340–505</strong> — compared with USD 640–940 in Seoul, USD 745–1,080 in Tokyo, and USD 1,070–1,635 in Singapore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to speak Chinese?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All courses, assignments, and the thesis are conducted <strong>entirely in English</strong>, and the <a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">Office of International Relations</a> handles administrative procedures — ARC, insurance, work permits — in English."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is campus life like at Tunghai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tunghai's campus covers <strong>134 hectares</strong> of tree-lined paths and traditional architecture, including the Luce Memorial Chapel designed by I.M. Pei. There are more than 150 student clubs and 46 dormitory buildings. The campus sits away from the noise of the city center while remaining within Taichung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is it like to live in Taichung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Taichung offers the food and amenities of a major Taiwanese city at a cost of living <strong>well below Taipei, Singapore, or Hong Kong</strong>, which means a scholarship stretches considerably further. The city is also at the center of Taiwan's AI-integrated manufacturing belt, so industry visits and internship opportunities are close at hand."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I learn Chinese while I'm here?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and many students do. Master's students can take elective beginner and intermediate Chinese courses, and the <a href=\"https://clc.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">Chinese Language Center</a> runs a full Mandarin program that pairs classroom learning with real-life practice. See the <a href=\"https://oir.thu.edu.tw/front/400_IntlDegree/400_3_Chinese_L/pages.php?ID=dGh1X29zYSY0MDBfM19DaGluZXNlX0w=\" target=\"_blank\" rel=\"noopener\">OIR Chinese Learning page</a> for details. Basic Mandarin is also a real advantage when you enter Taiwan's job market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I stay in Taiwan to work after graduation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. After receiving your diploma you can <strong>extend your ARC for up to one year</strong> to look for work. Full-time employment requires your employer to apply through Taiwan's Point-Based System, and a separate Ministry of Education post-graduation internship program is also available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does GMBA offer career services and an alumni network?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GMBA <strong>does not yet have a dedicated alumni association</strong>. Graduates can use Tunghai University's campus-wide Internship &amp; Student Achievement Center (ISAC), which offers career counseling, resume and interview coaching, corporate mentor matching, and job fairs open to all students and graduates. Details: <a href=\"https://isac-net.thu.edu.tw/\" target=\"_blank\" rel=\"noopener\">isac-net.thu.edu.tw</a>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What careers do GMBA graduates pursue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Graduates work in business management, marketing, finance, and operations across Taiwan's technology and AI-related industries. Taiwan's semiconductor and AI ecosystem generates steady demand for bilingual professionals, and the Ministry of Labor operates a <strong>streamlined work permit process</strong> for international graduates of accredited programs."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <style>
@@ -1239,6 +1424,10 @@
           <a href="admissions.html#downloads">Downloads</a>
         </div>
       </div>
+      <div class="nav-item">
+        <a href="faq.html">FAQ</a>
+      </div>
+      <button type="button" id="siteSearchBtn" class="nav-search-btn" aria-label="Search" style="background:none;border:none;color:rgba(255,255,255,0.92);font-size:0.82rem;font-weight:700;cursor:pointer;padding:0 0.6rem;display:flex;align-items:center;gap:4px;font-family:inherit;letter-spacing:0.03em;text-transform:uppercase;height:100%;">🔍<span>Search</span></button>
 
       
       <a href="admissions-zh.html" class="lang-btn" onclick="sessionStorage.setItem('lang-manual','1')">中文</a>
@@ -1252,7 +1441,7 @@
   <div class="container">
     <span class="ph-tag">Admissions</span>
     <h1>Admissions &amp; Scholarships</h1>
-    <p>Entry requirements, tuition and scholarships, and what to prepare before you arrive.</p>
+    <p>Entry requirements, tuition and scholarships, plus practical info and downloadable forms.</p>
   </div>
 </div>
 
@@ -1557,56 +1746,139 @@
     <!-- FAQ -->
     <div id="faq">
       <h2 style="color:var(--ink)">Everything you need to know</h2>
-      <div class="faq-cols">
-        <div>
-          <details>
-            <summary>Why study an MBA in Taiwan for AI industry access?</summary>
-            <p class="faq-a">Taiwan is the world's leading producer of semiconductors and a critical node in the global AI supply chain, home to TSMC, MediaTek, and major NVIDIA manufacturing partners. Taichung, where Tunghai University is located, is a hub for AI-integrated manufacturing. GMBA students have direct access to this ecosystem through industry partnerships, guest lectures, and career networks.</p>
-          </details>
-          <details>
-            <summary>What courses does GMBA offer?</summary>
-            <p class="faq-a">A four-layer framework: <strong>Research Foundation</strong> → <strong>AI &amp; Data Core</strong> → <strong>AI Analytics Across Functions</strong> → <strong>Leadership &amp; Strategy</strong>. Every course builds on the last — all taught entirely in English. → <a href="#curriculum">Full curriculum</a></p>
-          </details>
-          <details>
-            <summary>What is the tuition, and what scholarships are available?</summary>
-            <p class="faq-a">Tuition is <strong>~NT$69,020/semester</strong> (~USD 4,250/year) — significantly lower than comparable programs in Singapore or Hong Kong. Multiple scholarships are available, including the MOE Taiwan Scholarship (NT$20,000/month living allowance + up to NT$40,000/semester tuition support). → <a href="#tuition">Scholarships, Tuition and Fees</a></p>
-          </details>
-          <details>
-            <summary>What visa and ARC do I need?</summary>
-            <p class="faq-a">Apply for a <strong>Resident Visa (type FS)</strong> at a ROC representative office before arrival — do not enter on a landing visa, as it cannot be converted to an ARC. After arrival, OIR collectively assists new students to obtain the ARC (renewed annually; renew at least 3 months before expiry). → <a href="https://oir.thu.edu.tw/redirect.php?ID=400_5_ARC" target="_blank" rel="noopener">OIR ARC Guide</a></p>
-          </details>
-          <details>
-            <summary>What health insurance do I have?</summary>
-            <p class="faq-a">All international students are automatically enrolled in Group Medical Insurance upon arrival. After 6 months of continuous residence, you transition to National Health Insurance (NHI). To claim: bring your diagnosis certificate and receipt to OIR. → <a href="https://oir.thu.edu.tw/redirect.php?ID=400_6_Group_Med" target="_blank" rel="noopener">OIR Insurance Info</a></p>
-          </details>
-          <details>
-            <summary>Do I need to speak Chinese?</summary>
-            <p class="faq-a">No. All courses, assignments, and thesis are conducted entirely in English. Administrative procedures (ARC, insurance, work permits) are handled in English by the Office of International Relations (OIR). Optional Chinese courses are available at the <a href="https://clc.thu.edu.tw" target="_blank" rel="noopener">Chinese Language Center</a>.</p>
-          </details>
+      <p class="sec-lead" style="margin-bottom:0;">Common questions organized by where you are in the application process — see all 35 questions for the complete list.</p>
+        <div class="faq-subcat">
+          <h3 style="font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--maroon);margin:2rem 0 1rem;">Admissions</h3>
+          <div class="faq-cols">
+            <div>
+            <details>
+              <summary>What are the admission requirements, and how do I apply?</summary>
+              <p class="faq-a">You'll need a <strong>bachelor's degree</strong> and English proficiency evidence; the portal and deadline that apply depend on whether you're an international, in-Taiwan, or overseas-compatriot applicant. <a href="admissions.html#admissions">See full details →</a></p>
+            </details>
+            <details>
+              <summary>When are the application deadlines?</summary>
+              <p class="faq-a">Deadlines vary by route: overseas applicants apply in October for spring or January–May for fall, in-Taiwan/Taiwan-national applicants get two fall rounds, and Overseas Compatriots apply <strong>April–June</strong>. <a href="admissions.html#admissions">See full details →</a></p>
+            </details>
+            <details>
+              <summary>What is the difference between the spring and fall intake?</summary>
+              <p class="faq-a">Spring intake is open only to overseas applicants and simply starts the identical program <strong>six months earlier</strong>. <a href="admissions.html#admissions">See full details →</a></p>
+            </details>
+            <details>
+              <summary>What documents do I need to prepare?</summary>
+              <p class="faq-a">Overseas and Overseas-Compatriot applicants submit an <strong>English autobiography and study plan</strong>; in-Taiwan and Taiwanese applicants submit transcripts and a CV instead. <a href="admissions.html#admissions">See full details →</a></p>
+            </details>
+            </div>
+            <div>
+            <details>
+              <summary>Is there an interview?</summary>
+              <p class="faq-a">Interviews apply <strong>only to in-Taiwan and Taiwanese-national applicants</strong>; overseas and Overseas-Compatriot applicants are admitted by document review alone. <a href="admissions.html#admissions">See full details →</a></p>
+            </details>
+            <details>
+              <summary>What English test scores are accepted?</summary>
+              <p class="faq-a">Any one of <strong>CEFR B1, TOEFL iBT 47, TOEFL ITP 500, IELTS 4.0, or TOEIC 550</strong> satisfies the language requirement for overseas applicants. <a href="admissions.html#admissions">See full details →</a></p>
+            </details>
+            <details>
+              <summary>How many years of work experience do I need?</summary>
+              <p class="faq-a">There's <strong>no minimum years of work experience</strong> — recent graduates are welcome alongside applicants with professional backgrounds. <a href="admissions.html#admissions">See full details →</a></p>
+            </details>
+            </div>
+          </div>
         </div>
-        <div>
-          <details>
-            <summary>What are living costs in Taichung?</summary>
-            <p class="faq-a">Monthly living costs are approximately NT$24,000 (~USD 740), covering food, transport, and daily expenses. Housing is budgeted separately: on-campus dormitories are available (limited spots); off-campus rental in the Xitun area runs ~NT$30,000–48,000/semester. Significantly lower than Singapore or Hong Kong. → <a href="#fees-table">Full cost breakdown</a></p>
-          </details>
-          <details>
-            <summary>Can I work or intern while studying?</summary>
-            <p class="faq-a">Yes — up to 20 hrs/week during semester (no limit during breaks). Both part-time work and internships require a work permit; apply online at <a href="https://ezwp.wda.gov.tw" target="_blank" rel="noopener">ezwp.wda.gov.tw</a> with your student ID, passport, ARC, and enrollment certificate. Working without a permit carries fines of NT$30,000–150,000 and forced departure. → <a href="https://oir.thu.edu.tw/redirect.php?ID=400_10_Work_Per" target="_blank" rel="noopener">OIR Work Permit Guide</a></p>
-          </details>
-          <details>
-            <summary>Can I stay in Taiwan to work after graduation?</summary>
-            <p class="faq-a">Yes. After receiving your diploma, you may extend your ARC for up to 1 year for job-seeking. Full-time employment requires your employer to apply via the Point-Based System. A separate <a href="https://depart.moe.edu.tw/ed2500/News.aspx?n=29EA4B95E85C4EA0&sms=485598561214ABB5" target="_blank" rel="noopener">MOE post-graduation internship</a> program is also available. → <a href="https://oir.thu.edu.tw/redirect.php?ID=400_13_Intern_E" target="_blank" rel="noopener">OIR Post-Grad Work Guide</a></p>
-          </details>
-          <details>
-            <summary>What careers are available for GMBA graduates?</summary>
-            <p class="faq-a">GMBA graduates pursue roles in business management, marketing, finance, and operations across Taiwan's technology and AI-related industries. Taiwan's semiconductor and AI ecosystem generates strong demand for bilingual professionals, and Taiwan's Ministry of Labor offers a streamlined work permit process for international graduates from accredited programs.</p>
-          </details>
-          <details>
-            <summary>What are the admission requirements, and how do I apply?</summary>
-            <p class="faq-a">Three applicant categories: <strong>International (Overseas)</strong>, <strong>Already in Taiwan / Taiwan Nationals</strong>, and <strong>Overseas Compatriots (僑生)</strong> — each with different application windows and portals. → <a href="#admissions">Find your application route</a></p>
-          </details>
+
+        <div class="faq-subcat">
+          <h3 style="font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--maroon);margin:2rem 0 1rem;">Tuition & Scholarships</h3>
+          <div class="faq-cols">
+            <div>
+            <details>
+              <summary>What is the tuition, and what scholarships are available?</summary>
+              <p class="faq-a">Tuition runs <strong>NT$69,020 a semester</strong> for every student regardless of nationality, with scholarship support available from the Taiwanese government, Tunghai's OIR, and the GMBA program itself. <a href="admissions.html#tuition">See full details →</a></p>
+            </details>
+            <details>
+              <summary>What is the total cost of the whole degree?</summary>
+              <p class="faq-a">Budget roughly <strong>NT$600,000</strong> for the standard two-year degree before scholarships — about NT$150,000 a semester for tuition, housing, insurance, and living costs combined. <a href="admissions.html#fees-table">See full details →</a></p>
+            </details>
+            <details>
+              <summary>Is on-campus housing guaranteed?</summary>
+              <p class="faq-a">On-campus dorms exist but spots are limited, so housing <strong>isn't guaranteed</strong> — off-campus rental near campus runs about NT$30,000–48,000 a semester. <a href="admissions.html#fees-table">See full details →</a></p>
+            </details>
+            </div>
+            <div>
+            <details>
+              <summary>What happens to tuition if I need a third year?</summary>
+              <p class="faq-a">From year three, fees switch to per-credit billing — <strong>NT$2,090 per credit</strong> plus a small miscellaneous fee — well below full-semester tuition. <a href="admissions.html#fees-table">See full details →</a></p>
+            </details>
+            <details>
+              <summary>How competitive are the scholarships, and when do I apply?</summary>
+              <p class="faq-a">Government and university scholarships run on separate calendars — government awards go through your home country's Taiwan representative office by <strong>March 31</strong>, while GMBA's own award is announced each semester after admission. <a href="admissions.html#tuition">See full details →</a></p>
+            </details>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="faq-subcat">
+          <h3 style="font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--maroon);margin:2rem 0 1rem;">Living in Taiwan</h3>
+          <div class="faq-cols">
+            <div>
+            <details>
+              <summary>What visa and ARC do I need?</summary>
+              <p class="faq-a">Apply for a <strong>Resident Visa (type FS)</strong> before you travel — never a tourist visa — then let OIR help convert it into your ARC on arrival. <a href="admissions.html#practical-info">See full details →</a></p>
+            </details>
+            <details>
+              <summary>What health insurance will I have?</summary>
+              <p class="faq-a">You're auto-enrolled in Group Medical Insurance on arrival, then shift to National Health Insurance after <strong>six continuous months</strong> in Taiwan. <a href="admissions.html#practical-info">See full details →</a></p>
+            </details>
+            <details>
+              <summary>Can I work or intern while studying?</summary>
+              <p class="faq-a">Work and internships are allowed up to <strong>20 hours a week</strong> in term time (unlimited on breaks), but only with a work permit applied for in advance. <a href="admissions.html#practical-info">See full details →</a></p>
+            </details>
+            <details>
+              <summary>What are living costs in Taichung?</summary>
+              <p class="faq-a">Total monthly costs including housing land around <strong>USD 340–505</strong> — a fraction of Seoul, Tokyo, or Singapore. <a href="index.html#living-in-taiwan">See full details →</a></p>
+            </details>
+            </div>
+            <div>
+            <details>
+              <summary>Do I need to speak Chinese?</summary>
+              <p class="faq-a">No — every course and all administration <strong>run in English</strong>, though optional Mandarin classes are a smart addition for the local job market. <a href="admissions.html#practical-info">See full details →</a></p>
+            </details>
+            <details>
+              <summary>What is campus life like at Tunghai?</summary>
+              <p class="faq-a">Tunghai's <strong>134-hectare campus</strong> mixes tree-lined paths, I.M. Pei's Luce Chapel, 150-plus clubs, and 46 dormitories — a quiet retreat still inside Taichung. <a href="index.html#campus-life">See full details →</a></p>
+            </details>
+            <details>
+              <summary>What is it like to live in Taichung?</summary>
+              <p class="faq-a">Taichung delivers big-city food and amenities at a cost <strong>well under Taipei, Singapore, or Hong Kong</strong>, right at the center of Taiwan's manufacturing belt. <a href="index.html#living-in-taiwan">See full details →</a></p>
+            </details>
+            <details>
+              <summary>Can I learn Chinese while I'm here?</summary>
+              <p class="faq-a">Yes — master's students can take elective beginner and intermediate Chinese courses, and the <strong>Chinese Language Center runs a full program</strong> too. <a href="admissions.html#practical-info">See full details →</a></p>
+            </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-subcat">
+          <h3 style="font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--maroon);margin:2rem 0 1rem;">Careers</h3>
+          <div class="faq-cols">
+            <div>
+            <details>
+              <summary>Can I stay in Taiwan to work after graduation?</summary>
+              <p class="faq-a">Yes — your ARC can extend <strong>up to a year</strong> for job-hunting after graduation, with employer-sponsored hiring or the MOE internship program as next steps. <a href="admissions.html#practical-info">See full details →</a></p>
+            </details>
+            <details>
+              <summary>Does GMBA offer career services and an alumni network?</summary>
+              <p class="faq-a">There's <strong>no dedicated GMBA alumni body yet</strong>, but graduates can tap Tunghai's university-wide ISAC center for career counseling, mentoring, and job fairs. <a href="admissions.html#practical-info">See full details →</a></p>
+            </details>
+            </div>
+            <div>
+            <details>
+              <summary>What careers do GMBA graduates pursue?</summary>
+              <p class="faq-a">Graduates land roles across Taiwan's tech and AI-driven industries in management, marketing, finance, and operations, aided by a <strong>streamlined graduate work-permit process</strong>. <a href="admissions.html#practical-info">See full details →</a></p>
+            </details>
+            </div>
+          </div>
+        </div>
+      <a class="faq-more" href="faq.html" style="display:inline-block;margin-top:.5rem;font-weight:800;color:var(--maroon);text-decoration:none;font-size:15px;">See all 35 questions →</a>
     </div>
   </div>
 </section>
@@ -1790,7 +2062,7 @@
         <li><a href="#fees-table">Tuition &amp; Fees</a></li>
         <li><a href="#tuition">Scholarships</a></li>
         <li><a href="#practical-info">Practical Info</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="faq.html">FAQ</a></li>
       </ul>
     </div>
 
@@ -1874,7 +2146,7 @@
       });
     }
   });
-  ni.querySelectorAll('.nav-dropdown a,.lang-btn,.nav-contact-mobile,.nav-apply-mobile').forEach(function(a){
+  ni.querySelectorAll('.nav-dropdown a,.lang-btn,.nav-contact-mobile,.nav-apply-mobile,.nav-search-btn').forEach(function(a){
     a.addEventListener('click',function(){closeNav();});
   });
 })();
@@ -1903,4 +2175,54 @@ function openContactModal(){var m=document.getElementById('contact-modal');m.sty
 function closeContactModal(){document.getElementById('contact-modal').style.display='none';}
 function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(function(){var b=document.getElementById('copy-email-btn');b.textContent='Copied!';b.style.color='#4ade80';setTimeout(function(){b.textContent='Copy';b.style.color='#B8922A';},2000);});}
 </script>
+
+<div id="search-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.75);align-items:flex-start;justify-content:center;padding:4.5rem 1rem 1rem;overflow-y:auto;" onclick="if(event.target===this)closeSearchModal()">
+  <div style="background:#fff;border-radius:12px;max-width:640px;width:100%;padding:1.5rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4);">
+    <button onclick="closeSearchModal()" aria-label="Close" style="position:absolute;top:.75rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;line-height:1;color:#999;">&times;</button>
+    <input type="text" id="siteSearchInput" placeholder="Search the site (e.g. tuition, visa, GMAT, housing)..." autocomplete="off" style="width:100%;padding:.9rem 1rem;font-size:16px;border:2px solid var(--rule);border-radius:8px;font-family:var(--ff-body);box-sizing:border-box;">
+    <div id="siteSearchResults" style="margin-top:.75rem;max-height:60vh;overflow-y:auto;"></div>
+    <div id="siteSearchEmpty" style="display:none;padding:2rem 0;text-align:center;color:var(--ink-3);font-size:var(--t-sm);">No results found.</div>
+  </div>
+</div>
+<script>window.__SEARCH_INDEX__ = [{"t": "What makes Tunghai GMBA different?", "s": "Tunghai Global MBA is an AACSB-accredited , English-taught MBA in Taichung, Taiwan, ranked among the top 5% of business schools worldwide. The program develops leaders who can navigate complexity…", "p": "index.html", "a": "why-gmba"}, {"t": "A truly international classroom", "s": "30–40 students. 10+ nationalities. Small enough that you actually know everyone — diverse enough that everyone comes from somewhere different. Coming Soon Student Film · 2 min A Classroom Without…", "p": "index.html", "a": "class-profile"}, {"t": "Life at Tunghai University", "s": "134 hectares of tree-lined paths, traditional architecture, and the iconic Luce Memorial Chapel — designed by I.M. Pei. A pastoral campus where global careers begin, far from the noise of any city.…", "p": "index.html", "a": "campus-life"}, {"t": "Why Taiwan?", "s": "Taiwan doesn't just produce the chips that run the world's AI — it assembles the servers, manufactures the devices, and hosts the companies behind every major AI breakthrough. Studying here puts you…", "p": "index.html", "a": "living-in-taiwan"}, {"t": "News & events", "s": "Feature Story May 22, 2026 Student Life Graduation group photo on campus Class of 2026 GMBA graduates celebrated at Luce Chapel — capturing friendships and milestones from two years of shared…", "p": "index.html", "a": "news"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "index.html", "a": "contact"}, {"t": "Program overview", "s": "The curriculum is structured in four deliberate layers — research discipline, AI and data capability, cross-functional application, and strategic leadership — each one building on the last,…", "p": "academics.html", "a": "curriculum"}, {"t": "Academic excellence meets industry insight", "s": "GMBA faculty hold doctoral degrees from leading universities in Taiwan, the US, Europe, and Asia — and bring that research depth into classrooms shaped by Asia's technology economy. One program. Five…", "p": "academics.html", "a": "faculty"}, {"t": "Expand your global horizons", "s": "GMBA students can pursue exchange semesters and joint-degree opportunities at nearly 400 partner universities across 40+ countries — all coordinated through Tunghai's Office of International…", "p": "academics.html", "a": "joint-degree"}, {"t": "Academic calendar", "s": "Plan your studies with our semester schedule and download the official Tunghai University academic calendar. Period Dates Notes Fall Semester September – January Semester 1 Fall Oral Defense…", "p": "academics.html", "a": "academic-calendar"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "academics.html", "a": "contact"}, {"t": "Scholarships", "s": "Taiwan offers some of the most generous graduate scholarships in Asia. Combined with low tuition and living costs, an MBA here can cost a fraction of alternatives. Taiwan government scholarships The…", "p": "admissions.html", "a": "tuition"}, {"t": "How to apply", "s": "Find your applicant category below, then go straight to the right application portal. Only international applicants from overseas have a spring intake — every other route enrols in the fall.…", "p": "admissions.html", "a": "admissions"}, {"t": "Life Admin — Quick Reference", "s": "Three things every incoming student must handle. We've made it short. Visa & ARC Before arrival — FS Resident Visa Within 15 days — ARC registration Annually — renewal Tourist visas cannot be…", "p": "admissions.html", "a": "practical-info"}, {"t": "Student forms & documents", "s": "Download official GMBA forms for thesis procedures, examination, and submission. All files are PDF — open, print, and submit to the GMBA office. Thesis Preparation Supervision Agreement Advisor…", "p": "admissions.html", "a": "downloads"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "admissions.html", "a": "contact"}, {"t": "What is Tunghai University GMBA?", "s": "Tunghai GMBA is a fully English-taught Global MBA program in Taichung, Taiwan, launched in 2018 and accredited by AACSB. The curriculum is built in four layers — Research Foundation, AI &amp; Data…", "p": "faq.html", "a": "faq-g01"}, {"t": "How is GMBA different from a regular MBA or an IMBA program?", "s": "A GMBA (Global MBA) is designed from the start for an international cohort, so every course, assignment, and thesis runs in English and the classroom itself is multinational. Tunghai GMBA differs…", "p": "faq.html", "a": "faq-g02"}, {"t": "Why study an MBA in Taiwan rather than Singapore, Hong Kong, or Japan?", "s": "Taiwan gives you direct access to the world's AI hardware ecosystem at roughly one-third the living cost of Singapore. Taiwan fabricates about 90% of the world's advanced chips, builds around 70% of…", "p": "faq.html", "a": "faq-g03"}, {"t": "Is Tunghai GMBA accredited?", "s": "Yes. Tunghai University's College of Management holds AACSB accreditation, which fewer than 5% of business schools worldwide have achieved. The GMBA degree is also approved by Taiwan's Ministry of…", "p": "faq.html", "a": "faq-g04"}, {"t": "How many students are in each cohort, and where do they come from?", "s": "Each GMBA cohort has 30–40 students from 10 or more countries. Across the 2018–2026 classes, students have come from 22 nationalities across 8 world regions: Southeast Asia 65.4%, East Asia 21.1%,…", "p": "faq.html", "a": "faq-g05"}, {"t": "What courses does GMBA offer?", "s": "The curriculum follows a four-layer framework: Research Foundation, then AI &amp; Data Core, then AI Analytics Across Functions, then Leadership &amp; Strategy. Each layer builds on the one before…", "p": "faq.html", "a": "faq-a01"}, {"t": "Do I need a GMAT or GRE score to apply?", "s": "No. Tunghai GMBA does not require GMAT or GRE scores. Admission is based on document review — your bachelor's degree, English proficiency evidence, autobiography, and study plan. Applicants already…", "p": "faq.html", "a": "faq-a02"}, {"t": "Can I apply without a business or management background?", "s": "Yes. Prior study in business, management, or economics is not required — a bachelor's degree in any field is acceptable. The Research Foundation layer at the start of the curriculum is designed to…", "p": "faq.html", "a": "faq-a03"}, {"t": "Is GMBA a thesis or non-thesis program?", "s": "GMBA is a thesis-based master's program. Students work with a faculty advisor, submit a supervision agreement and topic evaluation form, and complete an oral defense before graduating. All thesis…", "p": "faq.html", "a": "faq-a04"}, {"t": "How long does the program take to complete?", "s": "Students can complete the degree in as little as 1 year with full-time, intensive coursework; most take two, with a maximum allowed duration of four years, depending on course selection and thesis progress. The degree requires 30 credits in total — 21 required credits, 8…", "p": "faq.html", "a": "faq-a05"}, {"t": "Can I study abroad or earn a dual degree?", "s": "Yes. GMBA students can pursue exchange semesters and joint-degree programs at nearly 400 partner universities across more than 40 countries, coordinated through Tunghai's Office of International…", "p": "faq.html", "a": "faq-a06"}, {"t": "Who teaches in the GMBA program?", "s": "GMBA faculty are drawn from five colleges at Tunghai University, not from the business school alone, which is what makes the cross-disciplinary curriculum possible. Teaching areas include supply…", "p": "faq.html", "a": "faq-a07"}, {"t": "What are the admission requirements, and how do I apply?", "s": "You need a bachelor's degree and evidence of English proficiency. There are three application routes with different portals and windows: International (Overseas), In Taiwan / Taiwan Nationals, and…", "p": "faq.html", "a": "faq-ad01"}, {"t": "When are the application deadlines?", "s": "Deadlines depend on your applicant category. International applicants from overseas apply in October for the spring intake, or between January and May for the fall intake. Taiwan nationals and…", "p": "faq.html", "a": "faq-ad02"}, {"t": "What is the difference between the spring and fall intake?", "s": "Only international applicants from overseas have a spring intake; all other routes enroll in the fall. The curriculum and degree are identical — the spring intake simply lets you start six months…", "p": "faq.html", "a": "faq-ad03"}, {"t": "How many years of work experience do I need?", "s": "Work experience is not a formal admission requirement — recent graduates are welcome to apply. Professional experience does strengthen your study plan, since it gives you concrete cases to write…", "p": "faq.html", "a": "faq-ad04"}, {"t": "What documents do I need to prepare?", "s": "International and Overseas Compatriot applicants submit an autobiography in English, a study plan in English, and supporting documents. Applicants already in Taiwan or holding Taiwanese nationality…", "p": "faq.html", "a": "faq-ad05"}, {"t": "Is there an interview?", "s": "An interview is required only for applicants already in Taiwan and for Taiwanese nationals, who also attend an information session. International applicants from overseas and Overseas Compatriots are…", "p": "faq.html", "a": "faq-ad06"}, {"t": "What English test scores are accepted?", "s": "Overseas applicants can meet the language requirement with any one of the following: CEFR B1 or above, TOEFL iBT 47, TOEFL ITP 500, IELTS 4.0, or TOEIC 550. Applicants who graduated from an…", "p": "faq.html", "a": "faq-ad07"}, {"t": "What is the tuition, and what scholarships are available?", "s": "Tuition is NT$69,020 per semester (about USD 2,124), and all students pay the same rate regardless of nationality. Scholarships come from three sources: the Taiwanese government (MOE Taiwan…", "p": "faq.html", "a": "faq-f01"}, {"t": "What is the total cost of the whole degree?", "s": "Budget roughly NT$150,000 (about USD 4,615) per semester covering tuition, housing, health insurance, and living expenses — so about NT$600,000 (USD 18,500) for a standard two-year degree before any…", "p": "faq.html", "a": "faq-f02"}, {"t": "How competitive are the scholarships, and when do I apply?", "s": "Government scholarships and university scholarships run on separate timelines. Taiwan government scholarships (MOE, MOFA) are applied for through the Taiwanese representative office — TECO or AIT —…", "p": "faq.html", "a": "faq-f03"}, {"t": "Is on-campus housing guaranteed?", "s": "On-campus dormitories are available but spots are limited, so housing is not guaranteed. Tunghai has 46 dormitory buildings, and on-campus housing costs NT$10,560–41,360 per semester depending on…", "p": "faq.html", "a": "faq-f04"}, {"t": "What happens to tuition if I need a third year?", "s": "From the third year onward, you pay per credit rather than a full semester's tuition — NT$2,090 per credit plus NT$440 in miscellaneous fees per credit. For a student finishing a thesis with few or…", "p": "faq.html", "a": "faq-f05"}, {"t": "What visa and ARC do I need?", "s": "Apply for a Resident Visa (type FS) at a ROC representative office before you travel — do not enter on a landing or tourist visa, because it cannot be converted to an ARC. After you arrive, the…", "p": "faq.html", "a": "faq-l01"}, {"t": "What health insurance will I have?", "s": "All international students are automatically enrolled in Group Medical Insurance when they arrive. After six months of continuous residence, you transfer to Taiwan's National Health Insurance, which…", "p": "faq.html", "a": "faq-l02"}, {"t": "Do I need to speak Chinese?", "s": "No. All courses, assignments, and the thesis are conducted entirely in English, and the Office of International Relations handles administrative procedures — ARC, insurance, work permits — in…", "p": "faq.html", "a": "faq-l03"}, {"t": "What are living costs in Taichung?", "s": "Monthly living costs run about NT$24,000 (roughly USD 740) for food, transport, and daily expenses, with housing budgeted separately. Total monthly costs including accommodation come to about USD…", "p": "faq.html", "a": "faq-l04"}, {"t": "Can I work or intern while studying?", "s": "Yes, up to 20 hours per week during the semester and with no hour limit during breaks. Both part-time work and internships require a work permit, which you apply for online at ezwp.wda.gov.tw with…", "p": "faq.html", "a": "faq-l05"}, {"t": "What is campus life like at Tunghai?", "s": "Tunghai's campus covers 134 hectares of tree-lined paths and traditional architecture, including the Luce Memorial Chapel designed by I.M. Pei. There are more than 150 student clubs and 46 dormitory…", "p": "faq.html", "a": "faq-l06"}, {"t": "What is it like to live in Taichung?", "s": "Taichung offers the food and amenities of a major Taiwanese city at a cost of living well below Taipei, Singapore, or Hong Kong, which means a scholarship stretches considerably further. The city is…", "p": "faq.html", "a": "faq-l07"}, {"t": "Can I stay in Taiwan to work after graduation?", "s": "Yes. After receiving your diploma you can extend your ARC for up to one year to look for work. Full-time employment requires your employer to apply through Taiwan's Point-Based System, and a separate…", "p": "faq.html", "a": "faq-c01"}, {"t": "What careers do GMBA graduates pursue?", "s": "Graduates work in business management, marketing, finance, and operations across Taiwan's technology and AI-related industries. Taiwan's semiconductor and AI ecosystem generates steady demand for…", "p": "faq.html", "a": "faq-c02"}, {"t": "Does GMBA offer career services and an alumni network?", "s": "GMBA does not yet have a dedicated alumni association. Graduates can use Tunghai University's campus-wide Internship &amp; Student Achievement Center (ISAC), which offers career counseling, resume…", "p": "faq.html", "a": "faq-c03"},{"t": "Can I learn Chinese while I'm here?", "s": "Yes, and many students do. Master's students can take elective beginner and intermediate Chinese courses, and the <a href=\"https://clc.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">Chinese Language Center</a> runs a full Mandarin program that pairs classroom learning with real-life practice. See the <a href=\"https://oir.thu.edu.tw/front/400_IntlDegree/400_3_Chinese_L/pages.php?ID=dGh1X29zYSY0MDBfM19DaGluZXNlX0w=\" target=\"_blank\" rel=\"noopener\">OIR Chinese Learning page</a> for details. Basic Mandarin is also a real advantage when you enter Taiwan's job market.", "p": "faq.html", "a": "faq-l08"}];</script>
+<script>
+(function(){
+  var btn = document.getElementById('siteSearchBtn');
+  var modal = document.getElementById('search-modal');
+  var input = document.getElementById('siteSearchInput');
+  var results = document.getElementById('siteSearchResults');
+  var empty = document.getElementById('siteSearchEmpty');
+  var idx = window.__SEARCH_INDEX__ || [];
+  if (!btn || !modal) return;
+  function openModal(){ modal.style.display='flex'; setTimeout(function(){ input.focus(); }, 50); }
+  window.closeSearchModal = function(){ modal.style.display='none'; input.value=''; render([]); };
+  btn.addEventListener('click', openModal);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeSearchModal();
+  });
+  function escapeHtml(s){ var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  function render(list){
+    if (list.length === 0){
+      results.innerHTML = '';
+      empty.style.display = input.value.trim() ? 'block' : 'none';
+      return;
+    }
+    empty.style.display = 'none';
+    results.innerHTML = list.map(function(item){
+      return '<a href="' + item.p + '#' + item.a + '" style="display:block;padding:.85rem 0;border-bottom:1px solid #eee;text-decoration:none;color:inherit;">' +
+        '<div style="font-weight:800;color:var(--maroon);font-size:15px;margin-bottom:.25rem;">' + escapeHtml(item.t) + '</div>' +
+        '<div style="font-size:13.5px;color:var(--ink-3);line-height:1.5;">' + escapeHtml(item.s) + '</div></a>';
+    }).join('');
+  }
+  input.addEventListener('input', function(){
+    var q = input.value.trim().toLowerCase();
+    if (!q){ render([]); return; }
+    var matches = idx.filter(function(item){
+      return item.t.toLowerCase().indexOf(q) !== -1 || item.s.toLowerCase().indexOf(q) !== -1;
+    }).slice(0, 12);
+    render(matches);
+  });
+})();
+</script>
+
 </body></html>
