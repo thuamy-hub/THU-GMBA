@@ -6,6 +6,7 @@
   "_最後更新": "2026-08-06",
   "stat": {
     "_說明": "首頁最上方那條關鍵數字（全英文授課／QS排名／國籍數／國際生比例／THE影響力排名）。通常一學年更新一次。",
+    "_2026-08-08新版首頁已停用": "首頁改版後，此區塊的數字已不再顯示於 index.html / index-zh.html（原數字條整條移除，只有 #1 QS排名與98.1%國際生比例併入 Hero 白卡，且改成寫死的文字，沒有 data-k 標記，apply-site-data.py 不會再更新首頁）。academics.html / academics-zh.html / admissions.html / admissions-zh.html 若有用到這些欄位仍會照常自動更新，不受影響。這裡的資料先保留，不刪除，之後如果想在首頁恢復自動化，要先幫 Hero 白卡的數字重新加上 data-k 標記。",
     "english": {
       "num": "100%",
       "label": {

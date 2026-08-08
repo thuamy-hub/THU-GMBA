@@ -123,8 +123,71 @@
 [id] { scroll-margin-top: 72px; }
 /* ===== END ANCHOR OFFSET FIX ===== */
 </style>
+<style>
+    /* ===== HEADER (aligned with index) ===== */
+    .announce {
+      background: #3E0710; color: #fff; text-align: center;
+      padding: .55rem 1.5rem; font-size: 14px; font-weight: 500; letter-spacing: .01em;
+      display: flex; align-items: center; justify-content: center; gap: .9rem; flex-wrap: wrap;
+    }
+    .announce .ann-tag {
+      font-size: 10.5px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+      color: #12210A; background: var(--gold-lt, #E8C55A); padding: .2rem .55rem;
+    }
+    .announce a { color: var(--gold-lt, #E8C55A); font-size: 13px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .announce a:hover { color: #fff; }
+    nav { min-height: 64px; }
+    nav .nav-items { gap: 2rem; }
+    nav .nav-item > a { padding: 0; }
+    #siteSearchBtn { margin-left: auto; }
+    .nav-apply-desk {
+      align-self: center; text-decoration: none;
+      background: var(--gold-lt, #E8C55A); color: #12210A;
+      padding: .62rem 1.2rem; font-size: 12.5px; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase; margin-left: .6rem;
+      transition: background .2s ease;
+    }
+    .nav-apply-desk:hover { background: #fff; color: #3A0810; }
+    @media (max-width: 960px) {
+      nav .nav-items { gap: 0; }
+      nav .nav-item > a { padding: 0.85rem 1.4rem; }
+      #siteSearchBtn { margin-left: 0 !important; padding: 0.85rem 1.4rem !important; justify-content: flex-start !important; }
+      #navItems .lang-btn { margin-left: 1.4rem !important; }
+      .nav-apply-desk { display: none; }
+    }
+  #navItems .lang-btn { margin-left: auto; }
+</style>
+
+<style>
+  /* --- Mobile nav breathing room --- */
+  @media (max-width: 960px) {
+    nav .nav-burger { margin-right: 1.15rem !important; flex-shrink: 0 !important;
+      width: 26px !important; height: 20px !important; padding: 2px 0 !important; box-sizing: content-box; }
+    nav .nav-logo { padding: 0 1rem !important; min-width: 0 !important; flex-shrink: 1 !important; }
+    nav .nav-logo img { height: 30px !important; }
+  }
+</style>
+<style>
+  /* --- Mobile nav: parent link tappable, caret toggles submenu --- */
+  @media (max-width: 960px) {
+    .nav-item { display: block !important; }
+    .nav-item > a { display: flex !important; width: 100% !important; }
+    .nav-item > a .nav-caret {
+      font-size: 13px !important; opacity: .85;
+      padding: .85rem 1.4rem .85rem 1.6rem; margin: -.85rem -1.4rem -.85rem 0;
+    }
+    .nav-dropdown { width: 100% !important; min-width: 0 !important; }
+    .nav-burger { align-self: center !important; }
+  }
+</style>
 </head>
 <body>
+
+<div class="announce" role="alert">
+  <span class="ann-tag">News</span>
+  <span>Tunghai partners with Chunghwa Telecom &amp; Google on enterprise AI agent platform Gemini Enterprise.</span>
+  <a href="index.html#news">Read more →</a>
+</div>
 
 <!-- NAV -->
 <nav role="navigation" aria-label="Main navigation">
@@ -160,7 +223,11 @@
           <a href="admissions.html#downloads">Downloads</a>
         </div>
       </div>
+      <div class="nav-item">
+        <a href="faq.html">FAQ</a>
+      </div>
       <a href="index-zh.html" class="lang-btn" onclick="sessionStorage.setItem('lang-manual','1')">中文</a>
+      <a href="admissions.html#admissions" class="nav-apply-desk">Apply</a>
       <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="nav-contact-mobile">✉ Contact Us</a>
       <a href="admissions.html#admissions" class="nav-apply-mobile">✎ Apply Now</a>
     </div>
@@ -280,7 +347,7 @@
     var item=a.closest('.nav-item');
     if(item.querySelector('.nav-dropdown')){
       a.addEventListener('click',function(e){
-        if(getComputedStyle(btn).display!=='none'){
+        if(getComputedStyle(btn).display!=='none' && e.target.closest('.nav-caret')){
           e.preventDefault();
           var isOpen=item.classList.contains('open');
           ni.querySelectorAll('.nav-item').forEach(function(o){o.classList.remove('open');});

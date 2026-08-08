@@ -270,7 +270,7 @@
       "description": "A fully English-taught MBA at Tunghai University, Taichung, Taiwan — positioned at the center of Asia's AI and semiconductor industry ecosystem. MOE-approved since 2017.",
       "foundingDate": "2018",
       "email": "gmba@thu.edu.tw",
-      "telephone": "+886-4-2359-0121",
+      "telephone": "+886-4-2359-0121 ext. 35002",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "No. 1727, Section 4, Taiwan Boulevard",
@@ -281,6 +281,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "gmba@thu.edu.tw",
+        "telephone": "+886-4-2359-0121 ext. 35002",
         "contactType": "admissions",
         "availableLanguage": [
           "English",
@@ -462,6 +463,53 @@
     }
     .lang-btn:hover { background: var(--maroon-hover) !important; color: var(--white) !important; }
 
+
+    /* ===== HERO-INTEGRATED HEADER (2a) ===== */
+    .announce {
+      background: #3E0710; color: #fff; text-align: center;
+      padding: .55rem 1.5rem; font-size: 14px; font-weight: 500; letter-spacing: .01em;
+      display: flex; align-items: center; justify-content: center; gap: .9rem; flex-wrap: wrap;
+    }
+    .announce .ann-tag {
+      font-size: 10.5px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+      color: #12210A; background: var(--gold-lt, #E8C55A); padding: .2rem .55rem;
+    }
+    .announce a { color: var(--gold-lt, #E8C55A); font-size: 13px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .announce a:hover { color: #fff; }
+
+    body.has-hero nav {
+      background: transparent; box-shadow: none;
+      border-bottom: 1px solid rgba(255,255,255,.18);
+      margin-bottom: -64px; min-height: 64px;
+      transition: background .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+    body.has-hero nav.nav-solid {
+      background: var(--maroon); border-bottom-color: transparent;
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    }
+    body.has-hero #hero-final { position: relative; z-index: 1; }
+    body.has-hero #hero-final .hf-copy { padding-top: 8.4rem; }
+    nav .nav-items { gap: 2rem; }
+    nav .nav-item > a { padding: 0; }
+    #siteSearchBtn { margin-left: auto; }
+    .nav-apply-desk {
+      align-self: center; text-decoration: none;
+      background: var(--gold-lt, #E8C55A); color: #12210A;
+      padding: .62rem 1.2rem; font-size: 12.5px; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase; margin-left: .6rem;
+      transition: background .2s ease;
+    }
+    .nav-apply-desk:hover { background: #fff; color: #3A0810; }
+    @media (max-width: 960px) {
+      body.has-hero nav { background: var(--maroon); margin-bottom: 0; }
+      body.has-hero #hero-final .hf-copy { padding-top: 6rem; }
+      nav .nav-items { gap: 0; }
+      nav .nav-item > a { padding: 0.85rem 1.4rem; }
+      #siteSearchBtn { margin-left: 0 !important; padding: 0.85rem 1.4rem !important; justify-content: flex-start !important; }
+      #navItems .lang-btn { margin-left: 1.4rem !important; }
+      .nav-apply-desk { display: none; }
+    }
+
     /* ===== FLOATING SIDEBAR ===== */
     .float-sidebar {
       position: fixed;
@@ -510,12 +558,6 @@
     .float-icon { font-size: 15px; opacity: 0.88; flex-shrink: 0; }
     @media (max-width: 960px) { .float-sidebar { display: none; } }
 
-    /* ANNOUNCEMENT BAR */
-    .announce {
-      background: var(--gold); color: var(--ink); text-align: center;
-      padding: 0.55rem 1.5rem; font-size: 15px; font-weight: 700; letter-spacing: 0.03em;
-    }
-    .announce a { color: var(--ink); }
 
     /* HERO */
     .hero {
@@ -1030,10 +1072,54 @@
 @media (max-width: 640px) { [id] { scroll-margin-top: 68px; } }
 /* ===== END ANCHOR OFFSET FIX ===== */
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Tunghai University — 2025 Introduction",
+  "description": "A tour of Tunghai University's 134-hectare campus in Taichung, Taiwan: tree-lined paths, traditional architecture and the I.M. Pei-designed Luce Memorial Chapel. One of Taiwan's largest green campuses, located inside the city, and home to the AACSB-accredited Tunghai Global MBA.",
+  "thumbnailUrl": "https://i.ytimg.com/vi/-FywhrZjUjI/maxresdefault.jpg",
+  "uploadDate": "2025-01-01",
+  "duration": "PT5M28S",
+  "embedUrl": "https://www.youtube.com/embed/-FywhrZjUjI",
+  "contentUrl": "https://www.youtube.com/watch?v=-FywhrZjUjI",
+  "inLanguage": ["zh-TW", "en"],
+  "publisher": {
+    "@type": "CollegeOrUniversity",
+    "name": "Tunghai University",
+    "url": "https://www.thu.edu.tw/"
+  }
+}
+</script>
+
+<style>
+  /* --- Mobile nav breathing room --- */
+  @media (max-width: 960px) {
+    nav .nav-burger { margin-right: 1.15rem !important; flex-shrink: 0 !important;
+      width: 26px !important; height: 20px !important; padding: 2px 0 !important; box-sizing: content-box; }
+    nav .nav-logo { padding: 0 1rem !important; min-width: 0 !important; flex-shrink: 1 !important; }
+    nav .nav-logo img { height: 30px !important; }
+  }
+</style>
+<style>
+  /* --- Mobile nav: parent link tappable, caret toggles submenu --- */
+  @media (max-width: 960px) {
+    .nav-item { display: block !important; }
+    .nav-item > a { display: flex !important; width: 100% !important; }
+    .nav-item > a .nav-caret {
+      font-size: 13px !important; opacity: .85;
+      padding: .85rem 1.4rem .85rem 1.6rem; margin: -.85rem -1.4rem -.85rem 0;
+    }
+    .nav-dropdown { width: 100% !important; min-width: 0 !important; }
+    .nav-burger { align-self: center !important; }
+  }
+</style>
 </head>
 <body>
 <div class="announce" role="alert">
-  東海攜手中華電信與Google，率全台之先導入企業級Agent管理平台「Gemini Enterprise」。
+  <span class="ann-tag">News</span>
+  <span>東海攜手中華電信與 Google，率全台之先導入企業級 AI Agent 管理平台「Gemini Enterprise」。</span>
+  <a href="#news">看更多 →</a>
 </div>
 
 <a href="#maincontent" class="skip-link">跳至主要內容</a>
@@ -1051,7 +1137,7 @@
       <span class="float-icon">✎</span>
       <span>立即申請</span>
     </a>
-    <a href="#" onclick="event.preventDefault();openContactModal();" class="float-item">
+    <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="float-item">
       <span class="float-icon">✉</span>
       <span>聯絡我們</span>
     </a>
@@ -1096,6 +1182,7 @@
       </div>
       <button type="button" id="siteSearchBtn" class="nav-search-btn" aria-label="搜尋" style="background:none;border:none;color:rgba(255,255,255,0.92);font-size:0.82rem;font-weight:700;cursor:pointer;padding:0 0.6rem;display:flex;align-items:center;gap:4px;font-family:inherit;letter-spacing:0.03em;text-transform:uppercase;height:100%;">🔍<span>搜尋</span></button>
       <a href="index.html" class="lang-btn" onclick="sessionStorage.setItem('lang-manual','1')">English</a>
+      <a href="admissions.html#admissions" class="nav-apply-desk">立即申請</a>
       <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="nav-contact-mobile">✉ Contact Us</a>
       <a href="admissions-zh.html#admissions" class="nav-apply-mobile">✎ 立即申請</a>
     </div>
@@ -1104,75 +1191,76 @@
 <main id="maincontent">
 
 <!-- HERO -->
-<header class="hero" role="banner">
-  <div class="hero-slide-main">
-  <div class="hero-in">
-    <div>
-      <div class="hero-tag">全英文授課 · 2018年起</div>
-      <h1>從台灣<br>引領<br><em>AI 時代</em></h1>
-      <p class="hero-lead">在台灣AI與半導體供應鏈的核心，取得你的MBA。</p>
+<header id="hero-final" class="hero" role="banner">
+<style>
+#hero-final{position:relative;padding-bottom:96px;background:var(--white);}
+#hero-final .hf-stage{position:relative;height:600px;overflow:hidden;background:#1b2907;}
+#hero-final .hf-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block;}
+#hero-final .hf-scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,18,6,.62) 0%,rgba(10,18,6,.18) 40%,rgba(10,18,6,.05) 100%);}
+#hero-final .hf-copy{position:relative;box-sizing:border-box;padding:3.4rem 4.5rem 0;max-width:1000px;}
+#hero-final .hf-tag{display:inline-flex;align-items:center;gap:.6rem;font-size:11.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt,#E8C55A);margin-bottom:1.3rem;}
+#hero-final .hf-tag i{width:22px;height:1px;background:currentColor;font-style:normal;}
+#hero-final h1{word-break:keep-all;line-break:strict;margin:0 0 1.1rem;font-family:var(--ff-num);font-size:clamp(40px,6.6vw,96px);font-weight:900;line-height:.96;color:#fff;text-shadow:0 2px 26px rgba(0,0,0,.45);}
+#hero-final h1 em{color:var(--gold-lt,#E8C55A);font-style:normal;}
+#hero-final .hf-lead{margin:0;font-size:19px;line-height:1.7;color:rgba(255,255,255,.9);max-width:30em;text-shadow:0 1px 14px rgba(0,0,0,.55);}
+#hero-final .hf-card{position:absolute;left:4.5rem;right:4.5rem;bottom:0;background:#fff;box-shadow:0 18px 44px rgba(0,0,0,.16);display:grid;grid-template-columns:1fr 1fr 1fr auto;align-items:center;gap:2.4rem;padding:1.8rem 2.4rem;}
+#hero-final .hf-num{font-family:var(--ff-num);font-size:32px;font-weight:900;line-height:1;color:var(--maroon);}
+#hero-final .hf-card p{margin:.35rem 0 0;font-size:13.5px;color:var(--ink-3);line-height:1.5;}
+#hero-final .hf-div{border-left:1px solid var(--rule);padding-left:2.4rem;}
+#hero-final .hf-cta{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;}
+#hero-final .hf-btn{text-decoration:none;background:var(--maroon);color:#fff;padding:1rem 2rem;font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;transition:background .2s ease;}
+#hero-final .hf-btn:hover{background:var(--maroon-hover,#B22234);color:#fff;}
+#hero-final .hf-deadline{font-size:12.5px;color:#8A8378;}
+@media (max-width:1100px){
+  #hero-final .hf-card{left:2rem;right:2rem;gap:1.6rem;padding:1.5rem 1.8rem;}
+  #hero-final .hf-div{padding-left:1.6rem;}
+  #hero-final .hf-copy{padding:2.8rem 2rem 0;}
+}
+@media (max-width:900px){
+  #hero-final{padding-bottom:0;}
+  #hero-final .hf-stage{height:auto;min-height:440px;display:flex;align-items:flex-end;}
+  #hero-final .hf-copy{padding:6rem 1.4rem 2.4rem;}
+  #hero-final .hf-lead{font-size:16px;line-height:1.8;}
+  #hero-final .hf-card{position:static;display:block;padding:.4rem 1rem 1.4rem;box-shadow:none;border-bottom:1px solid var(--rule);}
+  #hero-final .hf-card > div:not(.hf-cta){display:flex;align-items:baseline;justify-content:space-between;gap:1.2rem;padding:.85rem 0;border-bottom:1px solid var(--rule);}
+  #hero-final .hf-num{font-size:30px;flex-shrink:0;}
+  #hero-final .hf-card p{margin:0;text-align:right;font-size:13.5px;max-width:16em;}
+  #hero-final .hf-div{border-left:none;padding-left:0;}
+  #hero-final .hf-cta{align-items:stretch;padding-top:1.2rem;}
+  #hero-final .hf-btn{text-align:center;padding:1rem 1.2rem;}
+  #hero-final .hf-deadline{text-align:center;}
+}
+</style>
+  <div class="hf-stage">
+    <img src="./鐘樓.jpg" alt="東海大學鐘樓空拍">
+    <div class="hf-scrim"></div>
+    <div class="hf-copy">
+      <span class="hf-tag"><i></i>全英文授課 &middot; 2018 年起</span>
+      <h1>從台灣引領<br><em>AI 時代</em></h1>
+      <p class="hf-lead">通過 AACSB 國際認證的全英語 MBA，就在全球 AI 與半導體供應鏈的核心。</p>
     </div>
-    <aside class="dl-card" aria-label="Application deadlines">
-      <div class="dl-card-title">申請截止日期</div>
-      <div class="dl-item" style="margin-bottom:0;">
-        <div class="dl-item-label">國際生（海外）</div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
-          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">春季班</div>
-          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">10月</div>
-        </div>
-      </div>
-      <hr>
-      <div class="dl-item" style="margin-bottom:0;">
-        <div class="dl-item-label">國際生（海外）</div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
-          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">秋季班</div>
-          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">1–5月</div>
-        </div>
-      </div>
-      <hr>
-      <div class="dl-item" style="margin-bottom:0;">
-        <div class="dl-item-label">已在台灣／台灣籍</div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
-          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">秋季班 · 甄試入學</div>
-          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">10–11月</div>
-        </div>
-      </div>
-      <hr>
-      <div class="dl-item" style="margin-bottom:0;">
-        <div class="dl-item-label">已在台灣／台灣籍</div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
-          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">秋季班 · 考試入學</div>
-          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">12–2月</div>
-        </div>
-      </div>
-      <hr>
-      <div class="dl-item" style="margin-bottom:0;">
-        <div class="dl-item-label">海外僑生</div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:0.7rem;margin-top:0.2rem;">
-          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.42);text-transform:uppercase;">秋季班</div>
-          <div class="dl-item-date" style="font-size:16px;white-space:nowrap;">4–6月</div>
-        </div>
-      </div>
-      <hr>
-      <div style="text-align:center;margin-top:0.5rem;">
-        <a href="admissions-zh.html#admissions" class="btn-gold" style="padding:0.65rem 1.4rem;font-size:0.78rem;">立即申請 →</a>
-      </div>
-    </aside>
   </div>
-    
+  <div class="hf-card">
+    <div>
+      <div class="hf-num">#1</div>
+      <p>私立非醫學院 &middot; QS 亞洲</p>
+    </div>
+    <div class="hf-div">
+      <div class="hf-num">98.1%</div>
+      <p>國際學生比例</p>
+    </div>
+    <div class="hf-div">
+      <div class="hf-num">1 年</div>
+      <p>最快修畢並完成口試</p>
+    </div>
+    <div class="hf-cta">
+      <a href="admissions.html#admissions" class="hf-btn">立即申請 →</a>
+      <span class="hf-deadline">秋季班 &middot; 海外申請 5 月截止</span>
+    </div>
   </div>
 </header>
 
-<!-- STATS BAR -->
-<div id="about" class="stats" aria-label="Key facts">
-  <div class="stats-in">
-    <div class="stat-cell"><span class="stat-num" data-k="stat.english.num">100%</span><span class="stat-label" data-k="stat.english.label">全英文授課</span></div>
-    <div class="stat-cell"><span class="stat-num" data-k="stat.qs.num">#1</span><span class="stat-label" data-k="stat.qs.label">非醫私校#1 · QS亞洲</span></div>
-    <div class="stat-cell"><span class="stat-num" data-k="stat.nationalities.num">20+</span><span class="stat-label" data-k="stat.nationalities.label">個國籍</span></div>
-    <div class="stat-cell"><span class="stat-num" data-k="stat.intl_ratio.num">98.1%</span><span class="stat-label" data-k="stat.intl_ratio.label">國際學生</span></div>
-    <div class="stat-cell"><span class="stat-num" data-k="stat.the_impact.num">#85</span><span class="stat-label" data-k="stat.the_impact.label">THE世界影響力排名</span></div>
-  </div>
-</div>
+<div id="about"></div>
 
 <!-- ===== WHY THU GMBA ===== -->
 <section id="why-gmba" style="background:var(--white);padding:0;">
@@ -1194,31 +1282,75 @@
 .dark-bg .faq-cols .sec-tag { color: var(--gold-lt); opacity: 1; }
 .dark-bg strong { color: inherit; }
 </style>
-  <div class="about-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:640px;">
-    <!-- Left: Photo -->
-    <div class="about-img" style="overflow:hidden;min-height:500px;">
-      <img src="./Luce Chapel 2.jpg" alt="Tunghai University campus" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;">
-    </div>
-    <!-- Right: Text -->
-    <div style="padding:5rem 4rem 4rem 5rem;display:flex;flex-direction:column;justify-content:center;background:var(--cream);">
-      <h2 style="margin-bottom:2rem;font-size:clamp(28px,3.4vw,42px);font-weight:900;line-height:1.15;letter-spacing:-0.01em;">東海GMBA，為什麼不一樣？</h2>
-      <p style="font-size:18px;color:var(--ink-3);line-height:1.8;margin-bottom:1.6rem;">東海 <strong>Global MBA</strong> 位於台灣台中，是通過 <strong>AACSB 國際認證</strong>的<strong>全英語授課</strong> MBA，躋身<strong>全球前 5%</strong> 頂尖商學院之列。我們致力於培育跨越文化與學科界線的未來領袖，讓他們即使身處 AI 浪潮的複雜變局，依然能從容應對。</p>
-      <h3 style="font-size:21px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:1rem;letter-spacing:-0.005em;">速成碩士學程，全方位奠定核心實力：</h3>
-      <p style="font-size:15px;color:var(--maroon);font-weight:700;margin-top:-0.4rem;margin-bottom:1.2rem;">密集修課，最快 1 年即可修完學分並完成論文口試。</p>
-      <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.8rem;">
-        <span style="display:inline-block;padding:.4rem 1rem;font-size:14px;font-weight:600;color:var(--ink-3);background:var(--cream);border:1px solid var(--rule);border-radius:20px;"><strong style="color:var(--maroon);margin-right:.45rem;">01</strong>研究思維（Research Discipline）</span>
-        <span style="display:inline-block;padding:.4rem 1rem;font-size:14px;font-weight:600;color:var(--ink-3);background:var(--cream);border:1px solid var(--rule);border-radius:20px;"><strong style="color:var(--maroon);margin-right:.45rem;">02</strong>AI 與數據應用（AI &amp; Data Capability）</span>
-        <span style="display:inline-block;padding:.4rem 1rem;font-size:14px;font-weight:600;color:var(--ink-3);background:var(--cream);border:1px solid var(--rule);border-radius:20px;"><strong style="color:var(--maroon);margin-right:.45rem;">03</strong>跨領域整合應用（Cross-Functional Application）</span>
-        <span style="display:inline-block;padding:.4rem 1rem;font-size:14px;font-weight:600;color:var(--ink-3);background:var(--cream);border:1px solid var(--rule);border-radius:20px;"><strong style="color:var(--maroon);margin-right:.45rem;">04</strong>策略領導力（Strategic Leadership）</span>
+  <div id="about-final">
+<style>
+#about-final .ab-grid{display:grid;grid-template-columns:1fr 1fr;min-height:640px;}
+#about-final .ab-img{overflow:hidden;min-height:500px;}
+#about-final .ab-img img{width:100%;height:100%;object-fit:cover;object-position:36% 52%;display:block;}
+#about-final .ab-text{padding:4rem 4rem 3.5rem 5rem;display:flex;flex-direction:column;justify-content:center;background:var(--cream);}
+#about-final .ab-h2{word-break:keep-all;line-break:strict;text-wrap:pretty;margin:0 0 1.1rem;font-size:clamp(28px,3.2vw,38px);font-weight:900;line-height:1.14;letter-spacing:-.02em;color:var(--ink);text-wrap:pretty;}
+#about-final .ab-lead{margin:0 0 1.4rem;font-size:16.5px;line-height:1.75;color:var(--ink-3);max-width:34em;text-wrap:pretty;}
+#about-final .ab-curric{border-top:1px solid var(--rule);padding-top:1.4rem;margin-bottom:1.4rem;display:flex;align-items:flex-start;justify-content:space-between;gap:2.5rem;}
+#about-final .ab-kicker{margin:0 0 .8rem;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--maroon);}
+#about-final .ab-layers{display:grid;grid-template-columns:1fr 1fr;gap:.45rem 1.2rem;}
+#about-final .ab-layer{display:flex;gap:.6rem;align-items:baseline;}
+#about-final .ab-layer b{font-size:13px;font-weight:900;color:var(--maroon);font-variant-numeric:tabular-nums;}
+#about-final .ab-layer span{font-size:15px;font-weight:600;color:#2B2B2B;}
+#about-final .ab-fast{flex-shrink:0;width:158px;border-left:3px solid var(--maroon);padding-left:1.1rem;}
+#about-final .ab-fast-num{font-size:36px;font-weight:900;line-height:.95;color:var(--maroon);letter-spacing:-.02em;}
+#about-final .ab-fast-num em{font-size:20px;font-weight:800;font-style:normal;margin-left:.15em;}
+#about-final .ab-fast p{margin:.4rem 0 0;font-size:12.5px;line-height:1.55;color:var(--ink-3);}
+#about-final .ab-two{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.3rem;}
+#about-final .ab-two p.k{margin:0 0 .45rem;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--maroon);}
+#about-final .ab-two p.t{margin:0;font-size:14.5px;line-height:1.7;color:var(--ink-3);}
+#about-final .ab-quote{word-break:keep-all;line-break:strict;text-wrap:pretty;margin:0 0 1.2rem;font-size:23px;font-weight:900;line-height:1.35;letter-spacing:-.01em;color:var(--ink);}
+#about-final .ab-aacsb{border-top:1px solid rgba(0,0,0,.1);padding-top:1.4rem;display:flex;align-items:center;gap:1.4rem;}
+@media (max-width:900px){
+  #about-final .ab-text{padding:3rem 1rem 2.6rem;}
+  #about-final .ab-curric{flex-direction:column;gap:1.4rem;}
+  #about-final .ab-fast{width:100%;}
+}
+@media (max-width:768px){
+  #about-final .ab-grid{grid-template-columns:1fr;min-height:0;}
+  #about-final .ab-img{min-height:300px;}
+  #about-final .ab-layers{grid-template-columns:1fr;}
+  #about-final .ab-two{grid-template-columns:1fr;gap:1.2rem;}
+  #about-final .ab-quote{font-size:20px;}
+}
+</style>
+    <div class="ab-grid">
+      <div class="ab-img">
+        <img src="./Luce Chapel 2.jpg" alt="東海大學路思義教堂">
       </div>
-      <p style="font-size:var(--t-sm);color:var(--ink-3);line-height:1.85;margin-bottom:1.5rem;"><strong>立足產業重鎮，匯聚全球視野。</strong>學員來自全球 <strong>20 多個國家</strong>，由東海大學<strong>五大學院</strong>的師資共同授課。學程坐落於<strong>台灣 AI 與半導體產業的核心樞紐</strong>，為學術與職涯發展提供堅實後盾。</p>
-      <p style="font-size:var(--t-sm);color:var(--ink-3);line-height:1.85;margin-bottom:1.5rem;"><strong>雙語優勢 × 跨文化敏捷力。</strong>課堂全英語授課，生活則浸潤在道地的中文環境中。畢業生不僅流利掌握<strong>全球兩大主要語言（英語與中文）</strong>，更具備出色的跨文化適應力，能在世界各地發揮領導影響力。</p>
-      <p style="font-size:1.2rem;font-weight:900;font-family:var(--ff-num);color:var(--ink);line-height:1.3;margin-top:1rem;letter-spacing:0.01em;">東海 GMBA——AI 與人文的交匯點。</p>
-      <div id="about-aacsb" style="border-top:1px solid rgba(0,0,0,0.1);margin-top:3rem;padding-top:1.8rem;display:flex;align-items:center;gap:1.5rem;">
-        <a href="https://mana.thu.edu.tw/web/page/page.php?scid=70&sid=92" target="_blank" rel="noopener">
-          <img src="./THU-AACSB-H-PNG.png" alt="AACSB認證" style="height:52px;width:auto;">
-        </a>
-        <span style="font-size:0.9rem;color:var(--ink-3);line-height:1.6;">AACSB認證<br><strong style="font-size:0.95rem;color:var(--ink);">全球前5%商學院</strong></span>
+      <div class="ab-text">
+        <h2 class="ab-h2">東海 GMBA，<br>為什麼不一樣？</h2>
+        <p class="ab-lead">東海 Global MBA 位於台灣台中，是通過 AACSB 國際認證的<strong style="color:var(--ink);font-weight:700;">全英語授課</strong> MBA，躋身全球前 5% 頂尖商學院之列。我們致力於培育跨越文化與學科界線的未來領袖，讓他們身處 AI 浪潮的複雜變局，依然能從容應對。</p>
+        <div class="ab-curric">
+          <div style="flex:1;min-width:0;">
+            <p class="ab-kicker">四層課程架構</p>
+            <div class="ab-layers">
+            <div class="ab-layer"><b>01</b><span>研究方法訓練</span></div>
+            <div class="ab-layer"><b>02</b><span>AI 與數據能力</span></div>
+            <div class="ab-layer"><b>03</b><span>跨功能實務應用</span></div>
+            <div class="ab-layer"><b>04</b><span>策略與領導</span></div>
+            </div>
+          </div>
+          <div class="ab-fast">
+            <div class="ab-fast-num">1<em>年</em></div>
+            <p>密集修課，最快一年修畢學分並完成口試。</p>
+          </div>
+        </div>
+        <div class="ab-two">
+          <div><p class="k">國際連結</p><p class="t">來自 20 多國的同學、橫跨 5 個學院的師資，就在全球 AI 與半導體供應鏈的核心。</p></div>
+          <div><p class="k">雙語優勢</p><p class="t">課堂用英語，生活用華語，畢業時同時掌握世界上使用人數最多的兩種語言。</p></div>
+        </div>
+        <p class="ab-quote">東海 GMBA，<br>讓 AI 與人文相遇的地方。</p>
+        <div id="about-aacsb" class="ab-aacsb">
+          <a href="https://mana.thu.edu.tw/web/page/page.php?scid=70&amp;sid=92" target="_blank" rel="noopener">
+            <img src="./THU-AACSB-H-PNG.png" alt="AACSB Accredited" style="height:52px;width:auto;display:block;">
+          </a>
+          <span style="font-size:.9rem;color:var(--ink-3);line-height:1.6;">通過 AACSB 國際認證<br><strong style="color:var(--ink);">全球商學院前 5%</strong></span>
+        </div>
       </div>
     </div>
   </div>
@@ -1228,523 +1360,513 @@
 
 <!-- ── Graduate Profile ── -->
 <div class="container" style="padding-top:5rem;padding-bottom:4rem;">
-  <span style="font-size:0.72rem;font-weight:700;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:0.9rem;">Why GMBA &middot; 四大核心優勢</span>
-  <h2 style="margin-bottom:1rem;font-size:clamp(38px,5vw,68px);font-weight:900;line-height:1.08;letter-spacing:-0.02em;">你將成為<br>什麼樣的領導者？</h2>
-  <p class="sec-lead" style="margin-bottom:4rem;max-width:580px;">GMBA的四大優勢，融入每一門課、每一屆同學、每一段職涯——跟著你一輩子。</p>
 
-
-
-  <!-- Modern animated advantage cards -->
 <style>
-  .advantage-card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 14px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
-    position: relative;
-    opacity: 0;
-    transform: translateY(32px);
-    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,1,0.36,1),
-                box-shadow 0.3s ease;
-    cursor: default;
-  }
-  .advantage-card.ac-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .advantage-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--maroon);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.38s cubic-bezier(0.22,1,0.36,1);
-    border-radius: 0 0 14px 14px;
-  }
-  .advantage-card:hover::after { transform: scaleX(1); }
-  .advantage-card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 24px 52px rgba(0,0,0,0.14);
-  }
-  .ac-photo {
-    transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
-  }
-  .advantage-card:hover .ac-photo { transform: scale(1.06); }
-  .ac-icon svg {
-    width: 22px; height: 22px;
-    transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
-  }
-  .advantage-card:hover .ac-icon svg { transform: scale(1.2); }
-  .ac-body { padding: 1.5rem 1.3rem 2rem; flex: 1; }
-  .ac-num {
-    font-family: var(--ff-num);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: .15em;
-    color: var(--maroon);
-    margin-bottom: .6rem;
-  }
+#why-pillars{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:4.5rem;align-items:start;padding-bottom:1rem;}
+#why-pillars .wp-tag{font-size:11.5px;font-weight:800;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:.9rem;}
+#why-pillars h2{margin:0 0 1.2rem;font-size:clamp(30px,3.6vw,44px);font-weight:900;line-height:1.1;letter-spacing:-.02em;color:var(--ink);text-wrap:pretty;}
+#why-pillars .wp-lead{margin:0;font-size:17px;line-height:1.75;color:var(--ink-3);}
+#why-pillars .wp-list{display:flex;flex-direction:column;gap:1.5rem;padding-top:.4rem;}
+#why-pillars .wp-list p{margin:0;font-size:18px;line-height:1.85;color:var(--ink-3);text-wrap:pretty;}
+#why-pillars .wp-list strong{color:var(--ink);font-weight:800;}
+@media (max-width:1024px){
+  #why-pillars{grid-template-columns:1fr;gap:1.8rem;}
+  #why-pillars .wp-list{gap:1.1rem;}
+  #why-pillars .wp-list p{font-size:16px;line-height:1.8;}
+}
 </style>
-
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-bottom:2rem;margin-top:3rem;">
-
-  <div class="advantage-card">
-    <div class="ac-icon" style="position:relative;overflow:hidden;height:200px;padding:0;background:var(--cream);">
-      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=380&fit=crop&auto=format&q=80" alt="Professional working with AI and data"
-           loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);" class="ac-photo">
-      <div style="position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.92);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9B1A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="10"/><path d="M8 12h8M12 8v8"/><circle cx="12" cy="12" r="3"/></svg>
-      </div>
-    </div>
-    <div class="ac-body">
-      <div class="ac-num">01</div>
-      <h3 style="font-size:18px;font-weight:800;color:var(--ink);margin-bottom:.6rem;line-height:1.35;">AI, Day One.</h3>
-      <p style="font-size:16px;color:var(--ink-3);line-height:1.7;">每門課都融入AI實作能力，輔以倫理思辨與批判性思考——在演算法力所不及之處，讓你來領導。</p>
-    </div>
+<div id="why-pillars">
+  <div>
+    <span class="wp-tag">Why GMBA</span>
+    <h2>為什麼選擇<br>東海 GMBA</h2>
+    <p class="wp-lead">四個會不斷累積的優勢，融入每一門課、每一屆同學、每一段職涯。</p>
   </div>
-
-  <div class="advantage-card">
-    <div class="ac-icon" style="position:relative;overflow:hidden;height:200px;padding:0;background:var(--cream);">
-      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=380&fit=crop&auto=format&q=80" alt="Diverse multicultural team"
-           loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);" class="ac-photo">
-      <div style="position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.92);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9B1A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      </div>
-    </div>
-    <div class="ac-body">
-      <div class="ac-num">02</div>
-      <h3 style="font-size:18px;font-weight:800;color:var(--ink);margin-bottom:.6rem;line-height:1.35;">Scholarship Supported.</h3>
-      <p style="font-size:16px;color:var(--ink-3);line-height:1.7;">東海大學、GMBA學程與台灣政府多層次獎學金——全力支持你的學習旅程。</p>
-    </div>
+  <div class="wp-list">
+      <p><strong>AI 從第一天開始。</strong>AI 應用能力融入每一門課，同時訓練演算法無法取代的判斷力與倫理思考。</p>
+      <p><strong>獎學金支持。</strong>東海校方、GMBA 學程與台灣政府三個層級的獎助，讓你安心把重心放在學習上。</p>
+      <p><strong>台灣的產業優勢。</strong>深入理解半導體與供應鏈生態，這份專業帶到哪個市場都是你的籌碼。</p>
+      <p><strong>走向國際。</strong>透過姊妹校網絡出國交換或實習，取得的學分可直接採計於學位。</p>
   </div>
-
-  <div class="advantage-card">
-    <div class="ac-icon" style="position:relative;overflow:hidden;height:200px;padding:0;background:var(--cream);">
-      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=380&fit=crop&auto=format&q=80" alt="Faculty and academic professional"
-           loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);" class="ac-photo">
-      <div style="position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.92);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9B1A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-    </div>
-    <div class="ac-body">
-      <div class="ac-num">03</div>
-      <h3 style="font-size:18px;font-weight:800;color:var(--ink);margin-bottom:.6rem;line-height:1.35;">Taiwan Edge.</h3>
-      <p style="font-size:16px;color:var(--ink-3);line-height:1.7;">深耕台灣供應鏈與半導體生態系的專業知識——無論進入哪個市場，這都是你的獨特優勢。</p>
-    </div>
-  </div>
-
-  <div class="advantage-card">
-    <div class="ac-icon" style="position:relative;overflow:hidden;height:200px;padding:0;background:var(--cream);">
-      <img src="https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=600&h=380&fit=crop&auto=format&q=80" alt="Bilingual Asian professional"
-           loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);" class="ac-photo">
-      <div style="position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,0.92);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9B1A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      </div>
-    </div>
-    <div class="ac-body">
-      <div class="ac-num">04</div>
-      <h3 style="font-size:18px;font-weight:800;color:var(--ink);margin-bottom:.6rem;line-height:1.35;">Go Global.</h3>
-      <p style="font-size:16px;color:var(--ink-3);line-height:1.7;">透過全球姐妹校網絡出國交換或實習——學分全數計入畢業學分。</p>
-    </div>
-  </div>
-
 </div>
 
-<script>
-(function(){
-  var cards = document.querySelectorAll('.advantage-card');
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        var idx = Array.from(cards).indexOf(entry.target);
-        setTimeout(function(){ entry.target.classList.add('ac-visible'); }, idx * 120);
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  cards.forEach(function(c){ io.observe(c); });
-})();
-</script>
-
   <!-- ===== STUDENT VOICES ===== -->
-  <style>
-    .sv-row{display:flex;align-items:center;gap:3rem;padding:2.75rem 0;border-top:1px solid #d0c9c0;text-decoration:none;transition:opacity .15s;}
-    .sv-row:hover{opacity:.82;}
-    .sv-row-text{flex:1;min-width:0;max-width:560px;}
-    .sv-row-title{font-size:1.35rem;font-weight:900;color:var(--ink);line-height:1.25;margin:0 0 .65rem;letter-spacing:-.01em;}
-    .sv-row-excerpt{font-size:18px;color:var(--ink-3);line-height:1.8;margin:0 0 .85rem;}
-    .sv-row-byline{font-size:15px;color:var(--ink-3);letter-spacing:.02em;}
-    .sv-row-photo{flex-shrink:0;width:380px;height:260px;overflow:hidden;background:#ede9e3;margin-left:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.13);}
-    .sv-row-photo img{width:100%;height:100%;object-fit:cover;}
-    .sv-footer-row{border-top:1px solid #d0c9c0;padding-top:1.25rem;display:flex;justify-content:flex-end;}
-    .sv-see-all{font-size:14px;font-weight:800;color:var(--maroon);text-decoration:none;letter-spacing:.04em;}
-    .sv-see-all:hover{opacity:.7;}
-    @media(max-width:680px){
-      .sv-row{flex-direction:column-reverse;border-top:none;margin-bottom:1.25rem;padding:0;border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 2px 18px rgba(0,0,0,.10);}
-      .sv-row-photo{width:100%;height:260px;margin-left:0;}
-      .sv-row-text{padding:1.1rem 1.2rem 1.3rem;}
-      .sv-row-excerpt{font-size:15px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:0.5rem;}
-      .sv-footer-row{border-top:none;padding-top:0;}
-    }
-  </style>
-
   <div id="student-voices"></div>
-  <div style="margin-top:5.5rem;margin-bottom:2.5rem;border-top:2px solid var(--maroon);padding-top:3rem;">
-    <span style="font-size:0.72rem;font-weight:700;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:0.8rem;">學生見證</span>
-    <h2 style="margin:0 0 2rem;font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.1;letter-spacing:-0.02em;">用他們自己的話，<br>說GMBA的故事</h2>
+  <div id="sv-final" class="sv-scope" style="margin-top:5.5rem;">
+<style>
+.sv-scope .sv-head{display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;border-top:2px solid var(--maroon);padding-top:2.4rem;margin-bottom:2.4rem;}
+.sv-scope .sv-tag{font-size:11.5px;font-weight:800;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:.9rem;}
+.sv-scope .sv-head h2{word-break:keep-all;line-break:strict;text-wrap:pretty;margin:0;font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.08;letter-spacing:-.02em;color:var(--ink);}
+.sv-scope .sv-all{flex-shrink:0;font-size:14px;font-weight:800;color:var(--maroon);text-decoration:none;letter-spacing:.04em;padding-bottom:.4rem;white-space:nowrap;}
+.sv-scope .sv-film{margin-bottom:3rem;}
+.sv-scope .sv-stage{position:relative;aspect-ratio:21/9;width:100%;background:#1a0508;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;}
+.sv-scope .sv-stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.sv-scope .sv-play{width:58px;height:58px;border:2px solid rgba(255,255,255,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.sv-scope .sv-soon{font-size:10px;color:rgba(255,255,255,.42);letter-spacing:.15em;text-transform:uppercase;}
+.sv-scope .sv-stage-copy{position:absolute;left:0;bottom:0;padding:1.6rem 2rem;}
+.sv-scope .sv-stage-copy span{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--gold-lt,#E8C55A);text-transform:uppercase;display:block;margin-bottom:.5rem;}
+.sv-scope .sv-stage-copy h3{margin:0;font-size:clamp(22px,2.6vw,32px);font-weight:900;line-height:1.15;color:#fff;}
+.sv-scope .sv-qs{display:grid;grid-template-columns:repeat(3,1fr);background:#2B0A11;}
+.sv-scope .sv-q{display:flex;gap:.8rem;padding:1.1rem 1.6rem;}
+.sv-scope .sv-q + .sv-q{border-left:1px solid rgba(255,255,255,.16);}
+.sv-scope .sv-q b{font-size:12px;font-weight:900;color:var(--gold-lt,#E8C55A);flex-shrink:0;}
+.sv-scope .sv-q span{font-size:14.5px;color:rgba(255,255,255,.88);line-height:1.55;}
+.sv-scope .sv-cards{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;}
+.sv-scope .sv-card{text-decoration:none;display:grid;grid-template-columns:200px 1fr;background:var(--white);border-top:3px solid var(--maroon);transition:box-shadow .25s ease,transform .25s cubic-bezier(.22,1,.36,1);}
+.sv-scope .sv-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(0,0,0,.12);}
+.sv-scope .sv-card img{width:100%;height:100%;object-fit:cover;display:block;}
+.sv-scope .sv-card-body{padding:1.6rem 1.8rem 1.9rem;}
+.sv-scope .sv-quote{margin:0 0 1rem;font-size:20px;font-weight:700;line-height:1.5;color:var(--ink);letter-spacing:-.01em;text-wrap:pretty;}
+.sv-scope .sv-sum{margin:0 0 1.1rem;font-size:15px;line-height:1.7;color:var(--ink-3);}
+.sv-scope .sv-by{font-size:13px;color:#8A8378;}
+@media (max-width:1024px){
+  .sv-scope .sv-head{flex-direction:column;align-items:flex-start;gap:1rem;}
+  .sv-scope .sv-stage{aspect-ratio:16/9;}
+  .sv-scope .sv-stage-copy{padding:1.2rem 1.2rem;}
+  .sv-scope .sv-qs{grid-template-columns:1fr;}
+  .sv-scope .sv-q + .sv-q{border-left:none;border-top:1px solid rgba(255,255,255,.16);}
+  .sv-scope .sv-cards{grid-template-columns:1fr;gap:1.4rem;}
+  .sv-scope .sv-card{grid-template-columns:132px 1fr;}
+  .sv-scope .sv-quote{font-size:18px;}
+}
+</style>
+  <div class="sv-head">
+    <div>
+      <span class="sv-tag">學生的話</span>
+      <h2>GMBA 的日子，<br>由他們自己說</h2>
+    </div>
+    <a href="https://gmba.thu.edu.tw/web/about/page.php?lang=en&amp;scid=51&amp;sid=71" target="_blank" rel="noopener" class="sv-all">查看所有學生故事 →</a>
   </div>
-  <!-- Videos -->
-  <div id="video-section" style="margin-bottom:3.2rem;">
-    <!-- ═══ 影片一 · Film 1：為什麼是台灣，為什麼是東海（自製 · 2 分鐘）
-         上線時把下方深色 placeholder 整塊換成：
-         <iframe src="https://www.youtube.com/embed/VIDEO_ID" style="width:100%;height:100%;border:0;" allowfullscreen title="為什麼是台灣，為什麼是東海"></iframe>
-    ═══ -->
-    <div class="vid-grid" style="display:grid;grid-template-columns:1.05fr 1fr;gap:2.8rem;align-items:start;">
-      <!-- 影片一 · 影片格 -->
-      <div class="video-slot" style="aspect-ratio:16/9;width:100%;background:#1a0508;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;box-shadow:0 6px 28px rgba(0,0,0,0.20);">
-        <div style="width:46px;height:46px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <span style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:.15em;text-transform:uppercase;">即將上線</span>
+
+  <div class="sv-film">
+    <!-- 影片一 · 上線時把 .sv-play/.sv-soon 兩行換成 <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+    <div class="sv-stage">
+      <div class="sv-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+      <span class="sv-soon">Coming Soon</span>
+      <div class="sv-stage-copy">
+        <span>學生影片 · 2 分鐘</span>
+        <h3>為什麼是台灣，為什麼是東海</h3>
       </div>
-      <!-- 影片一 · 標題與說明 -->
-      <div>
-        <span style="font-size:0.72rem;font-weight:700;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:0.7rem;">學生影片 &middot; 2 分鐘</span>
-        <h3 style="margin:0 0 .7rem;font-size:clamp(24px,2.4vw,31px);font-weight:900;line-height:1.18;letter-spacing:-0.01em;color:var(--ink);">為什麼是台灣，為什麼是東海</h3>
-        <p style="font-size:17px;color:var(--ink-3);line-height:1.7;margin:0;">三位來自美國、俄羅斯與印尼的學生，談他們當初怎麼做出這個決定。</p>
-        <p style="font-size:0.68rem;font-weight:800;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase;margin:1.5rem 0 0;">影片內容</p>
-        <div style="margin-top:.55rem;border-top:1px solid var(--rule);">
-          <div style="display:flex;gap:.8rem;padding:.62rem 0;border-bottom:1px solid var(--rule);"><span style="font-size:13px;font-weight:800;color:#C94B0A;line-height:1.55;flex-shrink:0;">01</span><span style="font-size:15px;color:var(--ink);line-height:1.55;">為什麼是台灣，不是新加坡、香港，或留在自己的國家？</span></div>
-          <div style="display:flex;gap:.8rem;padding:.62rem 0;border-bottom:1px solid var(--rule);"><span style="font-size:13px;font-weight:800;color:#C94B0A;line-height:1.55;flex-shrink:0;">02</span><span style="font-size:15px;color:var(--ink);line-height:1.55;">為什麼是東海 GMBA？</span></div>
-          <div style="display:flex;gap:.8rem;padding:.62rem 0;border-bottom:1px solid var(--rule);"><span style="font-size:13px;font-weight:800;color:#C94B0A;line-height:1.55;flex-shrink:0;">03</span><span style="font-size:15px;color:var(--ink);line-height:1.55;">來了之後，最意外的是什麼？</span></div>
-        </div>
-      </div>
+    </div>
+    <div class="sv-qs">
+      <div class="sv-q"><b>01</b><span>當初為什麼選台灣，而不是新加坡、香港或留在家鄉？</span></div>
+      <div class="sv-q"><b>02</b><span>為什麼是東海 GMBA？</span></div>
+      <div class="sv-q"><b>03</b><span>真正來了之後，最出乎意料的是什麼？</span></div>
     </div>
   </div>
 
-
-
-
-  <!-- Jefferson Adrian -->
-  <a href="./student-voices.html#jefferson" class="sv-row">
-    <div class="sv-row-text">
-      <div class="sv-row-title">從恐懼到自信：GMBA 如何改變了 Jefferson Adrian</div>
-      <p class="sv-row-excerpt">來到東海之前，Jefferson 連教室在哪都不知道，更別說職涯方向。兩年後，他帶著來自十幾個國家的朋友離開，以及在任何場合都能開口發聲的自信。</p>
-      <div class="sv-row-byline">作者：Jefferson Adrian &nbsp;&middot;&nbsp; 菲律賓 &nbsp;&middot;&nbsp; 2023 屆</div>
-    </div>
-    <div class="sv-row-photo">
-      <img src="./照片 Jefferson.jpg" alt="Jefferson Adrian" style="object-fit:cover;object-position:center 12%;">
-    </div>
-  </a>
-
-  <!-- Tarah Julius -->
-  <a href="./student-voices.html#tarah" class="sv-row">
-    <div class="sv-row-text">
-      <div class="sv-row-title">緊密相連的群體：Tarah Julius 談 GMBA 的多元與成長</div>
-      <p class="sv-row-excerpt">Tarah 初來乍到時，感覺自己像汪洋中的一條小魚。供應鏈、財務、創業的課程挑戰了她，還送她到奧地利交換。離開時，她已準備好迎接職場的一切。</p>
-      <div class="sv-row-byline">作者：Tarah Julius &nbsp;&middot;&nbsp; 2023 屆</div>
-    </div>
-    <div class="sv-row-photo">
-      <img src="./照片 Tarah 1.jpg" alt="Tarah Julius" style="object-fit:cover;object-position:50% 12%;">
-    </div>
-  </a>
-
-  <div class="sv-footer-row">
-    <a href="https://gmba.thu.edu.tw/web/about/page.php?lang=en&amp;scid=51&amp;sid=71" target="_blank" rel="noopener" class="sv-see-all">查看所有學生故事 →</a>
+  <div class="sv-cards">
+    <a href="./student-voices.html#jefferson" class="sv-card">
+      <img src="./照片 Jefferson.jpg" alt="Jefferson Adrian" style="object-position:50% 18%;">
+      <div class="sv-card-body">
+        <p class="sv-quote">「謝謝東海與 GMBA，把我塑造成現在的樣子。」</p>
+        <p class="sv-sum">剛來的時候他什麼都怕——不敢加入任何一組，連教室在哪都不知道。兩年後：來自十幾個國家的朋友，以及現在還帶在職場上的自信。</p>
+        <div class="sv-by">Jefferson Adrian · 菲律賓 · 2023 屆</div>
+      </div>
+    </a>
+    <a href="./student-voices.html#tarah" class="sv-card">
+      <img src="./照片 Tarah 1.jpg" alt="Tarah Julius with classmates" style="object-position:50% 30%;">
+      <div class="sv-card-body">
+        <p class="sv-quote">「我發現了一個緊密相連的群體，充滿多元、知識與連結。」</p>
+        <p class="sv-sum">組織結構、財務、程式、供應鏈、創業，接著是奧地利的交換學期。畢業時，她帶走的是跨越國界的能力。</p>
+        <div class="sv-by">Tarah Julius（照片中）與同屆同學 · 2023 屆</div>
+      </div>
+    </a>
+  </div>
   </div>
 
 </div>
 <!-- ===== CLASS PROFILE ===== -->
 <section id="class-profile" style="background:var(--cream);padding:4rem 0;">
   <div class="container">
-    <h2 style="margin-bottom:1rem;">真正的國際化課堂</h2>
-    <p class="sec-lead" style="color:var(--ink-3);margin-bottom:3rem;">30–40 名學生，10 個以上國籍。小到讓你真正認識每一個人，多元到讓每個人都帶來不同的視野。</p>
-    <div class="vid-grid" style="display:grid;grid-template-columns:1.05fr 1fr;gap:2.8rem;align-items:start;">
-      <!-- 影片二 · 影片格 -->
-      <!-- ═══ 影片二 · Film 2：沒有國界的課堂（自製 · 2 分鐘）
-           上線時把下方深色 placeholder 整塊換成：
-           <iframe src="https://www.youtube.com/embed/VIDEO_ID" style="width:100%;height:100%;border:0;" allowfullscreen title="沒有國界的課堂"></iframe>
-      ═══ -->
-      <div class="video-slot" style="aspect-ratio:16/9;width:100%;background:#1a0508;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;box-shadow:0 6px 28px rgba(0,0,0,0.20);">
-        <div style="width:46px;height:46px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+        <div class="sv-scope">
+      <div class="sv-head">
+        <div>
+          <span class="sv-tag">班級組成</span>
+          <h2>真正的國際化課堂</h2>
         </div>
-        <span style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:.15em;text-transform:uppercase;">即將上線</span>
+        <p style="flex:none;max-width:30em;margin:0 0 .4rem;font-size:16px;line-height:1.7;color:var(--ink-3);">每屆 30–40 人、10 個以上國籍。小到你認得出每一個人，卻又多元到每個人都來自不同的地方。</p>
       </div>
-      <!-- 影片二 · 標題與說明 -->
-      <div>
-        <span style="font-size:0.72rem;font-weight:700;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:0.7rem;">學生影片 &middot; 2 分鐘</span>
-        <h3 style="margin:0 0 .7rem;font-size:clamp(24px,2.4vw,31px);font-weight:900;line-height:1.18;letter-spacing:-0.01em;color:var(--ink);">沒有國界的課堂</h3>
-        <p style="font-size:17px;color:var(--ink-3);line-height:1.7;margin:0;">班上來自二十幾個國家，卻小到你認得出每一個人。其中三位談實際相處起來是什麼樣子。</p>
-        <p style="font-size:0.68rem;font-weight:800;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase;margin:1.5rem 0 0;">影片內容</p>
-        <div style="margin-top:.55rem;border-top:1px solid var(--rule);">
-          <div style="display:flex;gap:.8rem;padding:.62rem 0;border-bottom:1px solid var(--rule);"><span style="font-size:13px;font-weight:800;color:#C94B0A;line-height:1.55;flex-shrink:0;">01</span><span style="font-size:15px;color:var(--ink);line-height:1.55;">跨文化的小組報告，實際上是怎麼進行的？</span></div>
-          <div style="display:flex;gap:.8rem;padding:.62rem 0;border-bottom:1px solid var(--rule);"><span style="font-size:13px;font-weight:800;color:#C94B0A;line-height:1.55;flex-shrink:0;">02</span><span style="font-size:15px;color:var(--ink);line-height:1.55;">同學最讓他們意外的地方是什麼？</span></div>
-          <div style="display:flex;gap:.8rem;padding:.62rem 0;border-bottom:1px solid var(--rule);"><span style="font-size:13px;font-weight:800;color:#C94B0A;line-height:1.55;flex-shrink:0;">03</span><span style="font-size:15px;color:var(--ink);line-height:1.55;">想對正在考慮申請的人說什麼？</span></div>
+    </div>
+
+    <div class="sv-scope">
+      <div class="sv-film">
+        <!-- 影片二 · 上線時把 .sv-play/.sv-soon 兩行換成 <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+        <div class="sv-stage">
+          <div class="sv-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="sv-soon">Coming Soon</span>
+          <div class="sv-stage-copy">
+            <span>學生影片 · 2 分鐘</span>
+            <h3>沒有國界的課堂</h3>
+          </div>
+        </div>
+        <div class="sv-qs">
+        <div class="sv-q"><b>01</b><span>跨文化的小組報告，實際上是怎麼進行的？</span></div>
+        <div class="sv-q"><b>02</b><span>關於同學，最讓他們意外的是什麼？</span></div>
+        <div class="sv-q"><b>03</b><span>如果有人正在考慮申請，他們會說什麼？</span></div>
         </div>
       </div>
     </div>
     <!-- ── 地區分佈 · Class of 2018-2026 ── -->
-    <div style="margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--rule);">
-      <div style="margin-bottom:2rem;">
-        <p style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#C94B0A;margin:0 0 .35rem;">Class of 2018-2026 · By World Region</p>
-        <p style="font-size:clamp(22px,2.8vw,34px);font-weight:900;color:var(--ink);margin:0;line-height:1.1;font-family:'Barlow Condensed','Inter',sans-serif;letter-spacing:.02em;">8 個地區 &nbsp;·&nbsp; 22 個國籍</p>
+    <div id="cp-regions" style="margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--rule);">
+<style>
+#cp-regions .cp-head{display:flex;justify-content:space-between;align-items:flex-end;gap:3rem;margin-bottom:2.2rem;}
+#cp-regions .cp-note{margin:0 0 .3rem;font-size:14px;color:var(--ink-3);line-height:1.65;max-width:21em;text-align:right;}
+#cp-regions .cp-heroes{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-bottom:2.4rem;}
+#cp-regions .cp-hero{padding:1.9rem 2rem 2.1rem;border-radius:4px;}
+#cp-regions .cp-hero-top{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:1.3rem;}
+#cp-regions .cp-hero-name{font-size:16px;font-weight:800;letter-spacing:.02em;}
+#cp-regions .cp-hero-pct{font-family:'Barlow Condensed','Inter',sans-serif;font-size:52px;font-weight:900;line-height:.85;}
+#cp-regions .cp-hero-flags{display:flex;flex-wrap:wrap;gap:.7rem 1.1rem;}
+#cp-regions .cp-hero-flags span{display:inline-flex;align-items:center;gap:.45rem;font-size:14px;white-space:nowrap;}
+#cp-regions .cp-hero-flags img{border-radius:1px;}
+#cp-regions .cp-rest-label{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .2rem;}
+#cp-regions .cp-rest{display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;}
+#cp-regions .cp-rest-row{display:flex;align-items:center;gap:.9rem;padding:.85rem 0;border-bottom:1px solid var(--rule);}
+#cp-regions .cp-dot{width:7px;height:7px;flex-shrink:0;}
+#cp-regions .cp-rest-name{font-size:14px;font-weight:800;color:var(--ink);width:104px;flex-shrink:0;}
+#cp-regions .cp-rest-flags{display:flex;gap:.35rem;flex:1;flex-wrap:wrap;}
+#cp-regions .cp-rest-flags img{border-radius:1px;box-shadow:0 1px 2px rgba(0,0,0,.22);}
+#cp-regions .cp-rest-pct{font-family:'Barlow Condensed','Inter',sans-serif;font-size:20px;font-weight:900;}
+@media (max-width:820px){
+  #cp-regions .cp-head{flex-direction:column;align-items:flex-start;gap:.9rem;}
+  #cp-regions .cp-note{text-align:left;max-width:none;}
+  #cp-regions .cp-heroes{grid-template-columns:1fr;gap:1rem;}
+  #cp-regions .cp-hero{padding:1.5rem 1.4rem 1.7rem;}
+  #cp-regions .cp-hero-pct{font-size:42px;}
+  #cp-regions .cp-hero-flags{gap:.6rem .9rem;}
+  #cp-regions .cp-hero-flags span{font-size:13px;}
+  #cp-regions .cp-rest{grid-template-columns:1fr;gap:0;}
+  #cp-regions .cp-rest-name{width:88px;font-size:13.5px;}
+}
+</style>
+      <div class="cp-head">
+        <div>
+          <p style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#C94B0A;margin:0 0 .35rem;">Class of 2018-2026 &middot; By World Region</p>
+          <p style="font-size:clamp(22px,2.8vw,34px);font-weight:900;color:var(--ink);margin:0;line-height:1.1;font-family:'Barlow Condensed','Inter',sans-serif;letter-spacing:.02em;">8 個地區 &nbsp;&middot;&nbsp; 22 個國籍</p>
+        </div>
+        <p class="cp-note">兩個地區撐起八成六的同學，其餘六個地區把教室拉開到四個大洲。</p>
       </div>
-      <div style="display:flex;height:10px;border-radius:3px;overflow:hidden;margin-bottom:2.5rem;gap:2px;">
-        <div style="width:65.4%;background:#9B1A2C;border-radius:3px 0 0 3px;" title="Southeast Asia 65.4%"></div>
-        <div style="width:21.1%;background:#2563A8;border-radius:0;" title="East Asia 21.1%"></div>
-        <div style="width:3.9%;background:#1E6B8C;border-radius:0;" title="Europe 3.9%"></div>
-        <div style="width:3.1%;background:#B8922A;border-radius:0;" title="South Asia 3.1%"></div>
-        <div style="width:3.1%;background:#2D7A5C;border-radius:0;" title="Central Asia 3.1%"></div>
-        <div style="width:1.3%;background:#4A5568;border-radius:0;" title="Africa 1.3%"></div>
-        <div style="width:1.3%;background:#C94B0A;border-radius:0;" title="Americas 1.3%"></div>
-        <div style="width:0.9%;background:#7B5EA7;border-radius:0 3px 3px 0;" title="Middle East 0.9%"></div>
+      <div class="cp-heroes">
+        <div class="cp-hero" style="background:#9B1A2C;color:#fff;">
+          <div class="cp-hero-top">
+            <span class="cp-hero-name" style="color:#fff;">東南亞</span>
+            <span class="cp-hero-pct" style="color:#fff;">65.4%</span>
+          </div>
+          <div class="cp-hero-flags"><span style="color:rgba(255,255,255,.9);"><img src="https://flagcdn.com/20x15/id.png" width="20" height="15" alt="Indonesia" style="">印尼</span><span style="color:rgba(255,255,255,.9);"><img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="Vietnam" style="">越南</span><span style="color:rgba(255,255,255,.9);"><img src="https://flagcdn.com/20x15/th.png" width="20" height="15" alt="Thailand" style="">泰國</span><span style="color:rgba(255,255,255,.9);"><img src="https://flagcdn.com/20x15/my.png" width="20" height="15" alt="Malaysia" style="">馬來西亞</span><span style="color:rgba(255,255,255,.9);"><img src="https://flagcdn.com/20x15/mm.png" width="20" height="15" alt="Myanmar" style="">緬甸</span><span style="color:rgba(255,255,255,.9);"><img src="https://flagcdn.com/20x15/ph.png" width="20" height="15" alt="Philippines" style="">菲律賓</span><span style="color:rgba(255,255,255,.9);"><img src="https://flagcdn.com/20x15/sg.png" width="20" height="15" alt="Singapore" style="">新加坡</span></div>
+        </div>
+        <div class="cp-hero" style="background:var(--white);border-top:4px solid #2563A8;">
+          <div class="cp-hero-top">
+            <span class="cp-hero-name" style="color:var(--ink);">東亞</span>
+            <span class="cp-hero-pct" style="color:#2563A8;">21.1%</span>
+          </div>
+          <div class="cp-hero-flags"><span style="color:var(--ink-3);"><img src="https://flagcdn.com/20x15/tw.png" width="20" height="15" alt="Taiwan" style="box-shadow:0 1px 2px rgba(0,0,0,.22);">台灣</span><span style="color:var(--ink-3);"><img src="https://flagcdn.com/20x15/mn.png" width="20" height="15" alt="Mongolia" style="box-shadow:0 1px 2px rgba(0,0,0,.22);">蒙古</span><span style="color:var(--ink-3);"><img src="https://flagcdn.com/20x15/hk.png" width="20" height="15" alt="Hong Kong" style="box-shadow:0 1px 2px rgba(0,0,0,.22);">香港</span></div>
+        </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
-        <div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #9B1A2C;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Southeast Asia</span><span style="font-size:14px;font-weight:900;color:#9B1A2C;font-family:'Barlow Condensed',sans-serif;">65.4%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:65.4%;height:100%;background:#9B1A2C;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/id.png" width="20" height="15" alt="Indonesia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Indonesia</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="Vietnam" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Vietnam</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/th.png" width="20" height="15" alt="Thailand" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Thailand</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/my.png" width="20" height="15" alt="Malaysia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Malaysia</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/mm.png" width="20" height="15" alt="Myanmar" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Myanmar</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/ph.png" width="20" height="15" alt="菲律賓" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">菲律賓</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/sg.png" width="20" height="15" alt="Singapore" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Singapore</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #2563A8;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">East Asia</span><span style="font-size:14px;font-weight:900;color:#2563A8;font-family:'Barlow Condensed',sans-serif;">21.1%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:21.1%;height:100%;background:#2563A8;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/tw.png" width="20" height="15" alt="Taiwan" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Taiwan</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/mn.png" width="20" height="15" alt="Mongolia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Mongolia</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/hk.png" width="20" height="15" alt="Hong Kong" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Hong Kong</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #1E6B8C;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Europe</span><span style="font-size:14px;font-weight:900;color:#1E6B8C;font-family:'Barlow Condensed',sans-serif;">3.9%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:3.9%;height:100%;background:#1E6B8C;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/es.png" width="20" height="15" alt="Spain" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Spain</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/ru.png" width="20" height="15" alt="Russia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Russia</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/fr.png" width="20" height="15" alt="France" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">France</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/ua.png" width="20" height="15" alt="Ukraine" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Ukraine</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #B8922A;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">South Asia</span><span style="font-size:14px;font-weight:900;color:#B8922A;font-family:'Barlow Condensed',sans-serif;">3.1%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:3.1%;height:100%;background:#B8922A;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/in.png" width="20" height="15" alt="India" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">India</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #2D7A5C;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Central Asia</span><span style="font-size:14px;font-weight:900;color:#2D7A5C;font-family:'Barlow Condensed',sans-serif;">3.1%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:3.1%;height:100%;background:#2D7A5C;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/kg.png" width="20" height="15" alt="Kyrgyzstan" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Kyrgyzstan</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #4A5568;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Africa</span><span style="font-size:14px;font-weight:900;color:#4A5568;font-family:'Barlow Condensed',sans-serif;">1.3%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:1.3%;height:100%;background:#4A5568;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/za.png" width="20" height="15" alt="S. Africa" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">S. Africa</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/ng.png" width="20" height="15" alt="Nigeria" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Nigeria</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #C94B0A;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Americas</span><span style="font-size:14px;font-weight:900;color:#C94B0A;font-family:'Barlow Condensed',sans-serif;">1.3%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:1.3%;height:100%;background:#C94B0A;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/br.png" width="20" height="15" alt="Brazil" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Brazil</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="USA" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">USA</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/bo.png" width="20" height="15" alt="Bolivia" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Bolivia</span></div></div></div><div style="background:var(--white);border:1px solid var(--rule);border-top:3px solid #7B5EA7;border-radius:4px;padding:1rem;"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;"><span style="font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.03em;">Middle East</span><span style="font-size:14px;font-weight:900;color:#7B5EA7;font-family:'Barlow Condensed',sans-serif;">0.9%</span></div><div style="height:3px;background:#EEE9E2;border-radius:2px;margin-bottom:.8rem;overflow:hidden;"><div style="width:0.9%;height:100%;background:#7B5EA7;border-radius:2px;"></div></div><div style="display:flex;flex-wrap:wrap;gap:.5rem .6rem;"><div style="display:flex;flex-direction:column;align-items:center;gap:3px;"><img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="Turkey" style="border-radius:1px;box-shadow:0 1px 3px rgba(0,0,0,.2);"><span style="font-size:11px;color:var(--ink-3);white-space:nowrap;">Turkey</span></div></div></div>
+      <p class="cp-rest-label">其餘六個地區</p>
+      <div class="cp-rest">
+        <div class="cp-rest-row">
+          <span class="cp-dot" style="background:#1E6B8C;"></span>
+          <span class="cp-rest-name">歐洲</span>
+          <span class="cp-rest-flags"><img src="https://flagcdn.com/20x15/es.png" width="20" height="15" alt="Spain"><img src="https://flagcdn.com/20x15/ru.png" width="20" height="15" alt="Russia"><img src="https://flagcdn.com/20x15/fr.png" width="20" height="15" alt="France"><img src="https://flagcdn.com/20x15/ua.png" width="20" height="15" alt="Ukraine"></span>
+          <span class="cp-rest-pct" style="color:#1E6B8C;">3.9%</span>
+        </div>
+        <div class="cp-rest-row">
+          <span class="cp-dot" style="background:#B8922A;"></span>
+          <span class="cp-rest-name">南亞</span>
+          <span class="cp-rest-flags"><img src="https://flagcdn.com/20x15/in.png" width="20" height="15" alt="India"></span>
+          <span class="cp-rest-pct" style="color:#B8922A;">3.1%</span>
+        </div>
+        <div class="cp-rest-row">
+          <span class="cp-dot" style="background:#2D7A5C;"></span>
+          <span class="cp-rest-name">中亞</span>
+          <span class="cp-rest-flags"><img src="https://flagcdn.com/20x15/kg.png" width="20" height="15" alt="Kyrgyzstan"></span>
+          <span class="cp-rest-pct" style="color:#2D7A5C;">3.1%</span>
+        </div>
+        <div class="cp-rest-row">
+          <span class="cp-dot" style="background:#4A5568;"></span>
+          <span class="cp-rest-name">非洲</span>
+          <span class="cp-rest-flags"><img src="https://flagcdn.com/20x15/za.png" width="20" height="15" alt="South Africa"><img src="https://flagcdn.com/20x15/ng.png" width="20" height="15" alt="Nigeria"></span>
+          <span class="cp-rest-pct" style="color:#4A5568;">1.3%</span>
+        </div>
+        <div class="cp-rest-row">
+          <span class="cp-dot" style="background:#C94B0A;"></span>
+          <span class="cp-rest-name">美洲</span>
+          <span class="cp-rest-flags"><img src="https://flagcdn.com/20x15/br.png" width="20" height="15" alt="Brazil"><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="USA"><img src="https://flagcdn.com/20x15/bo.png" width="20" height="15" alt="Bolivia"></span>
+          <span class="cp-rest-pct" style="color:#C94B0A;">1.3%</span>
+        </div>
+        <div class="cp-rest-row">
+          <span class="cp-dot" style="background:#7B5EA7;"></span>
+          <span class="cp-rest-name">中東</span>
+          <span class="cp-rest-flags"><img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="Turkey"></span>
+          <span class="cp-rest-pct" style="color:#7B5EA7;">0.9%</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== CAMPUS LIFE ===== -->
-<section id="campus-life" style="background:var(--cream);padding:0;">
-
-  <!-- HBS-style: 3-column hero panel -->
-  <div class="vid-grid" style="display:grid;grid-template-columns:1fr 2fr 1fr;min-height:560px;">
-
-    <!-- Left: Maroon panel + title + text -->
-    <div style="background:var(--maroon);padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center;">
-      <h2 style="color:#fff;font-size:clamp(26px,2.8vw,40px);font-weight:900;line-height:1.1;margin-bottom:1.8rem;letter-spacing:-0.01em;">東海大學的校園生活</h2>
-      <p style="font-size:18px;color:rgba(255,255,255,0.82);line-height:1.8;">134 公頃林蔭步道、傳統建築，以及由貝聿銘設計的標誌性<strong style="color:#f0c080;">路思義教堂</strong>——一座寧靜美麗的校園，讓你從這裡出發，走向全球職涯。</p>
-    </div>
-
-    <!-- Center: Campus video -->
-    <!-- ═══ 學校官方影片：2025 東海大學簡介影片-精華版（5:28，THUVideo 官方頻道，中英雙語燒錄字幕）
-         來源 https://www.youtube.com/watch?v=-FywhrZjUjI ｜ 若日後換片，只需替換下方 iframe 的 embed 網址
-    ═══ -->
-    <div style="overflow:hidden;background:#1a0508;display:flex;align-items:center;justify-content:center;">
-      <div style="width:100%;aspect-ratio:16/9;">
-        <iframe src="https://www.youtube.com/embed/-FywhrZjUjI" style="width:100%;height:100%;border:0;display:block;"
-                title="2025 東海大學簡介影片" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <!-- Right: Dark panel + 3 stats -->
-    <div style="background:var(--ink);padding:4rem 2.5rem;display:flex;flex-direction:column;justify-content:center;gap:3rem;">
+<section id="campus-life" style="background:var(--cream);padding:4rem 0;">
+  <style>
+    #campus-life .cl-in{max-width:1240px;margin:0 auto;padding:0 1rem;}
+    #campus-life .cl-head{display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;border-top:2px solid var(--maroon);padding-top:2.4rem;margin-bottom:2.4rem;}
+    #campus-life .cl-tag{font-size:11.5px;font-weight:800;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:.9rem;}
+    #campus-life .cl-head h2{word-break:keep-all;line-break:strict;text-wrap:pretty;margin:0;font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.08;letter-spacing:-.02em;color:var(--ink);}
+    #campus-life .cl-lead{flex:none;max-width:32em;margin:0 0 .4rem;font-size:16px;line-height:1.7;color:var(--ink-3);}
+    #campus-life .cl-video{width:100%;aspect-ratio:16/9;background:#1a0508;}
+    #campus-life .cl-video iframe{width:100%;height:100%;border:0;display:block;}
+    #campus-life .cl-stats{display:grid;grid-template-columns:repeat(3,1fr);background:#2B0A11;}
+    #campus-life .cl-stat{padding:1.5rem 1.8rem;}
+    #campus-life .cl-num{font-family:var(--ff-num);font-size:44px;font-weight:900;color:var(--gold-lt,#E8C55A);line-height:1;}
+    #campus-life .cl-stat p{margin:.45rem 0 0;font-size:14.5px;color:rgba(255,255,255,.82);line-height:1.55;}
+    @media (max-width:1024px){
+      #campus-life .cl-head{flex-direction:column;align-items:flex-start;gap:1rem;}
+      #campus-life .cl-lead{max-width:none;}
+      #campus-life .cl-stats{grid-template-columns:1fr;}
+      #campus-life .cl-stat{border-left:none !important;}
+      #campus-life .cl-stat + .cl-stat{border-top:1px solid rgba(255,255,255,.16);}
+      #campus-life .cl-num{font-size:36px;}
+    }
+  </style>
+  <div class="cl-in">
+    <div class="cl-head">
       <div>
-        <div style="font-size:clamp(44px,4vw,64px);font-weight:900;color:#fff;font-family:var(--ff-num);line-height:1;">134</div>
-        <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:.5rem;line-height:1.5;">公頃優美校園</p>
+        <span class="cl-tag">Campus Life</span>
+        <h2>東海大學的校園生活</h2>
       </div>
-      <div>
-        <div style="font-size:clamp(40px,4vw,60px);font-weight:900;color:#fff;font-family:var(--ff-num);line-height:1;">150+</div>
-        <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:.5rem;line-height:1.5;">個學生社團——總有一個適合你</p>
+      <p class="cl-lead">134 公頃林蔭步道、傳統建築，以及由貝聿銘設計的標誌性<strong style="color:var(--maroon);font-weight:700;">路思義教堂</strong>。這是台灣最大的綠色校園之一，而且就在台中市區裡——校園的靜，離城市只有幾分鐘。</p>
+    </div>
+    <!-- ═══ 學校官方影片：2025 東海大學簡介影片-精華版（5:28，THUVideo 官方頻道，中英雙語字幕）
+         換片時只需替換下方 iframe 的 embed 網址，並同步更新上方 VideoObject JSON-LD ═══ -->
+    <div class="cl-video">
+      <iframe src="https://www.youtube.com/embed/-FywhrZjUjI" title="Tunghai University &mdash; 2025 Introduction"
+              loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="cl-stats">
+      <div class="cl-stat">
+        <div class="cl-num">134</div>
+        <p>公頃優美校園</p>
       </div>
-      <div>
-        <div style="font-size:clamp(34px,3.5vw,52px);font-weight:900;color:#fff;font-family:var(--ff-num);line-height:1;">46</div>
-        <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:.5rem;line-height:1.5;">棟宿舍——每位學生都能住在校內</p>
+      <div class="cl-stat" style="border-left:1px solid rgba(255,255,255,.16);">
+        <div class="cl-num">150+</div>
+        <p>個學生社團，什麼興趣都找得到</p>
+      </div>
+      <div class="cl-stat" style="border-left:1px solid rgba(255,255,255,.16);">
+        <div class="cl-num">46</div>
+        <p>棟宿舍，每位學生都能住在校內</p>
       </div>
     </div>
-
   </div>
-
-
-
 </section>
 
 
-<section id="living-in-taiwan" style="background:var(--white);">
+<section id="living-in-taiwan" style="background:var(--white);padding:4rem 0;">
+  <style>
+    #living-in-taiwan .wt-head{display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;border-top:2px solid var(--maroon);padding-top:2.4rem;margin-bottom:2.4rem;}
+    #living-in-taiwan .wt-tag{font-size:11.5px;font-weight:800;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:.9rem;}
+    #living-in-taiwan .wt-head h2{word-break:keep-all;line-break:strict;text-wrap:pretty;margin:0;font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.08;letter-spacing:-.02em;color:var(--ink);}
+    #living-in-taiwan .wt-lead{flex:none;max-width:32em;margin:0 0 .4rem;font-size:16px;line-height:1.7;color:var(--ink-3);}
+    #living-in-taiwan .wt-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-bottom:2.2rem;}
+    #living-in-taiwan .wt-stat{padding:1.8rem 2rem 1.9rem;border-left:1px solid var(--rule);}
+    #living-in-taiwan .wt-stat:first-child{padding-left:0;border-left:none;}
+    #living-in-taiwan .wt-stat:last-child{padding-right:0;}
+    #living-in-taiwan .wt-num{font-family:var(--ff-num);font-size:52px;font-weight:900;color:var(--maroon);line-height:1;}
+    #living-in-taiwan .wt-stat h3{margin:.6rem 0 .5rem;font-size:17px;font-weight:800;color:var(--ink);}
+    #living-in-taiwan .wt-stat p{margin:0;font-size:15px;line-height:1.7;color:var(--ink-3);}
+    #living-in-taiwan .wt-band{background:#2B0A11;padding:1.6rem 2rem;margin-bottom:4.5rem;}
+    #living-in-taiwan .wt-band p{margin:0;font-size:18px;line-height:1.7;font-weight:600;color:#fff;}
+    #living-in-taiwan .wt-band em{color:var(--gold-lt,#E8C55A);font-style:normal;}
+    #living-in-taiwan .wt-cost{display:grid;grid-template-columns:300px 1fr;gap:3.5rem;align-items:start;}
+    #living-in-taiwan .wt-big{border-left:4px solid var(--maroon);padding-left:1.4rem;}
+    #living-in-taiwan .wt-big-num{font-family:var(--ff-num);font-size:72px;font-weight:900;line-height:.9;color:var(--maroon);}
+    #living-in-taiwan .wt-big-num small{font-size:34px;font-weight:900;}
+    #living-in-taiwan .wt-big p{margin:.7rem 0 0;font-size:15.5px;line-height:1.7;color:var(--ink-3);}
+    #living-in-taiwan .wt-bars{display:flex;flex-direction:column;gap:1.1rem;padding-top:.6rem;}
+    #living-in-taiwan .wt-bar-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.4rem;gap:1rem;}
+    #living-in-taiwan .wt-city{font-size:15px;font-weight:700;color:var(--ink-3);}
+    #living-in-taiwan .wt-bar-val{font-family:var(--ff-num);font-size:20px;font-weight:800;color:var(--ink-3);white-space:nowrap;}
+    #living-in-taiwan .wt-track{height:10px;background:#EFEAE3;}
+    #living-in-taiwan .wt-track > div{height:100%;background:#B4ADA2;}
+    #living-in-taiwan .wt-first .wt-city{font-weight:800;color:var(--ink);}
+    #living-in-taiwan .wt-first .wt-bar-val{color:var(--maroon);font-weight:900;}
+    #living-in-taiwan .wt-first .wt-track > div{background:var(--maroon);}
+    #living-in-taiwan .wt-note{margin:.6rem 0 0;font-size:13.5px;line-height:1.7;color:#8A8378;}
+    @media (max-width:1024px){
+      #living-in-taiwan .wt-head{flex-direction:column;align-items:flex-start;gap:1rem;}
+      #living-in-taiwan .wt-lead{max-width:none;}
+      #living-in-taiwan .wt-stats{grid-template-columns:1fr;}
+      #living-in-taiwan .wt-stat{padding:1.4rem 0;border-left:none;border-top:1px solid var(--rule);}
+      #living-in-taiwan .wt-stat:first-child{border-top:none;}
+      #living-in-taiwan .wt-num{font-size:42px;}
+      #living-in-taiwan .wt-band{padding:1.3rem 1.4rem;margin-bottom:3rem;}
+      #living-in-taiwan .wt-band p{font-size:16px;}
+      #living-in-taiwan .wt-cost{grid-template-columns:1fr;gap:2rem;}
+      #living-in-taiwan .wt-big-num{font-size:56px;}
+      #living-in-taiwan .wt-bar-val{font-size:17px;}
+    }
+  </style>
   <div class="container">
 
-    <!-- Section header -->
-    <h2>為何選擇台灣？</h2>
-    <p class="sec-lead">台灣不只生產驅動全球 AI 的晶片——它還組裝伺服器、製造設備，並孕育每一個重大 AI 突破背後的企業。在這裡就讀，讓你站在 全球 AI 產業最前線。</p>
+    <div class="wt-head">
+      <div>
+        <span class="wt-tag">Why Taiwan</span>
+        <h2>就在 AI 供應鏈的中心</h2>
+      </div>
+      <p class="wt-lead">台灣不只生產驅動全球 AI 的晶片，也組裝伺服器、製造終端裝置。在這裡念書，等於待在定義未來五十年的產業裡面。</p>
+    </div>
 
-    <!-- 3 stat cards -->
-    <div class="cards-3" style="margin-bottom:3rem;">
-      <div class="card">
-        <div class="card-num">90%</div>
-        <h3>先進晶片供應</h3>
-        <p style="font-size:18px;">台積電為 <strong>NVIDIA、Apple、AMD、Qualcomm</strong> 代工晶片——幾乎每個主要 AI 平台都跑在台灣矽晶片上。</p>
+    <div class="wt-stats">
+      <div class="wt-stat">
+        <div class="wt-num">90%</div>
+        <h3>先進製程晶片</h3>
+        <p>台積電為 <strong>NVIDIA、Apple、AMD、Qualcomm</strong> 代工——幾乎每一個主流 AI 平台都跑在台灣的晶片上。</p>
       </div>
-      <div class="card">
-        <div class="card-num">70%</div>
-        <h3>全球AI伺服器</h3>
-        <p style="font-size:18px;"><strong>廣達、緯穎、鴻海、英業達</strong> 為 Google、Amazon、Microsoft 和 Meta 建構 AI 伺服器基礎設施。</p>
+      <div class="wt-stat">
+        <div class="wt-num">70%</div>
+        <h3>全球 AI 伺服器</h3>
+        <p><strong>廣達、緯穎、鴻海、英業達</strong>為 Google、Amazon、Microsoft、Meta 打造 AI 伺服器基礎設施。</p>
       </div>
-      <div class="card">
-        <div class="card-num">40%+</div>
-        <h3>全球電子製造</h3>
-        <p style="font-size:18px;"><strong>鴻海、和碩、緯創</strong> 為 Apple、Dell、HP 和 Sony 製造設備——全球電子製造服務的骨幹。</p>
+      <div class="wt-stat">
+        <div class="wt-num">40%+</div>
+        <h3>全球電子組裝</h3>
+        <p><strong>鴻海、和碩、緯創</strong>為 Apple、Dell、HP、Sony 製造產品。</p>
       </div>
     </div>
 
-    <!-- AI industry conclusion strip -->
-    <div style="background:#1a1a1a;border-top:3px solid #C94B0A;border-radius:8px;padding:2rem 2.5rem;margin-bottom:5rem;">
-      <p style="font-size:clamp(18px,1.4vw,20px);color:#fff;font-weight:700;line-height:1.7;margin:0;">GMBA 畢業生直接進入這個生態系——透過實習、產業參訪，以及<span style="color:#C94B0A;">在全球 AI 產業的核心企業之中</span>的校友網絡。</p>
+    <div class="wt-band">
+      <p>GMBA 學生直接進入這個生態系——透過實習、企業參訪，以及<em>就在這些公司裡面的校友網絡</em>。</p>
     </div>
 
-    <!-- Video (left 60%) + Title & Description (right 40%) -->
-    <!-- Life in Taichung（影片已取消，改為純文字段落） -->
-    <div style="max-width:780px;margin-top:4.5rem;margin-bottom:3.5rem;">
-      <h3 style="margin:0 0 1.2rem;font-size:clamp(26px,3vw,38px);font-weight:900;line-height:1.15;color:var(--ink);">台中生活</h3>
-      <p style="font-size:18px;color:var(--ink-3);line-height:1.8;margin-bottom:1.8rem;">豐富的美食、充滿活力的城市，加上讓獎學金更耐用的生活成本——不必付台北、新加坡或香港的價格。</p>
-      <p style="font-size:18px;color:var(--ink-3);line-height:1.8;">台灣讓你以其他亞洲主要城市數分之一的花費，直接進入全球 AI 生態系。以下比較，數字說明一切。</p>
+    <div class="wt-head">
+      <div>
+        <span class="wt-tag">Cost of Living</span>
+        <h2>在台中生活</h2>
+      </div>
+      <p class="wt-lead">好吃的食物、運作良好的城市，以及一份能讓獎學金更耐用的生活成本——不必負擔台北、新加坡或香港的價格。</p>
     </div>
 
-    <!-- Full-width modern comparison table -->
-    <div class="table-wrapper" style="margin-bottom:4rem;">
-      <div style="overflow-x:auto;border-radius:10px;">
-        <table class="compare-table" style="width:auto;min-width:100%;border-collapse:separate;border-spacing:0;font-size:14px;">
-        <thead>
-          <tr>
-            <th style="background:var(--ink);color:#fff;padding:0.7rem 1rem;text-align:left;font-size:14px;letter-spacing:.08em;font-weight:700;border-radius:8px 0 0 0;">每月費用</th>
-            <th style="background:#C94B0A;color:#fff;padding:0.7rem 1rem;text-align:left;border-top:4px solid #ff7a45;position:relative;white-space:nowrap;">
-              <span style="display:block;font-size:10px;font-weight:700;letter-spacing:.14em;opacity:.85;margin-bottom:.3rem;">★ 最佳性價比</span>
-              <span style="font-size:15px;font-weight:900;letter-spacing:.04em;">🇹🇼 台中</span>
-            </th>
-            <th style="background:#2a2a2a;color:rgba(255,255,255,0.7);padding:0.7rem 1rem;text-align:left;font-size:14px;letter-spacing:.08em;font-weight:800;white-space:nowrap;">🇰🇷 首爾</th>
-            <th style="background:#2a2a2a;color:rgba(255,255,255,0.7);padding:0.7rem 1rem;text-align:left;font-size:14px;letter-spacing:.08em;font-weight:800;white-space:nowrap;">🇯🇵 東京</th>
-            <th style="background:#2a2a2a;color:rgba(255,255,255,0.7);padding:0.7rem 1rem;text-align:left;font-size:14px;letter-spacing:.08em;font-weight:800;border-radius:0 8px 0 0;white-space:nowrap;">🇸🇬 新加坡</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;font-weight:600;font-size:14px;color:var(--ink);">住宿</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #f0ddd5;background:#fff8f5;font-weight:700;font-size:14px;color:#C94B0A;">USD 170–250</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 320–460</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 400–560</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 650–980</td>
-          </tr>
-          <tr>
-            <td style="padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;font-weight:600;font-size:14px;color:var(--ink);">餐飲</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #f0ddd5;background:#fff8f5;font-weight:700;font-size:14px;color:#C94B0A;">USD 140–200</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 280–400</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 265–390</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:1px solid #e8e0d8;color:var(--ink-3);font-size:14px;">USD 320–500</td>
-          </tr>
-          <tr>
-            <td style="padding:0.7rem 1rem;border-bottom:2px solid #ccc;font-weight:600;font-size:14px;color:var(--ink);">交通</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:2px solid #e0b8a0;background:#fff8f5;font-weight:700;font-size:14px;color:#C94B0A;">USD 30–55</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:2px solid #ccc;color:var(--ink-3);font-size:14px;">USD 40–80</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:2px solid #ccc;color:var(--ink-3);font-size:14px;">USD 80–130</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;border-bottom:2px solid #ccc;color:var(--ink-3);font-size:14px;">USD 100–155</td>
-          </tr>
-          <tr>
-            <td style="padding:0.7rem 1rem;font-weight:800;font-size:14px;color:var(--ink);border-radius:0 0 0 8px;">每月合計</td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;background:#fff8f5;border-top:2px solid #C94B0A;">
-              <span style="font-size:15px;font-weight:900;color:#C94B0A;display:block;">~USD 340–505</span>
-            </td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;color:var(--ink-3);">
-              <span style="font-size:14px;font-weight:800;display:block;">~USD 640–940</span>
-            </td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;color:var(--ink-3);">
-              <span style="font-size:14px;font-weight:800;display:block;">~USD 745–1,080</span>
-            </td>
-            <td style="white-space:nowrap;padding:0.7rem 1rem;color:var(--ink-3);border-radius:0 0 8px 0;">
-              <span style="font-size:14px;font-weight:800;display:block;">~USD 1,070–1,635</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-        <p style="font-size:11px;color:var(--ink-3);margin-top:.8rem;text-align:right;">
-          資料來源：<a href="https://www.numbeo.com/cost-of-living/" target="_blank" rel="noopener" style="color:var(--maroon);">Numbeo 生活費用指數</a>，2026年6月。
-          住宿費用為共居／單人房間估算，實際費用因個人狀況而異。
-        </p>
+    <div class="wt-cost">
+      <div class="wt-big">
+        <div class="wt-big-num">$340<small>–505</small></div>
+        <p>每月在台中的總開銷——含住宿、飲食與交通。大約是同樣一個月在新加坡的三分之一。</p>
+      </div>
+      <div class="wt-bars">
+        <div class="wt-first">
+          <div class="wt-bar-top"><span class="wt-city">台中</span><span class="wt-bar-val">USD 340–505</span></div>
+          <div class="wt-track"><div style="width:31%;"></div></div>
         </div>
+        <div>
+          <div class="wt-bar-top"><span class="wt-city">首爾</span><span class="wt-bar-val">USD 640–940</span></div>
+          <div class="wt-track"><div style="width:58%;"></div></div>
+        </div>
+        <div>
+          <div class="wt-bar-top"><span class="wt-city">東京</span><span class="wt-bar-val">USD 745–1,080</span></div>
+          <div class="wt-track"><div style="width:66%;"></div></div>
+        </div>
+        <div>
+          <div class="wt-bar-top"><span class="wt-city">新加坡</span><span class="wt-bar-val">USD 1,070–1,635</span></div>
+          <div class="wt-track"><div style="width:100%;"></div></div>
+        </div>
+        <p class="wt-note">台中明細——住宿 USD 170–250 · 飲食 USD 140–200 · 交通 USD 30–55。資料來源：Numbeo，2026 年 6 月。</p>
+      </div>
     </div>
 
   </div>
-
 </section>
 
 <!-- ===== FAQ ===== -->
-<section id="faq" style="background:var(--white);">
+<section id="faq" aria-labelledby="faq-heading" style="background:var(--white);padding:4rem 0;">
+  <style>
+    #faq .fn-head{display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;border-top:2px solid var(--maroon);padding-top:2.4rem;margin-bottom:2.6rem;}
+    #faq .fn-tag{font-size:11.5px;font-weight:800;letter-spacing:.16em;color:#C94B0A;text-transform:uppercase;display:block;margin-bottom:.9rem;}
+    #faq .fn-head h2{word-break:keep-all;line-break:strict;text-wrap:pretty;margin:0;font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.08;letter-spacing:-.02em;color:var(--ink);}
+    #faq .fn-lead{flex:none;max-width:30em;margin:0 0 .4rem;font-size:16px;line-height:1.7;color:var(--ink-3);}
+    #faq .fn-grid{display:grid;grid-template-columns:1fr 360px;gap:4rem;align-items:start;}
+    #faq .fn-faq details{border-bottom:1px solid var(--rule);border-top:none;padding:1.15rem 0;}
+    #faq .fn-faq details:first-of-type{border-top:1px solid var(--rule);}
+    #faq .fn-faq summary{font-size:19px;font-weight:700;color:var(--ink);line-height:1.4;list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline;}
+    #faq .fn-faq summary::-webkit-details-marker{display:none;}
+    #faq .fn-faq summary::after{content:"+";color:var(--maroon);font-size:20px;font-weight:700;flex-shrink:0;transition:transform .2s ease;}
+    #faq .fn-faq details[open] summary::after{content:"–";}
+    #faq .fn-faq .faq-a{margin:.7rem 0 0;font-size:16px;line-height:1.75;color:var(--ink-3);max-width:46em;}
+    #faq .fn-more{display:inline-block;margin-top:1.4rem;font-size:15px;font-weight:800;color:var(--maroon);text-decoration:none;}
+    #faq .fn-news h3{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .9rem;}
+    #faq .fn-feature{display:block;text-decoration:none;border-top:2px solid var(--maroon);padding-top:1rem;margin-bottom:1.4rem;}
+    #faq .fn-feature img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:.9rem;}
+    #faq .fn-feature-meta{font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#C94B0A;margin-bottom:.4rem;}
+    #faq .fn-feature h4{margin:0 0 .4rem;font-size:18px;font-weight:800;color:var(--ink);line-height:1.35;}
+    #faq .fn-feature p{margin:0;font-size:14.5px;line-height:1.65;color:var(--ink-3);}
+    /* compact list styling for the live news feed inside the narrow column */
+    #faq .news-grid-3{display:block;margin-top:0;border-top:1px solid var(--rule);}
+    #faq .news-grid-3 .nc{background:none;border:none;border-bottom:1px solid var(--rule);border-top:none;padding:.95rem 0;transform:none !important;box-shadow:none !important;}
+    #faq .news-grid-3 .nc img{width:100%;height:auto;display:block;margin-bottom:.6rem;border-bottom:none !important;}
+    #faq .news-grid-3 .nc-body{padding:0;}
+    #faq .news-grid-3 .nc-badge{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:.15rem .45rem;margin-bottom:.35rem;}
+    #faq .news-grid-3 .nc-date{font-size:12px;color:#8A8378;margin-bottom:.25rem;}
+    #faq .news-grid-3 .nc-title{font-size:15px;font-weight:700;color:var(--ink);line-height:1.45;}
+    #faq .news-grid-3 .nc-excerpt{font-size:13.5px;line-height:1.6;color:var(--ink-3);margin-top:.3rem;}
+    #faq .news-grid-3 .nc-footer{padding:.5rem 0 0;border:none;}
+    #faq .news-grid-3 .nc-link{font-size:13px;font-weight:800;color:var(--maroon);text-decoration:none;}
+    #faq .news-source{font-size:11.5px;color:#8A8378;margin-top:.9rem;text-align:left;}
+    #faq .fn-all{display:inline-block;margin-top:1rem;font-size:14px;font-weight:800;color:var(--maroon);text-decoration:none;}
+    @media (max-width:1024px){
+      #faq .fn-head{flex-direction:column;align-items:flex-start;gap:1rem;}
+      #faq .fn-lead{max-width:none;}
+      #faq .fn-grid{grid-template-columns:1fr;gap:3rem;}
+      #faq .fn-faq summary{font-size:17px;}
+      #faq .fn-feature img{aspect-ratio:16/9;}
+    }
+  </style>
   <div class="container">
-    <h2>關於學程</h2>
-    <p class="sec-lead">幾個新生最先問的問題——完整 35 則問答請見總覽頁。</p>
-    <div class="faq-cols">
+    <div class="fn-head">
       <div>
-          <details>
-            <summary>東海大學 GMBA 是什麼樣的學程？</summary>
-            <p class="faq-a">GMBA 是東海大學全英語授課的國際企業管理碩士學程，<strong>通過 AACSB 認證</strong>，自 2018 年招生至今，同學來自 20 多個國家。 <a href="index-zh.html#why-gmba">查看詳情 →</a></p>
-          </details>
-          <details>
-            <summary>為什麼選台灣，而不是新加坡、香港或日本？</summary>
-            <p class="faq-a">選擇台灣，讓你直接站上全球 AI 硬體供應鏈的核心，生活費卻<strong>只要新加坡的三分之一左右</strong>。 <a href="index-zh.html#living-in-taiwan">查看詳情 →</a></p>
-          </details>
-          <details>
-            <summary>一屆有多少學生？同學來自哪些國家？</summary>
-            <p class="faq-a">每屆規模 <strong>30 到 40 人</strong>，來自 10 個以上國家；學程歷屆學生合計來自 22 個國籍。 <a href="index-zh.html#class-profile">查看詳情 →</a></p>
-          </details>
+        <span class="fn-tag">Before You Apply</span>
+        <h2 id="faq-heading">關於這個學程</h2>
       </div>
-      <div>
-          <details>
-            <summary>GMBA 跟一般 MBA、IMBA 有什麼不同？</summary>
-            <p class="faq-a">GMBA 的課程、作業與論文<strong>全部使用英語</strong>，打造真正的跨國班級，而不是中文授課外加英語選修的學程。 <a href="index-zh.html#why-gmba">查看詳情 →</a></p>
-          </details>
-          <details>
-            <summary>東海 GMBA 有國際認證嗎？</summary>
-            <p class="faq-a">東海大學管理學院擁有 AACSB 認證，這項殊榮全球只有<strong>不到 5%</strong> 的商學院取得。 <a href="index-zh.html#why-gmba">查看詳情 →</a></p>
-          </details>
-      </div>
+      <p class="fn-lead">申請人最常問的五個問題，以及這個學程最近在做的事。完整問答共 35 題。</p>
     </div>
-    <a class="faq-more" href="faq-zh.html" style="display:inline-block;margin-top:1.5rem;font-weight:800;color:var(--maroon);text-decoration:none;font-size:15px;">查看全部 35 則問答 →</a>
-  </div>
-</section>
 
-<!-- ===== NEWS ===== -->
-<section id="news" style="background:var(--cream);">
-  <div class="container">
-    <h2>最新消息</h2>
-
-    <!-- ── Feature Story ─────────────────────────────── -->
-    <!-- HOW TO UPDATE: change the img src, date, category, title, description and right-panel meta below -->
-    <div class="sec-rule" style="margin-bottom:1.25rem;"><span class="sec-tag">Feature Story</span><span class="rule-line"></span></div>
-    <div class="feature-story">
-      <div class="feature-story-img">
-        <!-- UPDATE IMAGE: replace src with your hosted photo URL (Google Drive public link or web URL) -->
-        <img src="./feature-story/feature_graduation_2026.jpg" alt="Graduation Group Photo on Campus – Luce Chapel, Tunghai University">
+    <div class="fn-grid">
+      <div class="fn-faq">
+        <h3 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;">常見問題</h3>
+        <details>
+          <summary>東海大學 GMBA 是什麼？</summary>
+          <p class="faq-a">東海大學全英語授課的 Global MBA——<strong>通過 AACSB 國際認證</strong>，自 2018 年開辦，同學來自 20 多個國家。 <a href="index-zh.html#why-gmba">看完整說明 →</a></p>
+        </details>
+        <details>
+          <summary>為什麼選台灣，而不是新加坡、香港或日本？</summary>
+          <p class="faq-a">台灣讓你身處全球 AI 硬體供應鏈之中，生活成本卻<strong>大約只有新加坡的三分之一</strong>。 <a href="index-zh.html#living-in-taiwan">看完整說明 →</a></p>
+        </details>
+        <details>
+          <summary>每屆多少人？他們來自哪裡？</summary>
+          <p class="faq-a">每屆 <strong>30–40 人</strong>、來自 10 個以上國家；開辦至今累計 22 個國籍。 <a href="index-zh.html#class-profile">看完整說明 →</a></p>
+        </details>
+        <details>
+          <summary>GMBA 跟一般 MBA 或 IMBA 有什麼不同？</summary>
+          <p class="faq-a">GMBA 的每一門課、每一份作業、每一篇論文都<strong>以英語進行</strong>，是真正多國籍的課堂，而不是在中文 MBA 上加掛一個英語班。 <a href="index-zh.html#why-gmba">看完整說明 →</a></p>
+        </details>
+        <details>
+          <summary>東海 GMBA 有國際認證嗎？</summary>
+          <p class="faq-a">東海管理學院通過 AACSB 認證，全球<strong>不到 5%</strong> 的商學院取得這項資格。 <a href="index-zh.html#why-gmba">看完整說明 →</a></p>
+        </details>
+        <a class="fn-more" href="faq-zh.html">看全部 35 個問題 →</a>
       </div>
-      <div class="feature-story-bottom">
-        <div class="feature-story-left">
-          <div class="feature-date-tag">
-            <span class="feature-date">May 22, 2026</span>
-            <span class="feature-category">Student Life</span>
-          </div>
-          <h3>校園畢業大合照</h3>
-          <p class="feature-desc">2026 屆 GMBA 畢業生在路思義教堂前慶祝——留下兩年共同學習的友誼與里程碑。</p>
+
+      <aside id="news" class="fn-news" aria-labelledby="news-heading">
+        <h3 id="news-heading">最新消息</h3>
+        <article>
+          <a class="fn-feature" href="news-zh.html">
+            <img src="./feature-story/feature_graduation_2026.jpg" alt="2026 屆 GMBA 畢業生於路思義教堂前合影" loading="lazy">
+            <div class="fn-feature-meta"><time datetime="2026-05-22">學生生活 · 2026 年 5 月 22 日</time></div>
+            <h4>校園畢業大合照</h4>
+            <p>2026 屆 GMBA 畢業生在路思義教堂前慶祝——留下兩年共同學習的友誼與里程碑。</p>
+          </a>
+        </article>
+        <div id="yaho-news-grid" class="news-grid-3">
+          <div style="text-align:left;padding:1rem 0;color:var(--ink-3);font-size:.9rem;">載入最新消息中…</div>
         </div>
-        <div class="feature-story-right">
-          <div class="feature-snapshot-title">Activity Snapshot</div>
-          <div class="feature-meta-row">
-            <div class="feature-meta-label">Location</div>
-            <div class="feature-meta-val">Luce Chapel</div>
-          </div>
-          <div class="feature-meta-row">
-            <div class="feature-meta-label">Photos</div>
-            <div class="feature-meta-val">10 photos</div>
-          </div>
-          <div class="feature-meta-row">
-            <div class="feature-meta-label">Cohort</div>
-            <div class="feature-meta-val">Class of 2026</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Latest From Tunghai ────────────────────────── -->
-    <div class="sec-rule" style="margin-bottom:1rem;"><span class="sec-tag">Latest From Tunghai</span><span class="rule-line"></span></div>
-    <p class="sec-lead" style="margin-bottom:1.5rem;">掌握 GMBA 社群與東海大學的最新活動與公告。</p>
-    <div id="yaho-news-grid-zh" class="news-grid-3">
-      <div style="grid-column:1/-1;text-align:center;padding:2rem 0;color:var(--ink-3);font-size:.9rem;">載入最新消息中…</div>
-    </div>
-    <script>
+<script>
     /* ── 新聞區塊 ────────────────────────────────────────────────
        第 1 格：固定招生公告，內容來自 news-pinned.json（每學期改那個檔案）
        第 2-3 格：YAHO 即時新聞，經由 /api/yaho-news 代理取得
@@ -1881,26 +2003,85 @@
       });
     })();
     </script>
-    <p class="news-source">資料來源： <a href="https://yaho-sooty.vercel.app/" target="_blank" rel="noopener">YAHO — Taiwan University Notice Curation</a></p>
+        <p class="news-source">資料來源： <a href="https://yaho-sooty.vercel.app/" target="_blank" rel="noopener">YAHO — Taiwan University Notice Curation</a></p>
+        <a class="fn-all" href="news-zh.html">所有消息 →</a>
+      </aside>
+    </div>
   </div>
 </section>
+
+<!-- ===== NEWS ===== -->
 
 <!-- ===== DOWNLOADS ===== -->
 
 
-<section id="contact" style="background:#2E0D1A;padding:0;border-top:3px solid #B8922A;text-align:center;">
-  <div style="padding:36px 2.5rem 32px;max-width:640px;margin:0 auto;">
-    <p style="font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#B8922A;margin:0 0 1.4rem;">準備好了嗎？</p>
-    <h2 style="font-size:clamp(28px,3.8vw,46px);font-weight:900;color:#FFFFFF;line-height:1.1;margin:0 0 1rem;letter-spacing:-.02em;white-space:nowrap;">從這裡啟程</h2>
-    <p style="color:rgba(255,255,255,0.65);max-width:480px;margin:0 auto 2rem;font-size:var(--t-body);line-height:1.65;">加入這個讓你站在亞洲 AI 轉型核心的學程。</p>
-    <a href="admissions-zh.html#admissions" style="display:inline-block;background:#B8922A;color:#fff;text-decoration:none;padding:1.2rem 3.4rem;font-weight:900;font-size:1.15rem;letter-spacing:.05em;transition:opacity 0.15s;">立即申請 →</a>
+<section id="contact" style="background:#2B0A11;padding:0;border-top:3px solid var(--gold-lt,#E8C55A);text-align:center;">
+  <style>
+    #contact .cta-in{padding:3.4rem 2.5rem 3.6rem;max-width:720px;margin:0 auto;}
+    #contact .cta-tag{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt,#E8C55A);margin:0 0 1.3rem;}
+    #contact h2{font-size:clamp(28px,3.8vw,46px);font-weight:900;color:#fff;line-height:1.1;margin:0 0 1rem;letter-spacing:-.02em;word-break:keep-all;line-break:strict;text-wrap:pretty;}
+    #contact .cta-lead{color:rgba(255,255,255,.7);max-width:30em;margin:0 auto 2.2rem;font-size:17px;line-height:1.7;}
+    #contact .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+    #contact .cta-primary{white-space:nowrap;text-decoration:none;background:var(--gold-lt,#E8C55A);color:#12210A;padding:1.1rem 2.6rem;font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;transition:background .2s ease;}
+    #contact .cta-primary:hover{background:#fff;color:#3A0810;}
+    #contact .cta-secondary{white-space:nowrap;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.45);padding:1.1rem 2.6rem;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;transition:border-color .2s ease,background .2s ease;}
+    #contact .cta-secondary:hover{background:rgba(255,255,255,.08);border-color:#fff;color:#fff;}
+    @media (max-width:640px){
+      #contact .cta-in{padding:2.6rem 1rem 2.8rem;}
+      #contact .cta-btns{flex-direction:column;}
+      #contact .cta-primary,#contact .cta-secondary{padding:1rem 1.4rem;}
+    }
+  </style>
+  <div class="cta-in">
+    <p class="cta-tag">Ready to Start?</p>
+    <h2>你的旅程從這裡開始</h2>
+    <p class="cta-lead">加入這個把你放進亞洲 AI 轉型核心的學程。2026 秋季班申請已經開放。</p>
+    <div class="cta-btns">
+      <a href="admissions-zh.html#admissions" class="cta-primary">立即申請 →</a>
+      <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="cta-secondary">先跟我們聊聊</a>
+    </div>
   </div>
 </section>
 </main>
 
 
+<style>
+  .site-footer .footer-contact address{font-style:normal;}
+  .site-footer .footer-contact p{margin:0 0 .7rem;font-size:14.5px;line-height:1.75;color:rgba(255,255,255,.72);}
+  .site-footer .footer-contact .fc-org{color:#fff;font-weight:600;}
+  .site-footer .footer-contact a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(232,197,90,.5);}
+  .site-footer .footer-contact a:hover{color:var(--gold-lt,#E8C55A);}
+  .site-footer .footer-main{align-items:start;}
+  .site-footer .footer-main{grid-template-columns:300px repeat(3,1fr);}
+  .site-footer .footer-secondary{max-width:1300px;margin:0 auto;padding:0 2rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+  .site-footer .footer-secondary > div{border-top:1px solid rgba(255,255,255,.12);padding-top:1.6rem;}
+  .site-footer .fs-title{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1rem;}
+  .site-footer .fs-links{display:flex;flex-wrap:wrap;gap:.55rem 1.6rem;}
+  .site-footer .fs-links a{font-size:14px;color:rgba(255,255,255,.68);text-decoration:none;}
+  .site-footer .fs-links a:hover{color:var(--gold-lt,#E8C55A);}
+  @media(max-width:1000px){
+    .site-footer .footer-main{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:680px){
+    .site-footer .footer-main{grid-template-columns:1fr;}
+    .site-footer .footer-col,.site-footer .footer-col-title,.site-footer .footer-col ul{text-align:left;}
+    .site-footer .footer-secondary{grid-template-columns:1fr;gap:0;padding:0 1.2rem 2rem;}
+  }
+
+</style>
 <footer class="site-footer" aria-label="Site footer" style="background:#1A0A0E;">
   <div class="footer-main">
+    <div class="footer-col footer-contact">
+      <div class="footer-col-title">聯絡我們</div>
+      <address>
+        <p class="fc-org">東海大學管理學院<br>國際經營管理碩士學位學程（GMBA）</p>
+        <p class="fc-addr">407224 臺中市西屯區臺灣大道四段 1727 號</p>
+        <p class="fc-mail"><a href="mailto:gmba@thu.edu.tw">gmba@thu.edu.tw</a></p>
+        <p class="fc-tel"><a href="tel:+886423590121,35002">電話：(04) 2359-0121 分機 35002</a></p>
+      </address>
+    </div>
+
+
 
     <div class="footer-col">
       <div class="footer-col-title">探索 GMBA</div>
@@ -1934,28 +2115,32 @@
       </ul>
     </div>
 
-    <div class="footer-col">
-      <div class="footer-col-title">在台生活</div>
-      <ul>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_5_ARC" target="_blank" rel="noopener">居留證（ARC）</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_6_Group_Med" target="_blank" rel="noopener">健康保險</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_10_Work_Per" target="_blank" rel="noopener">工作許可（兼職）</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_13_Intern_E" target="_blank" rel="noopener">畢業後工作與實習</a></li>
-        <li><a href="https://ezwp.wda.gov.tw" target="_blank" rel="noopener">勞動部工作許可申辦</a></li>
-      </ul>
-    </div>
+    
 
-        <div class="footer-col">
-      <div class="footer-col-title">學生入口</div>
-      <ul>
-        <li><a href="https://tmail.thu.edu.tw/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2ftmail.thu.edu.tw%2fowa%2f" target="_blank" rel="noopener">tMail</a></li>
-        <li><a href="https://ilearn.thu.edu.tw/?#/" target="_blank" rel="noopener">iLearn</a></li>
-        <li><a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">學生資訊系統</a></li>
-        <li><a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計處</a></li>
-        <li><a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">學生事務處</a></li>
-        <li><a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">國際暨兩岸合作處</a></li>
-        <li><a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">公共事務處</a></li>
-      </ul>
+        
+  </div>
+  <div class="footer-secondary">
+    <div>
+      <div class="fs-title">在台生活</div>
+      <div class="fs-links">
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_5_ARC" target="_blank" rel="noopener">居留證（ARC）</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_6_Group_Med" target="_blank" rel="noopener">健康保險</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_10_Work_Per" target="_blank" rel="noopener">工作許可（兼職）</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_13_Intern_E" target="_blank" rel="noopener">畢業後工作與實習</a>
+        <a href="https://ezwp.wda.gov.tw" target="_blank" rel="noopener">勞動部工作許可申辦</a>
+      </div>
+    </div>
+    <div>
+      <div class="fs-title">學生入口</div>
+      <div class="fs-links">
+        <a href="https://tmail.thu.edu.tw/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2ftmail.thu.edu.tw%2fowa%2f" target="_blank" rel="noopener">tMail</a>
+        <a href="https://ilearn.thu.edu.tw/?#/" target="_blank" rel="noopener">iLearn</a>
+        <a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">學生資訊系統</a>
+        <a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計處</a>
+        <a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">學生事務處</a>
+        <a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">國際暨兩岸合作處</a>
+        <a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">公共事務處</a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1989,7 +2174,7 @@
     var item=a.closest('.nav-item');
     if(item.querySelector('.nav-dropdown')){
       a.addEventListener('click',function(e){
-        if(getComputedStyle(btn).display!=='none'){
+        if(getComputedStyle(btn).display!=='none' && e.target.closest('.nav-caret')){
           e.preventDefault();
           var isOpen=item.classList.contains('open');
           ni.querySelectorAll('.nav-item').forEach(function(o){o.classList.remove('open');});
@@ -2035,30 +2220,7 @@
 })();
 </script>
 
-<!-- Contact Modal -->
-<div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.65);align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)closeContactModal()">
-  <div style="background:#1A0A0E;border:1px solid #B8922A;border-radius:12px;max-width:380px;width:100%;padding:2rem 1.75rem;position:relative;">
-    <button onclick="closeContactModal()" style="position:absolute;top:.75rem;right:1rem;background:none;border:none;color:#C9C1BB;font-size:1.4rem;cursor:pointer;line-height:1;">×</button>
-    <div style="font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#B8922A;margin-bottom:.5rem;">Contact GMBA</div>
-    <div style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:1.5rem;">請選擇聯絡方式</div>
-    <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" onclick="closeContactModal()" style="display:flex;align-items:center;gap:.75rem;background:#7A1422;color:#fff;text-decoration:none;padding:.9rem 1.25rem;border-radius:8px;font-weight:700;font-size:.95rem;margin-bottom:.75rem;">
-      <span style="font-size:1.2rem;">📋</span>
-      <span>填寫快速諮詢表單<br><span style="font-size:.78rem;font-weight:400;opacity:.8;">約 30 秒完成 · 我們將以 Email 回覆</span></span>
-    </a>
-    <div style="border:1px solid #3A1A1E;border-radius:8px;padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;">
-      <div>
-        <div style="font-size:.72rem;color:#888;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.2rem;">或直接寄信給我們</div>
-        <div style="color:#C9C1BB;font-size:.9rem;font-weight:600;">gmba@thu.edu.tw</div>
-      </div>
-      <button id="copy-email-btn-zh" onclick="copyGmbaEmailZh()" style="background:#2E1218;border:1px solid #3A1A1E;color:#B8922A;padding:.45rem .9rem;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:700;white-space:nowrap;">複製</button>
-    </div>
-  </div>
-</div>
-<script>
-function openContactModal(){var m=document.getElementById('contact-modal');m.style.display='flex';}
-function closeContactModal(){document.getElementById('contact-modal').style.display='none';}
-function copyGmbaEmailZh(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(function(){var b=document.getElementById('copy-email-btn-zh');b.textContent='已複製';b.style.color='#4ade80';setTimeout(function(){b.textContent='複製';b.style.color='#B8922A';},2000);});}
-</script>
+
 
 
 <div id="search-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.75);align-items:flex-start;justify-content:center;padding:4.5rem 1rem 1rem;overflow-y:auto;" onclick="if(event.target===this)closeSearchModal()">
@@ -2069,7 +2231,7 @@ function copyGmbaEmailZh(){navigator.clipboard.writeText('gmba@thu.edu.tw').then
     <div id="siteSearchEmpty" style="display:none;padding:2rem 0;text-align:center;color:var(--ink-3);font-size:var(--t-sm);">找不到符合的結果</div>
   </div>
 </div>
-<script>window.__SEARCH_INDEX__ = [{"t": "東海GMBA，為什麼不一樣？", "s": "東海 Global MBA 位於台灣台中，是通過 AACSB 國際認證 的 全英語授課 MBA，躋身 全球前 5% 頂尖商學院之列。我們致力於培育跨越文化與學科界線的未來領袖，讓他們即使身處 AI 浪潮的複雜變局，依然能從容應對。 速成碩士學程，全方位奠定核心實力： 01 研究思維（Research Discipline） 02 AI 與數據應用（AI & Data Capability） 03…", "p": "index-zh.html", "a": "why-gmba"}, {"t": "真正的國際化課堂", "s": "30–40 名學生，10 個以上國籍。小到讓你真正認識每一個人，多元到讓每個人都帶來不同的視野。 即將上線 學生影片 · 2 分鐘 沒有國界的課堂 班上來自二十幾個國家，卻小到你認得出每一個人。其中三位談實際相處起來是什麼樣子。 影片內容 01 跨文化的小組報告，實際上是怎麼進行的？ 02 同學最讓他們意外的地方是什麼？ 03 想對正在考慮申請的人說什麼？ Class of 2018-2026…", "p": "index-zh.html", "a": "class-profile"}, {"t": "東海大學的校園生活", "s": "134 公頃林蔭步道、傳統建築，以及由貝聿銘設計的標誌性 路思義教堂 ——一座寧靜美麗的校園，讓你從這裡出發，走向全球職涯。 134 公頃優美校園 150+ 個學生社團——總有一個適合你 46 棟宿舍——每位學生都能住在校內", "p": "index-zh.html", "a": "campus-life"}, {"t": "為何選擇台灣？", "s": "台灣不只生產驅動全球 AI 的晶片——它還組裝伺服器、製造設備，並孕育每一個重大 AI 突破背後的企業。在這裡就讀，讓你站在 全球 AI 產業最前線。 90% 先進晶片供應 台積電為 NVIDIA、Apple、AMD、Qualcomm 代工晶片——幾乎每個主要 AI 平台都跑在台灣矽晶片上。 70% 全球AI伺服器 廣達、緯穎、鴻海、英業達 為 Google、Amazon、Microsoft 和…", "p": "index-zh.html", "a": "living-in-taiwan"}, {"t": "最新消息", "s": "Feature Story May 22, 2026 Student Life 校園畢業大合照 2026 屆 GMBA 畢業生在路思義教堂前慶祝——留下兩年共同學習的友誼與里程碑。 Activity Snapshot Location Luce Chapel Photos 10 photos Cohort Class of 2026 Latest From Tunghai 掌握 GMBA…", "p": "index-zh.html", "a": "news"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入這個讓你站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "index-zh.html", "a": "contact"}, {"t": "學程課程", "s": "課程以四層遞進結構設計——研究方法、AI數據能力、跨職能應用、策略領導——每一層都在為下一層奠基，最終培養出在最高層次引領的判斷力。 課程理念 不是學 AI， 是用 AI 領導 四層遞進架構——每門課都在前一門的基礎上深化。 01 Research Foundation 商業研究方法 02 Core Pivot AI與數據科技核心 03 Cross-Functional Application…", "p": "academics-zh.html", "a": "curriculum"}, {"t": "卓越學術，跨院整合", "s": "GMBA 師資擁有台灣、美國、歐洲及亞洲頂尖大學博士學位，將深厚的學術研究帶入亞洲科技經濟的課堂之中。 一個學程，五個學院。 跨越五個學院，GMBA 將商業策略、公共政策、法律思維與跨文化溝通融為一體——培育能跨越產業與國界的領導者。 01 AI、數據與科技 商業分析 · 資訊安全 · 資料科學 · AI 應用 陳鶴元 金泰星 黃尹姿 黃家俊 02 財務與資本市場 公司財務 · 資本市場 ·…", "p": "academics-zh.html", "a": "faculty"}, {"t": "拓展您的全球視野", "s": "GMBA 學生可透過東海大學國際暨兩岸合作處（OIR），申請至全球逾 40 國、近 400 所姊妹校進行交換學期或雙聯學位。 查看短期研習、交換與雙聯學位詳情 → 短期學程 暑假或寒假期間赴姊妹校進行 1–3 個月的實體或線上課程，體驗當地語言、文化與國際商業環境。 交換學期 赴姊妹校就讀一學期或一學年，學分可抵回東海；交換期間只需繳交東海學費。最早可於第二學期提出申請。 雙聯學位…", "p": "academics-zh.html", "a": "joint-degree"}, {"t": "學期行事曆", "s": "掌握學期節點，規劃您的學習時程。 時期 日期 備註 秋季（上學期） 九月 – 一月 第一學期 秋季論文口試申請截止 1 月 15 日 截止日 秋季論文口試截止 1 月 31 日 2/15 畢業 寒假 一月 – 二月 春季（下學期） 二月 – 七月 第二學期 春季論文口試申請截止 7 月 15 日 截止日 春季論文口試截止 7 月 31 日 8/15 畢業…", "p": "academics-zh.html", "a": "academic-calendar"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入讓您站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "academics-zh.html", "a": "contact"}, {"t": "獎學金", "s": "台灣提供亞洲最豐厚的研究所獎學金之一。結合低廉的學費與生活費，在這裡攻讀 MBA 的成本遠低於其他選擇。 台灣政府獎學金 以下獎學金由台灣政府相關部會提供，申請資格、所需文件及申請程序等細節，請直接洽各主管機關確認。 教育部台灣獎學金 每月生活費 NT$20,000（碩/博士生） 學費補助 每學期最高 NT$40,000 期限 最長 2 年（碩士） 資格 各國籍均可（不含港澳及中國大陸）…", "p": "admissions-zh.html", "a": "tuition"}, {"t": "如何申請", "s": "先找到你屬於哪一類，再點進對應的報名頁面。只有從海外申請的國際生分春季班與秋季班，其餘管道都是秋季入學。 申請管道 入學學期 申請期間 審查方式 1 海外國際學生 自海外提出申請 春季班 10月 前往申請 → 書面審查 海外國際學生 自海外提出申請 秋季班 1月－5月 前往申請 → 書面審查 2 已在台者 · 台灣籍 須持ARC及正式學籍 · 甄試入學 秋季班 10月－11月 前往申請 →…", "p": "admissions-zh.html", "a": "admissions"}, {"t": "在台生活：快速指南", "s": "每位國際學生必須處理的三件事，整理成最精簡的版本。 簽證與居留證（ARC） 入境前 — FS 學生簽證 入台 15 日內 — 辦理 ARC 每年 — 辦理展期 觀光簽證無法轉換為居留證 東海大學國際暨兩岸合作處 → 工作許可 學期中每週最多 20 小時 假期間無時數限制 申請： ezwp.wda.gov.tw 未申請即工作：罰款最高新台幣 15 萬 中文能力 全英文授課 ，不要求中文 可選修…", "p": "admissions-zh.html", "a": "practical-info"}, {"t": "學生表單與文件", "s": "下載 GMBA 論文程序、考試與繳交所需官方表單。所有檔案均為 PDF 格式——請開啟、列印後繳交至 GMBA 辦公室。 論文準備 指導教授同意書 論文指導的指導教授同意書表格 ↓ 下載 論文題目審定書 論文審核專業領域確認清單 ↓ 下載 論文格式規定 論文繳交格式與規定說明 ↓ 下載 考試與繳交 學位考試時程表 論文口試時程與程序說明 ↓ 下載 論文上傳說明 電子論文繳交注意事項與步驟 ↓…", "p": "admissions-zh.html", "a": "downloads"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入讓您站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "admissions-zh.html", "a": "contact"}, {"t": "東海大學 GMBA 是什麼樣的學程？", "s": "東海 GMBA 是全英語授課的國際企業管理碩士學位學程，2018 年成立，<strong>通過 AACSB 認證</strong>。課程分四層設計：研究方法基礎、AI 與資料核心、跨功能 AI 分析、領導與策略。學生來自 20 多個國家。東海在 QS 亞洲大學排名是台灣私立非醫學類大學第一，THE 世界大學影響力排名全球第 85 名、全國第 3（僅次台大、陽明交大）。", "p": "faq-zh.html", "a": "faq-g01"}, {"t": "GMBA 跟一般 MBA、IMBA 有什麼不同？", "s": "GMBA（Global MBA）從設計之初就是為國際班而生，課程、作業、論文<strong>全部用英語進行</strong>，班上同學來自各國。東海 GMBA 與台灣多數 IMBA 的差別在三點：AI 能力融入每一門課，不是獨立的選修學程；師資橫跨五個學院，不限管理學院；地點在台中，位處台灣 AI 智慧製造聚落的核心。", "p": "faq-zh.html", "a": "faq-g02"}, {"t": "為什麼選台灣，而不是新加坡、香港或日本？", "s": "台灣讓你直接進入全球 AI 硬體生態系，生活費卻<strong>只要新加坡的三分之一左右</strong>。全球約 90% 的先進製程晶片、約 70% 的 AI 伺服器、超過 40% 的電子產品組裝都在台灣完成。台中每月生活費約 340 至 505 美元，新加坡要 1,070 至 1,635 美元，東京則是 745 至 1,080 美元。", "p": "faq-zh.html", "a": "faq-g03"}, {"t": "東海 GMBA 有國際認證嗎？", "s": "有。東海大學管理學院通過 AACSB 認證，全球商學院中只有<strong>不到 5%</strong> 拿得到。GMBA 學位也經教育部核定，畢業證書是正式碩士學位，可用於繼續升學與國際求職。", "p": "faq-zh.html", "a": "faq-g04"}, {"t": "一屆有多少學生？同學來自哪些國家？", "s": "每屆 <strong>30 到 40 人</strong>，來自 10 個以上的國家。2018 至 2026 年各屆合計，學生來自 8 大洲域、22 個國籍：東南亞占 65.4%、東亞 21.1%、歐洲 3.9%、南亞 3.1%、中亞 3.1%、非洲 1.3%、美洲 1.3%、中東 0.9%。班級規模小，同學彼此都叫得出名字。", "p": "faq-zh.html", "a": "faq-g05"}, {"t": "GMBA 開設哪些課程？", "s": "課程採<strong>四層架構</strong>：研究方法基礎、AI 與資料核心、跨功能 AI 分析、領導與策略，一層接一層往上建。所有課程全英語授課。", "p": "faq-zh.html", "a": "faq-a01"}, {"t": "申請 GMBA 需要 GMAT 或 GRE 成績嗎？", "s": "不需要。東海 GMBA <strong>不要求 GMAT 或 GRE</strong>。入學以書面審查為主，看的是學士學位、英語能力證明、自傳與讀書計畫。已在台灣的申請者另需面試。", "p": "faq-zh.html", "a": "faq-a02"}, {"t": "不是商管背景可以申請嗎？", "s": "可以。申請<strong>不限大學主修</strong>，任何科系的學士學位都能報考。課程一開始的「研究方法基礎」層，就是為了讓不同背景的學生先站上同一個起跑點，再進入核心課程。", "p": "faq-zh.html", "a": "faq-a03"}, {"t": "GMBA 需要寫論文嗎？", "s": "需要，GMBA 是<strong>論文型碩士學程</strong>。學生須指定指導教授、繳交指導同意書與論文題目專業檢核表，並通過口試才能畢業。相關表單都放在下載區。", "p": "faq-zh.html", "a": "faq-a04"}, {"t": "修業年限多久？", "s": "全職密集修課最快 1 年即可畢業；多數學生選擇兩年完成，最長修業年限為 4 年，實際時間依選課與論文進度而定。畢業共需 <strong>30 學分</strong>：21 學分必修、8 學分選修，加 1 學分論文。從第三年起改採學分計費，每學分 2,090 元加雜費 440 元，比繳整學期學費便宜很多。", "p": "faq-zh.html", "a": "faq-a05"}, {"t": "可以出國交換或修雙聯學位嗎？", "s": "可以。GMBA 學生可透過<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">東海大學國際處（OIR）</a>安排，至全球逾 40 國、<strong>近 400 所姊妹校</strong>進行交換學期或修讀雙聯學位。海外修得的學分可抵回東海畢業學分，交換期間只需繳交東海學費。", "p": "faq-zh.html", "a": "faq-a06"}, {"t": "GMBA 的師資背景如何？", "s": "GMBA 師資橫跨東海<strong>五個學院</strong>，不限管理學院，這也是跨領域課程能成立的原因。授課領域涵蓋供應鏈管理、財務、行銷、營運、創業與商業 AI 應用。", "p": "faq-zh.html", "a": "faq-a07"}, {"t": "入學條件是什麼？要怎麼申請？", "s": "需要<strong>學士學位與英語能力證明</strong>。申請分三種管道，各有不同的報名系統與時程：國際生（境外申請）、在台生／本國生、僑生。請到招生頁面找到自己的管道，再從對應連結進入報名系統。", "p": "faq-zh.html", "a": "faq-ad01"}, {"t": "各管道的報名時間是什麼時候？", "s": "時程依申請身分而定。境外國際生：春季班 10 月報名，秋季班 1 月至 5 月報名。在台生與本國生只有秋季班，分兩梯次：第一梯 10 至 11 月，第二梯 12 月至隔年 2 月。僑生秋季班 <strong>4 月至 6 月報名</strong>。", "p": "faq-zh.html", "a": "faq-ad02"}, {"t": "春季班和秋季班有什麼差別？", "s": "只有境外國際生有春季班，其他管道一律秋季入學。課程內容與學位完全相同，春季班只是讓你<strong>提早半年</strong>開始，不必再等一整年。若你人在境外、10 月前備妥文件，春季班值得考慮。", "p": "faq-zh.html", "a": "faq-ad03"}, {"t": "需要幾年工作經驗才能申請？", "s": "工作經驗<strong>不是入學的硬性門檻</strong>，應屆畢業生也歡迎申請。有工作經驗確實有助於寫讀書計畫，因為你有具體案例可以寫，但本學程招收的學生涵蓋不同職涯階段。", "p": "faq-zh.html", "a": "faq-ad04"}, {"t": "申請要準備哪些文件？", "s": "國際生與僑生需繳交<strong>英文自傳、英文讀書計畫</strong>與相關佐證資料。在台生與本國生則繳交成績單與履歷。所有申請者都須附上學士學位證明與英語能力證明。", "p": "faq-zh.html", "a": "faq-ad05"}, {"t": "需要面試嗎？", "s": "<strong>只有在台生與本國生需要面試</strong>，並須參加招生說明會。境外國際生與僑生採書面審查，不需面試。", "p": "faq-zh.html", "a": "faq-ad06"}, {"t": "接受哪些英語檢定成績？", "s": "境外申請者可用以下任一項達標：<strong>CEFR B1 以上、TOEFL iBT 47、TOEFL ITP 500、IELTS 4.0、TOEIC 550</strong>。若畢業於英語授課學校或主修英語，可改繳學校證明，不必附檢定成績。", "p": "faq-zh.html", "a": "faq-ad07"}, {"t": "學費多少？有哪些獎學金？", "s": "學費每學期 <strong>69,020 元</strong>（約 2,124 美元），不分國籍一律相同。獎學金來自三個層級：政府（<a href=\"https://english.moe.gov.tw/cp-24-16833-23C09-1.html\" target=\"_blank\" rel=\"noopener\">教育部台灣獎學金</a>、<a href=\"https://english.moe.gov.tw/cp-24-24284-3ea37-1.html\" target=\"_blank\" rel=\"noopener\">教育部華語文獎學金</a>、<a href=\"https://en.mofa.gov.tw/cp.aspx?n=1325\" target=\"_blank\" rel=\"noopener\">外交部台灣獎學金</a>）、<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">東海大學國際處</a>，以及 GMBA 學程本身。", "p": "faq-zh.html", "a": "faq-f01"}, {"t": "讀完整個學位總共要花多少錢？", "s": "每學期約抓 150,000 元（約 4,615 美元），含學費、住宿、健保與生活費，兩年標準修業約 <strong>60 萬元（約 18,500 美元）</strong>，這是未計獎學金的金額。獎學金能大幅降低負擔：光是<a href=\"https://english.moe.gov.tw/cp-24-16833-23C09-1.html\" target=\"_blank\" rel=\"noopener\">教育部台灣獎學金</a>就提供每月 20,000 元生活費，加上每學期最高 40,000 元的學費補助。", "p": "faq-zh.html", "a": "faq-f02"}, {"t": "獎學金競爭激烈嗎？什麼時候申請？", "s": "政府獎學金與校內獎學金的時程不同。政府獎學金（教育部、外交部）須向所在國的台灣代表處（TECO 或 AIT）申請，截止日通常是每年 <strong>3 月 31 日</strong>，錄取結果在你來台前就會確定。東海與 GMBA 的獎學金則在錄取後辦理，GMBA 學程獎學金金額每學期於招生說明會公布。", "p": "faq-zh.html", "a": "faq-f03"}, {"t": "一定住得到宿舍嗎？", "s": "校內宿舍有提供，但名額有限，<strong>不保證一定住得到</strong>。東海共有 46 棟宿舍，校內住宿每學期 10,560 至 41,360 元，依房型而定。校外租屋以鄰近的西屯區為主，每學期約 30,000 至 48,000 元。", "p": "faq-zh.html", "a": "faq-f04"}, {"t": "如果讀到第三年，學費怎麼算？", "s": "第三年起改採學分計費，不繳整學期學費：<strong>每學分 2,090 元</strong>，另加每學分雜費 440 元。對只剩論文、幾乎沒有課要修的學生來說，比繳整學期學費省很多。", "p": "faq-zh.html", "a": "faq-f05"}, {"t": "需要辦哪種簽證和居留證？", "s": "出發前先向台灣駐外代表處申請<strong>居留簽證（FS 類）</strong>。請勿持落地簽或觀光簽入境，這兩種簽證無法轉換成居留證。抵台後由<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">國際處</a>統一協助新生辦理居留證（ARC）。居留證每年換發，建議在到期前三個月辦理。", "p": "faq-zh.html", "a": "faq-l01"}, {"t": "健康保險怎麼保？", "s": "所有國際生抵台後自動納保團體醫療保險。<strong>連續居留滿六個月</strong>後，轉入全民健康保險，每學期保費 4,956 元。申請理賠時，帶診斷證明與收據到<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">國際處</a>辦理。", "p": "faq-zh.html", "a": "faq-l02"}, {"t": "需要會中文嗎？", "s": "不需要。課程、作業、論文<strong>全部使用英語</strong>，居留證、保險、工作許可等行政程序也由<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">國際處</a>以英語協助處理。", "p": "faq-zh.html", "a": "faq-l03"}, {"t": "在台中生活費要多少？", "s": "每月生活費約 24,000 元（約 740 美元），涵蓋伙食、交通與日常開銷，住宿另計。含住宿的每月總花費約 <strong>340 至 505 美元</strong>。相較之下，首爾 640 至 940 美元、東京 745 至 1,080 美元、新加坡 1,070 至 1,635 美元。", "p": "faq-zh.html", "a": "faq-l04"}, {"t": "在學期間可以打工或實習嗎？", "s": "可以，學期中每週最多 <strong>20 小時</strong>，寒暑假不限時數。打工與實習都需要工作許可，請上 <a href=\"https://ezwp.wda.gov.tw/\" target=\"_blank\" rel=\"noopener\">ezwp.wda.gov.tw</a> 線上申請，備妥學生證、護照、居留證與在學證明。未取得許可就工作，罰鍰 30,000 至 150,000 元並強制出境，務必先申請再上工。", "p": "faq-zh.html", "a": "faq-l05"}, {"t": "東海的校園生活是什麼樣子？", "s": "東海校園占地 <strong>134 公頃</strong>，林蔭道路與傳統建築交錯，包括貝聿銘設計的路思義教堂。校內有 150 多個學生社團、46 棟宿舍。校區位於台中市內，但遠離市中心的喧囂。", "p": "faq-zh.html", "a": "faq-l06"}, {"t": "住在台中的生活如何？", "s": "台中兼具大城市的美食與生活機能，物價卻<strong>遠低於台北、新加坡或香港</strong>，同樣一筆獎學金在這裡用得更久。台中也位處台灣智慧製造聚落的核心，產業參訪與實習機會就在身邊。", "p": "faq-zh.html", "a": "faq-l07"}, {"t": "畢業後可以留在台灣工作嗎？", "s": "可以。取得畢業證書後，居留證<strong>最長可延長一年</strong>用於求職。正式就業須由雇主透過評點配額制申請工作許可。教育部另有畢業後實習計畫可申請。", "p": "faq-zh.html", "a": "faq-c01"}, {"t": "GMBA 畢業生的職涯發展如何？", "s": "畢業生多在台灣科技業與 AI 相關產業從事經營管理、行銷、財務與營運工作。台灣半導體與 AI 生態系對雙語人才需求穩定，勞動部也為認證學程的國際畢業生提供<strong>簡化的工作許可流程</strong>。", "p": "faq-zh.html", "a": "faq-c02"}, {"t": "GMBA 有職涯輔導和校友網絡嗎？", "s": "GMBA <strong>目前沒有專屬的校友組織</strong>。畢業生可以使用東海大學全校性的「實習與學生成就中心」（ISAC）所提供的職涯服務，包括職涯諮詢、履歷與面試輔導、企業導師媒合、徵才博覽會，全校學生與畢業生皆可使用。詳情：<a href=\"https://isac-net.thu.edu.tw/\" target=\"_blank\" rel=\"noopener\">isac-net.thu.edu.tw</a>", "p": "faq-zh.html", "a": "faq-c03"},{"t": "在學期間可以學中文嗎？", "s": "可以，而且很多同學都會選修。碩士生可選修初級、中級中文課程（非必修），<a href=\"https://clc.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">華語中心</a>另開設完整的華語課程，結合語言教學與生活體驗。詳見<a href=\"https://oir.thu.edu.tw/front/400_IntlDegree/400_3_Chinese_L/pages.php?ID=dGh1X29zYSY0MDBfM19DaGluZXNlX0w=\" target=\"_blank\" rel=\"noopener\">國際處華語學習頁面</a>。具備基礎中文，對日後在台求職也是加分。", "p": "faq-zh.html", "a": "faq-l08"}];</script>
+<script>window.__SEARCH_INDEX__ = [{"t": "東海GMBA，為什麼不一樣？", "s": "東海 Global MBA 位於台灣台中，是通過 AACSB 國際認證 的 全英語授課 MBA，躋身 全球前 5% 頂尖商學院之列。我們致力於培育跨越文化與學科界線的未來領袖，讓他們即使身處 AI 浪潮的複雜變局，依然能從容應對。 速成碩士學程，全方位奠定核心實力： 01 研究思維（Research Discipline） 02 AI 與數據應用（AI & Data Capability） 03…", "p": "index-zh.html", "a": "why-gmba"}, {"t": "真正的國際化課堂", "s": "30–40 名學生，10 個以上國籍。小到讓你真正認識每一個人，多元到讓每個人都帶來不同的視野。 即將上線 學生影片 · 2 分鐘 沒有國界的課堂 班上來自二十幾個國家，卻小到你認得出每一個人。其中三位談實際相處起來是什麼樣子。 影片內容 01 跨文化的小組報告，實際上是怎麼進行的？ 02 同學最讓他們意外的地方是什麼？ 03 想對正在考慮申請的人說什麼？ Class of 2018-2026…", "p": "index-zh.html", "a": "class-profile"}, {"t": "東海大學的校園生活", "s": "134 公頃林蔭步道、傳統建築，以及由貝聿銘設計的標誌性 路思義教堂 ——一座寧靜美麗的校園，讓你從這裡出發，走向全球職涯。 134 公頃優美校園 150+ 個學生社團——總有一個適合你 46 棟宿舍——每位學生都能住在校內", "p": "index-zh.html", "a": "campus-life"}, {"t": "為何選擇台灣？", "s": "台灣不只生產驅動全球 AI 的晶片——它還組裝伺服器、製造設備，並孕育每一個重大 AI 突破背後的企業。在這裡就讀，讓你站在 全球 AI 產業最前線。 90% 先進晶片供應 台積電為 NVIDIA、Apple、AMD、Qualcomm 代工晶片——幾乎每個主要 AI 平台都跑在台灣矽晶片上。 70% 全球AI伺服器 廣達、緯穎、鴻海、英業達 為 Google、Amazon、Microsoft 和…", "p": "index-zh.html", "a": "living-in-taiwan"}, {"t": "最新消息", "s": "Feature Story May 22, 2026 Student Life 校園畢業大合照 2026 屆 GMBA 畢業生在路思義教堂前慶祝——留下兩年共同學習的友誼與里程碑。 Activity Snapshot Location Luce Chapel Photos 10 photos Cohort Class of 2026 Latest From Tunghai 掌握 GMBA…", "p": "index-zh.html", "a": "news"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入這個讓你站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "index-zh.html", "a": "contact"}, {"t": "學程課程", "s": "課程以四層遞進結構設計——研究方法、AI數據能力、跨職能應用、策略領導——每一層都在為下一層奠基，最終培養出在最高層次引領的判斷力。 課程理念 不是學 AI， 是用 AI 領導 四層遞進架構——每門課都在前一門的基礎上深化。 01 Research Foundation 商業研究方法 02 Core Pivot AI與數據科技核心 03 Cross-Functional Application…", "p": "academics-zh.html", "a": "curriculum"}, {"t": "卓越學術，跨院整合", "s": "GMBA 師資擁有台灣、美國、歐洲及亞洲頂尖大學博士學位，將深厚的學術研究帶入亞洲科技經濟的課堂之中。 一個學程，五個學院。 跨越五個學院，GMBA 將商業策略、公共政策、法律思維與跨文化溝通融為一體——培育能跨越產業與國界的領導者。 01 AI、數據與科技 商業分析 · 資訊安全 · 資料科學 · AI 應用 陳鶴元 金泰星 黃尹姿 黃家俊 02 財務與資本市場 公司財務 · 資本市場 ·…", "p": "academics-zh.html", "a": "faculty"}, {"t": "拓展您的全球視野", "s": "GMBA 學生可透過東海大學國際暨兩岸合作處（OIR），申請至全球逾 40 國、近 400 所姊妹校進行交換學期或雙聯學位。 查看短期研習、交換與雙聯學位詳情 → 短期學程 暑假或寒假期間赴姊妹校進行 1–3 個月的實體或線上課程，體驗當地語言、文化與國際商業環境。 交換學期 赴姊妹校就讀一學期或一學年，學分可抵回東海；交換期間只需繳交東海學費。最早可於第二學期提出申請。 雙聯學位…", "p": "academics-zh.html", "a": "joint-degree"}, {"t": "學期行事曆", "s": "掌握學期節點，規劃您的學習時程。 時期 日期 備註 秋季（上學期） 九月 – 一月 第一學期 秋季論文口試申請截止 1 月 15 日 截止日 秋季論文口試截止 1 月 31 日 2/15 畢業 寒假 一月 – 二月 春季（下學期） 二月 – 七月 第二學期 春季論文口試申請截止 7 月 15 日 截止日 春季論文口試截止 7 月 31 日 8/15 畢業…", "p": "academics-zh.html", "a": "academic-calendar"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入讓您站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "academics-zh.html", "a": "contact"}, {"t": "獎學金", "s": "台灣提供亞洲最豐厚的研究所獎學金之一。結合低廉的學費與生活費，在這裡攻讀 MBA 的成本遠低於其他選擇。 台灣政府獎學金 以下獎學金由台灣政府相關部會提供，申請資格、所需文件及申請程序等細節，請直接洽各主管機關確認。 教育部台灣獎學金 每月生活費 NT$20,000（碩/博士生） 學費補助 每學期最高 NT$40,000 期限 最長 2 年（碩士） 資格 各國籍均可（不含港澳及中國大陸）…", "p": "admissions-zh.html", "a": "tuition"}, {"t": "如何申請", "s": "先找到你屬於哪一類，再點進對應的報名頁面。只有從海外申請的國際生分春季班與秋季班，其餘管道都是秋季入學。 申請管道 入學學期 申請期間 審查方式 1 海外國際學生 自海外提出申請 春季班 10月 前往申請 → 書面審查 海外國際學生 自海外提出申請 秋季班 1月－5月 前往申請 → 書面審查 2 已在台者 · 台灣籍 須持ARC及正式學籍 · 甄試入學 秋季班 10月－11月 前往申請 →…", "p": "admissions-zh.html", "a": "admissions"}, {"t": "在台生活：快速指南", "s": "每位國際學生必須處理的三件事，整理成最精簡的版本。 簽證與居留證（ARC） 入境前 — FS 學生簽證 入台 15 日內 — 辦理 ARC 每年 — 辦理展期 觀光簽證無法轉換為居留證 東海大學國際暨兩岸合作處 → 工作許可 學期中每週最多 20 小時 假期間無時數限制 申請： ezwp.wda.gov.tw 未申請即工作：罰款最高新台幣 15 萬 中文能力 全英文授課 ，不要求中文 可選修…", "p": "admissions-zh.html", "a": "practical-info"}, {"t": "學生表單與文件", "s": "下載 GMBA 論文程序、考試與繳交所需官方表單。所有檔案均為 PDF 格式——請開啟、列印後繳交至 GMBA 辦公室。 論文準備 指導教授同意書 論文指導的指導教授同意書表格 ↓ 下載 論文題目審定書 論文審核專業領域確認清單 ↓ 下載 論文格式規定 論文繳交格式與規定說明 ↓ 下載 考試與繳交 學位考試時程表 論文口試時程與程序說明 ↓ 下載 論文上傳說明 電子論文繳交注意事項與步驟 ↓…", "p": "admissions-zh.html", "a": "downloads"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入讓您站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "admissions-zh.html", "a": "contact"}, {"t": "東海大學 GMBA 是什麼樣的學程？", "s": "東海 GMBA 是全英語授課的國際企業管理碩士學位學程，2018 年成立，通過 AACSB 認證。課程分四層設計：研究方法基礎、AI 與資料核心、跨功能 AI 分析、領導與策略。學生來自 20 多個國家。東海在 QS 亞洲大學排名是台灣私立非醫學類大學第一，THE 世界大學影響力排名全球第 85 名、全國第 3（僅次台大、陽明交大）。", "p": "faq-zh.html", "a": "faq-g01"}, {"t": "GMBA 跟一般 MBA、IMBA 有什麼不同？", "s": "GMBA（Global MBA）從設計之初就是為國際班而生，課程、作業、論文全部用英語進行，班上同學來自各國。東海 GMBA 與台灣多數 IMBA 的差別在三點：AI 能力融入每一門課，不是獨立的選修學程；師資橫跨五個學院，不限管理學院；地點在台中，位處台灣 AI 智慧製造聚落的核心。", "p": "faq-zh.html", "a": "faq-g02"}, {"t": "為什麼選台灣，而不是新加坡、香港或日本？", "s": "台灣讓你直接進入全球 AI 硬體生態系，生活費卻只要新加坡的三分之一左右。全球約 90% 的先進製程晶片、約 70% 的 AI 伺服器、超過 40% 的電子產品組裝都在台灣完成。台中每月生活費約 340 至 505 美元，新加坡要 1,070 至 1,635 美元，東京則是 745 至 1,080 美元。", "p": "faq-zh.html", "a": "faq-g03"}, {"t": "東海 GMBA 有國際認證嗎？", "s": "有。東海大學管理學院通過 AACSB 認證，全球商學院中只有不到 5% 拿得到。GMBA 學位也經教育部核定，畢業證書是正式碩士學位，可用於繼續升學與國際求職。", "p": "faq-zh.html", "a": "faq-g04"}, {"t": "一屆有多少學生？同學來自哪些國家？", "s": "每屆 30 到 40 人，來自 10 個以上的國家。2018 至 2026 年各屆合計，學生來自 8 大洲域、22 個國籍：東南亞占 65.4%、東亞 21.1%、歐洲 3.9%、南亞 3.1%、中亞 3.1%、非洲 1.3%、美洲 1.3%、中東 0.9%。班級規模小，同學彼此都叫得出名字。", "p": "faq-zh.html", "a": "faq-g05"}, {"t": "GMBA 開設哪些課程？", "s": "課程採四層架構：研究方法基礎、AI 與資料核心、跨功能 AI 分析、領導與策略，一層接一層往上建。所有課程全英語授課。", "p": "faq-zh.html", "a": "faq-a01"}, {"t": "申請 GMBA 需要 GMAT 或 GRE 成績嗎？", "s": "不需要。東海 GMBA 不要求 GMAT 或 GRE。入學以書面審查為主，看的是學士學位、英語能力證明、自傳與讀書計畫。已在台灣的申請者另需面試。", "p": "faq-zh.html", "a": "faq-a02"}, {"t": "不是商管背景可以申請嗎？", "s": "可以。申請不限大學主修，任何科系的學士學位都能報考。課程一開始的「研究方法基礎」層，就是為了讓不同背景的學生先站上同一個起跑點，再進入核心課程。", "p": "faq-zh.html", "a": "faq-a03"}, {"t": "GMBA 需要寫論文嗎？", "s": "需要，GMBA 是論文型碩士學程。學生須指定指導教授、繳交指導同意書與論文題目專業檢核表，並通過口試才能畢業。相關表單都放在下載區。", "p": "faq-zh.html", "a": "faq-a04"}, {"t": "修業年限多久？", "s": "全職密集修課最快 1 年即可畢業；多數學生選擇兩年完成，最長修業年限為 4 年，實際時間依選課與論文進度而定。畢業共需 30 學分：21 學分必修、8 學分選修，加 1 學分論文。從第三年起改採學分計費，每學分 2,090 元加雜費 440 元，比繳整學期學費便宜很多。", "p": "faq-zh.html", "a": "faq-a05"}, {"t": "可以出國交換或修雙聯學位嗎？", "s": "可以。GMBA 學生可透過東海大學國際處（OIR）安排，至全球逾 40 國、近 400 所姊妹校進行交換學期或修讀雙聯學位。海外修得的學分可抵回東海畢業學分，交換期間只需繳交東海學費。", "p": "faq-zh.html", "a": "faq-a06"}, {"t": "GMBA 的師資背景如何？", "s": "GMBA 師資橫跨東海五個學院，不限管理學院，這也是跨領域課程能成立的原因。授課領域涵蓋供應鏈管理、財務、行銷、營運、創業與商業 AI 應用。", "p": "faq-zh.html", "a": "faq-a07"}, {"t": "入學條件是什麼？要怎麼申請？", "s": "需要學士學位與英語能力證明。申請分三種管道，各有不同的報名系統與時程：國際生（境外申請）、在台生／本國生、僑生。請到招生頁面找到自己的管道，再從對應連結進入報名系統。", "p": "faq-zh.html", "a": "faq-ad01"}, {"t": "各管道的報名時間是什麼時候？", "s": "時程依申請身分而定。境外國際生：春季班 10 月報名，秋季班 1 月至 5 月報名。在台生與本國生只有秋季班，分兩梯次：第一梯 10 至 11 月，第二梯 12 月至隔年 2 月。僑生秋季班 4 月至 6 月報名。", "p": "faq-zh.html", "a": "faq-ad02"}, {"t": "春季班和秋季班有什麼差別？", "s": "只有境外國際生有春季班，其他管道一律秋季入學。課程內容與學位完全相同，春季班只是讓你提早半年開始，不必再等一整年。若你人在境外、10 月前備妥文件，春季班值得考慮。", "p": "faq-zh.html", "a": "faq-ad03"}, {"t": "需要幾年工作經驗才能申請？", "s": "工作經驗不是入學的硬性門檻，應屆畢業生也歡迎申請。有工作經驗確實有助於寫讀書計畫，因為你有具體案例可以寫，但本學程招收的學生涵蓋不同職涯階段。", "p": "faq-zh.html", "a": "faq-ad04"}, {"t": "申請要準備哪些文件？", "s": "國際生與僑生需繳交英文自傳、英文讀書計畫與相關佐證資料。在台生與本國生則繳交成績單與履歷。所有申請者都須附上學士學位證明與英語能力證明。", "p": "faq-zh.html", "a": "faq-ad05"}, {"t": "需要面試嗎？", "s": "只有在台生與本國生需要面試，並須參加招生說明會。境外國際生與僑生採書面審查，不需面試。", "p": "faq-zh.html", "a": "faq-ad06"}, {"t": "接受哪些英語檢定成績？", "s": "境外申請者可用以下任一項達標：CEFR B1 以上、TOEFL iBT 47、TOEFL ITP 500、IELTS 4.0、TOEIC 550。若畢業於英語授課學校或主修英語，可改繳學校證明，不必附檢定成績。", "p": "faq-zh.html", "a": "faq-ad07"}, {"t": "學費多少？有哪些獎學金？", "s": "學費每學期 69,020 元（約 2,124 美元），不分國籍一律相同。獎學金來自三個層級：政府（教育部台灣獎學金、教育部華語文獎學金、外交部台灣獎學金）、東海大學國際處，以及 GMBA 學程本身。", "p": "faq-zh.html", "a": "faq-f01"}, {"t": "讀完整個學位總共要花多少錢？", "s": "每學期約抓 150,000 元（約 4,615 美元），含學費、住宿、健保與生活費，兩年標準修業約 60 萬元（約 18,500 美元），這是未計獎學金的金額。獎學金能大幅降低負擔：光是教育部台灣獎學金就提供每月 20,000 元生活費，加上每學期最高 40,000 元的學費補助。", "p": "faq-zh.html", "a": "faq-f02"}, {"t": "獎學金競爭激烈嗎？什麼時候申請？", "s": "政府獎學金與校內獎學金的時程不同。政府獎學金（教育部、外交部）須向所在國的台灣代表處（TECO 或 AIT）申請，截止日通常是每年 3 月 31 日，錄取結果在你來台前就會確定。東海與 GMBA 的獎學金則在錄取後辦理，GMBA 學程獎學金金額每學期於招生說明會公布。", "p": "faq-zh.html", "a": "faq-f03"}, {"t": "一定住得到宿舍嗎？", "s": "校內宿舍有提供，但名額有限，不保證一定住得到。東海共有 46 棟宿舍，校內住宿每學期 10,560 至 41,360 元，依房型而定。校外租屋以鄰近的西屯區為主，每學期約 30,000 至 48,000 元。", "p": "faq-zh.html", "a": "faq-f04"}, {"t": "如果讀到第三年，學費怎麼算？", "s": "第三年起改採學分計費，不繳整學期學費：每學分 2,090 元，另加每學分雜費 440 元。對只剩論文、幾乎沒有課要修的學生來說，比繳整學期學費省很多。", "p": "faq-zh.html", "a": "faq-f05"}, {"t": "需要辦哪種簽證和居留證？", "s": "出發前先向台灣駐外代表處申請居留簽證（FS 類）。請勿持落地簽或觀光簽入境，這兩種簽證無法轉換成居留證。抵台後由國際處統一協助新生辦理居留證（ARC）。居留證每年換發，建議在到期前三個月辦理。", "p": "faq-zh.html", "a": "faq-l01"}, {"t": "健康保險怎麼保？", "s": "所有國際生抵台後自動納保團體醫療保險。連續居留滿六個月後，轉入全民健康保險，每學期保費 4,956 元。申請理賠時，帶診斷證明與收據到國際處辦理。", "p": "faq-zh.html", "a": "faq-l02"}, {"t": "需要會中文嗎？", "s": "不需要。課程、作業、論文全部使用英語，居留證、保險、工作許可等行政程序也由國際處以英語協助處理。", "p": "faq-zh.html", "a": "faq-l03"}, {"t": "在台中生活費要多少？", "s": "每月生活費約 24,000 元（約 740 美元），涵蓋伙食、交通與日常開銷，住宿另計。含住宿的每月總花費約 340 至 505 美元。相較之下，首爾 640 至 940 美元、東京 745 至 1,080 美元、新加坡 1,070 至 1,635 美元。", "p": "faq-zh.html", "a": "faq-l04"}, {"t": "在學期間可以打工或實習嗎？", "s": "可以，學期中每週最多 20 小時，寒暑假不限時數。打工與實習都需要工作許可，請上 ezwp.wda.gov.tw 線上申請，備妥學生證、護照、居留證與在學證明。未取得許可就工作，罰鍰 30,000 至 150,000 元並強制出境，務必先申請再上工。", "p": "faq-zh.html", "a": "faq-l05"}, {"t": "東海的校園生活是什麼樣子？", "s": "東海校園占地 134 公頃，林蔭道路與傳統建築交錯，包括貝聿銘設計的路思義教堂。校內有 150 多個學生社團、46 棟宿舍。校區位於台中市內，但遠離市中心的喧囂。", "p": "faq-zh.html", "a": "faq-l06"}, {"t": "住在台中的生活如何？", "s": "台中兼具大城市的美食與生活機能，物價卻遠低於台北、新加坡或香港，同樣一筆獎學金在這裡用得更久。台中也位處台灣智慧製造聚落的核心，產業參訪與實習機會就在身邊。", "p": "faq-zh.html", "a": "faq-l07"}, {"t": "畢業後可以留在台灣工作嗎？", "s": "可以。取得畢業證書後，居留證最長可延長一年用於求職。正式就業須由雇主透過評點配額制申請工作許可。教育部另有畢業後實習計畫可申請。", "p": "faq-zh.html", "a": "faq-c01"}, {"t": "GMBA 畢業生的職涯發展如何？", "s": "畢業生多在台灣科技業與 AI 相關產業從事經營管理、行銷、財務與營運工作。台灣半導體與 AI 生態系對雙語人才需求穩定，勞動部也為認證學程的國際畢業生提供簡化的工作許可流程。", "p": "faq-zh.html", "a": "faq-c02"}, {"t": "GMBA 有職涯輔導和校友網絡嗎？", "s": "GMBA 目前沒有專屬的校友組織。畢業生可以使用東海大學全校性的「實習與學生成就中心」（ISAC）所提供的職涯服務，包括職涯諮詢、履歷與面試輔導、企業導師媒合、徵才博覽會，全校學生與畢業生皆可使用。詳情：isac-net.thu.edu.tw", "p": "faq-zh.html", "a": "faq-c03"}, {"t": "在學期間可以學中文嗎？", "s": "可以，而且很多同學都會選修。碩士生可選修初級、中級中文課程（非必修），華語中心另開設完整的華語課程，結合語言教學與生活體驗。詳見國際處華語學習頁面。具備基礎中文，對日後在台求職也是加分。", "p": "faq-zh.html", "a": "faq-l08"}];</script>
 <script>
 (function(){
   var btn = document.getElementById('siteSearchBtn');
@@ -2110,4 +2272,19 @@ function copyGmbaEmailZh(){navigator.clipboard.writeText('gmba@thu.edu.tw').then
 })();
 </script>
 
+
+<script>
+(function(){
+  if(!document.getElementById('hero-final')) return;
+  document.body.classList.add('has-hero');
+  var nav = document.querySelector('nav');
+  if(!nav) return;
+  var onScroll = function(){
+    if(window.scrollY > 60) nav.classList.add('nav-solid');
+    else nav.classList.remove('nav-solid');
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+})();
+</script>
 </body></html>

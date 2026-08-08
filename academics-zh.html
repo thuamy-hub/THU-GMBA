@@ -1197,6 +1197,8 @@
   /* Calendar grid: stack on mobile */
   [style*="grid-template-columns:1fr 300px"] { grid-template-columns: 1fr !important; }
   /* Faculty: 2-per-row on mobile */
+  .ac-split > div { min-width: 0; }
+  @media (max-width: 900px) { .ac-split { flex-direction: column !important; gap: 1.6rem !important; } .ac-split .ac-quote { width: 100% !important; margin-top: 0 !important; } }
   .fv2-cards { display: grid !important; grid-template-columns: repeat(2,1fr) !important; gap: 1rem !important; align-items: start !important; }
   .fv2-card { min-width: unset !important; width: 100% !important; max-width: 100% !important; padding: 0.75rem 0.5rem !important; }
   .fv2-photo { width: 88px !important; height: 88px !important; }
@@ -1237,10 +1239,240 @@
 [id] { scroll-margin-top: 68px; }
 /* ===== END ANCHOR OFFSET FIX ===== */
 </style>
+<style>
+    /* ===== HEADER (aligned with index) ===== */
+    .announce {
+      background: #3E0710; color: #fff; text-align: center;
+      padding: .55rem 1.5rem; font-size: 14px; font-weight: 500; letter-spacing: .01em;
+      display: flex; align-items: center; justify-content: center; gap: .9rem; flex-wrap: wrap;
+    }
+    .announce .ann-tag {
+      font-size: 10.5px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+      color: #12210A; background: var(--gold-lt, #E8C55A); padding: .2rem .55rem;
+    }
+    .announce a { color: var(--gold-lt, #E8C55A); font-size: 13px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .announce a:hover { color: #fff; }
+    nav { min-height: 64px; }
+    nav .nav-items { gap: 2rem; }
+    nav .nav-item > a { padding: 0; }
+    #siteSearchBtn { margin-left: auto; }
+    .nav-apply-desk {
+      align-self: center; text-decoration: none;
+      background: var(--gold-lt, #E8C55A); color: #12210A;
+      padding: .62rem 1.2rem; font-size: 12.5px; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase; margin-left: .6rem;
+      transition: background .2s ease;
+    }
+    .nav-apply-desk:hover { background: #fff; color: #3A0810; }
+    @media (max-width: 960px) {
+      nav .nav-items { gap: 0; }
+      nav .nav-item > a { padding: 0.85rem 1.4rem; }
+      #siteSearchBtn { margin-left: 0 !important; padding: 0.85rem 1.4rem !important; justify-content: flex-start !important; }
+      #navItems .lang-btn { margin-left: 1.4rem !important; }
+      .nav-apply-desk { display: none; }
+    }
+</style>
+
+<!-- ===== HOMEPAGE DESIGN LANGUAGE (applied to Academics) ===== -->
+<style>
+  #curriculum, #faculty, #joint-degree, #academic-calendar, #faq { padding-top: 4.2rem; padding-bottom: 4.6rem; }
+
+  /* Section head — maroon rule + eyebrow */
+  #curriculum > .container:first-of-type::before,
+  #faculty > .container::before,
+  #joint-degree > .container::before,
+  #academic-calendar > .container::before,
+  #faq > .container::before {
+    display: block; border-top: 2px solid var(--maroon); padding-top: 2.2rem;
+    font-size: 11.5px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+    color: #C94B0A; margin-bottom: .9rem;
+  }
+  #curriculum > .container:first-of-type::before { content: "課程規劃"; }
+  #faculty > .container::before { content: "師資陣容"; }
+  #joint-degree > .container::before { content: "國際機會"; }
+  #academic-calendar > .container::before { content: "重要時程"; }
+  #faq > .container::before { content: "常見問題"; }
+
+  #curriculum h2, #faculty h2, #joint-degree h2, #academic-calendar h2, #faq h2 {
+    font-family: var(--ff-body, inherit); font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; line-height: 1.08; letter-spacing: -.02em; color: var(--ink); margin-bottom: 1rem;
+  }
+  #curriculum .sec-lead, #faculty .sec-lead, #joint-degree .sec-lead,
+  #academic-calendar .sec-lead, #faq .sec-lead {
+    font-size: 16px; line-height: 1.7; color: var(--ink-3); max-width: 36em; margin-bottom: 2.4rem;
+  }
+  #curriculum p, #faculty p, #joint-degree p, #academic-calendar p, #faq p,
+  .cur-card p, .card p, .ac-quote p {
+    text-wrap: pretty; word-break: keep-all; line-break: strict; overflow-wrap: break-word;
+  }
+  .sec-tag { color: #C94B0A !important; font-size: 11.5px !important; letter-spacing: .16em !important; }
+  .rule-line { height: 1px !important; }
+
+  /* Four-layer framework → stat grid */
+  #curriculum .ac-layers {
+    gap: 0 !important; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-top: 1.6rem !important;
+  }
+  #curriculum .ac-layers > div {
+    background: transparent !important; border: none !important; border-left: 1px solid var(--rule) !important;
+    border-radius: 0 !important; padding: 1.9rem 1.8rem 2rem !important;
+  }
+  #curriculum .ac-layers > div:first-child { border-left: none !important; padding-left: 0 !important; }
+  #curriculum .ac-layers > div:last-child { padding-right: 0 !important; }
+  #curriculum .ac-layers > div > div:first-child { color: var(--maroon) !important; font-size: 52px !important; margin-bottom: 10px !important; }
+  #curriculum .ac-layers > div > div:nth-child(2) { font-size: 10.5px !important; letter-spacing: .16em !important; color: #8A8378 !important; }
+  #curriculum .ac-layers > div > div:nth-child(3) { display: none !important; }
+  #curriculum .ac-layers > div > div:last-child { font-size: 16px !important; color: var(--ink) !important; font-weight: 800 !important; line-height: 1.45 !important; }
+
+  /* Required / elective → open two-column spread */
+  .curriculum-grid { gap: 0 !important; margin-top: 2.2rem !important; }
+  .cur-card { background: transparent !important; border: none !important; border-radius: 0 !important; padding: 0 2.8rem !important; }
+  .curriculum-grid .cur-card:first-child { padding-left: 0 !important; }
+  .curriculum-grid .cur-card:last-child { padding-right: 0 !important; border-left: 1px solid var(--rule) !important; }
+  .cur-year { color: #C94B0A !important; letter-spacing: .16em !important; font-size: 11.5px !important; }
+  .cur-card h3 { font-family: var(--ff-body, inherit) !important; font-size: 26px !important; letter-spacing: -.01em !important; margin-bottom: .8rem !important; }
+  .cur-card li { padding: 7px 0 !important; }
+  #curriculum .ac-credits {
+    background: transparent !important; margin: 0 !important; padding: 1.4rem 0 0 !important;
+    border-top: 1px solid var(--rule) !important; border-radius: 0 !important;
+  }
+  #curriculum .ac-credits > div { text-align: left !important; }
+  #curriculum .ac-credits > div > div:first-child { color: var(--maroon) !important; font-size: 42px !important; }
+  #curriculum .ac-credits > div > div:last-child { color: #8A8378 !important; font-size: 10.5px !important; letter-spacing: .16em !important; }
+
+  /* Faculty — sticky domain index + photo grid */
+  .fv2-domain { display: grid; grid-template-columns: 210px 1fr; gap: 2.8rem; border-top: 1px solid var(--rule); padding: 2.2rem 0 2.4rem; margin: 0 !important; }
+  .fv2-domain-head { position: sticky; top: 92px; align-self: start; display: block !important; }
+  .fv2-num { display: block; font-family: var(--ff-num); font-size: 34px; font-weight: 900; color: var(--rule); line-height: 1; margin-bottom: .5rem; }
+  .fv2-label { font-size: 15px !important; font-weight: 800 !important; color: var(--ink) !important; margin-bottom: .35rem; }
+  .fv2-sub { font-size: 13px !important; line-height: 1.6 !important; color: #8A8378 !important; }
+  .ac-split > div { min-width: 0; }
+  @media (max-width: 900px) { .ac-split { flex-direction: column !important; gap: 1.6rem !important; } .ac-split .ac-quote { width: 100% !important; margin-top: 0 !important; } }
+  .fv2-cards { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 1.6rem 1.2rem; align-items: start; }
+  .fv2-card { background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; width: auto !important; min-width: 0 !important; }
+  .fv2-photo { width: 100% !important; min-width: 0 !important; max-width: none !important; height: auto !important; border: none !important; aspect-ratio: 1 / 1; border-radius: 0 !important; overflow: hidden; }
+  .fv2-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+  .fv2-card:hover .fv2-photo img { transform: scale(1.03); }
+  .fv2-name { white-space: normal !important; text-align: left !important; font-size: 14.5px !important; font-weight: 800 !important; color: var(--ink) !important; margin-top: .6rem !important; }
+
+  /* Cards → flat hairline treatment */
+  .cards-3 { gap: 0 !important; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .card { background: transparent !important; border: none !important; border-left: 1px solid var(--rule) !important; border-radius: 0 !important; padding: 1.8rem 2rem 1.9rem !important; }
+  .cards-3 .card:first-child { border-left: none !important; padding-left: 0 !important; }
+  .cards-3 .card:last-child { padding-right: 0 !important; }
+  .card h3 { font-size: 17px !important; font-weight: 800 !important; color: var(--ink) !important; margin-bottom: .5rem !important; }
+  .card p { font-size: 15px !important; line-height: 1.7 !important; color: var(--ink-3) !important; }
+  .ai-callout { border-left-width: 4px !important; border-radius: 0 !important; }
+
+  /* Student quotes */
+  #curriculum .ac-quote, #joint-degree .ac-quote {
+    border-top: none !important; border-left: 2px solid var(--maroon) !important;
+    padding: .2rem 0 .2rem 1.5rem !important; margin-top: 2.9rem !important;
+  }
+  .ac-quote span[style*="Georgia"] { display: none !important; }
+  .ac-quote p { font-size: 17.5px !important; line-height: 1.6 !important; font-weight: 600 !important; letter-spacing: -.01em; }
+  .ac-quote > div:last-child {
+    font-size: 11px !important; letter-spacing: .14em !important; text-transform: uppercase; color: #8A8378 !important;
+  }
+
+  /* Academic calendar → timetable */
+  #academic-calendar .record-table { border-collapse: collapse; width: 100%; }
+  #academic-calendar .record-table thead th { background: transparent !important; border: none !important; border-bottom: 2px solid var(--maroon) !important; color: #8A8378 !important; font-size: 10.5px !important; letter-spacing: .16em !important; text-transform: uppercase !important; padding: 0 0 .8rem !important; text-align: left !important; }
+  #academic-calendar .record-table tbody tr, #academic-calendar .record-table tbody tr:nth-child(even) { background: transparent !important; }
+  #academic-calendar .record-table td { background: transparent !important; border: none !important; border-bottom: 1px solid var(--rule) !important; padding: 1.05rem 0 !important; font-size: 15px !important; color: var(--ink) !important; }
+  #academic-calendar .record-table td:nth-child(2) { font-family: var(--ff-num) !important; font-size: 20px !important; font-weight: 800 !important; color: var(--ink-3) !important; white-space: normal !important; }
+  #academic-calendar .record-table td:nth-child(3) { text-align: right !important; }
+  #academic-calendar .record-table th:nth-child(2), #academic-calendar .record-table td:nth-child(2) { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+  @media (max-width: 1040px) { .ac-calgrid { grid-template-columns: 1fr !important; gap: 2.2rem !important; } }
+  #academic-calendar .cal-badge { white-space: nowrap !important; word-break: normal !important; background: transparent !important; border: none !important; border-radius: 0 !important; padding: 0 !important; color: #8A8378 !important; font-size: 10.5px !important; font-weight: 800 !important; letter-spacing: .14em !important; text-transform: uppercase !important; }
+  #academic-calendar .cal-badge.gold { color: #C94B0A !important; }
+  #academic-calendar .forms-dl-btn { border-radius: 0 !important; }
+
+  @media (max-width: 1100px) { .fv2-cards { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    #curriculum .ac-layers > div,
+    .card { border-left: none !important; border-top: 1px solid var(--rule) !important; padding-left: 0 !important; padding-right: 0 !important; }
+    #curriculum .ac-layers > div:first-child,
+    .cards-3 .card:first-child { border-top: none !important; }
+    #curriculum .ac-layers > div > div:first-child { font-size: 42px !important; }
+    .cards-3 { grid-template-columns: 1fr !important; }
+    .cur-card { padding: 0 !important; min-width: 0 !important; }
+    .cur-card li, .cur-card p, .cur-card h3 { overflow-wrap: anywhere; }
+    .cur-card ul { column-count: 1 !important; }
+    .curriculum-grid { grid-template-columns: 1fr !important; }
+    #curriculum .ac-layers { grid-template-columns: 1fr !important; }
+    #academic-calendar .cal-badge { white-space: normal !important; }
+    .curriculum-grid .cur-card:last-child { border-left: none !important; border-top: 1px solid var(--rule) !important; padding-top: 2rem !important; margin-top: 2rem !important; }
+    .fv2-domain { grid-template-columns: 1fr; gap: 1.4rem; }
+    .fv2-domain-head { position: static; }
+    .fv2-cards { grid-template-columns: repeat(3, 1fr) !important; }
+    #academic-calendar .record-table td:nth-child(3) { text-align: left !important; }
+  }
+  @media (max-width: 640px) {
+    #curriculum, #faculty, #joint-degree, #academic-calendar, #faq { padding-left: 1.1rem !important; padding-right: 1.1rem !important; }
+    .fv2-cards { grid-template-columns: repeat(2, 1fr) !important; gap: 1.3rem 1rem !important; }
+    #curriculum .ac-layers > div > div:first-child { font-size: 38px !important; }
+  }
+
+  /* Scroll reveal */
+  .om-reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .om-reveal.in { opacity: 1; transform: none; }
+  @media (print), (prefers-reduced-motion: reduce) { .om-reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  function tag(sel, cls){ Array.prototype.forEach.call(document.querySelectorAll(sel), function(e){ e.classList.add(cls); }); }
+  tag('#curriculum div[style*="repeat(4"]', 'ac-layers');
+  tag('#curriculum div[style*="0D0D0D"], #curriculum div[style*="0d0d0d"]', 'ac-credits');
+  tag('#curriculum div[style*="width:260px"], #joint-degree div[style*="width:260px"]', 'ac-quote');
+  tag('#academic-calendar div[style*="300px"]', 'ac-calgrid');
+  tag('#curriculum div[style*="gap:4rem"], #curriculum div[style*="gap: 4rem"], #joint-degree div[style*="gap:4rem"], #joint-degree div[style*="gap: 4rem"]', 'ac-split');
+});
+</script>
+
+<style>
+  /* --- Sticky section index (matches Admissions) --- */
+  .acad-index { position: sticky; top: 56px; z-index: 500; background: var(--white);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .acad-index-row { display: flex; flex-wrap: wrap; gap: 1.9rem; padding: .85rem 0; }
+  .acad-index a { white-space: nowrap; font-size: 13.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    color: #8A8378; text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 3px; transition: color .2s, border-color .2s; }
+  .acad-index a:hover { color: var(--ink); }
+  .acad-index a.is-active { color: var(--maroon); border-bottom-color: var(--maroon); }
+  @media (max-width: 900px) {
+    .acad-index > .container { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+    .acad-index-row { gap: 1.2rem; flex-wrap: nowrap; width: max-content; }
+  }
+  @media (max-width: 640px) { .acad-index a { font-size: 13px; } }
+</style>
+
+<style>
+  /* --- Mobile nav breathing room --- */
+  @media (max-width: 960px) {
+    nav .nav-burger { margin-right: 1.15rem !important; flex-shrink: 0 !important;
+      width: 26px !important; height: 20px !important; padding: 2px 0 !important; box-sizing: content-box; }
+    nav .nav-logo { padding: 0 1rem !important; min-width: 0 !important; flex-shrink: 1 !important; }
+    nav .nav-logo img { height: 30px !important; }
+  }
+</style>
+<style>
+  /* --- Mobile nav: parent link tappable, caret toggles submenu --- */
+  @media (max-width: 960px) {
+    .nav-item { display: block !important; }
+    .nav-item > a { display: flex !important; width: 100% !important; }
+    .nav-item > a .nav-caret {
+      font-size: 13px !important; opacity: .85;
+      padding: .85rem 1.4rem .85rem 1.6rem; margin: -.85rem -1.4rem -.85rem 0;
+    }
+    .nav-dropdown { width: 100% !important; min-width: 0 !important; }
+    .nav-burger { align-self: center !important; }
+  }
+</style>
 </head>
 <body>
 <div class="announce" role="alert">
-  東海攜手中華電信與Google，率全台之先導入企業級Agent管理平台「Gemini Enterprise」。
+  <span class="ann-tag">News</span>
+  <span>東海攜手中華電信與 Google，率全台之先導入企業級 AI Agent 管理平台「Gemini Enterprise」。</span>
+  <a href="index-zh.html#news">看更多 →</a>
 </div>
 
 <a href="#maincontent" class="skip-link">跳到主要內容</a>
@@ -1258,7 +1490,7 @@
       <span class="float-icon">✎</span>
       <span>立即申請</span>
     </a>
-    <a href="#" onclick="openContactModal();return false;" class="float-item">
+    <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="float-item">
       <span class="float-icon">✉</span>
       <span>聯絡我們</span>
     </a>
@@ -1307,6 +1539,7 @@
 
       
       <a href="academics.html" class="lang-btn" onclick="sessionStorage.setItem('lang-manual','1')">English</a>
+      <a href="admissions-zh.html#admissions" class="nav-apply-desk">立即申請</a>
       <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="nav-contact-mobile">✉ Contact Us</a>
       <a href="admissions-zh.html#admissions" class="nav-apply-mobile">✎ 立即申請</a>
     </div>
@@ -1322,10 +1555,20 @@
   </div>
 </div>
 
+<nav class="acad-index" aria-label="Section index"><div class="container"><div class="acad-index-row"><a href="#curriculum">課程規劃</a><a href="#faculty">師資陣容</a><a href="#joint-degree">雙聯學位</a><a href="#academic-calendar">行事曆</a><a href="#faq">常見問題</a></div></div></nav>
 <section id="curriculum" style="background:var(--white);">
   <div class="container">
-    <h2>學程課程</h2>
-    <p style="font-size:1.1rem;color:var(--ink-3);line-height:var(--lh-zh);margin-top:1.5rem;max-width:700px;">課程以四層遞進結構設計——研究方法、AI數據能力、跨職能應用、策略領導——每一層都在為下一層奠基，最終培養出在最高層次引領的判斷力。</p>
+    <div style="display:flex;gap:4rem;align-items:flex-start;">
+      <div style="flex:1;min-width:0;">
+        <h2>學程課程</h2>
+        <p style="font-size:1.1rem;color:var(--ink-3);line-height:var(--lh-zh);margin-top:1.5rem;max-width:520px;">課程以四層遞進結構設計——研究方法、AI數據能力、跨職能應用、策略領導——每一層都在為下一層奠基，最終培養出在最高層次引領的判斷力。</p>
+      </div>
+      <div style="flex-shrink:0;width:260px;border-top:2px solid var(--gold);padding-top:1rem;margin-top:.5rem;margin-left:auto;">
+        <span style="font-family:Georgia,serif;font-size:2.8rem;line-height:.8;color:var(--gold);display:block;margin-bottom:.6rem;opacity:.6;">&ldquo;</span>
+        <p style="font-size:16px;font-weight:700;line-height:1.65;color:var(--ink);margin:0 0 1rem;">我們大部分的學習，都在面對新的變化——AI 就是其中之一。我們必須為新技術做好準備，這也是為什麼 GMBA 的課程幾乎都圍繞著 AI。</p>
+        <div style="font-size:12px;color:var(--ink-3);letter-spacing:.03em;">Jefferson Adrian &nbsp;&middot;&nbsp; 菲律賓 &nbsp;&middot;&nbsp; GMBA 2023 級</div>
+      </div>
+    </div>
   </div>
 
   <!-- ── 課程理念 ── -->
@@ -1416,7 +1659,7 @@
 <!-- ===== FACULTY ===== -->
 <section id="faculty" style="background:var(--cream);">
   <div class="container">
-    <h2 style="color:var(--ink);">卓越學術，跨院整合</h2>
+    <h2 style="color:var(--ink);">由研究者授課</h2>
     <p class="sec-lead">GMBA 師資擁有台灣、美國、歐洲及亞洲頂尖大學博士學位，將深厚的學術研究帶入亞洲科技經濟的課堂之中。</p>
 
     <div class="ai-callout" style="margin-bottom:2.5rem;">
@@ -1512,8 +1755,17 @@
 <!-- ===== JOINT-DEGREE & STUDY ABROAD ===== -->
 <section id="joint-degree" style="background:var(--white);">
   <div class="container">
-    <h2>拓展您的全球視野</h2>
-    <p class="sec-lead">GMBA 學生可透過東海大學國際暨兩岸合作處（OIR），申請至全球逾 40 國、近 400 所姊妹校進行交換學期或雙聯學位。 <a href="https://oir.thu.edu.tw/front/300_StudyAbroad/301_THU_EX_over/pages.php?ID=dGh1X29zYSYzMDFfVEhVX0VYX292ZXI=" target="_blank" rel="noopener" style="color:var(--gold-lt);font-weight:700;">查看短期研習、交換與雙聯學位詳情 →</a></p>
+    <div style="display:flex;gap:4rem;align-items:flex-start;">
+      <div style="flex:1;min-width:0;">
+        <h2>海外交換與雙聯</h2>
+        <p class="sec-lead" style="margin-top:1rem;max-width:520px;">GMBA 學生可透過東海大學國際暨兩岸合作處（OIR），申請至全球逾 40 國、近 400 所姊妹校進行交換學期或雙聯學位。 <a href="https://oir.thu.edu.tw/front/300_StudyAbroad/301_THU_EX_over/pages.php?ID=dGh1X29zYSYzMDFfVEhVX0VYX292ZXI=" target="_blank" rel="noopener" style="color:var(--gold-lt);font-weight:700;">查看短期研習、交換與雙聯學位詳情&nbsp;→</a></p>
+      </div>
+      <div style="flex-shrink:0;width:260px;border-top:2px solid var(--gold);padding-top:1rem;margin-top:.5rem;margin-left:auto;">
+        <span style="font-family:Georgia,serif;font-size:2.8rem;line-height:.8;color:var(--gold);display:block;margin-bottom:.6rem;opacity:.6;">&ldquo;</span>
+        <p style="font-size:16px;font-weight:700;line-height:1.65;color:var(--ink);margin:0 0 1rem;">在奧地利參與交換學程，印證了這個學程的價值。</p>
+        <div style="font-size:12px;color:var(--ink-3);letter-spacing:.03em;">Tarah Julius &nbsp;&middot;&nbsp; GMBA 2023 級</div>
+      </div>
+    </div>
 
 
     <div class="cards-3">
@@ -1621,8 +1873,58 @@
 </section>
 </main>
 
-<footer class="site-footer" aria-label="網站頁尾">
+<script>
+(function(){
+  var links = document.querySelectorAll('.acad-index a');
+  var secs = Array.prototype.map.call(links, function(a){ return document.querySelector(a.getAttribute('href')); });
+  function onScroll(){
+    var pos = window.scrollY + 140, active = 0;
+    secs.forEach(function(s,i){ if (s && s.offsetTop <= pos) active = i; });
+    links.forEach(function(a,i){ a.classList.toggle('is-active', i === active); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+
+<style>
+  .site-footer .footer-contact address{font-style:normal;}
+  .site-footer .footer-contact p{margin:0 0 .7rem;font-size:14.5px;line-height:1.75;color:rgba(255,255,255,.72);}
+  .site-footer .footer-contact .fc-org{color:#fff;font-weight:600;}
+  .site-footer .footer-contact a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(232,197,90,.5);}
+  .site-footer .footer-contact a:hover{color:var(--gold-lt,#E8C55A);}
+  .site-footer .footer-main{align-items:start;}
+  .site-footer .footer-main{grid-template-columns:300px repeat(3,1fr);}
+  .site-footer .footer-secondary{max-width:1300px;margin:0 auto;padding:0 2rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+  .site-footer .footer-secondary > div{border-top:1px solid rgba(255,255,255,.12);padding-top:1.6rem;}
+  .site-footer .fs-title{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1rem;}
+  .site-footer .fs-links{display:flex;flex-wrap:wrap;gap:.55rem 1.6rem;}
+  .site-footer .fs-links a{font-size:14px;color:rgba(255,255,255,.68);text-decoration:none;}
+  .site-footer .fs-links a:hover{color:var(--gold-lt,#E8C55A);}
+  @media(max-width:1000px){
+    .site-footer .footer-main{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:680px){
+    .site-footer .footer-main{grid-template-columns:1fr;}
+    .site-footer .footer-col,.site-footer .footer-col-title,.site-footer .footer-col ul{text-align:left;}
+    .site-footer .footer-secondary{grid-template-columns:1fr;gap:0;padding:0 1.2rem 2rem;}
+  }
+
+</style>
+<footer class="site-footer" aria-label="Site footer" style="background:#1A0A0E;">
   <div class="footer-main">
+    <div class="footer-col footer-contact">
+      <div class="footer-col-title">聯絡我們</div>
+      <address>
+        <p class="fc-org">東海大學管理學院<br>國際經營管理碩士學位學程（GMBA）</p>
+        <p class="fc-addr">407224 臺中市西屯區臺灣大道四段 1727 號</p>
+        <p class="fc-mail"><a href="mailto:gmba@thu.edu.tw">gmba@thu.edu.tw</a></p>
+        <p class="fc-tel"><a href="tel:+886423590121,35002">電話：(04) 2359-0121 分機 35002</a></p>
+      </address>
+    </div>
+
+
 
     <div class="footer-col">
       <div class="footer-col-title">探索 GMBA</div>
@@ -1636,7 +1938,7 @@
     </div>
 
     <div class="footer-col">
-      <div class="footer-col-title">學程資訊</div>
+      <div class="footer-col-title">課程規劃</div>
       <ul>
         <li><a href="academics-zh.html#curriculum">課程規劃</a></li>
         <li><a href="academics-zh.html#faculty">師資陣容</a></li>
@@ -1656,36 +1958,40 @@
       </ul>
     </div>
 
-    <div class="footer-col">
-      <div class="footer-col-title">在台灣生活</div>
-      <ul>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_5_ARC" target="_blank" rel="noopener">居留證（ARC）</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_6_Group_Med" target="_blank" rel="noopener">健康保險</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_10_Work_Per" target="_blank" rel="noopener">工作許可（兼職）</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_13_Intern_E" target="_blank" rel="noopener">畢業後工作與實習</a></li>
-        <li><a href="https://ezwp.wda.gov.tw" target="_blank" rel="noopener">勞動部工作許可申辦</a></li>
-      </ul>
-    </div>
+    
 
-        <div class="footer-col">
-      <div class="footer-col-title">學生入口</div>
-      <ul>
-        <li><a href="https://tmail.thu.edu.tw/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2ftmail.thu.edu.tw%2fowa%2f" target="_blank" rel="noopener">tMail</a></li>
-        <li><a href="https://ilearn.thu.edu.tw/?#/" target="_blank" rel="noopener">iLearn</a></li>
-        <li><a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">學生資訊系統</a></li>
-        <li><a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計處</a></li>
-        <li><a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">學生事務處</a></li>
-        <li><a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">國際暨兩岸合作處</a></li>
-        <li><a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">公共事務處</a></li>
-      </ul>
+        
+  </div>
+  <div class="footer-secondary">
+    <div>
+      <div class="fs-title">在台生活</div>
+      <div class="fs-links">
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_5_ARC" target="_blank" rel="noopener">居留證（ARC）</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_6_Group_Med" target="_blank" rel="noopener">健康保險</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_10_Work_Per" target="_blank" rel="noopener">工作許可（兼職）</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_13_Intern_E" target="_blank" rel="noopener">畢業後工作與實習</a>
+        <a href="https://ezwp.wda.gov.tw" target="_blank" rel="noopener">勞動部工作許可申辦</a>
+      </div>
+    </div>
+    <div>
+      <div class="fs-title">學生入口</div>
+      <div class="fs-links">
+        <a href="https://tmail.thu.edu.tw/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2ftmail.thu.edu.tw%2fowa%2f" target="_blank" rel="noopener">tMail</a>
+        <a href="https://ilearn.thu.edu.tw/?#/" target="_blank" rel="noopener">iLearn</a>
+        <a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">學生資訊系統</a>
+        <a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計處</a>
+        <a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">學生事務處</a>
+        <a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">國際暨兩岸合作處</a>
+        <a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">公共事務處</a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-bottom-inner">
-      <a href="index-zh.html" class="footer-bottom-logo" aria-label="東海GMBA首頁">
+      <a href="index-zh.html" class="footer-bottom-logo" aria-label="THU GMBA Home">
         <img src="./thu-com-logo-w.png" alt="東海大學管理學院 - AACSB 認證" style="height:28px;width:auto;display:block;">
       </a>
-      <span class="footer-bottom-copy">&copy; 2026 東海大學 GMBA 學程。版權所有。</span>
+      <span class="footer-bottom-copy">&copy; 2026 © 2026 東海大學 GMBA 學程。版權所有。</span>
       <div class="footer-bottom-links">
         <a href="https://www.thu.edu.tw/" target="_blank" rel="noopener">東海大學首頁</a>
         <a href="https://mana.thu.edu.tw/" target="_blank" rel="noopener">管理學院</a>
@@ -1694,21 +2000,7 @@
     </div>
   </div>
 </footer>
-<script>
-  (function() {
-    var sidebar = document.getElementById('floatSidebar');
-    var toggle  = document.getElementById('floatToggle');
-    var arrow   = document.getElementById('flo
 
-<script>
-  });
-    var hero = document.querySelector('.hero');
-    if(hero){
-      hero.addEventListener('mouseenter', stop);
-      hero.addEventListener('mouseleave', start);
-    }
-  });
-</script>
 <div id="modal-wong" class="fac-modal" data-fac="wong" role="dialog" aria-modal="true" aria-labelledby="modal-wong-title">
   <div class="fac-modal-box">
     <button class="fac-modal-close" onclick="closeFacModal('wong')" aria-label="關閉">&times;</button>
@@ -1885,7 +2177,8 @@
         </ul>
         <h4>研究專長</h4>
         <ul data-k="fac.chen-ho.expertise">
-          <li>科技融入教學、大數據分析、翻轉教育</li>
+          <li>教育研究法、生命教育研究、Interdisciplinary Case Studies</li>
+          <li>數位學習內容設計、大數據分析程式設計、智慧創新實務應用</li>
         </ul>
       </div>
     </div>
@@ -2200,8 +2493,8 @@
         </ul>
         <h4>授課領域</h4>
         <ul data-k="fac.lee-ki.expertise">
-          <li>採購學、會計學、研究方法、食品安全</li>
-          <li>餐旅英文、銀髮餐飲服務、財務管理、餐飲生產管理</li>
+          <li>飲食素養與食農教育、銀髮族營養與照顧、銀髮族餐飲</li>
+          <li>餐飲營養學、Global Business Management and Strategy、神經感官美食學</li>
         </ul>
       </div>
     </div>
@@ -2505,7 +2798,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var item=a.closest('.nav-item');
     if(item.querySelector('.nav-dropdown')){
       a.addEventListener('click',function(e){
-        if(getComputedStyle(btn).display!=='none'){
+        if(getComputedStyle(btn).display!=='none' && e.target.closest('.nav-caret')){
           e.preventDefault();
           var isOpen=item.classList.contains('open');
           ni.querySelectorAll('.nav-item').forEach(function(o){o.classList.remove('open');});
@@ -2519,30 +2812,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 </script>
-<!-- Contact Modal -->
-<div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.65);align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)closeContactModal()">
-  <div style="background:#1A0A0E;border:1px solid #B8922A;border-radius:12px;max-width:380px;width:100%;padding:2rem 1.75rem;position:relative;">
-    <button onclick="closeContactModal()" style="position:absolute;top:.75rem;right:1rem;background:none;border:none;color:#C9C1BB;font-size:1.4rem;cursor:pointer;line-height:1;">×</button>
-    <div style="font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#B8922A;margin-bottom:.5rem;">聯絡 GMBA</div>
-    <div style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:1.5rem;">請選擇聯絡方式</div>
-    <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" onclick="closeContactModal()" style="display:flex;align-items:center;gap:.75rem;background:#7A1422;color:#fff;text-decoration:none;padding:.9rem 1.25rem;border-radius:8px;font-weight:700;font-size:.95rem;margin-bottom:.75rem;">
-      <span style="font-size:1.2rem;">📋</span>
-      <span>填寫快速表單<br><span style="font-size:.78rem;font-weight:400;opacity:.8;">30 秒完成 · 我們將以 Email 回覆</span></span>
-    </a>
-    <div style="border:1px solid #3A1A1E;border-radius:8px;padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;">
-      <div>
-        <div style="font-size:.72rem;color:#888;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.2rem;">或直接寄信</div>
-        <div style="color:#C9C1BB;font-size:.9rem;font-weight:600;">gmba@thu.edu.tw</div>
-      </div>
-      <button id="copy-email-btn" onclick="copyGmbaEmail()" style="background:#2E1218;border:1px solid #3A1A1E;color:#B8922A;padding:.45rem .9rem;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:700;white-space:nowrap;">複製</button>
-    </div>
-  </div>
-</div>
-<script>
-function openContactModal(){var m=document.getElementById('contact-modal');m.style.display='flex';}
-function closeContactModal(){document.getElementById('contact-modal').style.display='none';}
-function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(function(){var b=document.getElementById('copy-email-btn');b.textContent='已複製！';b.style.color='#4ade80';setTimeout(function(){b.textContent='複製';b.style.color='#B8922A';},2000);});}
-</script>
+
 
 <div id="search-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.75);align-items:flex-start;justify-content:center;padding:4.5rem 1rem 1rem;overflow-y:auto;" onclick="if(event.target===this)closeSearchModal()">
   <div style="background:#fff;border-radius:12px;max-width:640px;width:100%;padding:1.5rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4);">
@@ -2552,7 +2822,7 @@ function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(f
     <div id="siteSearchEmpty" style="display:none;padding:2rem 0;text-align:center;color:var(--ink-3);font-size:var(--t-sm);">找不到符合的結果</div>
   </div>
 </div>
-<script>window.__SEARCH_INDEX__ = [{"t": "東海GMBA，為什麼不一樣？", "s": "東海 Global MBA 位於台灣台中，是通過 AACSB 國際認證 的 全英語授課 MBA，躋身 全球前 5% 頂尖商學院之列。我們致力於培育跨越文化與學科界線的未來領袖，讓他們即使身處 AI 浪潮的複雜變局，依然能從容應對。 速成碩士學程，全方位奠定核心實力： 01 研究思維（Research Discipline） 02 AI 與數據應用（AI & Data Capability） 03…", "p": "index-zh.html", "a": "why-gmba"}, {"t": "真正的國際化課堂", "s": "30–40 名學生，10 個以上國籍。小到讓你真正認識每一個人，多元到讓每個人都帶來不同的視野。 即將上線 學生影片 · 2 分鐘 沒有國界的課堂 班上來自二十幾個國家，卻小到你認得出每一個人。其中三位談實際相處起來是什麼樣子。 影片內容 01 跨文化的小組報告，實際上是怎麼進行的？ 02 同學最讓他們意外的地方是什麼？ 03 想對正在考慮申請的人說什麼？ Class of 2018-2026…", "p": "index-zh.html", "a": "class-profile"}, {"t": "東海大學的校園生活", "s": "134 公頃林蔭步道、傳統建築，以及由貝聿銘設計的標誌性 路思義教堂 ——一座寧靜美麗的校園，讓你從這裡出發，走向全球職涯。 134 公頃優美校園 150+ 個學生社團——總有一個適合你 46 棟宿舍——每位學生都能住在校內", "p": "index-zh.html", "a": "campus-life"}, {"t": "為何選擇台灣？", "s": "台灣不只生產驅動全球 AI 的晶片——它還組裝伺服器、製造設備，並孕育每一個重大 AI 突破背後的企業。在這裡就讀，讓你站在 全球 AI 產業最前線。 90% 先進晶片供應 台積電為 NVIDIA、Apple、AMD、Qualcomm 代工晶片——幾乎每個主要 AI 平台都跑在台灣矽晶片上。 70% 全球AI伺服器 廣達、緯穎、鴻海、英業達 為 Google、Amazon、Microsoft 和…", "p": "index-zh.html", "a": "living-in-taiwan"}, {"t": "最新消息", "s": "Feature Story May 22, 2026 Student Life 校園畢業大合照 2026 屆 GMBA 畢業生在路思義教堂前慶祝——留下兩年共同學習的友誼與里程碑。 Activity Snapshot Location Luce Chapel Photos 10 photos Cohort Class of 2026 Latest From Tunghai 掌握 GMBA…", "p": "index-zh.html", "a": "news"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入這個讓你站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "index-zh.html", "a": "contact"}, {"t": "學程課程", "s": "課程以四層遞進結構設計——研究方法、AI數據能力、跨職能應用、策略領導——每一層都在為下一層奠基，最終培養出在最高層次引領的判斷力。 課程理念 不是學 AI， 是用 AI 領導 四層遞進架構——每門課都在前一門的基礎上深化。 01 Research Foundation 商業研究方法 02 Core Pivot AI與數據科技核心 03 Cross-Functional Application…", "p": "academics-zh.html", "a": "curriculum"}, {"t": "卓越學術，跨院整合", "s": "GMBA 師資擁有台灣、美國、歐洲及亞洲頂尖大學博士學位，將深厚的學術研究帶入亞洲科技經濟的課堂之中。 一個學程，五個學院。 跨越五個學院，GMBA 將商業策略、公共政策、法律思維與跨文化溝通融為一體——培育能跨越產業與國界的領導者。 01 AI、數據與科技 商業分析 · 資訊安全 · 資料科學 · AI 應用 陳鶴元 金泰星 黃尹姿 黃家俊 02 財務與資本市場 公司財務 · 資本市場 ·…", "p": "academics-zh.html", "a": "faculty"}, {"t": "拓展您的全球視野", "s": "GMBA 學生可透過東海大學國際暨兩岸合作處（OIR），申請至全球逾 40 國、近 400 所姊妹校進行交換學期或雙聯學位。 查看短期研習、交換與雙聯學位詳情 → 短期學程 暑假或寒假期間赴姊妹校進行 1–3 個月的實體或線上課程，體驗當地語言、文化與國際商業環境。 交換學期 赴姊妹校就讀一學期或一學年，學分可抵回東海；交換期間只需繳交東海學費。最早可於第二學期提出申請。 雙聯學位…", "p": "academics-zh.html", "a": "joint-degree"}, {"t": "學期行事曆", "s": "掌握學期節點，規劃您的學習時程。 時期 日期 備註 秋季（上學期） 九月 – 一月 第一學期 秋季論文口試申請截止 1 月 15 日 截止日 秋季論文口試截止 1 月 31 日 2/15 畢業 寒假 一月 – 二月 春季（下學期） 二月 – 七月 第二學期 春季論文口試申請截止 7 月 15 日 截止日 春季論文口試截止 7 月 31 日 8/15 畢業…", "p": "academics-zh.html", "a": "academic-calendar"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入讓您站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "academics-zh.html", "a": "contact"}, {"t": "獎學金", "s": "台灣提供亞洲最豐厚的研究所獎學金之一。結合低廉的學費與生活費，在這裡攻讀 MBA 的成本遠低於其他選擇。 台灣政府獎學金 以下獎學金由台灣政府相關部會提供，申請資格、所需文件及申請程序等細節，請直接洽各主管機關確認。 教育部台灣獎學金 每月生活費 NT$20,000（碩/博士生） 學費補助 每學期最高 NT$40,000 期限 最長 2 年（碩士） 資格 各國籍均可（不含港澳及中國大陸）…", "p": "admissions-zh.html", "a": "tuition"}, {"t": "如何申請", "s": "先找到你屬於哪一類，再點進對應的報名頁面。只有從海外申請的國際生分春季班與秋季班，其餘管道都是秋季入學。 申請管道 入學學期 申請期間 審查方式 1 海外國際學生 自海外提出申請 春季班 10月 前往申請 → 書面審查 海外國際學生 自海外提出申請 秋季班 1月－5月 前往申請 → 書面審查 2 已在台者 · 台灣籍 須持ARC及正式學籍 · 甄試入學 秋季班 10月－11月 前往申請 →…", "p": "admissions-zh.html", "a": "admissions"}, {"t": "在台生活：快速指南", "s": "每位國際學生必須處理的三件事，整理成最精簡的版本。 簽證與居留證（ARC） 入境前 — FS 學生簽證 入台 15 日內 — 辦理 ARC 每年 — 辦理展期 觀光簽證無法轉換為居留證 東海大學國際暨兩岸合作處 → 工作許可 學期中每週最多 20 小時 假期間無時數限制 申請： ezwp.wda.gov.tw 未申請即工作：罰款最高新台幣 15 萬 中文能力 全英文授課 ，不要求中文 可選修…", "p": "admissions-zh.html", "a": "practical-info"}, {"t": "學生表單與文件", "s": "下載 GMBA 論文程序、考試與繳交所需官方表單。所有檔案均為 PDF 格式——請開啟、列印後繳交至 GMBA 辦公室。 論文準備 指導教授同意書 論文指導的指導教授同意書表格 ↓ 下載 論文題目審定書 論文審核專業領域確認清單 ↓ 下載 論文格式規定 論文繳交格式與規定說明 ↓ 下載 考試與繳交 學位考試時程表 論文口試時程與程序說明 ↓ 下載 論文上傳說明 電子論文繳交注意事項與步驟 ↓…", "p": "admissions-zh.html", "a": "downloads"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入讓您站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "admissions-zh.html", "a": "contact"}, {"t": "東海大學 GMBA 是什麼樣的學程？", "s": "東海 GMBA 是全英語授課的國際企業管理碩士學位學程，2018 年成立，<strong>通過 AACSB 認證</strong>。課程分四層設計：研究方法基礎、AI 與資料核心、跨功能 AI 分析、領導與策略。學生來自 20 多個國家。東海在 QS 亞洲大學排名是台灣私立非醫學類大學第一，THE 世界大學影響力排名全球第 85 名、全國第 3（僅次台大、陽明交大）。", "p": "faq-zh.html", "a": "faq-g01"}, {"t": "GMBA 跟一般 MBA、IMBA 有什麼不同？", "s": "GMBA（Global MBA）從設計之初就是為國際班而生，課程、作業、論文<strong>全部用英語進行</strong>，班上同學來自各國。東海 GMBA 與台灣多數 IMBA 的差別在三點：AI 能力融入每一門課，不是獨立的選修學程；師資橫跨五個學院，不限管理學院；地點在台中，位處台灣 AI 智慧製造聚落的核心。", "p": "faq-zh.html", "a": "faq-g02"}, {"t": "為什麼選台灣，而不是新加坡、香港或日本？", "s": "台灣讓你直接進入全球 AI 硬體生態系，生活費卻<strong>只要新加坡的三分之一左右</strong>。全球約 90% 的先進製程晶片、約 70% 的 AI 伺服器、超過 40% 的電子產品組裝都在台灣完成。台中每月生活費約 340 至 505 美元，新加坡要 1,070 至 1,635 美元，東京則是 745 至 1,080 美元。", "p": "faq-zh.html", "a": "faq-g03"}, {"t": "東海 GMBA 有國際認證嗎？", "s": "有。東海大學管理學院通過 AACSB 認證，全球商學院中只有<strong>不到 5%</strong> 拿得到。GMBA 學位也經教育部核定，畢業證書是正式碩士學位，可用於繼續升學與國際求職。", "p": "faq-zh.html", "a": "faq-g04"}, {"t": "一屆有多少學生？同學來自哪些國家？", "s": "每屆 <strong>30 到 40 人</strong>，來自 10 個以上的國家。2018 至 2026 年各屆合計，學生來自 8 大洲域、22 個國籍：東南亞占 65.4%、東亞 21.1%、歐洲 3.9%、南亞 3.1%、中亞 3.1%、非洲 1.3%、美洲 1.3%、中東 0.9%。班級規模小，同學彼此都叫得出名字。", "p": "faq-zh.html", "a": "faq-g05"}, {"t": "GMBA 開設哪些課程？", "s": "課程採<strong>四層架構</strong>：研究方法基礎、AI 與資料核心、跨功能 AI 分析、領導與策略，一層接一層往上建。所有課程全英語授課。", "p": "faq-zh.html", "a": "faq-a01"}, {"t": "申請 GMBA 需要 GMAT 或 GRE 成績嗎？", "s": "不需要。東海 GMBA <strong>不要求 GMAT 或 GRE</strong>。入學以書面審查為主，看的是學士學位、英語能力證明、自傳與讀書計畫。已在台灣的申請者另需面試。", "p": "faq-zh.html", "a": "faq-a02"}, {"t": "不是商管背景可以申請嗎？", "s": "可以。申請<strong>不限大學主修</strong>，任何科系的學士學位都能報考。課程一開始的「研究方法基礎」層，就是為了讓不同背景的學生先站上同一個起跑點，再進入核心課程。", "p": "faq-zh.html", "a": "faq-a03"}, {"t": "GMBA 需要寫論文嗎？", "s": "需要，GMBA 是<strong>論文型碩士學程</strong>。學生須指定指導教授、繳交指導同意書與論文題目專業檢核表，並通過口試才能畢業。相關表單都放在下載區。", "p": "faq-zh.html", "a": "faq-a04"}, {"t": "修業年限多久？", "s": "全職密集修課最快 1 年即可畢業；多數學生選擇兩年完成，最長修業年限為 4 年，實際時間依選課與論文進度而定。畢業共需 <strong>30 學分</strong>：21 學分必修、8 學分選修，加 1 學分論文。從第三年起改採學分計費，每學分 2,090 元加雜費 440 元，比繳整學期學費便宜很多。", "p": "faq-zh.html", "a": "faq-a05"}, {"t": "可以出國交換或修雙聯學位嗎？", "s": "可以。GMBA 學生可透過<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">東海大學國際處（OIR）</a>安排，至全球逾 40 國、<strong>近 400 所姊妹校</strong>進行交換學期或修讀雙聯學位。海外修得的學分可抵回東海畢業學分，交換期間只需繳交東海學費。", "p": "faq-zh.html", "a": "faq-a06"}, {"t": "GMBA 的師資背景如何？", "s": "GMBA 師資橫跨東海<strong>五個學院</strong>，不限管理學院，這也是跨領域課程能成立的原因。授課領域涵蓋供應鏈管理、財務、行銷、營運、創業與商業 AI 應用。", "p": "faq-zh.html", "a": "faq-a07"}, {"t": "入學條件是什麼？要怎麼申請？", "s": "需要<strong>學士學位與英語能力證明</strong>。申請分三種管道，各有不同的報名系統與時程：國際生（境外申請）、在台生／本國生、僑生。請到招生頁面找到自己的管道，再從對應連結進入報名系統。", "p": "faq-zh.html", "a": "faq-ad01"}, {"t": "各管道的報名時間是什麼時候？", "s": "時程依申請身分而定。境外國際生：春季班 10 月報名，秋季班 1 月至 5 月報名。在台生與本國生只有秋季班，分兩梯次：第一梯 10 至 11 月，第二梯 12 月至隔年 2 月。僑生秋季班 <strong>4 月至 6 月報名</strong>。", "p": "faq-zh.html", "a": "faq-ad02"}, {"t": "春季班和秋季班有什麼差別？", "s": "只有境外國際生有春季班，其他管道一律秋季入學。課程內容與學位完全相同，春季班只是讓你<strong>提早半年</strong>開始，不必再等一整年。若你人在境外、10 月前備妥文件，春季班值得考慮。", "p": "faq-zh.html", "a": "faq-ad03"}, {"t": "需要幾年工作經驗才能申請？", "s": "工作經驗<strong>不是入學的硬性門檻</strong>，應屆畢業生也歡迎申請。有工作經驗確實有助於寫讀書計畫，因為你有具體案例可以寫，但本學程招收的學生涵蓋不同職涯階段。", "p": "faq-zh.html", "a": "faq-ad04"}, {"t": "申請要準備哪些文件？", "s": "國際生與僑生需繳交<strong>英文自傳、英文讀書計畫</strong>與相關佐證資料。在台生與本國生則繳交成績單與履歷。所有申請者都須附上學士學位證明與英語能力證明。", "p": "faq-zh.html", "a": "faq-ad05"}, {"t": "需要面試嗎？", "s": "<strong>只有在台生與本國生需要面試</strong>，並須參加招生說明會。境外國際生與僑生採書面審查，不需面試。", "p": "faq-zh.html", "a": "faq-ad06"}, {"t": "接受哪些英語檢定成績？", "s": "境外申請者可用以下任一項達標：<strong>CEFR B1 以上、TOEFL iBT 47、TOEFL ITP 500、IELTS 4.0、TOEIC 550</strong>。若畢業於英語授課學校或主修英語，可改繳學校證明，不必附檢定成績。", "p": "faq-zh.html", "a": "faq-ad07"}, {"t": "學費多少？有哪些獎學金？", "s": "學費每學期 <strong>69,020 元</strong>（約 2,124 美元），不分國籍一律相同。獎學金來自三個層級：政府（<a href=\"https://english.moe.gov.tw/cp-24-16833-23C09-1.html\" target=\"_blank\" rel=\"noopener\">教育部台灣獎學金</a>、<a href=\"https://english.moe.gov.tw/cp-24-24284-3ea37-1.html\" target=\"_blank\" rel=\"noopener\">教育部華語文獎學金</a>、<a href=\"https://en.mofa.gov.tw/cp.aspx?n=1325\" target=\"_blank\" rel=\"noopener\">外交部台灣獎學金</a>）、<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">東海大學國際處</a>，以及 GMBA 學程本身。", "p": "faq-zh.html", "a": "faq-f01"}, {"t": "讀完整個學位總共要花多少錢？", "s": "每學期約抓 150,000 元（約 4,615 美元），含學費、住宿、健保與生活費，兩年標準修業約 <strong>60 萬元（約 18,500 美元）</strong>，這是未計獎學金的金額。獎學金能大幅降低負擔：光是<a href=\"https://english.moe.gov.tw/cp-24-16833-23C09-1.html\" target=\"_blank\" rel=\"noopener\">教育部台灣獎學金</a>就提供每月 20,000 元生活費，加上每學期最高 40,000 元的學費補助。", "p": "faq-zh.html", "a": "faq-f02"}, {"t": "獎學金競爭激烈嗎？什麼時候申請？", "s": "政府獎學金與校內獎學金的時程不同。政府獎學金（教育部、外交部）須向所在國的台灣代表處（TECO 或 AIT）申請，截止日通常是每年 <strong>3 月 31 日</strong>，錄取結果在你來台前就會確定。東海與 GMBA 的獎學金則在錄取後辦理，GMBA 學程獎學金金額每學期於招生說明會公布。", "p": "faq-zh.html", "a": "faq-f03"}, {"t": "一定住得到宿舍嗎？", "s": "校內宿舍有提供，但名額有限，<strong>不保證一定住得到</strong>。東海共有 46 棟宿舍，校內住宿每學期 10,560 至 41,360 元，依房型而定。校外租屋以鄰近的西屯區為主，每學期約 30,000 至 48,000 元。", "p": "faq-zh.html", "a": "faq-f04"}, {"t": "如果讀到第三年，學費怎麼算？", "s": "第三年起改採學分計費，不繳整學期學費：<strong>每學分 2,090 元</strong>，另加每學分雜費 440 元。對只剩論文、幾乎沒有課要修的學生來說，比繳整學期學費省很多。", "p": "faq-zh.html", "a": "faq-f05"}, {"t": "需要辦哪種簽證和居留證？", "s": "出發前先向台灣駐外代表處申請<strong>居留簽證（FS 類）</strong>。請勿持落地簽或觀光簽入境，這兩種簽證無法轉換成居留證。抵台後由<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">國際處</a>統一協助新生辦理居留證（ARC）。居留證每年換發，建議在到期前三個月辦理。", "p": "faq-zh.html", "a": "faq-l01"}, {"t": "健康保險怎麼保？", "s": "所有國際生抵台後自動納保團體醫療保險。<strong>連續居留滿六個月</strong>後，轉入全民健康保險，每學期保費 4,956 元。申請理賠時，帶診斷證明與收據到<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">國際處</a>辦理。", "p": "faq-zh.html", "a": "faq-l02"}, {"t": "需要會中文嗎？", "s": "不需要。課程、作業、論文<strong>全部使用英語</strong>，居留證、保險、工作許可等行政程序也由<a href=\"https://oir.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">國際處</a>以英語協助處理。", "p": "faq-zh.html", "a": "faq-l03"}, {"t": "在台中生活費要多少？", "s": "每月生活費約 24,000 元（約 740 美元），涵蓋伙食、交通與日常開銷，住宿另計。含住宿的每月總花費約 <strong>340 至 505 美元</strong>。相較之下，首爾 640 至 940 美元、東京 745 至 1,080 美元、新加坡 1,070 至 1,635 美元。", "p": "faq-zh.html", "a": "faq-l04"}, {"t": "在學期間可以打工或實習嗎？", "s": "可以，學期中每週最多 <strong>20 小時</strong>，寒暑假不限時數。打工與實習都需要工作許可，請上 <a href=\"https://ezwp.wda.gov.tw/\" target=\"_blank\" rel=\"noopener\">ezwp.wda.gov.tw</a> 線上申請，備妥學生證、護照、居留證與在學證明。未取得許可就工作，罰鍰 30,000 至 150,000 元並強制出境，務必先申請再上工。", "p": "faq-zh.html", "a": "faq-l05"}, {"t": "東海的校園生活是什麼樣子？", "s": "東海校園占地 <strong>134 公頃</strong>，林蔭道路與傳統建築交錯，包括貝聿銘設計的路思義教堂。校內有 150 多個學生社團、46 棟宿舍。校區位於台中市內，但遠離市中心的喧囂。", "p": "faq-zh.html", "a": "faq-l06"}, {"t": "住在台中的生活如何？", "s": "台中兼具大城市的美食與生活機能，物價卻<strong>遠低於台北、新加坡或香港</strong>，同樣一筆獎學金在這裡用得更久。台中也位處台灣智慧製造聚落的核心，產業參訪與實習機會就在身邊。", "p": "faq-zh.html", "a": "faq-l07"}, {"t": "畢業後可以留在台灣工作嗎？", "s": "可以。取得畢業證書後，居留證<strong>最長可延長一年</strong>用於求職。正式就業須由雇主透過評點配額制申請工作許可。教育部另有畢業後實習計畫可申請。", "p": "faq-zh.html", "a": "faq-c01"}, {"t": "GMBA 畢業生的職涯發展如何？", "s": "畢業生多在台灣科技業與 AI 相關產業從事經營管理、行銷、財務與營運工作。台灣半導體與 AI 生態系對雙語人才需求穩定，勞動部也為認證學程的國際畢業生提供<strong>簡化的工作許可流程</strong>。", "p": "faq-zh.html", "a": "faq-c02"}, {"t": "GMBA 有職涯輔導和校友網絡嗎？", "s": "GMBA <strong>目前沒有專屬的校友組織</strong>。畢業生可以使用東海大學全校性的「實習與學生成就中心」（ISAC）所提供的職涯服務，包括職涯諮詢、履歷與面試輔導、企業導師媒合、徵才博覽會，全校學生與畢業生皆可使用。詳情：<a href=\"https://isac-net.thu.edu.tw/\" target=\"_blank\" rel=\"noopener\">isac-net.thu.edu.tw</a>", "p": "faq-zh.html", "a": "faq-c03"},{"t": "在學期間可以學中文嗎？", "s": "可以，而且很多同學都會選修。碩士生可選修初級、中級中文課程（非必修），<a href=\"https://clc.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">華語中心</a>另開設完整的華語課程，結合語言教學與生活體驗。詳見<a href=\"https://oir.thu.edu.tw/front/400_IntlDegree/400_3_Chinese_L/pages.php?ID=dGh1X29zYSY0MDBfM19DaGluZXNlX0w=\" target=\"_blank\" rel=\"noopener\">國際處華語學習頁面</a>。具備基礎中文，對日後在台求職也是加分。", "p": "faq-zh.html", "a": "faq-l08"}];</script>
+<script>window.__SEARCH_INDEX__ = [{"t": "東海GMBA，為什麼不一樣？", "s": "東海 Global MBA 位於台灣台中，是通過 AACSB 國際認證 的 全英語授課 MBA，躋身 全球前 5% 頂尖商學院之列。我們致力於培育跨越文化與學科界線的未來領袖，讓他們即使身處 AI 浪潮的複雜變局，依然能從容應對。 速成碩士學程，全方位奠定核心實力： 01 研究思維（Research Discipline） 02 AI 與數據應用（AI & Data Capability） 03…", "p": "index-zh.html", "a": "why-gmba"}, {"t": "真正的國際化課堂", "s": "30–40 名學生，10 個以上國籍。小到讓你真正認識每一個人，多元到讓每個人都帶來不同的視野。 即將上線 學生影片 · 2 分鐘 沒有國界的課堂 班上來自二十幾個國家，卻小到你認得出每一個人。其中三位談實際相處起來是什麼樣子。 影片內容 01 跨文化的小組報告，實際上是怎麼進行的？ 02 同學最讓他們意外的地方是什麼？ 03 想對正在考慮申請的人說什麼？ Class of 2018-2026…", "p": "index-zh.html", "a": "class-profile"}, {"t": "東海大學的校園生活", "s": "134 公頃林蔭步道、傳統建築，以及由貝聿銘設計的標誌性 路思義教堂 ——一座寧靜美麗的校園，讓你從這裡出發，走向全球職涯。 134 公頃優美校園 150+ 個學生社團——總有一個適合你 46 棟宿舍——每位學生都能住在校內", "p": "index-zh.html", "a": "campus-life"}, {"t": "為何選擇台灣？", "s": "台灣不只生產驅動全球 AI 的晶片——它還組裝伺服器、製造設備，並孕育每一個重大 AI 突破背後的企業。在這裡就讀，讓你站在 全球 AI 產業最前線。 90% 先進晶片供應 台積電為 NVIDIA、Apple、AMD、Qualcomm 代工晶片——幾乎每個主要 AI 平台都跑在台灣矽晶片上。 70% 全球AI伺服器 廣達、緯穎、鴻海、英業達 為 Google、Amazon、Microsoft 和…", "p": "index-zh.html", "a": "living-in-taiwan"}, {"t": "最新消息", "s": "Feature Story May 22, 2026 Student Life 校園畢業大合照 2026 屆 GMBA 畢業生在路思義教堂前慶祝——留下兩年共同學習的友誼與里程碑。 Activity Snapshot Location Luce Chapel Photos 10 photos Cohort Class of 2026 Latest From Tunghai 掌握 GMBA…", "p": "index-zh.html", "a": "news"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入這個讓你站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "index-zh.html", "a": "contact"}, {"t": "學程課程", "s": "課程以四層遞進結構設計——研究方法、AI數據能力、跨職能應用、策略領導——每一層都在為下一層奠基，最終培養出在最高層次引領的判斷力。 課程理念 不是學 AI， 是用 AI 領導 四層遞進架構——每門課都在前一門的基礎上深化。 01 Research Foundation 商業研究方法 02 Core Pivot AI與數據科技核心 03 Cross-Functional Application…", "p": "academics-zh.html", "a": "curriculum"}, {"t": "卓越學術，跨院整合", "s": "GMBA 師資擁有台灣、美國、歐洲及亞洲頂尖大學博士學位，將深厚的學術研究帶入亞洲科技經濟的課堂之中。 一個學程，五個學院。 跨越五個學院，GMBA 將商業策略、公共政策、法律思維與跨文化溝通融為一體——培育能跨越產業與國界的領導者。 01 AI、數據與科技 商業分析 · 資訊安全 · 資料科學 · AI 應用 陳鶴元 金泰星 黃尹姿 黃家俊 02 財務與資本市場 公司財務 · 資本市場 ·…", "p": "academics-zh.html", "a": "faculty"}, {"t": "拓展您的全球視野", "s": "GMBA 學生可透過東海大學國際暨兩岸合作處（OIR），申請至全球逾 40 國、近 400 所姊妹校進行交換學期或雙聯學位。 查看短期研習、交換與雙聯學位詳情 → 短期學程 暑假或寒假期間赴姊妹校進行 1–3 個月的實體或線上課程，體驗當地語言、文化與國際商業環境。 交換學期 赴姊妹校就讀一學期或一學年，學分可抵回東海；交換期間只需繳交東海學費。最早可於第二學期提出申請。 雙聯學位…", "p": "academics-zh.html", "a": "joint-degree"}, {"t": "學期行事曆", "s": "掌握學期節點，規劃您的學習時程。 時期 日期 備註 秋季（上學期） 九月 – 一月 第一學期 秋季論文口試申請截止 1 月 15 日 截止日 秋季論文口試截止 1 月 31 日 2/15 畢業 寒假 一月 – 二月 春季（下學期） 二月 – 七月 第二學期 春季論文口試申請截止 7 月 15 日 截止日 春季論文口試截止 7 月 31 日 8/15 畢業…", "p": "academics-zh.html", "a": "academic-calendar"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入讓您站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "academics-zh.html", "a": "contact"}, {"t": "獎學金", "s": "台灣提供亞洲最豐厚的研究所獎學金之一。結合低廉的學費與生活費，在這裡攻讀 MBA 的成本遠低於其他選擇。 台灣政府獎學金 以下獎學金由台灣政府相關部會提供，申請資格、所需文件及申請程序等細節，請直接洽各主管機關確認。 教育部台灣獎學金 每月生活費 NT$20,000（碩/博士生） 學費補助 每學期最高 NT$40,000 期限 最長 2 年（碩士） 資格 各國籍均可（不含港澳及中國大陸）…", "p": "admissions-zh.html", "a": "tuition"}, {"t": "如何申請", "s": "先找到你屬於哪一類，再點進對應的報名頁面。只有從海外申請的國際生分春季班與秋季班，其餘管道都是秋季入學。 申請管道 入學學期 申請期間 審查方式 1 海外國際學生 自海外提出申請 春季班 10月 前往申請 → 書面審查 海外國際學生 自海外提出申請 秋季班 1月－5月 前往申請 → 書面審查 2 已在台者 · 台灣籍 須持ARC及正式學籍 · 甄試入學 秋季班 10月－11月 前往申請 →…", "p": "admissions-zh.html", "a": "admissions"}, {"t": "在台生活：快速指南", "s": "每位國際學生必須處理的三件事，整理成最精簡的版本。 簽證與居留證（ARC） 入境前 — FS 學生簽證 入台 15 日內 — 辦理 ARC 每年 — 辦理展期 觀光簽證無法轉換為居留證 東海大學國際暨兩岸合作處 → 工作許可 學期中每週最多 20 小時 假期間無時數限制 申請： ezwp.wda.gov.tw 未申請即工作：罰款最高新台幣 15 萬 中文能力 全英文授課 ，不要求中文 可選修…", "p": "admissions-zh.html", "a": "practical-info"}, {"t": "學生表單與文件", "s": "下載 GMBA 論文程序、考試與繳交所需官方表單。所有檔案均為 PDF 格式——請開啟、列印後繳交至 GMBA 辦公室。 論文準備 指導教授同意書 論文指導的指導教授同意書表格 ↓ 下載 論文題目審定書 論文審核專業領域確認清單 ↓ 下載 論文格式規定 論文繳交格式與規定說明 ↓ 下載 考試與繳交 學位考試時程表 論文口試時程與程序說明 ↓ 下載 論文上傳說明 電子論文繳交注意事項與步驟 ↓…", "p": "admissions-zh.html", "a": "downloads"}, {"t": "從這裡啟程", "s": "準備好了嗎？ 從這裡啟程 加入讓您站在亞洲 AI 轉型核心的學程。 立即申請 →", "p": "admissions-zh.html", "a": "contact"}, {"t": "東海大學 GMBA 是什麼樣的學程？", "s": "東海 GMBA 是全英語授課的國際企業管理碩士學位學程，2018 年成立，通過 AACSB 認證。課程分四層設計：研究方法基礎、AI 與資料核心、跨功能 AI 分析、領導與策略。學生來自 20 多個國家。東海在 QS 亞洲大學排名是台灣私立非醫學類大學第一，THE 世界大學影響力排名全球第 85 名、全國第 3（僅次台大、陽明交大）。", "p": "faq-zh.html", "a": "faq-g01"}, {"t": "GMBA 跟一般 MBA、IMBA 有什麼不同？", "s": "GMBA（Global MBA）從設計之初就是為國際班而生，課程、作業、論文全部用英語進行，班上同學來自各國。東海 GMBA 與台灣多數 IMBA 的差別在三點：AI 能力融入每一門課，不是獨立的選修學程；師資橫跨五個學院，不限管理學院；地點在台中，位處台灣 AI 智慧製造聚落的核心。", "p": "faq-zh.html", "a": "faq-g02"}, {"t": "為什麼選台灣，而不是新加坡、香港或日本？", "s": "台灣讓你直接進入全球 AI 硬體生態系，生活費卻只要新加坡的三分之一左右。全球約 90% 的先進製程晶片、約 70% 的 AI 伺服器、超過 40% 的電子產品組裝都在台灣完成。台中每月生活費約 340 至 505 美元，新加坡要 1,070 至 1,635 美元，東京則是 745 至 1,080 美元。", "p": "faq-zh.html", "a": "faq-g03"}, {"t": "東海 GMBA 有國際認證嗎？", "s": "有。東海大學管理學院通過 AACSB 認證，全球商學院中只有不到 5% 拿得到。GMBA 學位也經教育部核定，畢業證書是正式碩士學位，可用於繼續升學與國際求職。", "p": "faq-zh.html", "a": "faq-g04"}, {"t": "一屆有多少學生？同學來自哪些國家？", "s": "每屆 30 到 40 人，來自 10 個以上的國家。2018 至 2026 年各屆合計，學生來自 8 大洲域、22 個國籍：東南亞占 65.4%、東亞 21.1%、歐洲 3.9%、南亞 3.1%、中亞 3.1%、非洲 1.3%、美洲 1.3%、中東 0.9%。班級規模小，同學彼此都叫得出名字。", "p": "faq-zh.html", "a": "faq-g05"}, {"t": "GMBA 開設哪些課程？", "s": "課程採四層架構：研究方法基礎、AI 與資料核心、跨功能 AI 分析、領導與策略，一層接一層往上建。所有課程全英語授課。", "p": "faq-zh.html", "a": "faq-a01"}, {"t": "申請 GMBA 需要 GMAT 或 GRE 成績嗎？", "s": "不需要。東海 GMBA 不要求 GMAT 或 GRE。入學以書面審查為主，看的是學士學位、英語能力證明、自傳與讀書計畫。已在台灣的申請者另需面試。", "p": "faq-zh.html", "a": "faq-a02"}, {"t": "不是商管背景可以申請嗎？", "s": "可以。申請不限大學主修，任何科系的學士學位都能報考。課程一開始的「研究方法基礎」層，就是為了讓不同背景的學生先站上同一個起跑點，再進入核心課程。", "p": "faq-zh.html", "a": "faq-a03"}, {"t": "GMBA 需要寫論文嗎？", "s": "需要，GMBA 是論文型碩士學程。學生須指定指導教授、繳交指導同意書與論文題目專業檢核表，並通過口試才能畢業。相關表單都放在下載區。", "p": "faq-zh.html", "a": "faq-a04"}, {"t": "修業年限多久？", "s": "全職密集修課最快 1 年即可畢業；多數學生選擇兩年完成，最長修業年限為 4 年，實際時間依選課與論文進度而定。畢業共需 30 學分：21 學分必修、8 學分選修，加 1 學分論文。從第三年起改採學分計費，每學分 2,090 元加雜費 440 元，比繳整學期學費便宜很多。", "p": "faq-zh.html", "a": "faq-a05"}, {"t": "可以出國交換或修雙聯學位嗎？", "s": "可以。GMBA 學生可透過東海大學國際處（OIR）安排，至全球逾 40 國、近 400 所姊妹校進行交換學期或修讀雙聯學位。海外修得的學分可抵回東海畢業學分，交換期間只需繳交東海學費。", "p": "faq-zh.html", "a": "faq-a06"}, {"t": "GMBA 的師資背景如何？", "s": "GMBA 師資橫跨東海五個學院，不限管理學院，這也是跨領域課程能成立的原因。授課領域涵蓋供應鏈管理、財務、行銷、營運、創業與商業 AI 應用。", "p": "faq-zh.html", "a": "faq-a07"}, {"t": "入學條件是什麼？要怎麼申請？", "s": "需要學士學位與英語能力證明。申請分三種管道，各有不同的報名系統與時程：國際生（境外申請）、在台生／本國生、僑生。請到招生頁面找到自己的管道，再從對應連結進入報名系統。", "p": "faq-zh.html", "a": "faq-ad01"}, {"t": "各管道的報名時間是什麼時候？", "s": "時程依申請身分而定。境外國際生：春季班 10 月報名，秋季班 1 月至 5 月報名。在台生與本國生只有秋季班，分兩梯次：第一梯 10 至 11 月，第二梯 12 月至隔年 2 月。僑生秋季班 4 月至 6 月報名。", "p": "faq-zh.html", "a": "faq-ad02"}, {"t": "春季班和秋季班有什麼差別？", "s": "只有境外國際生有春季班，其他管道一律秋季入學。課程內容與學位完全相同，春季班只是讓你提早半年開始，不必再等一整年。若你人在境外、10 月前備妥文件，春季班值得考慮。", "p": "faq-zh.html", "a": "faq-ad03"}, {"t": "需要幾年工作經驗才能申請？", "s": "工作經驗不是入學的硬性門檻，應屆畢業生也歡迎申請。有工作經驗確實有助於寫讀書計畫，因為你有具體案例可以寫，但本學程招收的學生涵蓋不同職涯階段。", "p": "faq-zh.html", "a": "faq-ad04"}, {"t": "申請要準備哪些文件？", "s": "國際生與僑生需繳交英文自傳、英文讀書計畫與相關佐證資料。在台生與本國生則繳交成績單與履歷。所有申請者都須附上學士學位證明與英語能力證明。", "p": "faq-zh.html", "a": "faq-ad05"}, {"t": "需要面試嗎？", "s": "只有在台生與本國生需要面試，並須參加招生說明會。境外國際生與僑生採書面審查，不需面試。", "p": "faq-zh.html", "a": "faq-ad06"}, {"t": "接受哪些英語檢定成績？", "s": "境外申請者可用以下任一項達標：CEFR B1 以上、TOEFL iBT 47、TOEFL ITP 500、IELTS 4.0、TOEIC 550。若畢業於英語授課學校或主修英語，可改繳學校證明，不必附檢定成績。", "p": "faq-zh.html", "a": "faq-ad07"}, {"t": "學費多少？有哪些獎學金？", "s": "學費每學期 69,020 元（約 2,124 美元），不分國籍一律相同。獎學金來自三個層級：政府（教育部台灣獎學金、教育部華語文獎學金、外交部台灣獎學金）、東海大學國際處，以及 GMBA 學程本身。", "p": "faq-zh.html", "a": "faq-f01"}, {"t": "讀完整個學位總共要花多少錢？", "s": "每學期約抓 150,000 元（約 4,615 美元），含學費、住宿、健保與生活費，兩年標準修業約 60 萬元（約 18,500 美元），這是未計獎學金的金額。獎學金能大幅降低負擔：光是教育部台灣獎學金就提供每月 20,000 元生活費，加上每學期最高 40,000 元的學費補助。", "p": "faq-zh.html", "a": "faq-f02"}, {"t": "獎學金競爭激烈嗎？什麼時候申請？", "s": "政府獎學金與校內獎學金的時程不同。政府獎學金（教育部、外交部）須向所在國的台灣代表處（TECO 或 AIT）申請，截止日通常是每年 3 月 31 日，錄取結果在你來台前就會確定。東海與 GMBA 的獎學金則在錄取後辦理，GMBA 學程獎學金金額每學期於招生說明會公布。", "p": "faq-zh.html", "a": "faq-f03"}, {"t": "一定住得到宿舍嗎？", "s": "校內宿舍有提供，但名額有限，不保證一定住得到。東海共有 46 棟宿舍，校內住宿每學期 10,560 至 41,360 元，依房型而定。校外租屋以鄰近的西屯區為主，每學期約 30,000 至 48,000 元。", "p": "faq-zh.html", "a": "faq-f04"}, {"t": "如果讀到第三年，學費怎麼算？", "s": "第三年起改採學分計費，不繳整學期學費：每學分 2,090 元，另加每學分雜費 440 元。對只剩論文、幾乎沒有課要修的學生來說，比繳整學期學費省很多。", "p": "faq-zh.html", "a": "faq-f05"}, {"t": "需要辦哪種簽證和居留證？", "s": "出發前先向台灣駐外代表處申請居留簽證（FS 類）。請勿持落地簽或觀光簽入境，這兩種簽證無法轉換成居留證。抵台後由國際處統一協助新生辦理居留證（ARC）。居留證每年換發，建議在到期前三個月辦理。", "p": "faq-zh.html", "a": "faq-l01"}, {"t": "健康保險怎麼保？", "s": "所有國際生抵台後自動納保團體醫療保險。連續居留滿六個月後，轉入全民健康保險，每學期保費 4,956 元。申請理賠時，帶診斷證明與收據到國際處辦理。", "p": "faq-zh.html", "a": "faq-l02"}, {"t": "需要會中文嗎？", "s": "不需要。課程、作業、論文全部使用英語，居留證、保險、工作許可等行政程序也由國際處以英語協助處理。", "p": "faq-zh.html", "a": "faq-l03"}, {"t": "在台中生活費要多少？", "s": "每月生活費約 24,000 元（約 740 美元），涵蓋伙食、交通與日常開銷，住宿另計。含住宿的每月總花費約 340 至 505 美元。相較之下，首爾 640 至 940 美元、東京 745 至 1,080 美元、新加坡 1,070 至 1,635 美元。", "p": "faq-zh.html", "a": "faq-l04"}, {"t": "在學期間可以打工或實習嗎？", "s": "可以，學期中每週最多 20 小時，寒暑假不限時數。打工與實習都需要工作許可，請上 ezwp.wda.gov.tw 線上申請，備妥學生證、護照、居留證與在學證明。未取得許可就工作，罰鍰 30,000 至 150,000 元並強制出境，務必先申請再上工。", "p": "faq-zh.html", "a": "faq-l05"}, {"t": "東海的校園生活是什麼樣子？", "s": "東海校園占地 134 公頃，林蔭道路與傳統建築交錯，包括貝聿銘設計的路思義教堂。校內有 150 多個學生社團、46 棟宿舍。校區位於台中市內，但遠離市中心的喧囂。", "p": "faq-zh.html", "a": "faq-l06"}, {"t": "住在台中的生活如何？", "s": "台中兼具大城市的美食與生活機能，物價卻遠低於台北、新加坡或香港，同樣一筆獎學金在這裡用得更久。台中也位處台灣智慧製造聚落的核心，產業參訪與實習機會就在身邊。", "p": "faq-zh.html", "a": "faq-l07"}, {"t": "畢業後可以留在台灣工作嗎？", "s": "可以。取得畢業證書後，居留證最長可延長一年用於求職。正式就業須由雇主透過評點配額制申請工作許可。教育部另有畢業後實習計畫可申請。", "p": "faq-zh.html", "a": "faq-c01"}, {"t": "GMBA 畢業生的職涯發展如何？", "s": "畢業生多在台灣科技業與 AI 相關產業從事經營管理、行銷、財務與營運工作。台灣半導體與 AI 生態系對雙語人才需求穩定，勞動部也為認證學程的國際畢業生提供簡化的工作許可流程。", "p": "faq-zh.html", "a": "faq-c02"}, {"t": "GMBA 有職涯輔導和校友網絡嗎？", "s": "GMBA 目前沒有專屬的校友組織。畢業生可以使用東海大學全校性的「實習與學生成就中心」（ISAC）所提供的職涯服務，包括職涯諮詢、履歷與面試輔導、企業導師媒合、徵才博覽會，全校學生與畢業生皆可使用。詳情：isac-net.thu.edu.tw", "p": "faq-zh.html", "a": "faq-c03"}, {"t": "在學期間可以學中文嗎？", "s": "可以，而且很多同學都會選修。碩士生可選修初級、中級中文課程（非必修），華語中心另開設完整的華語課程，結合語言教學與生活體驗。詳見國際處華語學習頁面。具備基礎中文，對日後在台求職也是加分。", "p": "faq-zh.html", "a": "faq-l08"}];</script>
 <script>
 (function(){
   var btn = document.getElementById('siteSearchBtn');
@@ -2593,4 +2863,27 @@ function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(f
 })();
 </script>
 
+
+<script>
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var blocks = '#curriculum > .container > *, #faculty > .container > *, #joint-degree > .container > *, #academic-calendar > .container > *, #faq > .container > *';
+  var items = '.fv2-cards > .fv2-card, #curriculum .ac-layers > div, .cards-3 > .card';
+  var els = Array.prototype.slice.call(document.querySelectorAll(blocks + ', ' + items));
+  if (!els.length) return;
+  els.forEach(function(el){ el.classList.add('om-reveal'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      var sibs = Array.prototype.slice.call(el.parentNode.children).filter(function(n){ return n.classList.contains('om-reveal'); });
+      el.style.transitionDelay = Math.min(sibs.indexOf(el), 5) * 65 + 'ms';
+      el.classList.add('in');
+      io.unobserve(el);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
 </body></html>

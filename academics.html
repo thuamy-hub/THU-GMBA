@@ -1144,6 +1144,8 @@
   /* Calendar grid: stack on mobile */
   [style*="grid-template-columns:1fr 300px"] { grid-template-columns: 1fr !important; }
   /* Faculty: 2-per-row on mobile */
+  .ac-split > div { min-width: 0; }
+  @media (max-width: 900px) { .ac-split { flex-direction: column !important; gap: 1.6rem !important; } .ac-split .ac-quote { width: 100% !important; margin-top: 0 !important; } }
   .fv2-cards { display: grid !important; grid-template-columns: repeat(2,1fr) !important; gap: 1rem !important; align-items: start !important; }
   .fv2-card { min-width: unset !important; width: 100% !important; max-width: 100% !important; padding: 0.75rem 0.5rem !important; }
   .fv2-photo { width: 88px !important; height: 88px !important; }
@@ -1170,10 +1172,240 @@
 [id] { scroll-margin-top: 68px; }
 /* ===== END ANCHOR OFFSET FIX ===== */
 </style>
+<style>
+    /* ===== HEADER (aligned with index) ===== */
+    .announce {
+      background: #3E0710; color: #fff; text-align: center;
+      padding: .55rem 1.5rem; font-size: 14px; font-weight: 500; letter-spacing: .01em;
+      display: flex; align-items: center; justify-content: center; gap: .9rem; flex-wrap: wrap;
+    }
+    .announce .ann-tag {
+      font-size: 10.5px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+      color: #12210A; background: var(--gold-lt, #E8C55A); padding: .2rem .55rem;
+    }
+    .announce a { color: var(--gold-lt, #E8C55A); font-size: 13px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .announce a:hover { color: #fff; }
+    nav { min-height: 64px; }
+    nav .nav-items { gap: 2rem; }
+    nav .nav-item > a { padding: 0; }
+    #siteSearchBtn { margin-left: auto; }
+    .nav-apply-desk {
+      align-self: center; text-decoration: none;
+      background: var(--gold-lt, #E8C55A); color: #12210A;
+      padding: .62rem 1.2rem; font-size: 12.5px; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase; margin-left: .6rem;
+      transition: background .2s ease;
+    }
+    .nav-apply-desk:hover { background: #fff; color: #3A0810; }
+    @media (max-width: 960px) {
+      nav .nav-items { gap: 0; }
+      nav .nav-item > a { padding: 0.85rem 1.4rem; }
+      #siteSearchBtn { margin-left: 0 !important; padding: 0.85rem 1.4rem !important; justify-content: flex-start !important; }
+      #navItems .lang-btn { margin-left: 1.4rem !important; }
+      .nav-apply-desk { display: none; }
+    }
+</style>
+
+<!-- ===== HOMEPAGE DESIGN LANGUAGE (applied to Academics) ===== -->
+<style>
+  #curriculum, #faculty, #joint-degree, #academic-calendar, #faq { padding-top: 4.2rem; padding-bottom: 4.6rem; }
+
+  /* Section head — maroon rule + eyebrow */
+  #curriculum > .container:first-of-type::before,
+  #faculty > .container::before,
+  #joint-degree > .container::before,
+  #academic-calendar > .container::before,
+  #faq > .container::before {
+    display: block; border-top: 2px solid var(--maroon); padding-top: 2.2rem;
+    font-size: 11.5px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+    color: #C94B0A; margin-bottom: .9rem;
+  }
+  #curriculum > .container:first-of-type::before { content: "Curriculum"; }
+  #faculty > .container::before { content: "Faculty"; }
+  #joint-degree > .container::before { content: "Global Opportunities"; }
+  #academic-calendar > .container::before { content: "Dates &amp; Deadlines"; }
+  #faq > .container::before { content: "Questions"; }
+
+  #curriculum h2, #faculty h2, #joint-degree h2, #academic-calendar h2, #faq h2 {
+    font-family: var(--ff-body, inherit); font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; line-height: 1.08; letter-spacing: -.02em; color: var(--ink); margin-bottom: 1rem;
+  }
+  #curriculum .sec-lead, #faculty .sec-lead, #joint-degree .sec-lead,
+  #academic-calendar .sec-lead, #faq .sec-lead {
+    font-size: 16px; line-height: 1.7; color: var(--ink-3); max-width: 36em; margin-bottom: 2.4rem;
+  }
+  #curriculum p, #faculty p, #joint-degree p, #academic-calendar p, #faq p,
+  .cur-card p, .card p, .ac-quote p {
+    text-wrap: pretty; word-break: keep-all; line-break: strict; overflow-wrap: break-word;
+  }
+  .sec-tag { color: #C94B0A !important; font-size: 11.5px !important; letter-spacing: .16em !important; }
+  .rule-line { height: 1px !important; }
+
+  /* Four-layer framework → stat grid */
+  #curriculum .ac-layers {
+    gap: 0 !important; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-top: 1.6rem !important;
+  }
+  #curriculum .ac-layers > div {
+    background: transparent !important; border: none !important; border-left: 1px solid var(--rule) !important;
+    border-radius: 0 !important; padding: 1.9rem 1.8rem 2rem !important;
+  }
+  #curriculum .ac-layers > div:first-child { border-left: none !important; padding-left: 0 !important; }
+  #curriculum .ac-layers > div:last-child { padding-right: 0 !important; }
+  #curriculum .ac-layers > div > div:first-child { color: var(--maroon) !important; font-size: 52px !important; margin-bottom: 10px !important; }
+  #curriculum .ac-layers > div > div:nth-child(2) { font-size: 10.5px !important; letter-spacing: .16em !important; color: #8A8378 !important; }
+  #curriculum .ac-layers > div > div:nth-child(3) { display: none !important; }
+  #curriculum .ac-layers > div > div:last-child { font-size: 16px !important; color: var(--ink) !important; font-weight: 800 !important; line-height: 1.45 !important; }
+
+  /* Required / elective → open two-column spread */
+  .curriculum-grid { gap: 0 !important; margin-top: 2.2rem !important; }
+  .cur-card { background: transparent !important; border: none !important; border-radius: 0 !important; padding: 0 2.8rem !important; }
+  .curriculum-grid .cur-card:first-child { padding-left: 0 !important; }
+  .curriculum-grid .cur-card:last-child { padding-right: 0 !important; border-left: 1px solid var(--rule) !important; }
+  .cur-year { color: #C94B0A !important; letter-spacing: .16em !important; font-size: 11.5px !important; }
+  .cur-card h3 { font-family: var(--ff-body, inherit) !important; font-size: 26px !important; letter-spacing: -.01em !important; margin-bottom: .8rem !important; }
+  .cur-card li { padding: 7px 0 !important; }
+  #curriculum .ac-credits {
+    background: transparent !important; margin: 0 !important; padding: 1.4rem 0 0 !important;
+    border-top: 1px solid var(--rule) !important; border-radius: 0 !important;
+  }
+  #curriculum .ac-credits > div { text-align: left !important; }
+  #curriculum .ac-credits > div > div:first-child { color: var(--maroon) !important; font-size: 42px !important; }
+  #curriculum .ac-credits > div > div:last-child { color: #8A8378 !important; font-size: 10.5px !important; letter-spacing: .16em !important; }
+
+  /* Faculty — sticky domain index + photo grid */
+  .fv2-domain { display: grid; grid-template-columns: 210px 1fr; gap: 2.8rem; border-top: 1px solid var(--rule); padding: 2.2rem 0 2.4rem; margin: 0 !important; }
+  .fv2-domain-head { position: sticky; top: 92px; align-self: start; display: block !important; }
+  .fv2-num { display: block; font-family: var(--ff-num); font-size: 34px; font-weight: 900; color: var(--rule); line-height: 1; margin-bottom: .5rem; }
+  .fv2-label { font-size: 15px !important; font-weight: 800 !important; color: var(--ink) !important; margin-bottom: .35rem; }
+  .fv2-sub { font-size: 13px !important; line-height: 1.6 !important; color: #8A8378 !important; }
+  .ac-split > div { min-width: 0; }
+  @media (max-width: 900px) { .ac-split { flex-direction: column !important; gap: 1.6rem !important; } .ac-split .ac-quote { width: 100% !important; margin-top: 0 !important; } }
+  .fv2-cards { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 1.6rem 1.2rem; align-items: start; }
+  .fv2-card { background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; width: auto !important; min-width: 0 !important; }
+  .fv2-photo { width: 100% !important; min-width: 0 !important; max-width: none !important; height: auto !important; border: none !important; aspect-ratio: 1 / 1; border-radius: 0 !important; overflow: hidden; }
+  .fv2-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+  .fv2-card:hover .fv2-photo img { transform: scale(1.03); }
+  .fv2-name { white-space: normal !important; text-align: left !important; font-size: 14.5px !important; font-weight: 800 !important; color: var(--ink) !important; margin-top: .6rem !important; }
+
+  /* Cards → flat hairline treatment */
+  .cards-3 { gap: 0 !important; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .card { background: transparent !important; border: none !important; border-left: 1px solid var(--rule) !important; border-radius: 0 !important; padding: 1.8rem 2rem 1.9rem !important; }
+  .cards-3 .card:first-child { border-left: none !important; padding-left: 0 !important; }
+  .cards-3 .card:last-child { padding-right: 0 !important; }
+  .card h3 { font-size: 17px !important; font-weight: 800 !important; color: var(--ink) !important; margin-bottom: .5rem !important; }
+  .card p { font-size: 15px !important; line-height: 1.7 !important; color: var(--ink-3) !important; }
+  .ai-callout { border-left-width: 4px !important; border-radius: 0 !important; }
+
+  /* Student quotes */
+  #curriculum .ac-quote, #joint-degree .ac-quote {
+    border-top: none !important; border-left: 2px solid var(--maroon) !important;
+    padding: .2rem 0 .2rem 1.5rem !important; margin-top: 2.9rem !important;
+  }
+  .ac-quote span[style*="Georgia"] { display: none !important; }
+  .ac-quote p { font-size: 17.5px !important; line-height: 1.6 !important; font-weight: 600 !important; letter-spacing: -.01em; }
+  .ac-quote > div:last-child {
+    font-size: 11px !important; letter-spacing: .14em !important; text-transform: uppercase; color: #8A8378 !important;
+  }
+
+  /* Academic calendar → timetable */
+  #academic-calendar .record-table { border-collapse: collapse; width: 100%; }
+  #academic-calendar .record-table thead th { background: transparent !important; border: none !important; border-bottom: 2px solid var(--maroon) !important; color: #8A8378 !important; font-size: 10.5px !important; letter-spacing: .16em !important; text-transform: uppercase !important; padding: 0 0 .8rem !important; text-align: left !important; }
+  #academic-calendar .record-table tbody tr, #academic-calendar .record-table tbody tr:nth-child(even) { background: transparent !important; }
+  #academic-calendar .record-table td { background: transparent !important; border: none !important; border-bottom: 1px solid var(--rule) !important; padding: 1.05rem 0 !important; font-size: 15px !important; color: var(--ink) !important; }
+  #academic-calendar .record-table td:nth-child(2) { font-family: var(--ff-num) !important; font-size: 20px !important; font-weight: 800 !important; color: var(--ink-3) !important; white-space: normal !important; }
+  #academic-calendar .record-table td:nth-child(3) { text-align: right !important; }
+  #academic-calendar .record-table th:nth-child(2), #academic-calendar .record-table td:nth-child(2) { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+  @media (max-width: 1040px) { .ac-calgrid { grid-template-columns: 1fr !important; gap: 2.2rem !important; } }
+  #academic-calendar .cal-badge { white-space: nowrap !important; word-break: normal !important; background: transparent !important; border: none !important; border-radius: 0 !important; padding: 0 !important; color: #8A8378 !important; font-size: 10.5px !important; font-weight: 800 !important; letter-spacing: .14em !important; text-transform: uppercase !important; }
+  #academic-calendar .cal-badge.gold { color: #C94B0A !important; }
+  #academic-calendar .forms-dl-btn { border-radius: 0 !important; }
+
+  @media (max-width: 1100px) { .fv2-cards { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    #curriculum .ac-layers > div,
+    .card { border-left: none !important; border-top: 1px solid var(--rule) !important; padding-left: 0 !important; padding-right: 0 !important; }
+    #curriculum .ac-layers > div:first-child,
+    .cards-3 .card:first-child { border-top: none !important; }
+    #curriculum .ac-layers > div > div:first-child { font-size: 42px !important; }
+    .cards-3 { grid-template-columns: 1fr !important; }
+    .cur-card { padding: 0 !important; min-width: 0 !important; }
+    .cur-card li, .cur-card p, .cur-card h3 { overflow-wrap: anywhere; }
+    .cur-card ul { column-count: 1 !important; }
+    .curriculum-grid { grid-template-columns: 1fr !important; }
+    #curriculum .ac-layers { grid-template-columns: 1fr !important; }
+    #academic-calendar .cal-badge { white-space: normal !important; }
+    .curriculum-grid .cur-card:last-child { border-left: none !important; border-top: 1px solid var(--rule) !important; padding-top: 2rem !important; margin-top: 2rem !important; }
+    .fv2-domain { grid-template-columns: 1fr; gap: 1.4rem; }
+    .fv2-domain-head { position: static; }
+    .fv2-cards { grid-template-columns: repeat(3, 1fr) !important; }
+    #academic-calendar .record-table td:nth-child(3) { text-align: left !important; }
+  }
+  @media (max-width: 640px) {
+    #curriculum, #faculty, #joint-degree, #academic-calendar, #faq { padding-left: 1.1rem !important; padding-right: 1.1rem !important; }
+    .fv2-cards { grid-template-columns: repeat(2, 1fr) !important; gap: 1.3rem 1rem !important; }
+    #curriculum .ac-layers > div > div:first-child { font-size: 38px !important; }
+  }
+
+  /* Scroll reveal */
+  .om-reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .om-reveal.in { opacity: 1; transform: none; }
+  @media (print), (prefers-reduced-motion: reduce) { .om-reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  function tag(sel, cls){ Array.prototype.forEach.call(document.querySelectorAll(sel), function(e){ e.classList.add(cls); }); }
+  tag('#curriculum div[style*="repeat(4"]', 'ac-layers');
+  tag('#curriculum div[style*="0D0D0D"], #curriculum div[style*="0d0d0d"]', 'ac-credits');
+  tag('#curriculum div[style*="width:260px"], #joint-degree div[style*="width:260px"]', 'ac-quote');
+  tag('#academic-calendar div[style*="300px"]', 'ac-calgrid');
+  tag('#curriculum div[style*="gap:4rem"], #curriculum div[style*="gap: 4rem"], #joint-degree div[style*="gap:4rem"], #joint-degree div[style*="gap: 4rem"]', 'ac-split');
+});
+</script>
+
+<style>
+  /* --- Sticky section index (matches Admissions) --- */
+  .acad-index { position: sticky; top: 56px; z-index: 500; background: var(--white);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .acad-index-row { display: flex; flex-wrap: wrap; gap: 1.9rem; padding: .85rem 0; }
+  .acad-index a { white-space: nowrap; font-size: 13.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    color: #8A8378; text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 3px; transition: color .2s, border-color .2s; }
+  .acad-index a:hover { color: var(--ink); }
+  .acad-index a.is-active { color: var(--maroon); border-bottom-color: var(--maroon); }
+  @media (max-width: 900px) {
+    .acad-index > .container { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+    .acad-index-row { gap: 1.2rem; flex-wrap: nowrap; width: max-content; }
+  }
+  @media (max-width: 640px) { .acad-index a { font-size: 13px; } }
+</style>
+
+<style>
+  /* --- Mobile nav breathing room --- */
+  @media (max-width: 960px) {
+    nav .nav-burger { margin-right: 1.15rem !important; flex-shrink: 0 !important;
+      width: 26px !important; height: 20px !important; padding: 2px 0 !important; box-sizing: content-box; }
+    nav .nav-logo { padding: 0 1rem !important; min-width: 0 !important; flex-shrink: 1 !important; }
+    nav .nav-logo img { height: 30px !important; }
+  }
+</style>
+<style>
+  /* --- Mobile nav: parent link tappable, caret toggles submenu --- */
+  @media (max-width: 960px) {
+    .nav-item { display: block !important; }
+    .nav-item > a { display: flex !important; width: 100% !important; }
+    .nav-item > a .nav-caret {
+      font-size: 13px !important; opacity: .85;
+      padding: .85rem 1.4rem .85rem 1.6rem; margin: -.85rem -1.4rem -.85rem 0;
+    }
+    .nav-dropdown { width: 100% !important; min-width: 0 !important; }
+    .nav-burger { align-self: center !important; }
+  }
+</style>
 </head>
 <body>
 <div class="announce" role="alert">
-  Tunghai partners with Chunghwa Telecom &amp; Google to lead Taiwan in adopting enterprise AI agent platform Gemini Enterprise.
+  <span class="ann-tag">News</span>
+  <span>Tunghai partners with Chunghwa Telecom &amp; Google on enterprise AI agent platform Gemini Enterprise.</span>
+  <a href="index.html#news">Read more →</a>
 </div>
 
 <a href="#maincontent" class="skip-link">Skip to main content</a>
@@ -1191,7 +1423,7 @@
       <span class="float-icon">✎</span>
       <span>Apply Now</span>
     </a>
-    <a href="#" onclick="openContactModal();return false;" class="float-item">
+    <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="float-item">
       <span class="float-icon">✉</span>
       <span>Contact Us</span>
     </a>
@@ -1239,6 +1471,7 @@
 
       
       <a href="academics-zh.html" class="lang-btn" onclick="sessionStorage.setItem('lang-manual','1')">中文</a>
+      <a href="admissions.html#admissions" class="nav-apply-desk">Apply</a>
       <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="nav-contact-mobile">✉ Contact Us</a>
       <a href="admissions.html#admissions" class="nav-apply-mobile">✎ Apply Now</a>
     </div>
@@ -1253,6 +1486,7 @@
   </div>
 </div>
 
+<nav class="acad-index" aria-label="Section index"><div class="container"><div class="acad-index-row"><a href="#curriculum">Curriculum</a><a href="#faculty">Faculty</a><a href="#joint-degree">Joint-Degree</a><a href="#academic-calendar">Calendar</a><a href="#faq">FAQ</a></div></div></nav>
 <section id="curriculum" style="background:var(--white);">
   <div class="container">
     <div style="display:flex;gap:4rem;align-items:flex-start;">
@@ -1353,7 +1587,7 @@
 <!-- ===== FACULTY ===== -->
 <section id="faculty" style="background:var(--cream);">
   <div class="container">
-    <h2>Academic excellence meets industry insight</h2>
+    <h2>Taught by researchers</h2>
     <p class="sec-lead">GMBA faculty hold doctoral degrees from leading universities in Taiwan, the US, Europe, and Asia — and bring that research depth into classrooms shaped by Asia's technology economy.</p>
 
     <div class="ai-callout" style="margin-bottom:2.5rem;">
@@ -1455,8 +1689,8 @@
   <div class="container">
     <div style="display:flex;gap:4rem;align-items:flex-start;">
       <div style="flex:1;min-width:0;">
-        <h2>Expand your global horizons</h2>
-        <p class="sec-lead" style="margin-top:1rem;max-width:520px;">GMBA students can pursue exchange semesters and joint-degree opportunities at nearly 400 partner universities across 40+ countries — all coordinated through Tunghai's Office of International Relations (OIR). <a href="https://oir.thu.edu.tw/front/300_StudyAbroad/301_THU_EX_over/pages.php?ID=dGh1X29zYSYzMDFfVEhVX0VYX292ZXI=" target="_blank" rel="noopener" style="color:var(--gold-lt);font-weight:700;">View short-term, exchange & dual-degree options →</a></p>
+        <h2>Study abroad</h2>
+        <p class="sec-lead" style="margin-top:1rem;max-width:520px;">GMBA students can pursue exchange semesters and joint-degree opportunities at nearly 400 partner universities across 40+ countries — all coordinated through Tunghai's Office of International Relations (OIR). <a href="https://oir.thu.edu.tw/front/300_StudyAbroad/301_THU_EX_over/pages.php?ID=dGh1X29zYSYzMDFfVEhVX0VYX292ZXI=" target="_blank" rel="noopener" style="color:var(--gold-lt);font-weight:700;">View short-term, exchange & dual-degree options&nbsp;→</a></p>
       </div>
       <div style="flex-shrink:0;width:260px;border-top:2px solid var(--gold);padding-top:1rem;margin-top:.5rem;margin-left:auto;">
         <span style="font-family:Georgia,serif;font-size:2.8rem;line-height:.8;color:var(--gold);display:block;margin-bottom:.6rem;opacity:.6;">&ldquo;</span>
@@ -1738,7 +1972,7 @@
           <li>Ph.D., Learning &amp; Performance Systems, The Pennsylvania State University, USA</li>
         </ul>
         <h4>Research &amp; Courses</h4>
-        <ul data-k="fac.chen-ho.expertise"><li>科技融入教學、大數據分析、翻轉教育</li></ul>
+        <ul data-k="fac.chen-ho.expertise"><li>Educational Research Methods, Studies on Life Education, Interdisciplinary Case Studies</li><li>Digital Content Design, Programming for Big Data Analysis, Practical Applications of Smart Innovation</li></ul>
       </div>
     </div>
   </div>
@@ -2054,7 +2288,7 @@
           <li>Research Assistant, Kansas State University</li>
         </ul>
         <h4>Courses Offered</h4>
-        <ul data-k="fac.lee-ki.expertise"><li>採購學、會計學、研究方法、食品安全</li><li>餐旅英文、銀髮餐飲服務、財務管理、餐飲生產管理</li></ul>
+        <ul data-k="fac.lee-ki.expertise"><li>Food Literacy and Food &amp; Agriculture Education, Nutritional Care for the Elderly, Foodservice for the Elderly</li><li>Nutrition for the Food Service Professions, Global Business Management and Strategy, Neurogastronomy</li></ul>
       </div>
     </div>
   </div>
@@ -2331,8 +2565,43 @@ document.addEventListener('click',function(e){if(e.target.classList.contains('fa
   </div>
 </section>
 
-<footer class="site-footer" aria-label="Site footer">
+<style>
+  .site-footer .footer-contact address{font-style:normal;}
+  .site-footer .footer-contact p{margin:0 0 .7rem;font-size:14.5px;line-height:1.75;color:rgba(255,255,255,.72);}
+  .site-footer .footer-contact .fc-org{color:#fff;font-weight:600;}
+  .site-footer .footer-contact a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(232,197,90,.5);}
+  .site-footer .footer-contact a:hover{color:var(--gold-lt,#E8C55A);}
+  .site-footer .footer-main{align-items:start;}
+  .site-footer .footer-main{grid-template-columns:300px repeat(3,1fr);}
+  .site-footer .footer-secondary{max-width:1300px;margin:0 auto;padding:0 2rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+  .site-footer .footer-secondary > div{border-top:1px solid rgba(255,255,255,.12);padding-top:1.6rem;}
+  .site-footer .fs-title{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1rem;}
+  .site-footer .fs-links{display:flex;flex-wrap:wrap;gap:.55rem 1.6rem;}
+  .site-footer .fs-links a{font-size:14px;color:rgba(255,255,255,.68);text-decoration:none;}
+  .site-footer .fs-links a:hover{color:var(--gold-lt,#E8C55A);}
+  @media(max-width:1000px){
+    .site-footer .footer-main{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:680px){
+    .site-footer .footer-main{grid-template-columns:1fr;}
+    .site-footer .footer-col,.site-footer .footer-col-title,.site-footer .footer-col ul{text-align:left;}
+    .site-footer .footer-secondary{grid-template-columns:1fr;gap:0;padding:0 1.2rem 2rem;}
+  }
+
+</style>
+<footer class="site-footer" aria-label="Site footer" style="background:#1A0A0E;">
   <div class="footer-main">
+    <div class="footer-col footer-contact">
+      <div class="footer-col-title">Contact</div>
+      <address>
+        <p class="fc-org">Global MBA Program, College of Management<br>Tunghai University</p>
+        <p class="fc-addr">No. 1727, Sec. 4, Taiwan Boulevard,<br>Xitun District, Taichung City 407224, Taiwan (R.O.C.)</p>
+        <p class="fc-mail"><a href="mailto:gmba@thu.edu.tw">gmba@thu.edu.tw</a></p>
+        <p class="fc-tel"><a href="tel:+886423590121,35002">Tel +886 4 2359 0121 ext. 35002</a></p>
+      </address>
+    </div>
+
+
 
     <div class="footer-col">
       <div class="footer-col-title">Explore GMBA</div>
@@ -2366,28 +2635,32 @@ document.addEventListener('click',function(e){if(e.target.classList.contains('fa
       </ul>
     </div>
 
-    <div class="footer-col">
-      <div class="footer-col-title">Living in Taiwan</div>
-      <ul>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_5_ARC" target="_blank" rel="noopener">ARC (Residence Permit)</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_6_Group_Med" target="_blank" rel="noopener">Health Insurance</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_10_Work_Per" target="_blank" rel="noopener">Work Permit (Part-time)</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_13_Intern_E" target="_blank" rel="noopener">Post-Grad Work &amp; Internship</a></li>
-        <li><a href="https://ezwp.wda.gov.tw" target="_blank" rel="noopener">WDA Work Permit Portal</a></li>
-      </ul>
-    </div>
+    
 
-        <div class="footer-col">
-      <div class="footer-col-title">Student Portal</div>
-      <ul>
-        <li><a href="https://tmail.thu.edu.tw/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2ftmail.thu.edu.tw%2fowa%2f" target="_blank" rel="noopener">tMail</a></li>
-        <li><a href="https://ilearn.thu.edu.tw/?#/" target="_blank" rel="noopener">iLearn</a></li>
-        <li><a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">Student Info System</a></li>
-        <li><a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">Accounting Office</a></li>
-        <li><a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">Office of Student Affairs</a></li>
-        <li><a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">Office of International Relations</a></li>
-        <li><a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">Office of Public Affairs</a></li>
-      </ul>
+        
+  </div>
+  <div class="footer-secondary">
+    <div>
+      <div class="fs-title">Living in Taiwan</div>
+      <div class="fs-links">
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_5_ARC" target="_blank" rel="noopener">ARC (Residence Permit)</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_6_Group_Med" target="_blank" rel="noopener">Health Insurance</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_10_Work_Per" target="_blank" rel="noopener">Work Permit (Part-time)</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_13_Intern_E" target="_blank" rel="noopener">Post-Grad Work &amp; Internship</a>
+        <a href="https://ezwp.wda.gov.tw" target="_blank" rel="noopener">WDA Work Permit Portal</a>
+      </div>
+    </div>
+    <div>
+      <div class="fs-title">Student Portal</div>
+      <div class="fs-links">
+        <a href="https://tmail.thu.edu.tw/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2ftmail.thu.edu.tw%2fowa%2f" target="_blank" rel="noopener">tMail</a>
+        <a href="https://ilearn.thu.edu.tw/?#/" target="_blank" rel="noopener">iLearn</a>
+        <a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">Student Info System</a>
+        <a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">Accounting Office</a>
+        <a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">Office of Student Affairs</a>
+        <a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">Office of International Relations</a>
+        <a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">Office of Public Affairs</a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
@@ -2407,6 +2680,21 @@ document.addEventListener('click',function(e){if(e.target.classList.contains('fa
 
 
 </main>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.acad-index a');
+  var secs = Array.prototype.map.call(links, function(a){ return document.querySelector(a.getAttribute('href')); });
+  function onScroll(){
+    var pos = window.scrollY + 140, active = 0;
+    secs.forEach(function(s,i){ if (s && s.offsetTop <= pos) active = i; });
+    links.forEach(function(a,i){ a.classList.toggle('is-active', i === active); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
 
 
 <script>
@@ -2451,7 +2739,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var item=a.closest('.nav-item');
     if(item.querySelector('.nav-dropdown')){
       a.addEventListener('click',function(e){
-        if(getComputedStyle(btn).display!=='none'){
+        if(getComputedStyle(btn).display!=='none' && e.target.closest('.nav-caret')){
           e.preventDefault();
           var isOpen=item.classList.contains('open');
           ni.querySelectorAll('.nav-item').forEach(function(o){o.classList.remove('open');});
@@ -2465,30 +2753,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 </script>
-<!-- Contact Modal -->
-<div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.65);align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)closeContactModal()">
-  <div style="background:#1A0A0E;border:1px solid #B8922A;border-radius:12px;max-width:380px;width:100%;padding:2rem 1.75rem;position:relative;">
-    <button onclick="closeContactModal()" style="position:absolute;top:.75rem;right:1rem;background:none;border:none;color:#C9C1BB;font-size:1.4rem;cursor:pointer;line-height:1;">×</button>
-    <div style="font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#B8922A;margin-bottom:.5rem;">Contact GMBA</div>
-    <div style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:1.5rem;">How would you like to reach us?</div>
-    <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" onclick="closeContactModal()" style="display:flex;align-items:center;gap:.75rem;background:#7A1422;color:#fff;text-decoration:none;padding:.9rem 1.25rem;border-radius:8px;font-weight:700;font-size:.95rem;margin-bottom:.75rem;">
-      <span style="font-size:1.2rem;">📋</span>
-      <span>Fill out a quick form<br><span style="font-size:.78rem;font-weight:400;opacity:.8;">Takes 30 seconds · We'll reply via email</span></span>
-    </a>
-    <div style="border:1px solid #3A1A1E;border-radius:8px;padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;">
-      <div>
-        <div style="font-size:.72rem;color:#888;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.2rem;">Or email us directly</div>
-        <div style="color:#C9C1BB;font-size:.9rem;font-weight:600;">gmba@thu.edu.tw</div>
-      </div>
-      <button id="copy-email-btn" onclick="copyGmbaEmail()" style="background:#2E1218;border:1px solid #3A1A1E;color:#B8922A;padding:.45rem .9rem;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:700;white-space:nowrap;">Copy</button>
-    </div>
-  </div>
-</div>
-<script>
-function openContactModal(){var m=document.getElementById('contact-modal');m.style.display='flex';}
-function closeContactModal(){document.getElementById('contact-modal').style.display='none';}
-function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(function(){var b=document.getElementById('copy-email-btn');b.textContent='Copied!';b.style.color='#4ade80';setTimeout(function(){b.textContent='Copy';b.style.color='#B8922A';},2000);});}
-</script>
+
 
 <div id="search-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.75);align-items:flex-start;justify-content:center;padding:4.5rem 1rem 1rem;overflow-y:auto;" onclick="if(event.target===this)closeSearchModal()">
   <div style="background:#fff;border-radius:12px;max-width:640px;width:100%;padding:1.5rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4);">
@@ -2498,7 +2763,7 @@ function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(f
     <div id="siteSearchEmpty" style="display:none;padding:2rem 0;text-align:center;color:var(--ink-3);font-size:var(--t-sm);">No results found.</div>
   </div>
 </div>
-<script>window.__SEARCH_INDEX__ = [{"t": "What makes Tunghai GMBA different?", "s": "Tunghai Global MBA is an AACSB-accredited , English-taught MBA in Taichung, Taiwan, ranked among the top 5% of business schools worldwide. The program develops leaders who can navigate complexity…", "p": "index.html", "a": "why-gmba"}, {"t": "A truly international classroom", "s": "30–40 students. 10+ nationalities. Small enough that you actually know everyone — diverse enough that everyone comes from somewhere different. Coming Soon Student Film · 2 min A Classroom Without…", "p": "index.html", "a": "class-profile"}, {"t": "Life at Tunghai University", "s": "134 hectares of tree-lined paths, traditional architecture, and the iconic Luce Memorial Chapel — designed by I.M. Pei. A pastoral campus where global careers begin, far from the noise of any city.…", "p": "index.html", "a": "campus-life"}, {"t": "Why Taiwan?", "s": "Taiwan doesn't just produce the chips that run the world's AI — it assembles the servers, manufactures the devices, and hosts the companies behind every major AI breakthrough. Studying here puts you…", "p": "index.html", "a": "living-in-taiwan"}, {"t": "News & events", "s": "Feature Story May 22, 2026 Student Life Graduation group photo on campus Class of 2026 GMBA graduates celebrated at Luce Chapel — capturing friendships and milestones from two years of shared…", "p": "index.html", "a": "news"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "index.html", "a": "contact"}, {"t": "Program overview", "s": "The curriculum is structured in four deliberate layers — research discipline, AI and data capability, cross-functional application, and strategic leadership — each one building on the last,…", "p": "academics.html", "a": "curriculum"}, {"t": "Academic excellence meets industry insight", "s": "GMBA faculty hold doctoral degrees from leading universities in Taiwan, the US, Europe, and Asia — and bring that research depth into classrooms shaped by Asia's technology economy. One program. Five…", "p": "academics.html", "a": "faculty"}, {"t": "Expand your global horizons", "s": "GMBA students can pursue exchange semesters and joint-degree opportunities at nearly 400 partner universities across 40+ countries — all coordinated through Tunghai's Office of International…", "p": "academics.html", "a": "joint-degree"}, {"t": "Academic calendar", "s": "Plan your studies with our semester schedule and download the official Tunghai University academic calendar. Period Dates Notes Fall Semester September – January Semester 1 Fall Oral Defense…", "p": "academics.html", "a": "academic-calendar"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "academics.html", "a": "contact"}, {"t": "Scholarships", "s": "Taiwan offers some of the most generous graduate scholarships in Asia. Combined with low tuition and living costs, an MBA here can cost a fraction of alternatives. Taiwan government scholarships The…", "p": "admissions.html", "a": "tuition"}, {"t": "How to apply", "s": "Find your applicant category below, then go straight to the right application portal. Only international applicants from overseas have a spring intake — every other route enrols in the fall.…", "p": "admissions.html", "a": "admissions"}, {"t": "Life Admin — Quick Reference", "s": "Three things every incoming student must handle. We've made it short. Visa & ARC Before arrival — FS Resident Visa Within 15 days — ARC registration Annually — renewal Tourist visas cannot be…", "p": "admissions.html", "a": "practical-info"}, {"t": "Student forms & documents", "s": "Download official GMBA forms for thesis procedures, examination, and submission. All files are PDF — open, print, and submit to the GMBA office. Thesis Preparation Supervision Agreement Advisor…", "p": "admissions.html", "a": "downloads"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "admissions.html", "a": "contact"}, {"t": "What is Tunghai University GMBA?", "s": "Tunghai GMBA is a fully English-taught Global MBA program in Taichung, Taiwan, launched in 2018 and accredited by AACSB. The curriculum is built in four layers — Research Foundation, AI &amp; Data…", "p": "faq.html", "a": "faq-g01"}, {"t": "How is GMBA different from a regular MBA or an IMBA program?", "s": "A GMBA (Global MBA) is designed from the start for an international cohort, so every course, assignment, and thesis runs in English and the classroom itself is multinational. Tunghai GMBA differs…", "p": "faq.html", "a": "faq-g02"}, {"t": "Why study an MBA in Taiwan rather than Singapore, Hong Kong, or Japan?", "s": "Taiwan gives you direct access to the world's AI hardware ecosystem at roughly one-third the living cost of Singapore. Taiwan fabricates about 90% of the world's advanced chips, builds around 70% of…", "p": "faq.html", "a": "faq-g03"}, {"t": "Is Tunghai GMBA accredited?", "s": "Yes. Tunghai University's College of Management holds AACSB accreditation, which fewer than 5% of business schools worldwide have achieved. The GMBA degree is also approved by Taiwan's Ministry of…", "p": "faq.html", "a": "faq-g04"}, {"t": "How many students are in each cohort, and where do they come from?", "s": "Each GMBA cohort has 30–40 students from 10 or more countries. Across the 2018–2026 classes, students have come from 22 nationalities across 8 world regions: Southeast Asia 65.4%, East Asia 21.1%,…", "p": "faq.html", "a": "faq-g05"}, {"t": "What courses does GMBA offer?", "s": "The curriculum follows a four-layer framework: Research Foundation, then AI &amp; Data Core, then AI Analytics Across Functions, then Leadership &amp; Strategy. Each layer builds on the one before…", "p": "faq.html", "a": "faq-a01"}, {"t": "Do I need a GMAT or GRE score to apply?", "s": "No. Tunghai GMBA does not require GMAT or GRE scores. Admission is based on document review — your bachelor's degree, English proficiency evidence, autobiography, and study plan. Applicants already…", "p": "faq.html", "a": "faq-a02"}, {"t": "Can I apply without a business or management background?", "s": "Yes. Prior study in business, management, or economics is not required — a bachelor's degree in any field is acceptable. The Research Foundation layer at the start of the curriculum is designed to…", "p": "faq.html", "a": "faq-a03"}, {"t": "Is GMBA a thesis or non-thesis program?", "s": "GMBA is a thesis-based master's program. Students work with a faculty advisor, submit a supervision agreement and topic evaluation form, and complete an oral defense before graduating. All thesis…", "p": "faq.html", "a": "faq-a04"}, {"t": "How long does the program take to complete?", "s": "Students can complete the degree in as little as 1 year with full-time, intensive coursework; most take two, with a maximum allowed duration of four years, depending on course selection and thesis progress. The degree requires 30 credits in total — 21 required credits, 8…", "p": "faq.html", "a": "faq-a05"}, {"t": "Can I study abroad or earn a dual degree?", "s": "Yes. GMBA students can pursue exchange semesters and joint-degree programs at nearly 400 partner universities across more than 40 countries, coordinated through Tunghai's Office of International…", "p": "faq.html", "a": "faq-a06"}, {"t": "Who teaches in the GMBA program?", "s": "GMBA faculty are drawn from five colleges at Tunghai University, not from the business school alone, which is what makes the cross-disciplinary curriculum possible. Teaching areas include supply…", "p": "faq.html", "a": "faq-a07"}, {"t": "What are the admission requirements, and how do I apply?", "s": "You need a bachelor's degree and evidence of English proficiency. There are three application routes with different portals and windows: International (Overseas), In Taiwan / Taiwan Nationals, and…", "p": "faq.html", "a": "faq-ad01"}, {"t": "When are the application deadlines?", "s": "Deadlines depend on your applicant category. International applicants from overseas apply in October for the spring intake, or between January and May for the fall intake. Taiwan nationals and…", "p": "faq.html", "a": "faq-ad02"}, {"t": "What is the difference between the spring and fall intake?", "s": "Only international applicants from overseas have a spring intake; all other routes enroll in the fall. The curriculum and degree are identical — the spring intake simply lets you start six months…", "p": "faq.html", "a": "faq-ad03"}, {"t": "How many years of work experience do I need?", "s": "Work experience is not a formal admission requirement — recent graduates are welcome to apply. Professional experience does strengthen your study plan, since it gives you concrete cases to write…", "p": "faq.html", "a": "faq-ad04"}, {"t": "What documents do I need to prepare?", "s": "International and Overseas Compatriot applicants submit an autobiography in English, a study plan in English, and supporting documents. Applicants already in Taiwan or holding Taiwanese nationality…", "p": "faq.html", "a": "faq-ad05"}, {"t": "Is there an interview?", "s": "An interview is required only for applicants already in Taiwan and for Taiwanese nationals, who also attend an information session. International applicants from overseas and Overseas Compatriots are…", "p": "faq.html", "a": "faq-ad06"}, {"t": "What English test scores are accepted?", "s": "Overseas applicants can meet the language requirement with any one of the following: CEFR B1 or above, TOEFL iBT 47, TOEFL ITP 500, IELTS 4.0, or TOEIC 550. Applicants who graduated from an…", "p": "faq.html", "a": "faq-ad07"}, {"t": "What is the tuition, and what scholarships are available?", "s": "Tuition is NT$69,020 per semester (about USD 2,124), and all students pay the same rate regardless of nationality. Scholarships come from three sources: the Taiwanese government (MOE Taiwan…", "p": "faq.html", "a": "faq-f01"}, {"t": "What is the total cost of the whole degree?", "s": "Budget roughly NT$150,000 (about USD 4,615) per semester covering tuition, housing, health insurance, and living expenses — so about NT$600,000 (USD 18,500) for a standard two-year degree before any…", "p": "faq.html", "a": "faq-f02"}, {"t": "How competitive are the scholarships, and when do I apply?", "s": "Government scholarships and university scholarships run on separate timelines. Taiwan government scholarships (MOE, MOFA) are applied for through the Taiwanese representative office — TECO or AIT —…", "p": "faq.html", "a": "faq-f03"}, {"t": "Is on-campus housing guaranteed?", "s": "On-campus dormitories are available but spots are limited, so housing is not guaranteed. Tunghai has 46 dormitory buildings, and on-campus housing costs NT$10,560–41,360 per semester depending on…", "p": "faq.html", "a": "faq-f04"}, {"t": "What happens to tuition if I need a third year?", "s": "From the third year onward, you pay per credit rather than a full semester's tuition — NT$2,090 per credit plus NT$440 in miscellaneous fees per credit. For a student finishing a thesis with few or…", "p": "faq.html", "a": "faq-f05"}, {"t": "What visa and ARC do I need?", "s": "Apply for a Resident Visa (type FS) at a ROC representative office before you travel — do not enter on a landing or tourist visa, because it cannot be converted to an ARC. After you arrive, the…", "p": "faq.html", "a": "faq-l01"}, {"t": "What health insurance will I have?", "s": "All international students are automatically enrolled in Group Medical Insurance when they arrive. After six months of continuous residence, you transfer to Taiwan's National Health Insurance, which…", "p": "faq.html", "a": "faq-l02"}, {"t": "Do I need to speak Chinese?", "s": "No. All courses, assignments, and the thesis are conducted entirely in English, and the Office of International Relations handles administrative procedures — ARC, insurance, work permits — in…", "p": "faq.html", "a": "faq-l03"}, {"t": "What are living costs in Taichung?", "s": "Monthly living costs run about NT$24,000 (roughly USD 740) for food, transport, and daily expenses, with housing budgeted separately. Total monthly costs including accommodation come to about USD…", "p": "faq.html", "a": "faq-l04"}, {"t": "Can I work or intern while studying?", "s": "Yes, up to 20 hours per week during the semester and with no hour limit during breaks. Both part-time work and internships require a work permit, which you apply for online at ezwp.wda.gov.tw with…", "p": "faq.html", "a": "faq-l05"}, {"t": "What is campus life like at Tunghai?", "s": "Tunghai's campus covers 134 hectares of tree-lined paths and traditional architecture, including the Luce Memorial Chapel designed by I.M. Pei. There are more than 150 student clubs and 46 dormitory…", "p": "faq.html", "a": "faq-l06"}, {"t": "What is it like to live in Taichung?", "s": "Taichung offers the food and amenities of a major Taiwanese city at a cost of living well below Taipei, Singapore, or Hong Kong, which means a scholarship stretches considerably further. The city is…", "p": "faq.html", "a": "faq-l07"}, {"t": "Can I stay in Taiwan to work after graduation?", "s": "Yes. After receiving your diploma you can extend your ARC for up to one year to look for work. Full-time employment requires your employer to apply through Taiwan's Point-Based System, and a separate…", "p": "faq.html", "a": "faq-c01"}, {"t": "What careers do GMBA graduates pursue?", "s": "Graduates work in business management, marketing, finance, and operations across Taiwan's technology and AI-related industries. Taiwan's semiconductor and AI ecosystem generates steady demand for…", "p": "faq.html", "a": "faq-c02"}, {"t": "Does GMBA offer career services and an alumni network?", "s": "GMBA does not yet have a dedicated alumni association. Graduates can use Tunghai University's campus-wide Internship &amp; Student Achievement Center (ISAC), which offers career counseling, resume…", "p": "faq.html", "a": "faq-c03"},{"t": "Can I learn Chinese while I'm here?", "s": "Yes, and many students do. Master's students can take elective beginner and intermediate Chinese courses, and the <a href=\"https://clc.thu.edu.tw/index.php\" target=\"_blank\" rel=\"noopener\">Chinese Language Center</a> runs a full Mandarin program that pairs classroom learning with real-life practice. See the <a href=\"https://oir.thu.edu.tw/front/400_IntlDegree/400_3_Chinese_L/pages.php?ID=dGh1X29zYSY0MDBfM19DaGluZXNlX0w=\" target=\"_blank\" rel=\"noopener\">OIR Chinese Learning page</a> for details. Basic Mandarin is also a real advantage when you enter Taiwan's job market.", "p": "faq.html", "a": "faq-l08"}];</script>
+<script>window.__SEARCH_INDEX__ = [{"t": "What makes Tunghai GMBA different?", "s": "Tunghai Global MBA is an AACSB-accredited , English-taught MBA in Taichung, Taiwan, ranked among the top 5% of business schools worldwide. The program develops leaders who can navigate complexity…", "p": "index.html", "a": "why-gmba"}, {"t": "A truly international classroom", "s": "30–40 students. 10+ nationalities. Small enough that you actually know everyone — diverse enough that everyone comes from somewhere different. Coming Soon Student Film · 2 min A Classroom Without…", "p": "index.html", "a": "class-profile"}, {"t": "Life at Tunghai University", "s": "134 hectares of tree-lined paths, traditional architecture, and the iconic Luce Memorial Chapel — designed by I.M. Pei. A pastoral campus where global careers begin, far from the noise of any city.…", "p": "index.html", "a": "campus-life"}, {"t": "Why Taiwan?", "s": "Taiwan doesn't just produce the chips that run the world's AI — it assembles the servers, manufactures the devices, and hosts the companies behind every major AI breakthrough. Studying here puts you…", "p": "index.html", "a": "living-in-taiwan"}, {"t": "News & events", "s": "Feature Story May 22, 2026 Student Life Graduation group photo on campus Class of 2026 GMBA graduates celebrated at Luce Chapel — capturing friendships and milestones from two years of shared…", "p": "index.html", "a": "news"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "index.html", "a": "contact"}, {"t": "Program overview", "s": "The curriculum is structured in four deliberate layers — research discipline, AI and data capability, cross-functional application, and strategic leadership — each one building on the last,…", "p": "academics.html", "a": "curriculum"}, {"t": "Academic excellence meets industry insight", "s": "GMBA faculty hold doctoral degrees from leading universities in Taiwan, the US, Europe, and Asia — and bring that research depth into classrooms shaped by Asia's technology economy. One program. Five…", "p": "academics.html", "a": "faculty"}, {"t": "Expand your global horizons", "s": "GMBA students can pursue exchange semesters and joint-degree opportunities at nearly 400 partner universities across 40+ countries — all coordinated through Tunghai's Office of International…", "p": "academics.html", "a": "joint-degree"}, {"t": "Academic calendar", "s": "Plan your studies with our semester schedule and download the official Tunghai University academic calendar. Period Dates Notes Fall Semester September – January Semester 1 Fall Oral Defense…", "p": "academics.html", "a": "academic-calendar"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "academics.html", "a": "contact"}, {"t": "Scholarships", "s": "Taiwan offers some of the most generous graduate scholarships in Asia. Combined with low tuition and living costs, an MBA here can cost a fraction of alternatives. Taiwan government scholarships The…", "p": "admissions.html", "a": "tuition"}, {"t": "How to apply", "s": "Find your applicant category below, then go straight to the right application portal. Only international applicants from overseas have a spring intake — every other route enrols in the fall.…", "p": "admissions.html", "a": "admissions"}, {"t": "Life Admin — Quick Reference", "s": "Three things every incoming student must handle. We've made it short. Visa & ARC Before arrival — FS Resident Visa Within 15 days — ARC registration Annually — renewal Tourist visas cannot be…", "p": "admissions.html", "a": "practical-info"}, {"t": "Student forms & documents", "s": "Download official GMBA forms for thesis procedures, examination, and submission. All files are PDF — open, print, and submit to the GMBA office. Thesis Preparation Supervision Agreement Advisor…", "p": "admissions.html", "a": "downloads"}, {"t": "Your Journey Starts Here", "s": "Ready to Start? Your Journey Starts Here Join the program that puts you at the center of Asia's AI transformation. Apply Now →", "p": "admissions.html", "a": "contact"}, {"t": "What is Tunghai University GMBA?", "s": "Tunghai GMBA is a fully English-taught Global MBA program in Taichung, Taiwan, launched in 2018 and accredited by AACSB. The curriculum is built in four layers — Research Foundation, AI &amp; Data…", "p": "faq.html", "a": "faq-g01"}, {"t": "How is GMBA different from a regular MBA or an IMBA program?", "s": "A GMBA (Global MBA) is designed from the start for an international cohort, so every course, assignment, and thesis runs in English and the classroom itself is multinational. Tunghai GMBA differs…", "p": "faq.html", "a": "faq-g02"}, {"t": "Why study an MBA in Taiwan rather than Singapore, Hong Kong, or Japan?", "s": "Taiwan gives you direct access to the world's AI hardware ecosystem at roughly one-third the living cost of Singapore. Taiwan fabricates about 90% of the world's advanced chips, builds around 70% of…", "p": "faq.html", "a": "faq-g03"}, {"t": "Is Tunghai GMBA accredited?", "s": "Yes. Tunghai University's College of Management holds AACSB accreditation, which fewer than 5% of business schools worldwide have achieved. The GMBA degree is also approved by Taiwan's Ministry of…", "p": "faq.html", "a": "faq-g04"}, {"t": "How many students are in each cohort, and where do they come from?", "s": "Each GMBA cohort has 30–40 students from 10 or more countries. Across the 2018–2026 classes, students have come from 22 nationalities across 8 world regions: Southeast Asia 65.4%, East Asia 21.1%,…", "p": "faq.html", "a": "faq-g05"}, {"t": "What courses does GMBA offer?", "s": "The curriculum follows a four-layer framework: Research Foundation, then AI &amp; Data Core, then AI Analytics Across Functions, then Leadership &amp; Strategy. Each layer builds on the one before…", "p": "faq.html", "a": "faq-a01"}, {"t": "Do I need a GMAT or GRE score to apply?", "s": "No. Tunghai GMBA does not require GMAT or GRE scores. Admission is based on document review — your bachelor's degree, English proficiency evidence, autobiography, and study plan. Applicants already…", "p": "faq.html", "a": "faq-a02"}, {"t": "Can I apply without a business or management background?", "s": "Yes. Prior study in business, management, or economics is not required — a bachelor's degree in any field is acceptable. The Research Foundation layer at the start of the curriculum is designed to…", "p": "faq.html", "a": "faq-a03"}, {"t": "Is GMBA a thesis or non-thesis program?", "s": "GMBA is a thesis-based master's program. Students work with a faculty advisor, submit a supervision agreement and topic evaluation form, and complete an oral defense before graduating. All thesis…", "p": "faq.html", "a": "faq-a04"}, {"t": "How long does the program take to complete?", "s": "Students can complete the degree in as little as 1 year with full-time, intensive coursework; most take two, with a maximum allowed duration of four years, depending on course selection and thesis progress. The degree requires 30 credits in total — 21 required credits, 8…", "p": "faq.html", "a": "faq-a05"}, {"t": "Can I study abroad or earn a dual degree?", "s": "Yes. GMBA students can pursue exchange semesters and joint-degree programs at nearly 400 partner universities across more than 40 countries, coordinated through Tunghai's Office of International…", "p": "faq.html", "a": "faq-a06"}, {"t": "Who teaches in the GMBA program?", "s": "GMBA faculty are drawn from five colleges at Tunghai University, not from the business school alone, which is what makes the cross-disciplinary curriculum possible. Teaching areas include supply…", "p": "faq.html", "a": "faq-a07"}, {"t": "What are the admission requirements, and how do I apply?", "s": "You need a bachelor's degree and evidence of English proficiency. There are three application routes with different portals and windows: International (Overseas), In Taiwan / Taiwan Nationals, and…", "p": "faq.html", "a": "faq-ad01"}, {"t": "When are the application deadlines?", "s": "Deadlines depend on your applicant category. International applicants from overseas apply in October for the spring intake, or between January and May for the fall intake. Taiwan nationals and…", "p": "faq.html", "a": "faq-ad02"}, {"t": "What is the difference between the spring and fall intake?", "s": "Only international applicants from overseas have a spring intake; all other routes enroll in the fall. The curriculum and degree are identical — the spring intake simply lets you start six months…", "p": "faq.html", "a": "faq-ad03"}, {"t": "How many years of work experience do I need?", "s": "Work experience is not a formal admission requirement — recent graduates are welcome to apply. Professional experience does strengthen your study plan, since it gives you concrete cases to write…", "p": "faq.html", "a": "faq-ad04"}, {"t": "What documents do I need to prepare?", "s": "International and Overseas Compatriot applicants submit an autobiography in English, a study plan in English, and supporting documents. Applicants already in Taiwan or holding Taiwanese nationality…", "p": "faq.html", "a": "faq-ad05"}, {"t": "Is there an interview?", "s": "An interview is required only for applicants already in Taiwan and for Taiwanese nationals, who also attend an information session. International applicants from overseas and Overseas Compatriots are…", "p": "faq.html", "a": "faq-ad06"}, {"t": "What English test scores are accepted?", "s": "Overseas applicants can meet the language requirement with any one of the following: CEFR B1 or above, TOEFL iBT 47, TOEFL ITP 500, IELTS 4.0, or TOEIC 550. Applicants who graduated from an…", "p": "faq.html", "a": "faq-ad07"}, {"t": "What is the tuition, and what scholarships are available?", "s": "Tuition is NT$69,020 per semester (about USD 2,124), and all students pay the same rate regardless of nationality. Scholarships come from three sources: the Taiwanese government (MOE Taiwan…", "p": "faq.html", "a": "faq-f01"}, {"t": "What is the total cost of the whole degree?", "s": "Budget roughly NT$150,000 (about USD 4,615) per semester covering tuition, housing, health insurance, and living expenses — so about NT$600,000 (USD 18,500) for a standard two-year degree before any…", "p": "faq.html", "a": "faq-f02"}, {"t": "How competitive are the scholarships, and when do I apply?", "s": "Government scholarships and university scholarships run on separate timelines. Taiwan government scholarships (MOE, MOFA) are applied for through the Taiwanese representative office — TECO or AIT —…", "p": "faq.html", "a": "faq-f03"}, {"t": "Is on-campus housing guaranteed?", "s": "On-campus dormitories are available but spots are limited, so housing is not guaranteed. Tunghai has 46 dormitory buildings, and on-campus housing costs NT$10,560–41,360 per semester depending on…", "p": "faq.html", "a": "faq-f04"}, {"t": "What happens to tuition if I need a third year?", "s": "From the third year onward, you pay per credit rather than a full semester's tuition — NT$2,090 per credit plus NT$440 in miscellaneous fees per credit. For a student finishing a thesis with few or…", "p": "faq.html", "a": "faq-f05"}, {"t": "What visa and ARC do I need?", "s": "Apply for a Resident Visa (type FS) at a ROC representative office before you travel — do not enter on a landing or tourist visa, because it cannot be converted to an ARC. After you arrive, the…", "p": "faq.html", "a": "faq-l01"}, {"t": "What health insurance will I have?", "s": "All international students are automatically enrolled in Group Medical Insurance when they arrive. After six months of continuous residence, you transfer to Taiwan's National Health Insurance, which…", "p": "faq.html", "a": "faq-l02"}, {"t": "Do I need to speak Chinese?", "s": "No. All courses, assignments, and the thesis are conducted entirely in English, and the Office of International Relations handles administrative procedures — ARC, insurance, work permits — in…", "p": "faq.html", "a": "faq-l03"}, {"t": "What are living costs in Taichung?", "s": "Monthly living costs run about NT$24,000 (roughly USD 740) for food, transport, and daily expenses, with housing budgeted separately. Total monthly costs including accommodation come to about USD…", "p": "faq.html", "a": "faq-l04"}, {"t": "Can I work or intern while studying?", "s": "Yes, up to 20 hours per week during the semester and with no hour limit during breaks. Both part-time work and internships require a work permit, which you apply for online at ezwp.wda.gov.tw with…", "p": "faq.html", "a": "faq-l05"}, {"t": "What is campus life like at Tunghai?", "s": "Tunghai's campus covers 134 hectares of tree-lined paths and traditional architecture, including the Luce Memorial Chapel designed by I.M. Pei. There are more than 150 student clubs and 46 dormitory…", "p": "faq.html", "a": "faq-l06"}, {"t": "What is it like to live in Taichung?", "s": "Taichung offers the food and amenities of a major Taiwanese city at a cost of living well below Taipei, Singapore, or Hong Kong, which means a scholarship stretches considerably further. The city is…", "p": "faq.html", "a": "faq-l07"}, {"t": "Can I stay in Taiwan to work after graduation?", "s": "Yes. After receiving your diploma you can extend your ARC for up to one year to look for work. Full-time employment requires your employer to apply through Taiwan's Point-Based System, and a separate…", "p": "faq.html", "a": "faq-c01"}, {"t": "What careers do GMBA graduates pursue?", "s": "Graduates work in business management, marketing, finance, and operations across Taiwan's technology and AI-related industries. Taiwan's semiconductor and AI ecosystem generates steady demand for…", "p": "faq.html", "a": "faq-c02"}, {"t": "Does GMBA offer career services and an alumni network?", "s": "GMBA does not yet have a dedicated alumni association. Graduates can use Tunghai University's campus-wide Internship &amp; Student Achievement Center (ISAC), which offers career counseling, resume…", "p": "faq.html", "a": "faq-c03"}, {"t": "Can I learn Chinese while I'm here?", "s": "Yes, and many students do. Master's students can take elective beginner and intermediate Chinese courses, and the Chinese Language Center runs a full Mandarin program that pairs classroom learning with real-life practice. See the OIR Chinese Learning page for details. Basic Mandarin is also a real advantage when you enter Taiwan's job market.", "p": "faq.html", "a": "faq-l08"}];</script>
 <script>
 (function(){
   var btn = document.getElementById('siteSearchBtn');
@@ -2539,4 +2804,27 @@ function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(f
 })();
 </script>
 
+
+<script>
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var blocks = '#curriculum > .container > *, #faculty > .container > *, #joint-degree > .container > *, #academic-calendar > .container > *, #faq > .container > *';
+  var items = '.fv2-cards > .fv2-card, #curriculum .ac-layers > div, .cards-3 > .card';
+  var els = Array.prototype.slice.call(document.querySelectorAll(blocks + ', ' + items));
+  if (!els.length) return;
+  els.forEach(function(el){ el.classList.add('om-reveal'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      var sibs = Array.prototype.slice.call(el.parentNode.children).filter(function(n){ return n.classList.contains('om-reveal'); });
+      el.style.transitionDelay = Math.min(sibs.indexOf(el), 5) * 65 + 'ms';
+      el.classList.add('in');
+      io.unobserve(el);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
 </body></html>

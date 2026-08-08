@@ -1348,10 +1348,68 @@
 [id] { scroll-margin-top: 68px; }
 /* ===== END ANCHOR OFFSET FIX ===== */
 </style>
+<style>
+    /* ===== HEADER (aligned with index) ===== */
+    .announce {
+      background: #3E0710; color: #fff; text-align: center;
+      padding: .55rem 1.5rem; font-size: 14px; font-weight: 500; letter-spacing: .01em;
+      display: flex; align-items: center; justify-content: center; gap: .9rem; flex-wrap: wrap;
+    }
+    .announce .ann-tag {
+      font-size: 10.5px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+      color: #12210A; background: var(--gold-lt, #E8C55A); padding: .2rem .55rem;
+    }
+    .announce a { color: var(--gold-lt, #E8C55A); font-size: 13px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .announce a:hover { color: #fff; }
+    nav { min-height: 64px; }
+    nav .nav-items { gap: 2rem; }
+    nav .nav-item > a { padding: 0; }
+    #siteSearchBtn { margin-left: auto; }
+    .nav-apply-desk {
+      align-self: center; text-decoration: none;
+      background: var(--gold-lt, #E8C55A); color: #12210A;
+      padding: .62rem 1.2rem; font-size: 12.5px; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase; margin-left: .6rem;
+      transition: background .2s ease;
+    }
+    .nav-apply-desk:hover { background: #fff; color: #3A0810; }
+    @media (max-width: 960px) {
+      nav .nav-items { gap: 0; }
+      nav .nav-item > a { padding: 0.85rem 1.4rem; }
+      #siteSearchBtn { margin-left: 0 !important; padding: 0.85rem 1.4rem !important; justify-content: flex-start !important; }
+      #navItems .lang-btn { margin-left: 1.4rem !important; }
+      .nav-apply-desk { display: none; }
+    }
+</style>
+
+<style>
+  /* --- Mobile nav breathing room --- */
+  @media (max-width: 960px) {
+    nav .nav-burger { margin-right: 1.15rem !important; flex-shrink: 0 !important;
+      width: 26px !important; height: 20px !important; padding: 2px 0 !important; box-sizing: content-box; }
+    nav .nav-logo { padding: 0 1rem !important; min-width: 0 !important; flex-shrink: 1 !important; }
+    nav .nav-logo img { height: 30px !important; }
+  }
+</style>
+<style>
+  /* --- Mobile nav: parent link tappable, caret toggles submenu --- */
+  @media (max-width: 960px) {
+    .nav-item { display: block !important; }
+    .nav-item > a { display: flex !important; width: 100% !important; }
+    .nav-item > a .nav-caret {
+      font-size: 13px !important; opacity: .85;
+      padding: .85rem 1.4rem .85rem 1.6rem; margin: -.85rem -1.4rem -.85rem 0;
+    }
+    .nav-dropdown { width: 100% !important; min-width: 0 !important; }
+    .nav-burger { align-self: center !important; }
+  }
+</style>
 </head>
 <body>
 <div class="announce" role="alert">
-  東海攜手中華電信與Google，率全台之先導入企業級Agent管理平台「Gemini Enterprise」。
+  <span class="ann-tag">News</span>
+  <span>東海攜手中華電信與 Google，率全台之先導入企業級 AI Agent 管理平台「Gemini Enterprise」。</span>
+  <a href="index-zh.html#news">看更多 →</a>
 </div>
 
 <a href="#maincontent" class="skip-link">跳到主要內容</a>
@@ -1369,7 +1427,7 @@
       <span class="float-icon">✎</span>
       <span>立即申請</span>
     </a>
-    <a href="#" onclick="openContactModal();return false;" class="float-item">
+    <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="float-item">
       <span class="float-icon">✉</span>
       <span>聯絡我們</span>
     </a>
@@ -1417,6 +1475,7 @@
 
       
       <a href="admissions.html" class="lang-btn" onclick="sessionStorage.setItem('lang-manual','1')">English</a>
+      <a href="admissions-zh.html#admissions" class="nav-apply-desk">立即申請</a>
       <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" class="nav-contact-mobile">✉ Contact Us</a>
       <a href="admissions-zh.html#admissions" class="nav-apply-mobile">✎ 立即申請</a>
     </div>
@@ -1431,172 +1490,23 @@
     <p>申請資格與流程、學費與獎學金，以及入學前後的實用資訊與表單下載。</p>
   </div>
 </div>
+<div class="adm-stats-wrap"><div class="container"><div class="adm-stats"><div><div class="adm-stat-n">3</div><div class="adm-stat-l">申請管道</div></div><div><div class="adm-stat-n">2</div><div class="adm-stat-l">入學學期</div></div><div><div class="adm-stat-n">6</div><div class="adm-stat-l">獎助方案</div></div><div><div class="adm-stat-n adm-stat-tuition">~USD 2,100</div><div class="adm-stat-l">每學期學費（參考）</div></div></div></div></div>
+<nav class="adm-index" aria-label="Section index"><div class="container"><div class="adm-index-row"><a href="#admissions">申請方式</a><a href="#tuition">學費</a><a href="#scholarships">獎助</a><a href="#practical-info">實務資訊</a><a href="#downloads">表單</a><a href="#faq">常見問題</a></div></div></nav>
 
-<section id="tuition" style="background:var(--white);">
-  <div class="container">
-    <h2>獎學金</h2>
-    <p class="sec-lead">台灣提供亞洲最豐厚的研究所獎學金之一。結合低廉的學費與生活費，在這裡攻讀 MBA 的成本遠低於其他選擇。</p>
 
-    <div class="schol-box">
-      <h3>台灣政府獎學金</h3>
-      <p style="font-size:var(--t-xs);color:var(--ink-3);margin-bottom:1rem;">以下獎學金由台灣政府相關部會提供，申請資格、所需文件及申請程序等細節，請直接洽各主管機關確認。</p>
-      <div class="gov-schol-cards">
-        <div class="gov-schol-card">
-          <div data-k="sch1.name" class="gov-schol-head">教育部台灣獎學金</div>
-          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span data-k="sch1.monthly" class="gov-schol-val">NT$20,000（碩/博士生）</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span data-k="sch1.tuition" class="gov-schol-val">每學期最高 NT$40,000</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span data-k="sch1.duration" class="gov-schol-val">最長 2 年（碩士）</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span data-k="sch1.eligible" class="gov-schol-val">各國籍均可（不含港澳及中國大陸）</span></div>
-          <div class="gov-schol-link"><a data-k="sch1.url" href="https://english.moe.gov.tw/cp-24-16833-23C09-1.html" target="_blank" rel="noopener">詳細資訊</a></div>
-        </div>
-        <div class="gov-schol-card">
-          <div data-k="sch2.name" class="gov-schol-head">教育部華語獎學金（HES）</div>
-          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span data-k="sch2.monthly" class="gov-schol-val">NT$28,000</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span data-k="sch2.tuition" class="gov-schol-val">&mdash;</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span data-k="sch2.duration" class="gov-schol-val">2 個月 &ndash; 1 年</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span data-k="sch2.eligible" class="gov-schol-val">各國籍均可</span></div>
-          <div class="gov-schol-link"><a data-k="sch2.url" href="https://english.moe.gov.tw/cp-24-24284-3ea37-1.html" target="_blank" rel="noopener">詳細資訊</a></div>
-        </div>
-        <div class="gov-schol-card">
-          <div data-k="sch3.name" class="gov-schol-head">外交部台灣獎學金</div>
-          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span data-k="sch3.monthly" class="gov-schol-val">NT$33,000（學位生）</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span data-k="sch3.tuition" class="gov-schol-val">&mdash;</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span data-k="sch3.duration" class="gov-schol-val">最長 2 年（碩士）</span></div>
-          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span data-k="sch3.eligible" class="gov-schol-val">與台灣有邦交或友好關係之國家</span></div>
-          <div class="gov-schol-link"><a data-k="sch3.url" href="https://en.mofa.gov.tw/cp.aspx?n=1325" target="_blank" rel="noopener">詳細資訊</a></div>
-        </div>
-      </div>
-      <p style="margin-top:1rem;font-size:var(--t-xs);color:var(--ink-3);">申請須透過所在國台灣代表處（TECO）提出，申請截止日一般為每年 <strong>3月31日</strong>。</p>
-    </div>
-
-    <div class="schol-box">
-      <h3>東海大學及 GMBA 學程獎學金</h3>
-      <p style="font-size:var(--t-xs);color:var(--ink-3);margin-bottom:1rem;">東海大學（國際處）及 GMBA 學程提供的獎學金，點擊卡片查看詳情或報名。</p>
-      <div class="gov-schol-cards">
-      <div class="gov-schol-card">
-        <div data-k="sch4.name" class="gov-schol-head">外國學生績優獎學金</div>
-        <div class="gov-schol-row"><span class="gov-schol-key">提供單位</span><span data-k="sch4.by" class="gov-schol-val">東海大學國際處</span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span data-k="sch4.for" class="gov-schol-val">已在學之外國學生（不含僑生及陸生）</span></div>
-        <div class="gov-schol-link"><a data-k="sch4.url" href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/INTL_Scholarshi/pages.php?ID=dGh1X29zYSZJTlRMX1NjaG9sYXJzaGk=" target="_blank" rel="noopener">詳細資訊</a></div>
-      </div>
-      <div class="gov-schol-card">
-        <div data-k="sch5.name" class="gov-schol-head">僑生獎學金</div>
-        <div class="gov-schol-row"><span class="gov-schol-key">提供單位</span><span data-k="sch5.by" class="gov-schol-val">東海大學國際處</span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span data-k="sch5.for" class="gov-schol-val">僑生</span></div>
-        <div class="gov-schol-link"><a data-k="sch5.url" href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/Overseas_Schola/pages.php?ID=dGh1X29zYSZPdmVyc2Vhc19TY2hvbGE=" target="_blank" rel="noopener">詳細資訊</a></div>
-      </div>
-      <div class="gov-schol-card" style="border-color:var(--gold);">
-        <div data-k="sch6.name" class="gov-schol-head" style="background:var(--gold);color:var(--ink);">GMBA 學程獎學金</div>
-        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span data-k="sch6.for" class="gov-schol-val">新生／準新生，已在台者（持居留證）或台灣籍</span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">金額</span><span class="gov-schol-val"><span data-k="sch6.amount">每學期說明會公布</span><br><a href="問卷2 GMBA Save My Seat 填寫頁面.html" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.5rem;padding:0.4rem 1rem;font-size:0.78rem;font-weight:700;text-decoration:none;background:var(--gold);color:var(--ink);border-radius:4px;letter-spacing:0.05em;">✉ 我要參加說明會</a></span></div>
-        <div class="gov-schol-row"><span class="gov-schol-key">注意</span><span data-k="sch6.note" class="gov-schol-val" style="font-style:italic;color:var(--ink-3);font-size:12px;">僅限準備入學之新生，在學生不適用</span></div>
-        
-      </div>
-    </div>
-    </div>
-
-    <!-- ===== GMBA說明會報名 Modal ===== -->
-    <div id="infoSessionModal" class="info-modal-overlay" onclick="if(event.target===this)this.classList.remove('active')">
-      <div class="info-modal">
-        <div class="info-modal-header">
-          <h4>GMBA 招生說明會 · 報名</h4>
-          <button class="info-modal-close" onclick="document.getElementById('infoSessionModal').classList.remove('active')" aria-label="關閉">&times;</button>
-        </div>
-        <div class="info-modal-body">
-          <!--
-            *** 操作說明 ***
-            1. 至 Google 表單建立問卷（建議欄位：姓名、Email、身份 / 就讀背景）
-            2. 表單右上角 → 傳送 → 嵌入 → 複製 src 網址
-            3. 將下方 src 的 "GOOGLE_FORM_EMBED_URL" 替換為複製的連結
-          -->
-          <iframe
-            src="GOOGLE_FORM_EMBED_URL"
-            title="GMBA說明會報名表"
-            loading="lazy">
-            載入中，請稍候…
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-    <h2 id="fees-table" style="margin-top:3.5rem;">學費與費用</h2>
-    <p style="font-size:var(--t-body);color:var(--ink-3);margin-bottom:1rem;">每學期費用參考。所有學生學費相同，畢業時間取決於選課與論文進度。</p>
-    <div class="fee-cards">
-      <div class="fee-cards-header"><span>項目</span><span>台幣費用</span><span>備註</span></div>
-      <div class="fee-card">
-        <div class="fee-card-label"><strong>學費</strong>（含雜費）</div>
-        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.tuition.nt">NT$69,020</div>
-          <div class="fee-card-usd" data-k="fee.tuition.usd">~USD 2,124 / 學期</div>
-        </div>
-        <div class="fee-card-ref"><a class="fee-card-note" href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">官方費用公告 →</a></div>
-      </div>
-      <div class="fee-card">
-        <div class="fee-card-label">住宿費（校內宿舍）</div>
-        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.dorm.nt">NT$10,560～41,360</div>
-          <div class="fee-card-usd" data-k="fee.dorm.usd">~USD 325～1,273</div>
-        </div>
-        <div class="fee-card-ref"><a class="fee-card-note" href="https://dorm.thu.edu.tw/web/about/page.php?scid=56&amp;sid=65" target="_blank" rel="noopener">宿舍收費標準 →</a></div>
-      </div>
-      <div class="fee-card">
-        <div class="fee-card-label">住宿費（校外租屋）</div>
-        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.offcampus.nt">NT$30,000～48,000</div>
-          <div class="fee-card-usd" data-k="fee.offcampus.usd">~USD 923～1,477 · 台中行情</div>
-        </div>
-        <div class="fee-card-ref"><a class="fee-card-note" href="https://oir.thu.edu.tw/redirect.php?ID=400_9_Fees_and_" target="_blank" rel="noopener">國際處生活費 →</a></div>
-      </div>
-      <div class="fee-card">
-        <div class="fee-card-label">健保費</div>
-        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.nhi.nt">NT$4,956</div>
-          <div class="fee-card-usd" data-k="fee.nhi.usd">~USD 152 · 每學期</div>
-        </div>
-        <div class="fee-card-ref"><a class="fee-card-note" href="https://oir.thu.edu.tw/redirect.php?ID=400_7_NHI" target="_blank" rel="noopener">健保說明 →</a></div>
-      </div>
-      <div class="fee-card">
-        <div class="fee-card-label">生活費</div>
-        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.living.nt">NT$48,000</div>
-          <div class="fee-card-usd" data-k="fee.living.usd">~USD 1,477 · 每學期</div>
-        </div>
-        <div class="fee-card-ref"></div>
-      </div>
-      <div class="fee-card fee-card-total">
-        <div class="fee-card-label"><strong>每學期總費用估算</strong></div>
-        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.total.nt">~NT$150,000</div>
-          <div class="fee-card-usd" data-k="fee.total.usd">~USD 4,615 · 因人而異</div>
-        </div>
-        <div class="fee-card-ref"></div>
-      </div>
-    </div>
-    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;" data-k="fee.disclaimer">以上金額僅供參考，正確金額以官方公告為準。　資料更新日期：2026-08-06</p>
-
-    <div class="sec-rule" style="margin-top:2rem;"><span class="sec-tag">第三學年：按學分計費</span><span class="rule-line"></span></div>
-    <p style="font-size:var(--t-body);color:var(--ink-3);margin-bottom:1rem;">第三學年起依修習學分計費，費用通常遠低於全學期學費。</p>
-    <div class="fee-cards">
-      <div class="fee-cards-header"><span>項目</span><span>台幣費用</span><span>備註</span></div>
-      <div class="fee-card">
-        <div class="fee-card-label">學分費<div style="font-size:12px;font-weight:400;color:var(--ink-3);margin-top:2px;">依修習學分計費</div></div>
-        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.credit.nt">NT$2,090</div>
-          <div class="fee-card-usd" data-k="fee.credit.usd">~USD 64 / 學分</div>
-        </div>
-        <div class="fee-card-ref"><a class="fee-card-note" href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計室公告 →</a></div>
-      </div>
-      <div class="fee-card">
-        <div class="fee-card-label">雜費<div style="font-size:12px;font-weight:400;color:var(--ink-3);margin-top:2px;">同上</div></div>
-        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.misc.nt">NT$440</div>
-          <div class="fee-card-usd" data-k="fee.misc.usd">~USD 14 / 學分</div>
-        </div>
-        <div class="fee-card-ref"></div>
-      </div>
-    </div>
-    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;" data-k="fee.disclaimer2">以上金額僅供參考，正確金額以官方公告為準。　資料更新日期：2026-08-06</p>
-  </div>
-</section>
-
-<!-- ===== CAMPUS LIFE ===== -->
-<section id="admissions" style="background:var(--cream);">
+<section id="admissions" style="background:var(--white);">
   <div class="container">
     <h2>如何申請</h2>
     <p class="sec-lead">先找到你屬於哪一類，再點進對應的報名頁面。只有從海外申請的國際生分春季班與秋季班，其餘管道都是秋季入學。</p>
 
+<div class="adm-session">
+      <div class="adm-session-l">
+        <div class="adm-session-eyebrow">GMBA 招生說明會</div>
+        <div class="adm-session-title">認識師資、聽獎學金公布，當場完成申請諮詢。</div>
+        <div class="adm-session-meta">下一場・日期待公布 &nbsp;·&nbsp; 已在台申請者必須參加</div>
+      </div>
+      <a class="adm-seat" href="問卷2 GMBA Save My Seat 填寫頁面.html" target="_blank" rel="noopener">✉ 立即報名 →</a>
+    </div>
     <!-- 申請管道表格 -->
     <div style="margin-bottom:3rem">
       <div class="admit-grid-wrapper" style="overflow:hidden;background:#fff;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,0.18)">
@@ -1729,7 +1639,253 @@
     </div>
 
     <!-- FAQ -->
-    <div id="faq">
+    
+  </div>
+</section>
+
+<section id="tuition" style="background:var(--cream);">
+  <div class="container">
+    <h2 id="fees-table">學費與費用</h2>
+    <p style="font-size:var(--t-body);color:var(--ink-3);margin-bottom:1rem;">每學期費用參考。所有學生學費相同，畢業時間取決於選課與論文進度。</p>
+    <div class="fee-cards">
+      <div class="fee-cards-header"><span>項目</span><span>台幣費用</span><span>備註</span></div>
+      <div class="fee-card">
+        <div class="fee-card-label"><strong>學費</strong>（含雜費）</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.tuition.nt">NT$69,020</div>
+          <div class="fee-card-usd" data-k="fee.tuition.usd">~USD 2,124 / 學期</div>
+        </div>
+        <div class="fee-card-ref"><a class="fee-card-note" href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">官方費用公告 →</a></div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-card-label">住宿費（校內宿舍）</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.dorm.nt">NT$10,560～41,360</div>
+          <div class="fee-card-usd" data-k="fee.dorm.usd">~USD 325～1,273</div>
+        </div>
+        <div class="fee-card-ref"><a class="fee-card-note" href="https://dorm.thu.edu.tw/web/about/page.php?scid=56&amp;sid=65" target="_blank" rel="noopener">宿舍收費標準 →</a></div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-card-label">住宿費（校外租屋）</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.offcampus.nt">NT$30,000～48,000</div>
+          <div class="fee-card-usd" data-k="fee.offcampus.usd">~USD 923～1,477 · 台中行情</div>
+        </div>
+        <div class="fee-card-ref"><a class="fee-card-note" href="https://oir.thu.edu.tw/redirect.php?ID=400_9_Fees_and_" target="_blank" rel="noopener">國際處生活費 →</a></div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-card-label">健保費</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.nhi.nt">NT$4,956</div>
+          <div class="fee-card-usd" data-k="fee.nhi.usd">~USD 152 · 每學期</div>
+        </div>
+        <div class="fee-card-ref"><a class="fee-card-note" href="https://oir.thu.edu.tw/redirect.php?ID=400_7_NHI" target="_blank" rel="noopener">健保說明 →</a></div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-card-label">生活費</div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.living.nt">NT$48,000</div>
+          <div class="fee-card-usd" data-k="fee.living.usd">~USD 1,477 · 每學期</div>
+        </div>
+        <div class="fee-card-ref"></div>
+      </div>
+      <div class="fee-card fee-card-total">
+        <div class="fee-card-label"><strong>每學期總費用估算</strong></div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.total.nt">~NT$150,000</div>
+          <div class="fee-card-usd" data-k="fee.total.usd">~USD 4,615 · 因人而異</div>
+        </div>
+        <div class="fee-card-ref"></div>
+      </div>
+    </div>
+    
+
+    <div class="sec-rule" style="margin-top:2rem;"><span class="sec-tag">第三學年：按學分計費</span><span class="rule-line"></span></div>
+    <p style="font-size:var(--t-body);color:var(--ink-3);margin-bottom:1rem;">第三學年起依修習學分計費，費用通常遠低於全學期學費。</p>
+    <div class="fee-cards">
+      <div class="fee-cards-header"><span>項目</span><span>台幣費用</span><span>備註</span></div>
+      <div class="fee-card">
+        <div class="fee-card-label">學分費<div style="font-size:12px;font-weight:400;color:var(--ink-3);margin-top:2px;">依修習學分計費</div></div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.credit.nt">NT$2,090</div>
+          <div class="fee-card-usd" data-k="fee.credit.usd">~USD 64 / 學分</div>
+        </div>
+        <div class="fee-card-ref"><a class="fee-card-note" href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計室公告 →</a></div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-card-label">雜費<div style="font-size:12px;font-weight:400;color:var(--ink-3);margin-top:2px;">同上</div></div>
+        <div class="fee-card-amt"><div class="fee-card-nt" data-k="fee.misc.nt">NT$440</div>
+          <div class="fee-card-usd" data-k="fee.misc.usd">~USD 14 / 學分</div>
+        </div>
+        <div class="fee-card-ref"></div>
+      </div>
+    </div>
+    <p style="font-size:var(--t-sm);color:var(--ink-3);margin-top:.75rem;font-style:italic;" data-k="fee.disclaimer2">以上金額僅供參考，正確金額以官方公告為準。　資料更新日期：2026-08-06</p>
+  </div>
+</section>
+
+<section id="scholarships" style="background:var(--white);">
+  <div class="container">
+    <h2>獎學金</h2>
+    <p class="sec-lead">台灣提供亞洲最豐厚的研究所獎學金之一。結合低廉的學費與生活費，在這裡攻讀 MBA 的成本遠低於其他選擇。</p>
+
+    <div class="schol-box">
+      <h3>台灣政府獎學金</h3>
+      <p style="font-size:var(--t-xs);color:var(--ink-3);margin-bottom:1rem;">以下獎學金由台灣政府相關部會提供，申請資格、所需文件及申請程序等細節，請直接洽各主管機關確認。</p>
+      <div class="gov-schol-cards">
+        <div class="gov-schol-card">
+          <div data-k="sch1.name" class="gov-schol-head">教育部台灣獎學金</div>
+          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span data-k="sch1.monthly" class="gov-schol-val">NT$20,000（碩/博士生）</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span data-k="sch1.tuition" class="gov-schol-val">每學期最高 NT$40,000</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span data-k="sch1.duration" class="gov-schol-val">最長 2 年（碩士）</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span data-k="sch1.eligible" class="gov-schol-val">各國籍均可（不含港澳及中國大陸）</span></div>
+          <div class="gov-schol-link"><a data-k="sch1.url" href="https://english.moe.gov.tw/cp-24-16833-23C09-1.html" target="_blank" rel="noopener">詳細資訊</a></div>
+        </div>
+        <div class="gov-schol-card">
+          <div data-k="sch2.name" class="gov-schol-head">教育部華語獎學金（HES）</div>
+          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span data-k="sch2.monthly" class="gov-schol-val">NT$28,000</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span data-k="sch2.tuition" class="gov-schol-val">&mdash;</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span data-k="sch2.duration" class="gov-schol-val">2 個月 &ndash; 1 年</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span data-k="sch2.eligible" class="gov-schol-val">各國籍均可</span></div>
+          <div class="gov-schol-link"><a data-k="sch2.url" href="https://english.moe.gov.tw/cp-24-24284-3ea37-1.html" target="_blank" rel="noopener">詳細資訊</a></div>
+        </div>
+        <div class="gov-schol-card">
+          <div data-k="sch3.name" class="gov-schol-head">外交部台灣獎學金</div>
+          <div class="gov-schol-row"><span class="gov-schol-key">每月生活費</span><span data-k="sch3.monthly" class="gov-schol-val">NT$33,000（學位生）</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">學費補助</span><span data-k="sch3.tuition" class="gov-schol-val">&mdash;</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">期限</span><span data-k="sch3.duration" class="gov-schol-val">最長 2 年（碩士）</span></div>
+          <div class="gov-schol-row"><span class="gov-schol-key">資格</span><span data-k="sch3.eligible" class="gov-schol-val">與台灣有邦交或友好關係之國家</span></div>
+          <div class="gov-schol-link"><a data-k="sch3.url" href="https://en.mofa.gov.tw/cp.aspx?n=1325" target="_blank" rel="noopener">詳細資訊</a></div>
+        </div>
+      </div>
+      <p style="margin-top:1rem;font-size:var(--t-xs);color:var(--ink-3);">申請須透過所在國台灣代表處（TECO）提出，申請截止日一般為每年 <strong>3月31日</strong>。</p>
+    </div>
+
+    <div class="schol-box">
+      <h3>東海大學及 GMBA 學程獎學金</h3>
+      <p style="font-size:var(--t-xs);color:var(--ink-3);margin-bottom:1rem;">東海大學（國際處）及 GMBA 學程提供的獎學金，點擊卡片查看詳情或報名。</p>
+      <div class="gov-schol-cards">
+      <div class="gov-schol-card">
+        <div data-k="sch4.name" class="gov-schol-head">外國學生績優獎學金</div>
+        <div class="gov-schol-row"><span class="gov-schol-key">提供單位</span><span data-k="sch4.by" class="gov-schol-val">東海大學國際處</span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span data-k="sch4.for" class="gov-schol-val">已在學之外國學生（不含僑生及陸生）</span></div>
+        <div class="gov-schol-link"><a data-k="sch4.url" href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/INTL_Scholarshi/pages.php?ID=dGh1X29zYSZJTlRMX1NjaG9sYXJzaGk=" target="_blank" rel="noopener">詳細資訊</a></div>
+      </div>
+      <div class="gov-schol-card">
+        <div data-k="sch5.name" class="gov-schol-head">僑生獎學金</div>
+        <div class="gov-schol-row"><span class="gov-schol-key">提供單位</span><span data-k="sch5.by" class="gov-schol-val">東海大學國際處</span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span data-k="sch5.for" class="gov-schol-val">僑生</span></div>
+        <div class="gov-schol-link"><a data-k="sch5.url" href="https://oir.thu.edu.tw/front/400_IntlDegree/400_14_scholars/Overseas_Schola/pages.php?ID=dGh1X29zYSZPdmVyc2Vhc19TY2hvbGE=" target="_blank" rel="noopener">詳細資訊</a></div>
+      </div>
+      <div class="gov-schol-card" style="border-color:var(--gold);">
+        <div data-k="sch6.name" class="gov-schol-head" style="background:var(--gold);color:var(--ink);">GMBA 學程獎學金</div>
+        <div class="gov-schol-row"><span class="gov-schol-key">適用對象</span><span data-k="sch6.for" class="gov-schol-val">新生／準新生，已在台者（持居留證）或台灣籍</span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">金額</span><span class="gov-schol-val"><span data-k="sch6.amount">每學期說明會公布</span><br><a href="問卷2 GMBA Save My Seat 填寫頁面.html" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.5rem;padding:0.4rem 1rem;font-size:0.78rem;font-weight:700;text-decoration:none;background:var(--gold);color:var(--ink);border-radius:4px;letter-spacing:0.05em;">✉ 我要參加說明會</a></span></div>
+        <div class="gov-schol-row"><span class="gov-schol-key">注意</span><span data-k="sch6.note" class="gov-schol-val" style="font-style:italic;color:var(--ink-3);font-size:12px;">僅限準備入學之新生，在學生不適用</span></div>
+        
+      </div>
+    </div>
+    </div>
+
+    <!-- ===== GMBA說明會報名 Modal ===== -->
+    <div id="infoSessionModal" class="info-modal-overlay" onclick="if(event.target===this)this.classList.remove('active')">
+      <div class="info-modal">
+        <div class="info-modal-header">
+          <h4>GMBA 招生說明會 · 報名</h4>
+          <button class="info-modal-close" onclick="document.getElementById('infoSessionModal').classList.remove('active')" aria-label="關閉">&times;</button>
+        </div>
+        <div class="info-modal-body">
+          <!--
+            *** 操作說明 ***
+            1. 至 Google 表單建立問卷（建議欄位：姓名、Email、身份 / 就讀背景）
+            2. 表單右上角 → 傳送 → 嵌入 → 複製 src 網址
+            3. 將下方 src 的 "GOOGLE_FORM_EMBED_URL" 替換為複製的連結
+          -->
+          <iframe
+            src="GOOGLE_FORM_EMBED_URL"
+            title="GMBA說明會報名表"
+            loading="lazy">
+            載入中，請稍候…
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAMPUS LIFE ===== -->
+
+
+<!-- ===== TUITION & SCHOLARSHIPS ===== -->
+
+<section id="practical-info" style="background:var(--cream);">
+  <div class="container">
+    <h2>在台生活：快速指南</h2>
+    <p class="sec-lead" style="line-height:var(--lh-zh);">每位國際學生必須處理的三件事，整理成最精簡的版本。</p>
+    <div class="cards-3">
+
+      <div class="card" style="background:var(--cream);border-top:3px solid var(--maroon);padding:1.4rem 1.3rem;">
+        <h3 style="color:var(--maroon);margin-bottom:0.8rem;font-size:var(--t-h3);">簽證與居留證（ARC）</h3>
+        <ol style="padding-left:1.3rem;line-height:1.7;color:var(--ink-3);font-size:var(--t-sm);margin:0 0 1rem;">
+          <li style="margin-bottom:.4rem"><strong>入境前</strong> — FS 學生簽證</li>
+          <li style="margin-bottom:.4rem"><strong>入台 15 日內</strong> — 辦理 ARC</li>
+          <li><strong>每年</strong> — 辦理展期</li>
+        </ol>
+        <p style="font-size:var(--t-sm);color:var(--maroon);border-left:3px solid var(--maroon);padding:.3rem .7rem;margin:0 0 .9rem;background:rgba(155,26,44,.06);">觀光簽證無法轉換為居留證</p>
+        <a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener" style="font-size:var(--t-sm);color:var(--maroon);font-weight:700;">東海大學國際暨兩岸合作處 →</a>
+      </div>
+
+      <div class="card" style="background:var(--cream);border-top:3px solid var(--maroon);padding:1.4rem 1.3rem;">
+        <h3 style="color:var(--maroon);margin-bottom:0.8rem;font-size:var(--t-h3);">工作許可</h3>
+        <ul style="padding-left:1.3rem;line-height:1.7;color:var(--ink-3);font-size:var(--t-sm);list-style:disc;margin:0 0 1rem;">
+          <li style="margin-bottom:.4rem">學期中每週最多 <strong>20 小時</strong></li>
+          <li style="margin-bottom:.4rem">假期間無時數限制</li>
+          <li>申請：<a href="https://ezwp.wda.gov.tw/" target="_blank" rel="noopener" style="color:var(--maroon);text-decoration:underline;">ezwp.wda.gov.tw</a></li>
+        </ul>
+        <p style="font-size:var(--t-sm);color:var(--maroon);border-left:3px solid var(--maroon);padding:.3rem .7rem;background:rgba(155,26,44,.06);">未申請即工作：罰款最高新台幣 15 萬</p>
+      </div>
+
+      <div class="card" style="background:var(--cream);border-top:3px solid var(--maroon);padding:1.4rem 1.3rem;">
+        <h3 style="color:var(--maroon);margin-bottom:0.8rem;font-size:var(--t-h3);">中文能力</h3>
+        <ul style="padding-left:1.3rem;line-height:1.7;color:var(--ink-3);font-size:var(--t-sm);list-style:disc;margin:0 0 1rem;">
+          <li style="margin-bottom:.4rem"><strong>全英文授課</strong>，不要求中文</li>
+          <li>可選修<a href="https://clc.thu.edu.tw/index.php" target="_blank" rel="noopener" style="color:var(--maroon);">東海語言中心</a>中文課</li>
+        </ul>
+        <p style="font-size:var(--t-sm);color:var(--ink-3);border-left:3px solid var(--gold);padding:.3rem .7rem;margin:0 0 .9rem;background:rgba(184,146,42,.08);">基礎中文是職場加分項</p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="downloads" style="background:var(--white);">
+  <div class="container">
+    <h2>學生表單與文件</h2>
+    <p class="sec-lead">下載 GMBA 論文程序、考試與繳交所需官方表單。所有檔案均為 PDF 格式——請開啟、列印後繳交至 GMBA 辦公室。</p>
+    <div class="forms-grid">
+      <div>
+        <div class="forms-group-title">論文準備</div>
+        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">指導教授同意書</div><div class="forms-item-desc">論文指導的指導教授同意書表格</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Supervision%20Agreement%20for%20Master%20Thesis%20at%20GMBA%20%285%29.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
+        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">論文題目審定書</div><div class="forms-item-desc">論文審核專業領域確認清單</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/1703060293-%E5%9C%8B%E9%9A%9B%E4%BC%81%E6%A5%AD%E7%AE%A1%E7%90%86%E7%A2%A9%E5%A3%AB%E5%AD%B8%E4%BD%8D%E5%AD%B8%E7%A8%8B%E5%AD%B8%E4%BD%8D%E8%AB%96%E6%96%87%E5%B0%88%E6%A5%AD%E6%AA%A2%E6%A0%B8%E8%A1%A8.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
+        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">論文格式規定</div><div class="forms-item-desc">論文繳交格式與規定說明</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Thesis%20form.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
+      </div>
+      <div>
+        <div class="forms-group-title">考試與繳交</div>
+        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">學位考試時程表</div><div class="forms-item-desc">論文口試時程與程序說明</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/oral%20defense%20(2).pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
+        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">論文上傳說明</div><div class="forms-item-desc">電子論文繳交注意事項與步驟</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Precautions%20for%20thesis%20upload.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
+        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">GMBA 學程時程表</div><div class="forms-item-desc">學程完整修業時程與課程規劃總覽</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Global%20Master%20of%20Business%20Administration%20Program%20schedule.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
+      </div>
+    </div>
+    <div class="dl-note"><strong>找不到所需表單？</strong>請聯絡 GMBA 辦公室：<a href="mailto:gmba@thu.edu.tw" style="color:var(--maroon);">gmba@thu.edu.tw</a> 或致電 <strong>+886-4-2359-0121 分機 35002</strong>。</div>
+  <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--rule);">
+    <div style="font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase;margin-bottom:.7rem;">年度報告</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-113.pdf" class="ar-pill" target="_blank" rel="noopener">2024–25 學年 ↓</a>
+      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/72_%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-112%20V2.pdf" class="ar-pill" target="_blank" rel="noopener">2023–24 學年 ↓</a>
+      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-111.pdf" class="ar-pill" target="_blank" rel="noopener">2022–23 學年 ↓</a>
+      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-110-1.pdf" class="ar-pill" target="_blank" rel="noopener">2021–22 學年 ↓</a>
+      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-109.pdf" class="ar-pill" target="_blank" rel="noopener">2020–21 學年 ↓</a>
+    </div>
+  </div>
+
+  </div></section>
+
+<section id="faq-section" style="background:var(--cream);">
+  <div class="container">
+<div id="faq">
       <h2 style="color:var(--ink)">你最想知道的事</h2>
       <p class="sec-lead" style="margin-bottom:0;">常見問題依申請流程分類，完整 35 則問答請見總覽頁。</p>
         <div class="faq-subcat">
@@ -1868,80 +2024,6 @@
   </div>
 </section>
 
-<!-- ===== TUITION & SCHOLARSHIPS ===== -->
-
-<section id="practical-info" style="background:var(--white);">
-  <div class="container">
-    <h2>在台生活：快速指南</h2>
-    <p class="sec-lead" style="line-height:var(--lh-zh);">每位國際學生必須處理的三件事，整理成最精簡的版本。</p>
-    <div class="cards-3">
-
-      <div class="card" style="background:var(--cream);border-top:3px solid var(--maroon);padding:1.4rem 1.3rem;">
-        <h3 style="color:var(--maroon);margin-bottom:0.8rem;font-size:var(--t-h3);">簽證與居留證（ARC）</h3>
-        <ol style="padding-left:1.3rem;line-height:1.7;color:var(--ink-3);font-size:var(--t-sm);margin:0 0 1rem;">
-          <li style="margin-bottom:.4rem"><strong>入境前</strong> — FS 學生簽證</li>
-          <li style="margin-bottom:.4rem"><strong>入台 15 日內</strong> — 辦理 ARC</li>
-          <li><strong>每年</strong> — 辦理展期</li>
-        </ol>
-        <p style="font-size:var(--t-sm);color:var(--maroon);border-left:3px solid var(--maroon);padding:.3rem .7rem;margin:0 0 .9rem;background:rgba(155,26,44,.06);">觀光簽證無法轉換為居留證</p>
-        <a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener" style="font-size:var(--t-sm);color:var(--maroon);font-weight:700;">東海大學國際暨兩岸合作處 →</a>
-      </div>
-
-      <div class="card" style="background:var(--cream);border-top:3px solid var(--maroon);padding:1.4rem 1.3rem;">
-        <h3 style="color:var(--maroon);margin-bottom:0.8rem;font-size:var(--t-h3);">工作許可</h3>
-        <ul style="padding-left:1.3rem;line-height:1.7;color:var(--ink-3);font-size:var(--t-sm);list-style:disc;margin:0 0 1rem;">
-          <li style="margin-bottom:.4rem">學期中每週最多 <strong>20 小時</strong></li>
-          <li style="margin-bottom:.4rem">假期間無時數限制</li>
-          <li>申請：<a href="https://ezwp.wda.gov.tw/" target="_blank" rel="noopener" style="color:var(--maroon);text-decoration:underline;">ezwp.wda.gov.tw</a></li>
-        </ul>
-        <p style="font-size:var(--t-sm);color:var(--maroon);border-left:3px solid var(--maroon);padding:.3rem .7rem;background:rgba(155,26,44,.06);">未申請即工作：罰款最高新台幣 15 萬</p>
-      </div>
-
-      <div class="card" style="background:var(--cream);border-top:3px solid var(--maroon);padding:1.4rem 1.3rem;">
-        <h3 style="color:var(--maroon);margin-bottom:0.8rem;font-size:var(--t-h3);">中文能力</h3>
-        <ul style="padding-left:1.3rem;line-height:1.7;color:var(--ink-3);font-size:var(--t-sm);list-style:disc;margin:0 0 1rem;">
-          <li style="margin-bottom:.4rem"><strong>全英文授課</strong>，不要求中文</li>
-          <li>可選修<a href="https://clc.thu.edu.tw/index.php" target="_blank" rel="noopener" style="color:var(--maroon);">東海語言中心</a>中文課</li>
-        </ul>
-        <p style="font-size:var(--t-sm);color:var(--ink-3);border-left:3px solid var(--gold);padding:.3rem .7rem;margin:0 0 .9rem;background:rgba(184,146,42,.08);">基礎中文是職場加分項</p>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-<section id="downloads" style="background:var(--cream);">
-  <div class="container">
-    <h2>學生表單與文件</h2>
-    <p class="sec-lead">下載 GMBA 論文程序、考試與繳交所需官方表單。所有檔案均為 PDF 格式——請開啟、列印後繳交至 GMBA 辦公室。</p>
-    <div class="forms-grid">
-      <div>
-        <div class="forms-group-title">論文準備</div>
-        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">指導教授同意書</div><div class="forms-item-desc">論文指導的指導教授同意書表格</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Supervision%20Agreement%20for%20Master%20Thesis%20at%20GMBA%20%285%29.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
-        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">論文題目審定書</div><div class="forms-item-desc">論文審核專業領域確認清單</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/1703060293-%E5%9C%8B%E9%9A%9B%E4%BC%81%E6%A5%AD%E7%AE%A1%E7%90%86%E7%A2%A9%E5%A3%AB%E5%AD%B8%E4%BD%8D%E5%AD%B8%E7%A8%8B%E5%AD%B8%E4%BD%8D%E8%AB%96%E6%96%87%E5%B0%88%E6%A5%AD%E6%AA%A2%E6%A0%B8%E8%A1%A8.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
-        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">論文格式規定</div><div class="forms-item-desc">論文繳交格式與規定說明</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Thesis%20form.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
-      </div>
-      <div>
-        <div class="forms-group-title">考試與繳交</div>
-        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">學位考試時程表</div><div class="forms-item-desc">論文口試時程與程序說明</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/oral%20defense%20(2).pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
-        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">論文上傳說明</div><div class="forms-item-desc">電子論文繳交注意事項與步驟</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Precautions%20for%20thesis%20upload.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
-        <div class="forms-item"><div class="forms-item-info"><div class="forms-item-name">GMBA 學程時程表</div><div class="forms-item-desc">學程完整修業時程與課程規劃總覽</div></div><a href="./GMBA%20%E8%A1%A8%E5%96%AE%E4%B8%8B%E8%BC%89/Global%20Master%20of%20Business%20Administration%20Program%20schedule.pdf" class="forms-dl-btn" target="_blank" rel="noopener">↓ 下載</a></div>
-      </div>
-    </div>
-    <div class="dl-note"><strong>找不到所需表單？</strong>請聯絡 GMBA 辦公室：<a href="mailto:gmba@thu.edu.tw" style="color:var(--maroon);">gmba@thu.edu.tw</a> 或致電 <strong>+886-4-2359-0121 分機 35002</strong>。</div>
-  <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--rule);">
-    <div style="font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase;margin-bottom:.7rem;">年度報告</div>
-    <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
-      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-113.pdf" class="ar-pill" target="_blank" rel="noopener">2024–25 學年 ↓</a>
-      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/72_%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-112%20V2.pdf" class="ar-pill" target="_blank" rel="noopener">2023–24 學年 ↓</a>
-      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-111.pdf" class="ar-pill" target="_blank" rel="noopener">2022–23 學年 ↓</a>
-      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-110-1.pdf" class="ar-pill" target="_blank" rel="noopener">2021–22 學年 ↓</a>
-      <a href="./GMBA%20%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A/%E7%B3%BB%E6%89%80%E5%B9%B4%E5%BA%A6%E5%A0%B1%E5%91%8A-GMBA-109.pdf" class="ar-pill" target="_blank" rel="noopener">2020–21 學年 ↓</a>
-    </div>
-  </div>
-
-  </div></section>
-
 <section id="contact" style="background:#2E0D1A;padding:0;border-top:3px solid #B8922A;text-align:center;">
   <div style="padding:36px 2.5rem 32px;max-width:640px;margin:0 auto;">
     <p style="font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#B8922A;margin:0 0 1.4rem;">準備好了嗎？</p>
@@ -1953,8 +2035,43 @@
 
 </main>
 
+<style>
+  .site-footer .footer-contact address{font-style:normal;}
+  .site-footer .footer-contact p{margin:0 0 .7rem;font-size:14.5px;line-height:1.75;color:rgba(255,255,255,.72);}
+  .site-footer .footer-contact .fc-org{color:#fff;font-weight:600;}
+  .site-footer .footer-contact a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(232,197,90,.5);}
+  .site-footer .footer-contact a:hover{color:var(--gold-lt,#E8C55A);}
+  .site-footer .footer-main{align-items:start;}
+  .site-footer .footer-main{grid-template-columns:300px repeat(3,1fr);}
+  .site-footer .footer-secondary{max-width:1300px;margin:0 auto;padding:0 2rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+  .site-footer .footer-secondary > div{border-top:1px solid rgba(255,255,255,.12);padding-top:1.6rem;}
+  .site-footer .fs-title{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1rem;}
+  .site-footer .fs-links{display:flex;flex-wrap:wrap;gap:.55rem 1.6rem;}
+  .site-footer .fs-links a{font-size:14px;color:rgba(255,255,255,.68);text-decoration:none;}
+  .site-footer .fs-links a:hover{color:var(--gold-lt,#E8C55A);}
+  @media(max-width:1000px){
+    .site-footer .footer-main{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:680px){
+    .site-footer .footer-main{grid-template-columns:1fr;}
+    .site-footer .footer-col,.site-footer .footer-col-title,.site-footer .footer-col ul{text-align:left;}
+    .site-footer .footer-secondary{grid-template-columns:1fr;gap:0;padding:0 1.2rem 2rem;}
+  }
+
+</style>
 <footer class="site-footer" aria-label="Site footer" style="background:#1A0A0E;">
   <div class="footer-main">
+    <div class="footer-col footer-contact">
+      <div class="footer-col-title">聯絡我們</div>
+      <address>
+        <p class="fc-org">東海大學管理學院<br>國際經營管理碩士學位學程（GMBA）</p>
+        <p class="fc-addr">407224 臺中市西屯區臺灣大道四段 1727 號</p>
+        <p class="fc-mail"><a href="mailto:gmba@thu.edu.tw">gmba@thu.edu.tw</a></p>
+        <p class="fc-tel"><a href="tel:+886423590121,35002">電話：(04) 2359-0121 分機 35002</a></p>
+      </address>
+    </div>
+
+
 
     <div class="footer-col">
       <div class="footer-col-title">探索 GMBA</div>
@@ -1981,35 +2098,39 @@
     <div class="footer-col">
       <div class="footer-col-title">招生申請</div>
       <ul>
-        <li><a href="#fees-table">學費與費用</a></li>
-        <li><a href="#tuition">獎學金</a></li>
-        <li><a href="#practical-info">實用資訊</a></li>
+        <li><a href="admissions-zh.html#fees-table">學費與費用</a></li>
+        <li><a href="admissions-zh.html#tuition">獎學金</a></li>
+        <li><a href="admissions-zh.html#practical-info">實用資訊</a></li>
         <li><a href="faq-zh.html">FAQ</a></li>
       </ul>
     </div>
 
-    <div class="footer-col">
-      <div class="footer-col-title">在台生活</div>
-      <ul>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_5_ARC" target="_blank" rel="noopener">居留證（ARC）</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_6_Group_Med" target="_blank" rel="noopener">健康保險</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_10_Work_Per" target="_blank" rel="noopener">工作許可（兼職）</a></li>
-        <li><a href="https://oir.thu.edu.tw/redirect.php?ID=400_13_Intern_E" target="_blank" rel="noopener">畢業後工作與實習</a></li>
-        <li><a href="https://ezwp.wda.gov.tw" target="_blank" rel="noopener">勞動部工作許可申辦</a></li>
-      </ul>
-    </div>
+    
 
-    <div class="footer-col">
-      <div class="footer-col-title">學生入口</div>
-      <ul>
-        <li><a href="https://tmail.thu.edu.tw/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2ftmail.thu.edu.tw%2fowa%2f" target="_blank" rel="noopener">tMail</a></li>
-        <li><a href="https://ilearn.thu.edu.tw/?#/" target="_blank" rel="noopener">iLearn</a></li>
-        <li><a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">學生資訊系統</a></li>
-        <li><a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計處</a></li>
-        <li><a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">學生事務處</a></li>
-        <li><a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">國際暨兩岸合作處</a></li>
-        <li><a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">公共事務處</a></li>
-      </ul>
+        
+  </div>
+  <div class="footer-secondary">
+    <div>
+      <div class="fs-title">在台生活</div>
+      <div class="fs-links">
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_5_ARC" target="_blank" rel="noopener">居留證（ARC）</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_6_Group_Med" target="_blank" rel="noopener">健康保險</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_10_Work_Per" target="_blank" rel="noopener">工作許可（兼職）</a>
+        <a href="https://oir.thu.edu.tw/redirect.php?ID=400_13_Intern_E" target="_blank" rel="noopener">畢業後工作與實習</a>
+        <a href="https://ezwp.wda.gov.tw" target="_blank" rel="noopener">勞動部工作許可申辦</a>
+      </div>
+    </div>
+    <div>
+      <div class="fs-title">學生入口</div>
+      <div class="fs-links">
+        <a href="https://tmail.thu.edu.tw/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2ftmail.thu.edu.tw%2fowa%2f" target="_blank" rel="noopener">tMail</a>
+        <a href="https://ilearn.thu.edu.tw/?#/" target="_blank" rel="noopener">iLearn</a>
+        <a href="https://fsis.thu.edu.tw/mosi/ccsd3/index.php?job=&loginn=&r=" target="_blank" rel="noopener">學生資訊系統</a>
+        <a href="https://account.thu.edu.tw/web/course/list.php" target="_blank" rel="noopener">會計處</a>
+        <a href="https://student.thu.edu.tw/index.php?lang=en" target="_blank" rel="noopener">學生事務處</a>
+        <a href="https://oir.thu.edu.tw/index.php" target="_blank" rel="noopener">國際暨兩岸合作處</a>
+        <a href="https://thupr.thu.edu.tw/EN/index.php" target="_blank" rel="noopener">公共事務處</a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
@@ -2061,7 +2182,7 @@
     var item=a.closest('.nav-item');
     if(item.querySelector('.nav-dropdown')){
       a.addEventListener('click',function(e){
-        if(getComputedStyle(btn).display!=='none'){
+        if(getComputedStyle(btn).display!=='none' && e.target.closest('.nav-caret')){
           e.preventDefault();
           var isOpen=item.classList.contains('open');
           ni.querySelectorAll('.nav-item').forEach(function(o){o.classList.remove('open');});
@@ -2075,30 +2196,7 @@
   });
 })();
 </script>
-<!-- Contact Modal -->
-<div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.65);align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)closeContactModal()">
-  <div style="background:#1A0A0E;border:1px solid #B8922A;border-radius:12px;max-width:380px;width:100%;padding:2rem 1.75rem;position:relative;">
-    <button onclick="closeContactModal()" style="position:absolute;top:.75rem;right:1rem;background:none;border:none;color:#C9C1BB;font-size:1.4rem;cursor:pointer;line-height:1;">×</button>
-    <div style="font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#B8922A;margin-bottom:.5rem;">聯絡 GMBA</div>
-    <div style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:1.5rem;">請選擇聯絡方式</div>
-    <a href="問卷3 GMBA Contact Us 填寫頁面.html" target="_blank" rel="noopener" onclick="closeContactModal()" style="display:flex;align-items:center;gap:.75rem;background:#7A1422;color:#fff;text-decoration:none;padding:.9rem 1.25rem;border-radius:8px;font-weight:700;font-size:.95rem;margin-bottom:.75rem;">
-      <span style="font-size:1.2rem;">📋</span>
-      <span>填寫快速表單<br><span style="font-size:.78rem;font-weight:400;opacity:.8;">30 秒完成 · 我們將以 Email 回覆</span></span>
-    </a>
-    <div style="border:1px solid #3A1A1E;border-radius:8px;padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;">
-      <div>
-        <div style="font-size:.72rem;color:#888;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.2rem;">或直接寄信</div>
-        <div style="color:#C9C1BB;font-size:.9rem;font-weight:600;">gmba@thu.edu.tw</div>
-      </div>
-      <button id="copy-email-btn" onclick="copyGmbaEmail()" style="background:#2E1218;border:1px solid #3A1A1E;color:#B8922A;padding:.45rem .9rem;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:700;white-space:nowrap;">複製</button>
-    </div>
-  </div>
-</div>
-<script>
-function openContactModal(){var m=document.getElementById('contact-modal');m.style.display='flex';}
-function closeContactModal(){document.getElementById('contact-modal').style.display='none';}
-function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(function(){var b=document.getElementById('copy-email-btn');b.textContent='已複製！';b.style.color='#4ade80';setTimeout(function(){b.textContent='複製';b.style.color='#B8922A';},2000);});}
-</script>
+
 
 <div id="search-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.75);align-items:flex-start;justify-content:center;padding:4.5rem 1rem 1rem;overflow-y:auto;" onclick="if(event.target===this)closeSearchModal()">
   <div style="background:#fff;border-radius:12px;max-width:640px;width:100%;padding:1.5rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4);">
@@ -2149,4 +2247,312 @@ function copyGmbaEmail(){navigator.clipboard.writeText('gmba@thu.edu.tw').then(f
 })();
 </script>
 
+<!-- ===== HOMEPAGE DESIGN LANGUAGE (applied to Admissions) ===== -->
+<style>
+  #tuition, #admissions, #scholarships, #faq-section, #practical-info, #downloads { padding-top: 4.2rem; padding-bottom: 4.6rem; }
+
+  /* --- Section heads: maroon rule + eyebrow + heavy h2 --- */
+  #tuition > .container::before,
+  #admissions > .container::before,
+  #practical-info > .container::before,
+  #downloads > .container::before,
+  #scholarships > .container::before,
+  #faq-section > .container::before,
+  #tuition h2#fees-table::before {
+    display: block; border-top: 2px solid var(--maroon); padding-top: 2.2rem;
+    font-size: 11.5px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+    color: #C94B0A; margin-bottom: .9rem;
+  }
+  #tuition > .container::before { content: "學費與費用"; }
+  #admissions > .container::before { content: "申請方式"; }
+  #practical-info > .container::before { content: "實務資訊"; }
+  #downloads > .container::before { content: "表單下載"; }
+  
+  #faq-section > .container::before { content: "常見問題"; }
+  
+  #scholarships > .container::before { content: "獎助方案"; }
+
+  #tuition > .container > h2, #admissions > .container > h2, #scholarships > .container > h2,
+  #practical-info h2, #downloads h2, #faq-section h2 {
+    font-family: var(--ff-body, inherit); font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900; line-height: 1.08; letter-spacing: -.02em; color: var(--ink); margin-bottom: 1rem;
+  }
+  #tuition .sec-lead, #admissions .sec-lead, #scholarships .sec-lead, #faq-section .sec-lead, #practical-info .sec-lead, #downloads .sec-lead {
+    font-size: 16px; line-height: 1.7; color: var(--ink-3); max-width: 36em; margin-bottom: 2.4rem;
+  }
+  #tuition .sec-tag, #admissions .sec-tag, #downloads .sec-tag { color: #C94B0A !important; font-size: 11.5px !important; letter-spacing: .16em !important; }
+  #tuition .rule-line, #admissions .rule-line { height: 1px !important; }
+
+  /* --- Scholarships: open blocks, no gold box --- */
+  #scholarships .schol-box { border: none !important; border-top: 1px solid var(--rule) !important; padding: 2rem 0 1.4rem !important; margin-bottom: 0 !important; }
+  .schol-box h3 { font-family: var(--ff-body, inherit) !important; font-size: 22px !important; font-weight: 900 !important; color: var(--ink) !important; letter-spacing: -.01em !important; }
+  .gov-schol-cards { gap: 0 !important; border-top: 1px solid var(--rule); }
+  .gov-schol-card { border: none !important; border-left: 1px solid var(--rule) !important; border-radius: 0 !important; padding: 1.5rem 1.6rem 1.6rem !important; }
+  .gov-schol-cards > .gov-schol-card:first-child { border-left: none !important; padding-left: 0 !important; }
+  .gov-schol-cards > .gov-schol-card:last-child { padding-right: 0 !important; }
+  .gov-schol-head { background: transparent !important; color: var(--ink) !important; padding: 0 0 .7rem !important;
+    font-size: 16.5px !important; font-weight: 900 !important; letter-spacing: -.01em !important; border-bottom: 2px solid var(--maroon) !important; }
+  .gov-schol-row { border-bottom: 1px solid var(--rule) !important; padding: .6rem 0 !important; align-items: baseline; }
+  .gov-schol-key { min-width: 74px; color: #8A8378 !important; font-size: 10.5px !important; font-weight: 800 !important; letter-spacing: .14em !important; text-transform: uppercase !important; }
+  .gov-schol-val { font-size: 14.5px !important; color: var(--ink) !important; line-height: 1.55 !important; }
+  .gov-schol-link { padding: .9rem 0 0 !important; }
+  .gov-schol-link a { font-size: 11.5px !important; font-weight: 800 !important; letter-spacing: .14em !important; text-transform: uppercase !important; color: var(--maroon) !important; border-bottom: 1px solid currentColor; text-decoration: none !important; }
+
+  /* --- Fee tables → rule-only timetable --- */
+  .fee-cards { border: none !important; border-radius: 0 !important; box-shadow: none !important; margin-bottom: 1rem !important; }
+  .fee-cards-header { background: transparent !important; color: #8A8378 !important; padding: 0 0 .8rem !important;
+    border-bottom: 2px solid var(--maroon) !important; font-size: 10.5px !important; letter-spacing: .16em !important; font-weight: 800 !important; text-transform: uppercase; }
+  .fee-card { background: transparent !important; border-left: none !important; border-bottom: 1px solid var(--rule) !important; padding: 1.05rem 0 !important; }
+  .fee-card:not(.fee-card-total):hover { background: transparent !important; border-left-color: transparent !important; }
+  .fee-card-label { font-size: 15.5px !important; color: var(--ink) !important; }
+  .fee-card-nt { font-family: var(--ff-num) !important; font-size: 24px !important; font-weight: 800 !important; color: var(--maroon) !important; letter-spacing: -.01em; }
+  .fee-card-usd { font-size: 12.5px !important; color: #8A8378 !important; }
+  .fee-card-total { border-bottom: none !important; border-top: 2px solid var(--maroon) !important; background: transparent !important; }
+  .fee-card-note { font-size: 11.5px !important; font-weight: 800 !important; letter-spacing: .12em !important; text-transform: uppercase !important; color: var(--maroon) !important; }
+
+  /* --- Application routes → flat schedule --- */
+  .admit-grid-wrapper { background: transparent !important; border-radius: 0 !important; box-shadow: none !important; }
+  .adm-thead { background: transparent !important; color: #8A8378 !important; padding: 0 0 .8rem !important; border-bottom: 2px solid var(--maroon) !important; }
+  .adm-thead > div { font-size: 10.5px !important; font-weight: 800 !important; letter-spacing: .16em !important; text-transform: uppercase; }
+  .adm-row { background: transparent !important; padding: 1.15rem 0 !important; border-bottom: 1px solid var(--rule) !important; }
+  .adm-row:last-child { border-bottom: 1px solid var(--rule) !important; }
+  .adm-num { background: transparent !important; color: var(--rule) !important; font-family: var(--ff-num); font-size: 26px !important; font-weight: 900 !important; border-radius: 0 !important; height: auto !important; justify-content: flex-start !important; }
+  .adm-pill { white-space: nowrap !important; background: transparent !important; border-radius: 0 !important; padding: 0 !important;
+    font-size: 10.5px !important; font-weight: 800 !important; letter-spacing: .14em !important; text-transform: uppercase; }
+  .adm-apply { white-space: nowrap !important; background: transparent !important; border-radius: 0 !important; padding: .35rem 0 0 !important;
+    color: var(--maroon) !important; font-size: 11.5px !important; font-weight: 800 !important; letter-spacing: .12em !important; text-transform: uppercase; border-bottom: 1px solid currentColor; }
+
+  /* --- Requirements → hairline stat grid --- */
+  .adm-req { gap: 0 !important; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .adm-req > div { background: transparent !important; border-top: none !important; border-left: 1px solid var(--rule) !important; padding: 1.7rem 1.6rem 1.8rem !important; }
+  .adm-req > div:first-child { border-left: none !important; padding-left: 0 !important; }
+  .adm-req > div:last-child { padding-right: 0 !important; }
+  .adm-req h3 { color: var(--ink) !important; font-size: 15px !important; letter-spacing: .02em !important; text-transform: none !important; }
+  .adm-req span[style*="ff-num"] { color: var(--rule) !important; font-size: 30px !important; }
+
+  /* --- Forms --- */
+  .forms-group-title { color: #C94B0A !important; letter-spacing: .16em !important; font-size: 11.5px !important; border-bottom-color: var(--maroon) !important; }
+  @media (max-width: 1000px) { .forms-grid { grid-template-columns: 1fr !important; gap: 2rem !important; } }
+  .forms-item { background: transparent !important; border-left: none !important; border-bottom: 1px solid var(--rule) !important; padding: .95rem 0 !important; margin-bottom: 0 !important; }
+  .forms-item-name { font-size: 15.5px !important; font-weight: 800 !important; }
+  .forms-dl-btn { border-radius: 0 !important; }
+  .forms-note { background: transparent !important; border-left: 2px solid var(--maroon) !important; padding: .2rem 0 .2rem 1.4rem !important; }
+
+  /* --- Practical cards --- */
+  #practical-info .cards-3 { gap: 0 !important; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  #practical-info .card { background: transparent !important; border: none !important; border-left: 1px solid var(--rule) !important; border-radius: 0 !important; padding: 1.8rem 2rem 1.9rem !important; }
+  #practical-info .cards-3 .card:first-child { border-left: none !important; padding-left: 0 !important; }
+  #practical-info .cards-3 .card:last-child { padding-right: 0 !important; }
+  #practical-info .card h3 { font-size: 17px !important; font-weight: 800 !important; color: var(--ink) !important; margin-bottom: .5rem !important; }
+  #practical-info .card p { font-size: 15px !important; line-height: 1.7 !important; color: var(--ink-3) !important; }
+
+  #contact a[href="#admissions"] { border-radius: 0 !important; }
+
+  @media (max-width: 1000px) {
+    .gov-schol-cards { border-top: none !important; }
+    .gov-schol-card { border-left: none !important; border-top: 1px solid var(--rule) !important; padding: 1.5rem 0 1.6rem !important; }
+    .gov-schol-cards > .gov-schol-card:first-child { border-top: none !important; }
+    .adm-req { grid-template-columns: 1fr !important; }
+    .adm-req > div { border-left: none !important; border-top: 1px solid var(--rule) !important; padding: 1.5rem 0 1.6rem !important; }
+    .adm-req > div:first-child { border-top: none !important; }
+    #practical-info .cards-3 { grid-template-columns: 1fr !important; }
+    #practical-info .card { border-left: none !important; border-top: 1px solid var(--rule) !important; padding: 1.6rem 0 1.7rem !important; }
+    #practical-info .cards-3 .card:first-child { border-top: none !important; }
+  }
+  @media (max-width: 1040px) {
+    .adm-thead { display: none !important; }
+    .adm-row { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: .5rem !important; }
+    .adm-num { font-size: 20px !important; }
+  }
+  @media (max-width: 640px) {
+    .fee-card { padding: .9rem 0 !important; }
+    .fee-card-nt { font-size: 21px !important; }
+  }
+
+  /* --- Scholarship cards read as a comparison table: rows align across columns --- */
+  @supports (grid-template-rows: subgrid) {
+    #scholarships .gov-schol-cards { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; }
+    #scholarships .gov-schol-card { display: grid !important; grid-template-rows: subgrid !important; min-width: 0; }
+    #scholarships .schol-box:nth-of-type(1) .gov-schol-cards { grid-template-rows: repeat(6, auto); }
+    #scholarships .schol-box:nth-of-type(1) .gov-schol-card { grid-row: span 6; }
+    #scholarships .schol-box:nth-of-type(2) .gov-schol-cards { grid-template-rows: repeat(4, auto); }
+    #scholarships .schol-box:nth-of-type(2) .gov-schol-card { grid-row: span 4; }
+    #scholarships .gov-schol-head { align-content: end; }
+    #scholarships .gov-schol-link { align-content: start; }
+    @media (max-width: 1000px) {
+      #scholarships .gov-schol-cards { grid-template-columns: 1fr !important; grid-template-rows: none !important; }
+      #scholarships .gov-schol-card { display: block !important; grid-row: auto !important; }
+    }
+  }
+
+  .adm-session { display: flex; align-items: center; justify-content: space-between; gap: 2.5rem;
+    border-top: 2px solid var(--maroon); border-bottom: 1px solid var(--rule);
+    padding: 1.7rem 0 1.8rem; margin: 0 0 2.6rem; }
+  .adm-session-eyebrow { font-size: 10.5px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #C94B0A; margin-bottom: .5rem; }
+  .adm-session-title { font-size: 20px; font-weight: 900; letter-spacing: -.01em; color: var(--ink); line-height: 1.3; max-width: 30em; }
+  .adm-session-meta { margin-top: .5rem; font-size: 13px; color: #8A8378; }
+  @media (max-width: 760px) { .adm-session { flex-direction: column; align-items: flex-start; gap: 1.2rem; } }
+
+  /* --- Hero eyebrow: same accent as section eyebrows --- */
+  .page-hero-strip .ph-tag { color: #C94B0A !important; letter-spacing: .16em !important; }
+
+  /* --- Stat strip --- */
+  .adm-stats-wrap { background: var(--white); padding: 0 0 3rem; }
+  .adm-stats { display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .adm-stats > div { border-left: 1px solid var(--rule); padding: 1.7rem 1.6rem 1.8rem; }
+  .adm-stats > div:first-child { border-left: none; padding-left: 0; }
+  .adm-stats > div:last-child { padding-right: 0; }
+  .adm-stats > div:last-child .adm-stat-n { font-size: clamp(24px, 2.4vw, 34px); }
+  .adm-stat-n { font-family: var(--ff-num); font-size: clamp(30px, 3.2vw, 46px); font-weight: 900; line-height: 1;
+    color: var(--maroon); letter-spacing: -.02em; margin-bottom: 10px; }
+  .adm-stat-l { font-size: 10.5px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #8A8378; }
+
+  /* --- Sticky section index --- */
+  .adm-index { position: sticky; top: 56px; z-index: 500; background: var(--white);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .adm-index-row { display: flex; flex-wrap: wrap; gap: 1.9rem; padding: .85rem 0; }
+  .adm-index a { white-space: nowrap; font-size: 13.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    color: #8A8378; text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 3px; transition: color .2s, border-color .2s; }
+  .adm-index a:hover { color: var(--ink); }
+  .adm-index a.is-active { color: var(--maroon); border-bottom-color: var(--maroon); }
+
+  /* --- Intake pills keep season contrast --- */
+  .adm-pill.is-spring { color: var(--maroon) !important; }
+  .adm-pill.is-fall { color: #8A8378 !important; }
+
+  /* --- Save-my-seat buttons: squared outline --- */
+  .adm-seat { display: inline-flex !important; align-items: center; gap: .5rem; flex-shrink: 0;
+    background: var(--maroon) !important; border: 1px solid var(--maroon) !important; border-radius: 0 !important;
+    color: #fff !important; font-size: 11.5px !important; font-weight: 800 !important;
+    letter-spacing: .14em !important; text-transform: uppercase; padding: .8rem 1.5rem !important;
+    position: relative; overflow: hidden; transition: background .2s, color .2s; }
+  .adm-seat::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(105deg, transparent 38%, rgba(255,255,255,.28) 50%, transparent 62%);
+    transform: translateX(-120%); animation: admSeatSheen 4.6s ease-in-out infinite; }
+  .adm-seat:hover { background: var(--ink) !important; border-color: var(--ink) !important; color: #fff !important; }
+  @keyframes admSeatSheen { 0%, 72% { transform: translateX(-120%); } 92%, 100% { transform: translateX(120%); } }
+  @media (prefers-reduced-motion: reduce) { .adm-seat::after { animation: none; } }
+  .adm-seat-note { display: block; margin-top: .55rem; font-size: 11px; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; color: #8A8378; }
+
+  /* --- Closing CTA --- */
+  #contact { border-top: none !important; }
+  #contact > div { padding: 5.5rem 2.5rem 5.8rem !important; max-width: 760px !important; }
+  #contact > div > p:first-child { color: #C9A227 !important; letter-spacing: .16em !important; font-size: 11.5px !important; }
+  #contact h2 { font-size: clamp(30px, 4vw, 52px) !important; line-height: 1.05 !important; }
+  #contact a[href="#admissions"] { white-space: nowrap !important; background: transparent !important; border: 1px solid #C9A227 !important;
+    color: #C9A227 !important; padding: 1.05rem 2.8rem !important; font-size: 11.5px !important;
+    letter-spacing: .16em !important; text-transform: uppercase; transition: background .2s, color .2s; }
+  #contact a[href="#admissions"]:hover { background: #C9A227 !important; color: #2E0D1A !important; opacity: 1 !important; }
+
+  @media (max-width: 900px) {
+    .adm-stats { grid-template-columns: repeat(2, 1fr); }
+    .adm-stats > div:nth-child(odd) { border-left: none; padding-left: 0; }
+    .adm-stats > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+    .adm-stat-n { font-size: 34px; }
+    .adm-index > .container { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+    .adm-index-row { gap: 1.2rem; flex-wrap: nowrap; width: max-content; }
+    .adm-index a { white-space: nowrap; }
+  }
+
+  @media (max-width: 640px) {
+    .adm-apply { padding: .6rem 0 .55rem !important; font-size: 12px !important; }
+    .forms-dl-btn { padding: .7rem 1.1rem !important; min-height: 44px; display: inline-flex !important; align-items: center; }
+    .forms-item { padding: 1.05rem 0 !important; }
+    .adm-stat-l, .gov-schol-key, .fee-cards-header, .adm-pill { font-size: 11.5px !important; }
+    .adm-index a { font-size: 13px !important; }
+    .adm-session-title { font-size: 18px !important; }
+    .adm-seat { width: 100%; justify-content: center; }
+  }
+
+  /* --- Line-break & nav polish --- */
+  .adm-seat, .adm-apply, .forms-dl-btn, #contact a[href="#admissions"] { white-space: nowrap !important; }
+  .adm-session-meta, .adm-session-title, .sec-lead, .card p, .gov-schol-val,
+  .fee-card-label, .adm-row div, .forms-item-desc { word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; }
+  #practical-info a, #practical-info li, #practical-info p { word-break: keep-all; overflow-wrap: break-word; }
+  #practical-info a[href] { text-wrap: pretty; }
+  @media (max-width: 960px) {
+    nav .nav-burger { margin-right: 1.15rem !important; flex-shrink: 0 !important; }
+    nav .nav-logo { padding: 0 1rem !important; min-width: 0 !important; flex-shrink: 1 !important; }
+    nav .nav-logo img { height: 30px !important; }
+  }
+
+  .om-reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .om-reveal.in { opacity: 1; transform: none; }
+  @media (print), (prefers-reduced-motion: reduce) { .om-reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  function tag(sel, cls, root){ Array.prototype.forEach.call((root||document).querySelectorAll(sel), function(e){ e.classList.add(cls); }); }
+  var wrap = document.querySelector('#admissions .admit-grid-wrapper') || document.querySelector('#admissions div[style*="2.3fr"]');
+  if (wrap && !wrap.classList.contains('admit-grid-wrapper')) wrap = wrap.parentNode;
+  if (wrap) {
+    Array.prototype.forEach.call(wrap.children, function(row, i){ row.classList.add(i === 0 ? 'adm-thead' : 'adm-row'); });
+    tag('.adm-row span[style*="border-radius:20px"], .adm-row span[style*="border-radius: 20px"]', 'adm-pill', wrap);
+    tag('.adm-row a[style*="background:var(--maroon)"], .adm-row a[style*="background: var(--maroon)"]', 'adm-apply', wrap);
+    tag('.adm-row span[style*="height:28px"], .adm-row span[style*="height: 28px"]', 'adm-num', wrap);
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('#admissions div[style*="repeat(4,1fr)"], #admissions div[style*="repeat(4, 1fr)"]'), function(g){ g.classList.add('adm-req'); });
+
+
+
+    (function(){
+
+      function roundTuition(raw){
+        var digits = (raw || '').replace(/[^0-9]/g, '');
+        if (!digits) return raw;
+        return '~NT$' + Math.round(parseInt(digits, 10) / 1000) + 'K';
+      }
+      function syncTuition(){
+        var src = document.querySelector('[data-k="fee.tuition.nt"]');
+        var dst = document.querySelector('.adm-stat-tuition');
+        if (src && dst) dst.textContent = roundTuition(src.textContent);
+      }
+      syncTuition();
+      window.addEventListener('load', syncTuition);
+      var src = document.querySelector('[data-k="fee.tuition.nt"]');
+      if (src && window.MutationObserver) new MutationObserver(syncTuition).observe(src, { childList: true, characterData: true, subtree: true });
+    })();
+
+  (function(){
+    var pillMap = { Spring: 'is-spring', Fall: 'is-fall', '春': 'is-spring', '秋': 'is-fall' };
+    Array.prototype.forEach.call(document.querySelectorAll('.adm-pill'), function(el){
+      var t = (el.textContent || '').trim();
+      el.classList.add(/Spring|春/.test(t) ? 'is-spring' : 'is-fall');
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('a[href*="Save My Seat"]'), function(el){ el.classList.add('adm-seat'); });
+    var links = Array.prototype.slice.call(document.querySelectorAll('.adm-index a'));
+    var targets = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+    if (links.length && 'IntersectionObserver' in window) {
+      var spy = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if (!e.isIntersecting) return;
+          links.forEach(function(a, i){ a.classList.toggle('is-active', targets[i] === e.target); });
+        });
+      }, { rootMargin: '-25% 0px -65% 0px' });
+      targets.forEach(function(t){ if (t) spy.observe(t.closest('section') || t); });
+    }
+  })();
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var blocks = '#tuition > .container > *, #admissions > .container > *, #scholarships > .container > *, #faq-section > .container > *, #practical-info > .container > *, #downloads > .container > *';
+  var items = '.gov-schol-cards > .gov-schol-card, .adm-req > div, #practical-info .cards-3 > .card';
+  var els = Array.prototype.slice.call(document.querySelectorAll(blocks + ', ' + items));
+  if (!els.length) return;
+  els.forEach(function(el){ el.classList.add('om-reveal'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      var sibs = Array.prototype.slice.call(el.parentNode.children).filter(function(n){ return n.classList.contains('om-reveal'); });
+      el.style.transitionDelay = Math.min(sibs.indexOf(el), 5) * 65 + 'ms';
+      el.classList.add('in');
+      io.unobserve(el);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  els.forEach(function(el){ io.observe(el); });
+});
+</script>
 </body></html>

@@ -155,22 +155,209 @@
     .page-footer { text-align: center; padding: 1.5rem; font-size: 0.78rem; color: var(--ink-3); border-top: 1px solid var(--rule); background: var(--white); }
     .page-footer a { color: var(--maroon); text-decoration: none; }
   </style>
+
+<style>
+  /* ===== SITE DESIGN SYSTEM (matches gmba.thu.edu.tw) ===== */
+  :root {
+    --ff-zh: 'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+    --ff-body: 'Inter', var(--ff-zh);
+    --ff-num: 'Inter', var(--ff-zh);
+    --maroon: #9B1A2C;
+    --maroon-2: #9B1A2C;
+    --maroon-hover: #B22234;
+    --maroon-dk: #4D0D16;
+    --gold: #B8922A;
+    --gold-lt: #D4AC52;
+    --ink: #0D0D0D;
+    --ink-2: #2B2B2B;
+    --ink-3: #4A4A4A;
+    --rule: #DDD8D0;
+    --cream: #F8F6F2;
+    --white: #FFF;
+    --ff: var(--ff-body);
+  }
+  body { font-family: var(--ff-body); background: var(--cream); }
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* ===== NAV ===== */
+  nav.site-nav {
+    background: var(--maroon); border-bottom: none; padding: 0;
+    display: flex; align-items: stretch; justify-content: flex-start;
+    position: sticky; top: 0; z-index: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); min-height: 56px;
+  }
+  .nav-logo { text-decoration: none; cursor: pointer; padding: 0 1.4rem;
+    display: flex; align-items: center; gap: 2px; flex-shrink: 0;
+    border-right: 1px solid rgba(255,255,255,0.18); }
+  .nav-logo-thu { font-size: 1.55rem; font-weight: 900; color: #fff;
+    letter-spacing: -0.03em; line-height: 1; font-family: 'Arial Black','Arial',sans-serif; }
+  .nav-logo-gmba { font-size: 0.6rem; font-weight: 800; color: rgba(255,255,255,0.6);
+    letter-spacing: 0.18em; text-transform: uppercase; margin-left: 10px; align-self: center; }
+  .nav-links { display: flex; align-items: stretch; flex: 1; }
+  .nav-items { display: flex; align-items: stretch; flex-wrap: nowrap; gap: 2rem; }
+  .nav-item { position: relative; display: flex; align-items: center; }
+  .nav-item > a { color: rgba(255,255,255,0.92); text-decoration: none; font-size: 0.82rem;
+    font-weight: 700; padding: 0; letter-spacing: 0.03em; text-transform: uppercase;
+    transition: color 0.15s; white-space: nowrap; display: flex; align-items: center; gap: 3px; height: 100%; }
+  .nav-item > a:hover, .nav-item:hover > a { color: #fff; }
+  .nav-caret { font-size: 8px; transition: transform 0.2s; display: inline-block; opacity: 0.6; }
+  .nav-item:hover .nav-caret { transform: rotate(180deg); opacity: 1; }
+  .nav-dropdown { position: absolute; top: 100%; left: 0; background: var(--white);
+    min-width: 195px; box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+    border-top: 3px solid var(--maroon); z-index: 700; display: none; }
+  .nav-item:hover .nav-dropdown, .nav-item.open .nav-dropdown { display: block; }
+  .nav-dropdown a { display: block; padding: 0.65rem 1.1rem; color: var(--ink-2);
+    text-decoration: none; font-size: 0.78rem; font-weight: 600;
+    border-bottom: 1px solid var(--rule); transition: background 0.1s, color 0.1s;
+    text-transform: none; letter-spacing: 0; white-space: nowrap; }
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-dropdown a:hover { background: var(--cream); color: var(--maroon); }
+  .nav-apply-desk { align-self: center; text-decoration: none; margin-left: auto;
+    background: var(--gold-lt); color: #12210A; font-size: 0.74rem; font-weight: 900;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 0.45rem 1.1rem;
+    border-radius: 2px; transition: background .2s ease; }
+  .nav-apply-desk:hover { background: #fff; color: #3A0810; }
+  .nav-burger { display: none; }
+  @media (max-width: 960px) {
+    .nav-burger { display: flex; flex-direction: column; justify-content: space-between;
+      width: 26px; height: 20px; background: none; border: none; cursor: pointer;
+      padding: 2px 0; margin-left: auto; margin-right: 1.15rem; box-sizing: content-box; }
+    .nav-burger span { display: block; height: 2px; background: #fff; border-radius: 2px; }
+    .nav-items { display: none; flex-direction: column; position: absolute; gap: 0;
+      top: 100%; left: 0; right: 0; background: var(--maroon);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18); z-index: 900; }
+    .nav-items.open { display: flex; }
+    .nav-item { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.15); }
+    .nav-item > a { font-size: 0.88rem; padding: 0.85rem 1.4rem; width: 100%;
+      justify-content: space-between; color: rgba(255,255,255,0.9); }
+    .nav-dropdown { position: static; display: none; box-shadow: none;
+      border-top: none; background: rgba(0,0,0,0.2); }
+    .nav-dropdown a { color: rgba(255,255,255,0.8) !important; padding: 0.6rem 1.4rem 0.6rem 2rem; }
+    .nav-dropdown a:hover { background: rgba(255,255,255,0.1); color: #fff !important; }
+    .nav-apply-desk { margin: 0.8rem 1.4rem 1rem; align-self: stretch; text-align: center; }
+    nav.site-nav .nav-logo { padding: 0 1rem; }
+  }
+
+  /* ===== PAGE HEADER STRIP ===== */
+  .page-hero-strip { background: var(--white); padding: 3rem 0 2.5rem; border-top: 4px solid var(--maroon); }
+  .page-hero-strip .ph-tag { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--maroon); margin-bottom: 0.5rem; display: block; opacity: 0.75; }
+  .page-hero-strip h1 { font-family: var(--ff-num); font-size: clamp(40px,6vw,72px); font-weight: 900;
+    line-height: 1.0; color: var(--maroon); margin: 0; text-transform: uppercase; letter-spacing: -0.01em; }
+  .page-hero-strip p { color: var(--ink-3); margin-top: 1rem; font-size: 1rem; max-width: 560px; line-height: 1.65; }
+  @media (max-width: 640px) { .page-hero-strip h1 { font-size: clamp(28px,8vw,40px); } }
+
+  /* ===== FORM CARD (aligned to site) ===== */
+  .form-wrap { max-width: 860px; margin: 2.5rem auto 4rem; padding: 0 1.5rem; }
+  .form-card { background: var(--white); border: 1px solid var(--rule); border-radius: 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,.05); overflow: hidden; }
+  .form-card-header { background: var(--maroon); padding: 1.4rem 2rem; border-bottom: 3px solid var(--gold); }
+  .form-card-header h2 { font-family: var(--ff-num); color: var(--white); font-size: 1.2rem; font-weight: 800; margin-bottom: 0.15rem; }
+  .btn-primary { background: var(--maroon); color: #fff; border-radius: 2px; letter-spacing: .08em;
+    text-transform: uppercase; font-weight: 800; font-size: 0.86rem; }
+  .btn-primary:hover { background: var(--maroon-hover); }
+  .radio-option { border-radius: 2px; }
+  .radio-option:hover { border-color: var(--maroon); background: #fdf5f6; }
+  .radio-option.selected { border-color: var(--maroon); background: rgba(155,26,44,0.05); }
+  .success-section h2 { font-family: var(--ff-num); color: var(--maroon); }
+
+  /* ===== SITE FOOTER ===== */
+  .site-footer { background: #1A0A0E; color: #B0A8A2; font-family: var(--ff-body); }
+  .site-footer a { color: #C9C1BB; text-decoration: none; transition: color .18s; }
+  .site-footer a:hover { color: #D4AC52; }
+  .footer-main { display: grid; grid-template-columns: 300px repeat(3,1fr); gap: 2rem;
+    max-width: 1300px; margin: 0 auto; padding: 3.5rem 2rem 2.5rem; align-items: start; }
+  .footer-col-title { font-size: 14.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    color: #B8922A; border-bottom: 1px solid #3A1A1E; padding-bottom: .5rem; margin-bottom: .9rem; }
+  .footer-col ul { list-style: none; margin: 0; padding: 0; }
+  .footer-col ul li { margin-bottom: .48rem; }
+  .footer-col ul li a { font-size: 15.5px; line-height: 1.5; }
+  .site-footer .footer-contact address { font-style: normal; }
+  .site-footer .footer-contact p { margin: 0 0 .7rem; font-size: 14.5px; line-height: 1.75; color: rgba(255,255,255,.72); }
+  .site-footer .footer-contact .fc-org { color: #fff; font-weight: 600; }
+  .site-footer .footer-contact a { color: #fff; border-bottom: 1px solid rgba(232,197,90,.5); }
+  .footer-bottom { border-top: 1px solid #2E1218; background: #0E0508; }
+  .footer-bottom-inner { max-width: 1300px; margin: 0 auto; padding: .9rem 2rem; display: flex;
+    align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .footer-bottom-logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+  .footer-bottom-logo-mark { width: 28px; height: 28px; background: #9B1A2C; border-radius: 2px;
+    display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 11px;
+    color: #fff; letter-spacing: -.02em; flex-shrink: 0; }
+  .footer-bottom-logo-text { font-size: 12px; font-weight: 700; color: #E8E0D8; letter-spacing: .05em;
+    text-transform: uppercase; line-height: 1.2; }
+  .footer-bottom-copy { font-size: 12px; color: #5A4F4C; }
+  .footer-bottom-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .footer-bottom-links a { font-size: 12px; color: #5A4F4C; }
+  .footer-bottom-links a:hover { color: #B8922A; }
+  @media(max-width:1000px) { .footer-main { grid-template-columns: repeat(2,1fr); } }
+  @media(max-width:680px) {
+    .footer-main { grid-template-columns: 1fr; padding: 2.5rem 1.2rem 2rem; }
+    .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: .5rem; }
+  }
+</style>
+
+<style>
+  /* --- Mobile nav: parent link tappable, caret toggles submenu --- */
+  @media (max-width: 960px) {
+    .nav-item { display: block !important; }
+    .nav-item > a { display: flex !important; width: 100% !important; }
+    .nav-item > a .nav-caret {
+      font-size: 13px !important; opacity: .85;
+      padding: .85rem 1.4rem .85rem 1.6rem; margin: -.85rem -1.4rem -.85rem 0;
+    }
+    .nav-dropdown { width: 100% !important; min-width: 0 !important; }
+    .nav-burger { align-self: center !important; }
+  }
+</style>
 </head>
 <body>
 
-<nav class="top-nav">
-  <a class="nav-brand" href="./" target="_blank">
-    <span class="nav-logo-badge">GMBA</span>
-    <span class="nav-brand-text">Tunghai University</span>
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Tunghai GMBA - Home">
+    <img src="./thu-wordmark-w.png" alt="Tunghai University" style="height:36px;width:auto;display:block;"><span class="nav-logo-gmba">GMBA</span>
   </a>
-  <a class="nav-link" href="./" target="_blank">Back to Website</a>
+  <div class="nav-links">
+    <div class="nav-items" id="navItems">
+      <div class="nav-item">
+        <a href="index.html">Why THU GMBA <span class="nav-caret">&#9660;</span></a>
+        <div class="nav-dropdown">
+          <a href="index.html#why-gmba">About</a>
+          <a href="index.html#class-profile">Class Profile</a>
+          <a href="index.html#living-in-taiwan">Why Taiwan?</a>
+          <a href="index.html#campus-life">Campus Life</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="academics.html">Academics <span class="nav-caret">&#9660;</span></a>
+        <div class="nav-dropdown">
+          <a href="academics.html#curriculum">Curriculum</a>
+          <a href="academics.html#faculty">Faculty</a>
+          <a href="academics.html#joint-degree">Joint-Degree &amp; Study Abroad</a>
+          <a href="academics.html#academic-calendar">Academic Calendar</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="admissions.html">Admissions <span class="nav-caret">&#9660;</span></a>
+        <div class="nav-dropdown">
+          <a href="admissions.html#tuition">Scholarships, Tuition and Fees</a>
+          <a href="admissions.html#admissions">Apply Now</a>
+          <a href="admissions.html#practical-info">Practical Info</a>
+          <a href="admissions.html#downloads">Downloads</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="faq.html">FAQ</a></div>
+      <a href="admissions.html#admissions" class="nav-apply-desk">Apply</a>
+    </div>
+  </div>
 </nav>
 
-<section class="hero">
-  <span class="hero-tag">Limited Seats</span>
-  <h1>Save My <em>Seat</em></h1>
-  <p class="hero-sub">Reserve your place in Tunghai GMBA &mdash; Taiwan's fully English-taught graduate business program at the heart of Asia's AI tech industry.</p>
-</section>
+<div class="page-hero-strip">
+  <div class="container">
+    <span class="ph-tag">Admissions &middot; Limited Seats</span>
+    <h1>Save My Seat</h1>
+    <p>Reserve your place in Tunghai GMBA &mdash; Taiwan&rsquo;s fully English-taught graduate business program at the heart of Asia&rsquo;s AI tech industry.</p>
+  </div>
+</div>
 
 <div class="form-wrap">
   <div class="form-card">
@@ -413,10 +600,57 @@
   </div>
 </div>
 
-<footer class="page-footer">
-  &copy; Tunghai University GMBA Program &nbsp;&middot;&nbsp;
-  <a href="./" target="_blank">gmba.thu.edu.tw</a> &nbsp;&middot;&nbsp;
-  <a href="mailto:gmba@thu.edu.tw">gmba@thu.edu.tw</a>
+<footer class="site-footer" aria-label="Site footer">
+  <div class="footer-main">
+    <div class="footer-col footer-contact">
+      <div class="footer-col-title">Contact</div>
+      <address>
+        <p class="fc-org">Global MBA Program, College of Management<br>Tunghai University</p>
+        <p class="fc-addr">No. 1727, Sec. 4, Taiwan Boulevard,<br>Xitun District, Taichung City 407224, Taiwan (R.O.C.)</p>
+        <p class="fc-mail"><a href="mailto:gmba@thu.edu.tw">gmba@thu.edu.tw</a></p>
+        <p class="fc-tel"><a href="tel:+886423590121,35002">Tel +886 4 2359 0121 ext. 35002</a></p>
+      </address>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Explore GMBA</div>
+      <ul>
+        <li><a href="index.html#why-gmba">About</a></li>
+        <li><a href="index.html#class-profile">Class Profile</a></li>
+        <li><a href="index.html#living-in-taiwan">Why Taiwan?</a></li>
+        <li><a href="index.html#campus-life">Campus Life</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Academics</div>
+      <ul>
+        <li><a href="academics.html#curriculum">Curriculum</a></li>
+        <li><a href="academics.html#faculty">Faculty</a></li>
+        <li><a href="academics.html#joint-degree">Joint-Degree &amp; Study Abroad</a></li>
+        <li><a href="academics.html#academic-calendar">Academic Calendar</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Admissions</div>
+      <ul>
+        <li><a href="admissions.html#fees-table">Tuition &amp; Fees</a></li>
+        <li><a href="admissions.html#tuition">Scholarships</a></li>
+        <li><a href="admissions.html#practical-info">Practical Info</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <a href="index.html" class="footer-bottom-logo" aria-label="THU GMBA Home">
+        <img src="./thu-com-logo-w.png" alt="College of Management, Tunghai University - AACSB Accredited" style="height:28px;width:auto;display:block;">
+      </a>
+      <span class="footer-bottom-copy">&copy; 2026 Tunghai University GMBA Program. All Rights Reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="https://eng.thu.edu.tw/" target="_blank" rel="noopener">Tunghai University</a>
+        <a href="https://mana.thu.edu.tw/web/about/page.php?scid=35&amp;sid=38&amp;lang=en" target="_blank" rel="noopener">College of Management</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <iframe id="submit-iframe" name="submit-iframe" style="display:none"></iframe>
@@ -620,6 +854,33 @@
     });
   });
 
+})();
+</script>
+<script>
+(function(){
+  var nb=document.querySelector(".nav-links"), ni=document.getElementById("navItems");
+  if(!nb||!ni) return;
+  var btn=document.createElement("button");
+  btn.className="nav-burger"; btn.setAttribute("aria-label","Menu");
+  btn.innerHTML="<span></span><span></span><span></span>";
+  nb.prepend(btn);
+  function closeNav(){ni.classList.remove("open");}
+  btn.addEventListener("click",function(e){e.stopPropagation();ni.classList.toggle("open");});
+  document.addEventListener("click",function(e){if(!ni.contains(e.target)&&!btn.contains(e.target))closeNav();});
+  ni.querySelectorAll(".nav-item>a").forEach(function(a){
+    var item=a.closest(".nav-item");
+    if(item.querySelector(".nav-dropdown")){
+      a.addEventListener("click",function(e){
+        if(getComputedStyle(btn).display!=="none" && e.target.closest(".nav-caret")){
+          e.preventDefault();
+          var isOpen=item.classList.contains("open");
+          ni.querySelectorAll(".nav-item").forEach(function(o){o.classList.remove("open");});
+          if(!isOpen)item.classList.add("open");
+        }
+      });
+    }
+  });
+  ni.querySelectorAll(".nav-dropdown a,.nav-apply-desk").forEach(function(a){a.addEventListener("click",closeNav);});
 })();
 </script>
 </body>
